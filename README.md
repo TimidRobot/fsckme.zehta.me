@@ -7,9 +7,9 @@ Source for [fsckme.zehta.me][fsckme].
 
 ## Overview
 
-The source is located in `fsckme/`.
+The source is located in [`fsckme/`](fsckme/).
 
-The build/content is located in `docs/`.
+The built content is located in [`docs/`](docs/).
 
 
 ## Development
