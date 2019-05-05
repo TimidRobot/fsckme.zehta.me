@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# ControlMaster Controller - Eases management of SSH ControlMaster connections
+#
+# Notes
+# • `kill -sigalrm SESSION_PID` will result in SSH leaving a stale socket
+#
+#### SETUP ####################################################################
+set -o errexit
+set -o errtrace
+set -o nounset
+
+trap '_es=${?};
+    printf "${0}: line ${LINENO}: \"${BASH_COMMAND}\"";
+    printf " exited with a status of ${_es}\n";
+    exit ${_es}' ERR
+
+pipenv run lektor server --output-path ../docs
