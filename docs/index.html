@@ -1,17 +1,13 @@
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="./static/style.css">
-<title>Welcome to fsckme! — fsckme</title>
+<title>Blog — fsckme</title>
 <body>
   <header>
     <h1>fsckme</h1>
     <nav>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="./">Welcome</a></li>
-        
-          <li><a href="./blog/">Blog</a></li>
-        
-          <li><a href="./projects/">Projects</a></li>
+        <li class="active"><a href="./">Home</a></li>
         
           <li><a href="./about/">About</a></li>
         
@@ -20,9 +16,129 @@
   </header>
   <div class="page">
     
-  <h2>Welcome to fsckme!</h2>
-  <p>This is a basic demo website that shows how to use Lektor for a basic
-website with some pages and a blog.</p>
+  
+    
+  <div class="blog-post">
+  
+    <h2><a href="./2013/1/go-to-bed/">Go to Bed</a></h2>
+  
+  <p class="meta">
+    written by
+    
+      Timid Robot Zehta
+    
+    on 2013-01-02 09:41:00
+  </p>
+  <p>One of my own troubleshooting or programming rules is to go to bed. Over and
+over again, I have discovered that I will fail to solve a problem if I focus
+too stubbornly on it. If I go to bed, however, the answer is usually waiting
+for me as soon as I wake up or pick up the problem again.</p>
+<p>I was reminded of this while reading the highly fascinating article, <a href="http://www.newyorker.com/reporting/2013/01/07/130107fa_fact_green">Adam
+Green: The Spectacular Thefts of Apollo Robbins, Pickpocket</a> (linked
+from <a href="http://www.schneier.com/blog/archives/2013/01/apollo_robbins.html">Schneier on Security: Apollo Robbins, Pickpocket</a>).</p>
+<p>Specifically:</p>
+<blockquote><p>"inattentional blindness," the phenomenon of focussing so intently on a
+single task that one fails to notice things in plain sight.</p>
+</blockquote>
+
+  </div>
+
+  
+    
+  <div class="blog-post">
+  
+    <h2><a href="./2012/11/mystery-writes/">Mystery Writes</a></h2>
+  
+  <p class="meta">
+    written by
+    
+      Timid Robot Zehta
+    
+    on 2012-11-01 13:28:00
+  </p>
+  <p>We recently observed constant write activity on our development server, while
+watching dstat. With the help of <a href="http://guichaz.free.fr/iotop/"><code>iotop</code></a>, we identified the Apache web
+server was the culprit. But why would apache be doing so many writes? That's
+not normal behavior (excluding the the logs). We then used auditd to log
+writes by apache.</p>
+<pre><code class="lang-shell">sudo auditctl -a exit,always -S write -F uid=33
+</code></pre>
+<p>We also logged opens that were not O_RDONLY:</p>
+<pre><code class="lang-shell">sudo auditctl -a exit,always -S open -F uid=33 -F a1&#39;!=0&#39;`
+</code></pre>
+<p>This resulted in the following rules:</p>
+<pre><code class="lang-shell">sudo auditctl -l LIST_RULES: exit,always uid=33 (0x21) syscall=write LIST_RULES: exit,always uid=33 (0x21) a1!=0 syscall=open
+</code></pre>
+<p>This allowed us to isolate a PHP module that was completely broken (using
+<code>aureport</code>).</p>
+<h3>Man Pages</h3>
+<ul>
+<li><a href="http://manpages.ubuntu.com/manpages/lucid/en/man8/auditctl.8.html">man 8 auditctl</a> - a utility to assist controlling the kernel's
+audit system</li>
+<li><a href="http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html">man 8 aureport</a> - a tool that produces summary reports of
+audit daemon logs</li>
+<li><a href="http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html">man 1 dstat</a> - versatile tool for generating system resource
+statistics</li>
+<li><a href="http://manpages.ubuntu.com/manpages/lucid/en/man1/iotop.1.html">man 1 iotop</a> - simple top-like I/O monitor</li>
+<li><a href="http://manpages.ubuntu.com/manpages/lucid/man2/open.2.html">man 2 open</a> - open and possibly create a file or device</li>
+</ul>
+
+  </div>
+
+  
+    
+  <div class="blog-post">
+  
+    <h2><a href="./2012/10/automation-of-nets-of-nets/">The Automation of Networks of Networks</a></h2>
+  
+  <p class="meta">
+    written by
+    
+      Timid Robot Zehta
+    
+    on 2012-10-10 12:58:00
+  </p>
+  <p>For me, at least, systems administration is a difficult field to define and
+talk about--especially succinctly. A couple of excellent blog posts suggest the
+following definition for Systems Administration: <strong>the automation of networks
+of networks.</strong></p>
+<p>Automation:</p>
+<blockquote><p>Therefore, SREs spend half their time writing code to eliminate what they do
+the other half of their day. When they "automate themselves out of a job" it
+is cause for celebration and they get to pick a new project. There are
+always more projects.</p>
+<p>(<a href="http://everythingsysadmin.com/2012/10/whatschangedsre.html">Everything Sysadmin: Has the job of a Google SRE changed over the
+years?</a>)</p>
+</blockquote>
+<p>Networks of Networks:</p>
+<blockquote><p>Findings so far suggest that networks of networks pose risks of catastrophic
+danger that can exceed the risks in isolated systems. A seemingly benign
+disruption can generate rippling negative effects. Those effects can cost
+millions of dollars, or even billions, when stock markets crash, half of
+India loses power or an Icelandic volcano spews ash into the sky, shutting
+down air travel and overwhelming hotels and rental car companies. In other
+cases, failure within a network of networks can mean the difference between
+a minor disease outbreak or a pandemic, a foiled terrorist attack or one
+that kills thousands of people.</p>
+<p>(<a href="http://www.sciencenews.org/view/feature/id/343939/title/When_Networks_Network">When Networks Network - Science News</a> via <a href="http://www.schneier.com/blog/archives/2012/10/the_insecurity_1.html">Schneier on Security:
+The Insecurity of Networks</a>)</p>
+</blockquote>
+<p>The concept of networks of networks also servers to differentiate system administrators from programmers (not 100% accurate, but helpful none-the-less).</p>
+
+  </div>
+
+  
+
+  
+  <div class="pagination">
+    
+      <span class="disabled">&laquo; Previous</span>
+    
+    | 1 |
+    
+      <a href="./page/2/">Next &raquo;</a>
+    
+  </div>
 
 
   </div>

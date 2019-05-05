@@ -1,0 +1,45 @@
+_model: blog-post
+---
+title: The Automation of Networks of Networks
+---
+pub_date: 2012-10-10 12:58
+---
+author: Timid Robot Zehta
+---
+body:
+
+For me, at least, systems administration is a difficult field to define and
+talk about--especially succinctly. A couple of excellent blog posts suggest the
+following definition for Systems Administration: **the automation of networks
+of networks.**
+
+Automation:
+
+> Therefore, SREs spend half their time writing code to eliminate what they do
+> the other half of their day. When they "automate themselves out of a job" it
+> is cause for celebration and they get to pick a new project. There are
+> always more projects.
+>
+> ([Everything Sysadmin: Has the job of a Google SRE changed over the
+> years?][googlesre])
+
+Networks of Networks:
+
+> Findings so far suggest that networks of networks pose risks of catastrophic
+> danger that can exceed the risks in isolated systems. A seemingly benign
+> disruption can generate rippling negative effects. Those effects can cost
+> millions of dollars, or even billions, when stock markets crash, half of
+> India loses power or an Icelandic volcano spews ash into the sky, shutting
+> down air travel and overwhelming hotels and rental car companies. In other
+> cases, failure within a network of networks can mean the difference between
+> a minor disease outbreak or a pandemic, a foiled terrorist attack or one
+> that kills thousands of people.
+>
+> ([When Networks Network - Science News][networks] via [Schneier on Security:
+> The Insecurity of Networks][insecurity])
+
+The concept of networks of networks also servers to differentiate system administrators from programmers (not 100% accurate, but helpful none-the-less).
+
+[googlesre]: http://everythingsysadmin.com/2012/10/whatschangedsre.html
+[networks]: http://www.sciencenews.org/view/feature/id/343939/title/When_Networks_Network
+[insecurity]: http://www.schneier.com/blog/archives/2012/10/the_insecurity_1.html

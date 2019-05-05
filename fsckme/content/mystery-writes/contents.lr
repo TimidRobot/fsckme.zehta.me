@@ -1,0 +1,51 @@
+_model: blog-post
+---
+title: Mystery Writes
+---
+pub_date: 2012-11-01 13:28
+---
+author: Timid Robot Zehta
+---
+body:
+
+We recently observed constant write activity on our development server, while
+watching dstat. With the help of [`iotop`][iotop], we identified the Apache web
+server was the culprit. But why would apache be doing so many writes? That's
+not normal behavior (excluding the the logs). We then used auditd to log
+writes by apache.
+
+```shell
+sudo auditctl -a exit,always -S write -F uid=33
+```
+
+We also logged opens that were not O_RDONLY:
+```shell
+sudo auditctl -a exit,always -S open -F uid=33 -F a1'!=0'`
+```
+
+This resulted in the following rules:
+```shell
+sudo auditctl -l LIST_RULES: exit,always uid=33 (0x21) syscall=write LIST_RULES: exit,always uid=33 (0x21) a1!=0 syscall=open
+```
+
+This allowed us to isolate a PHP module that was completely broken (using
+`aureport`).
+
+
+### Man Pages
+
+- [man 8 auditctl][manauditctl] - a utility to assist controlling the kernel's
+  audit system
+- [man 8 aureport][manaureport] - a tool that produces summary reports of
+  audit daemon logs
+- [man 1 dstat][manaureport] - versatile tool for generating system resource
+  statistics
+- [man 1 iotop][maniotop] - simple top-like I/O monitor
+- [man 2 open][manopen] - open and possibly create a file or device
+
+[iotop]: http://guichaz.free.fr/iotop/
+[manauditctl]: http://manpages.ubuntu.com/manpages/lucid/en/man8/auditctl.8.html
+[manaureport]: http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html
+[mandstat]: http://manpages.ubuntu.com/manpages/lucid/en/man1/dstat.1.html
+[maniotop]: http://manpages.ubuntu.com/manpages/lucid/en/man1/iotop.1.html
+[manopen]: http://manpages.ubuntu.com/manpages/lucid/man2/open.2.html

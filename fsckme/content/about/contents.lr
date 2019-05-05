@@ -1,7 +1,26 @@
-title: About this Website
+title: About
 ---
 body:
 
-This is a website that was made with the Lektor quickstart.
 
-And it does not contain a lot of information.
+### In Short
+
+I care.
+
+
+### Name
+
+My legal name is Timid Robot Zehta. Please call me Timid Robot.
+
+
+### Moar Me
+
+- [Creative Commons][cc]
+- [GitHub][github]
+- [HackerRank][hackerrank]
+- [Twitter][twitter]
+
+[cc]: https://creativecommons.org/author/timidcreativecommons-org/
+[github]: https://github.com/TimidRobot
+[hackerrank]: https://www.hackerrank.com/TimidRobot
+[twitter]: https://twitter.com/fsckme
