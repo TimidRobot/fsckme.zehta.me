@@ -4,134 +4,112 @@
 <title>Blog — fsckme</title>
 <body>
   <header>
-    <h1>fsckme</h1>
+    <h1>fsck me</h1>
     <nav>
       <ul class="nav navbar-nav">
         <li class="active"><a href="./">Home</a></li>
-        
           <li><a href="./about/">About</a></li>
-        
       </ul>
     </nav>
   </header>
   <div class="page">
     
-  
-    
   <div class="blog-post">
-  
     <h2><a href="./2014/04/empire-dice/">Star Wars: Edge of the Empire Dice Probabilities</a></h2>
-  
   <p class="meta">
     written by
-    
       Timid Robot Zehta
-    
     on 2014-04-02 16:09:00
   </p>
-  <h2>Overview</h2>
-<p>Each of the graphs below was created by simulating 100,000 dice rolls for each
-die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
-rolls). The work was inspired by <a href="http://rpg-design.wikidot.com/evaluation">A Treatise on Different Dice-rolling
-Mechanics in RPGs</a>.  The graphs were created using <a href="https://github.com/TimZehta/rpgdice">TimZehta/rpgdice
-· GitHub</a>.</p>
-<h2>Graphs</h2>
-<p>The 2nd line of the title is an attempt to describe the dice simulated. They
-are shown in the top left corner of the graph.</p>
-<p>While Despair and Triumph do not cancel each other out, Despair is graphed to
-the left of zero to maintain its sinister meaning.</p>
-<p>Probabilties below 0.5% were discarded.</p>
-<ol>
-<li><img src="./2014/04/empire-dice/sweote00_unskilled_pc_vs_average_difficulty.png#thumb" alt="Graph: Unskilled PC vs Averge Difficulty" title="Graph: Unskilled PC vs Averge Difficulty"></li>
-<li><img src="./2014/04/empire-dice/sweote01_unskilled_pc_vs_hard_difficulty.png#thumb" alt="Graph: Unskilled PC vs Hard Difficulty" title="Graph: Unskilled PC vs Hard Difficulty"></li>
-<li><img src="./2014/04/empire-dice/sweote02_unskilled_pc_vs_advesary_npc.png#thumb" alt="Graph: Unskilled PC vs Advesary NPC" title="Graph: Unskilled PC vs Advesary NPC"></li>
-<li><img src="./2014/04/empire-dice/sweote03_talented_pc_vs_average_difficulty.png#thumb" alt="Graph: Talented PC vs Average Difficulty" title="Graph: Talented PC vs Average Difficulty"></li>
-<li><img src="./2014/04/empire-dice/sweote04_talented_pc_vs_hard_difficulty.png#thumb" alt="Graph: Talented PC vs Hard Difficulty" title="Graph: Talented PC vs Hard Difficulty"></li>
-<li><img src="./2014/04/empire-dice/sweote05_talented_pc_vs_advesary.png#thumb" alt="Graph: Talented PC vs Advesary NPC" title="Graph: Talented PC vs Advesary NPC"></li>
-<li><img src="./2014/04/empire-dice/sweote06_pro_pc_vs_average_difficulty.png#thumb" alt="Graph: Pro PC vs Average Difficulty" title="Graph: Pro PC vs Averge Difficulty"></li>
-<li><img src="./2014/04/empire-dice/sweote07_pro_pc_vs_hard_difficulty.png#thumb" alt="Graph: Pro PC vs Hard Difficulty" title="Graph: Pro PC vs Hard Difficulty"></li>
-<li><img src="./2014/04/empire-dice/sweote08_pro_pc_vs_advesary_npc.png#thumb" alt="Graph: Pro PC vs Advesary NPC" title="Graph: Pro PC vs Advesary NPC"></li>
-</ol>
-
   </div>
-
-  
     
   <div class="blog-post">
-  
     <h2><a href="./2014/03/trouble-metrics/">Troubleshooting collectd / statsd / Graphite</a></h2>
-  
   <p class="meta">
     written by
-    
       Timid Robot Zehta
-    
     on 2014-03-31 16:09:00
   </p>
-  <p>Troubleshooting <a href="http://graphite.readthedocs.org/en/latest/">Graphite</a> can be a bother. Determining where a
-problem lies requires verification of the data at all of the points of
-communication. The best tool I've found for this is ngrep:</p>
-<pre><code class="lang-shell">sudo ngrep -lqd any ping tcp dst port 2003
-</code></pre>
-<p>The following complex command finds ping metrics submitted over TCP to
-Graphite and highlights them using grep:</p>
-<pre><code class="lang-shell">match=&#39;ping&#39;; sudo ngrep -lqd any &quot;${match}&quot; tcp dst port 2003 \
-    | grep -E --line-buffered --color=tty &quot;${match}&quot;
-</code></pre>
-<p>Changing the protocol and port allows easy inspection of metrics sent to a
-statsd listener, from carbon-aggregator to carbon-cache, etc.</p>
-<p>See the man page for more information:</p>
-<ul>
-<li><a href="http://manpages.ubuntu.com/manpages/precise/en/man8/ngrep.8.html">man 8 ngrep</a></li>
-</ul>
-
   </div>
-
-  
     
   <div class="blog-post">
-  
     <h2><a href="./2014/03/dungeon-dice/">Dungeon World Dice Probabilities</a></h2>
-  
   <p class="meta">
     written by
-    
       Timid Robot Zehta
-    
     on 2014-03-30 23:16:00
   </p>
-  <h2>Overview</h2>
-<p>Each of the graphs below was created by simulating 100,000 dice rolls per
-Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
-inspired by <a href="http://rpg-design.wikidot.com/evaluation">A Treatise on Different Dice-rolling Mechanics in RPGs</a>.
-The graphs were created using <a href="https://github.com/TimZehta/rpgdice">TimZehta/rpgdice · GitHub</a>.</p>
-<h2>Graphs</h2>
-<ol>
-<li><img src="./2014/03/dungeon-dice/dw00_success.png#thumb" alt="Graph: Chance of Any Success" title="Graph: Chance of Any Success"></li>
-<li><img src="./2014/03/dungeon-dice/dw01_simplified.png#thumb" alt="Graph: Simplified Results" title="Graph: Simplified Results"></li>
-<li><img src="./2014/03/dungeon-dice/dw02_raw.png#thumb" alt="Graph: Raw Results" title="Graph: Raw Result"></li>
-</ol>
-<h2>Edits</h2>
-<ul>
-<li>2014-04-01 edit: updated graph labels.</li>
-</ul>
-
   </div>
-
-  
+    
+  <div class="blog-post">
+    <h2><a href="./2014/03/rpg-dice/">RPG Dice</a></h2>
+  <p class="meta">
+    written by
+      Timid Robot Zehta
+    on 2014-03-30 23:09:00
+  </p>
+  </div>
+    
+  <div class="blog-post">
+    <h2><a href="./2014/02/monster-cards/">Dungeon World Monster Cards</a></h2>
+  <p class="meta">
+    written by
+      Timid Robot Zehta
+    on 2014-02-27 20:33:00
+  </p>
+  </div>
+    
+  <div class="blog-post">
+    <h2><a href="./2013/01/go-to-bed/">Go to Bed</a></h2>
+  <p class="meta">
+    written by
+      Timid Robot Zehta
+    on 2013-01-02 09:41:00
+  </p>
+  </div>
+    
+  <div class="blog-post">
+    <h2><a href="./2012/11/mystery-writes/">Mystery Writes</a></h2>
+  <p class="meta">
+    written by
+      Timid Robot Zehta
+    on 2012-11-01 13:28:00
+  </p>
+  </div>
+    
+  <div class="blog-post">
+    <h2><a href="./2012/10/automation-of-nets/">The Automation of Networks of Networks</a></h2>
+  <p class="meta">
+    written by
+      Timid Robot Zehta
+    on 2012-10-10 12:58:00
+  </p>
+  </div>
+    
+  <div class="blog-post">
+    <h2><a href="./2012/10/isolating-ssd/">Isolating SSD Firmware Issue</a></h2>
+  <p class="meta">
+    written by
+      Timid Robot Zehta
+    on 2012-10-03 16:10:00
+  </p>
+  </div>
+    
+  <div class="blog-post">
+    <h2><a href="./2012/10/linux-tcp-ip/">Linux TCP/IP Tuning</a></h2>
+  <p class="meta">
+    written by
+      Timid Robot Zehta
+    on 2012-10-03 15:32:00
+  </p>
+  </div>
 
   
   <div class="pagination">
-    
       <span class="disabled">&laquo; Previous</span>
-    
     | 1 |
-    
       <a href="./page/2/">Next &raquo;</a>
-    
   </div>
-
-
   </div>
   <footer>
     &copy; Copyright 2019 by Timid Robot Zehta.
