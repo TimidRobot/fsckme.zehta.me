@@ -1,0 +1,21 @@
+{%- macro render_post_list(posts) %}
+<ol>
+{%- for post in posts.order_by('-pub_date') %}
+<li><a href="{{ post|url }}">{{ post.title }}</a></li>
+{%- endfor %}
+</ol>
+{%- endmacro %}
+
+{%- macro render_cat_nav(active=none) %}
+{%- set post_count = site.query('/xxxxxxx-tags').count() %}
+<h2>{{post_count}} Tags</h2>
+<div>
+<ul>
+{%- for tag in site.query('/xxxxxxx-tags') %}
+    <li{%- if tag._id == active %} class="active"{%- endif
+    %}><a href="{{ tag|url }}">{{ tag.name }}</a>
+    ({{ tag.children.count() }})</li>
+{%- endfor %}
+</ul>
+</div>
+{%- endmacro %}

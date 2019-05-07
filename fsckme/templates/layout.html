@@ -10,6 +10,7 @@
         <li{%- if this._path == '/' %} class="active"{%- endif
           %}><a href="{{ '/'|url }}">Home</a></li>
         {%- for href, title in [
+          ['/tags/', 'Tags'],
           ['/about/', 'About']
         ] %}
           <li{%- if this.is_child_of(href) %} class="active"{%- endif
@@ -19,7 +20,7 @@
     </nav>
   </header>
   <div class="page">
-    {%- block body %}{%- endblock %}
+    {% block body %}{%- endblock %}
   </div>
   <footer>
     &copy; Copyright 2019 by Timid Robot Zehta.

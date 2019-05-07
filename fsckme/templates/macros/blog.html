@@ -17,6 +17,16 @@
   </p>
   {%- if not from_index %}
   {{ post.body }}
+  {%- if post.tags %}
+  <div>
+    <h3>Tags:</h3>
+    <ul>
+    {%- for tag in post.tags %}
+      <li><a href="/tags/{{ tag }}/">{{tag}}</a>{%- if not loop.last %},{%- endif %}</li>
+    {%- endfor %}
+    </ul>
+  </div>
+  {%- endif %}
   {%- endif %}
   </div>
 {%- endmacro %}

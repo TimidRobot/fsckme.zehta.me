@@ -1,0 +1,6 @@
+{%- extends "layout.html" %}
+{%- from "macros/tags.html" import render_cat_nav %}
+{%- block title %}Tags {{ super.title }}{%- endblock %}
+{%- block body %}
+{{ render_cat_nav(active=none) }}
+{%- endblock %}
