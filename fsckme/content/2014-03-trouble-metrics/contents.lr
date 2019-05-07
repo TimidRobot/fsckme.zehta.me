@@ -1,0 +1,36 @@
+_model: blog-post
+---
+title: Troubleshooting collectd / statsd / Graphite
+---
+pub_date: 2014-03-31 16:09
+---
+author: Timid Robot Zehta
+---
+body:
+
+
+Troubleshooting [Graphite][graphite] can be a bother. Determining where a
+problem lies requires verification of the data at all of the points of
+communication. The best tool I've found for this is ngrep:
+
+```shell
+sudo ngrep -lqd any ping tcp dst port 2003
+```
+
+The following complex command finds ping metrics submitted over TCP to
+Graphite and highlights them using grep:
+
+```shell
+match='ping'; sudo ngrep -lqd any "${match}" tcp dst port 2003 \
+    | grep -E --line-buffered --color=tty "${match}"
+```
+
+Changing the protocol and port allows easy inspection of metrics sent to a
+statsd listener, from carbon-aggregator to carbon-cache, etc.
+
+See the man page for more information:
+
+- [man 8 ngrep][ngrep]
+
+[graphite]: http://graphite.readthedocs.org/en/latest/
+[ngrep]: http://manpages.ubuntu.com/manpages/precise/en/man8/ngrep.8.html

@@ -1,0 +1,36 @@
+_model: blog-post
+---
+title: Dungeon World Dice Probabilities
+---
+pub_date: 2014-03-30 23:16
+---
+author: Timid Robot Zehta
+---
+body:
+
+
+## Overview
+
+Each of the graphs below was created by simulating 100,000 dice rolls per
+Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
+inspired by [A Treatise on Different Dice-rolling Mechanics in RPGs][treatise].
+The graphs were created using [TimZehta/rpgdice · GitHub][github].
+
+[treatise]: http://rpg-design.wikidot.com/evaluation
+[github]: https://github.com/TimZehta/rpgdice
+
+
+## Graphs
+
+1. ![Graph: Chance of Any Success][dw00]
+2. ![Graph: Simplified Results][dw01]
+3. ![Graph: Raw Results][dw02]
+
+[dw00]: dw00_success.png#thumb "Graph: Chance of Any Success"
+[dw01]: dw01_simplified.png#thumb "Graph: Simplified Results"
+[dw02]: dw02_raw.png#thumb "Graph: Raw Result"
+
+
+## Edits
+
+- 2014-04-01 edit: updated graph labels.

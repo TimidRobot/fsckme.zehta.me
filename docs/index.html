@@ -20,32 +20,69 @@
     
   <div class="blog-post">
   
-    <h2><a href="./2014/02/monster-cards/">Dungeon World Monster Cards</a></h2>
+    <h2><a href="./2014/04/empire-dice/">Star Wars: Edge of the Empire Dice Probabilities</a></h2>
   
   <p class="meta">
     written by
     
       Timid Robot Zehta
     
-    on 2014-02-27 20:33:00
+    on 2014-04-02 16:09:00
   </p>
   <h2>Overview</h2>
-<p>I wrote a Python program that allows the generation of <a href="http://www.dungeon-world.com/">Dungeon World</a>
-Monster Cards. They can be made from the source files containing the Dungeon
-World monsters or from custom YAML files.</p>
-<p>I am pleased with the outcome. The formatting does not match the Dungeon World
-text, but the most significant changes are intentional. I think they make the
-cards easier to use. I especially like the way I categorized and ordered the
-tags.</p>
-<h2>ReportLab</h2>
-<p>This project was the first time that I've worked with the
-<a href="https://pypi.python.org/pypi/reportlab/">ReportLab</a> Python module. It was very refreshing to do non-WYSIWYG
-layout.  Overall my experience was very positive.</p>
-<h2>Results</h2>
+<p>Each of the graphs below was created by simulating 100,000 dice rolls for each
+die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
+rolls). The work was inspired by <a href="http://rpg-design.wikidot.com/evaluation">A Treatise on Different Dice-rolling
+Mechanics in RPGs</a>.  The graphs were created using <a href="https://github.com/TimZehta/rpgdice">TimZehta/rpgdice
+· GitHub</a>.</p>
+<h2>Graphs</h2>
+<p>The 2nd line of the title is an attempt to describe the dice simulated. They
+are shown in the top left corner of the graph.</p>
+<p>While Despair and Triumph do not cancel each other out, Despair is graphed to
+the left of zero to maintain its sinister meaning.</p>
+<p>Probabilties below 0.5% were discarded.</p>
+<ol>
+<li><img src="./2014/04/empire-dice/sweote00_unskilled_pc_vs_average_difficulty.png#thumb" alt="Graph: Unskilled PC vs Averge Difficulty" title="Graph: Unskilled PC vs Averge Difficulty"></li>
+<li><img src="./2014/04/empire-dice/sweote01_unskilled_pc_vs_hard_difficulty.png#thumb" alt="Graph: Unskilled PC vs Hard Difficulty" title="Graph: Unskilled PC vs Hard Difficulty"></li>
+<li><img src="./2014/04/empire-dice/sweote02_unskilled_pc_vs_advesary_npc.png#thumb" alt="Graph: Unskilled PC vs Advesary NPC" title="Graph: Unskilled PC vs Advesary NPC"></li>
+<li><img src="./2014/04/empire-dice/sweote03_talented_pc_vs_average_difficulty.png#thumb" alt="Graph: Talented PC vs Average Difficulty" title="Graph: Talented PC vs Average Difficulty"></li>
+<li><img src="./2014/04/empire-dice/sweote04_talented_pc_vs_hard_difficulty.png#thumb" alt="Graph: Talented PC vs Hard Difficulty" title="Graph: Talented PC vs Hard Difficulty"></li>
+<li><img src="./2014/04/empire-dice/sweote05_talented_pc_vs_advesary.png#thumb" alt="Graph: Talented PC vs Advesary NPC" title="Graph: Talented PC vs Advesary NPC"></li>
+<li><img src="./2014/04/empire-dice/sweote06_pro_pc_vs_average_difficulty.png#thumb" alt="Graph: Pro PC vs Average Difficulty" title="Graph: Pro PC vs Averge Difficulty"></li>
+<li><img src="./2014/04/empire-dice/sweote07_pro_pc_vs_hard_difficulty.png#thumb" alt="Graph: Pro PC vs Hard Difficulty" title="Graph: Pro PC vs Hard Difficulty"></li>
+<li><img src="./2014/04/empire-dice/sweote08_pro_pc_vs_advesary_npc.png#thumb" alt="Graph: Pro PC vs Advesary NPC" title="Graph: Pro PC vs Advesary NPC"></li>
+</ol>
+
+  </div>
+
+  
+    
+  <div class="blog-post">
+  
+    <h2><a href="./2014/03/trouble-metrics/">Troubleshooting collectd / statsd / Graphite</a></h2>
+  
+  <p class="meta">
+    written by
+    
+      Timid Robot Zehta
+    
+    on 2014-03-31 16:09:00
+  </p>
+  <p>Troubleshooting <a href="http://graphite.readthedocs.org/en/latest/">Graphite</a> can be a bother. Determining where a
+problem lies requires verification of the data at all of the points of
+communication. The best tool I've found for this is ngrep:</p>
+<pre><code class="lang-shell">sudo ngrep -lqd any ping tcp dst port 2003
+</code></pre>
+<p>The following complex command finds ping metrics submitted over TCP to
+Graphite and highlights them using grep:</p>
+<pre><code class="lang-shell">match=&#39;ping&#39;; sudo ngrep -lqd any &quot;${match}&quot; tcp dst port 2003 \
+    | grep -E --line-buffered --color=tty &quot;${match}&quot;
+</code></pre>
+<p>Changing the protocol and port allows easy inspection of metrics sent to a
+statsd listener, from carbon-aggregator to carbon-cache, etc.</p>
+<p>See the man page for more information:</p>
 <ul>
-<li><a href="https://raw.github.com/TimZehta/dw-monster-cards/master/monster_cards.pdf">monster_cards.pdf</a> (PDF, 39 pages)</li>
-<li><a href="https://raw.github.com/TimZehta/dw-monster-cards/master/back_example.pdf">back_example.pdf</a> (PDF, 1 page)</li>
-<li><a href="https://github.com/TimZehta/dw-monster-cards">TimZehta/dw-monster-cards</a> (project on GitHub)</li>
+<li><a href="http://manpages.ubuntu.com/manpages/precise/en/man8/ngrep.8.html">man 8 ngrep</a></li>
 </ul>
 
   </div>
@@ -54,67 +91,29 @@ layout.  Overall my experience was very positive.</p>
     
   <div class="blog-post">
   
-    <h2><a href="./2013/01/go-to-bed/">Go to Bed</a></h2>
+    <h2><a href="./2014/03/dungeon-dice/">Dungeon World Dice Probabilities</a></h2>
   
   <p class="meta">
     written by
     
       Timid Robot Zehta
     
-    on 2013-01-02 09:41:00
+    on 2014-03-30 23:16:00
   </p>
-  <p>One of my own troubleshooting or programming rules is to go to bed. Over and
-over again, I have discovered that I will fail to solve a problem if I focus
-too stubbornly on it. If I go to bed, however, the answer is usually waiting
-for me as soon as I wake up or pick up the problem again.</p>
-<p>I was reminded of this while reading the highly fascinating article, <a href="http://www.newyorker.com/reporting/2013/01/07/130107fa_fact_green">Adam
-Green: The Spectacular Thefts of Apollo Robbins, Pickpocket</a> (linked
-from <a href="http://www.schneier.com/blog/archives/2013/01/apollo_robbins.html">Schneier on Security: Apollo Robbins, Pickpocket</a>).</p>
-<p>Specifically:</p>
-<blockquote><p>"inattentional blindness," the phenomenon of focussing so intently on a
-single task that one fails to notice things in plain sight.</p>
-</blockquote>
-
-  </div>
-
-  
-    
-  <div class="blog-post">
-  
-    <h2><a href="./2012/11/mystery-writes/">Mystery Writes</a></h2>
-  
-  <p class="meta">
-    written by
-    
-      Timid Robot Zehta
-    
-    on 2012-11-01 13:28:00
-  </p>
-  <p>We recently observed constant write activity on our development server, while
-watching dstat. With the help of <a href="http://guichaz.free.fr/iotop/"><code>iotop</code></a>, we identified the Apache web
-server was the culprit. But why would apache be doing so many writes? That's
-not normal behavior (excluding the the logs). We then used auditd to log
-writes by apache.</p>
-<pre><code class="lang-shell">sudo auditctl -a exit,always -S write -F uid=33
-</code></pre>
-<p>We also logged opens that were not O_RDONLY:</p>
-<pre><code class="lang-shell">sudo auditctl -a exit,always -S open -F uid=33 -F a1&#39;!=0&#39;`
-</code></pre>
-<p>This resulted in the following rules:</p>
-<pre><code class="lang-shell">sudo auditctl -l LIST_RULES: exit,always uid=33 (0x21) syscall=write LIST_RULES: exit,always uid=33 (0x21) a1!=0 syscall=open
-</code></pre>
-<p>This allowed us to isolate a PHP module that was completely broken (using
-<code>aureport</code>).</p>
-<h3>Man Pages</h3>
+  <h2>Overview</h2>
+<p>Each of the graphs below was created by simulating 100,000 dice rolls per
+Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
+inspired by <a href="http://rpg-design.wikidot.com/evaluation">A Treatise on Different Dice-rolling Mechanics in RPGs</a>.
+The graphs were created using <a href="https://github.com/TimZehta/rpgdice">TimZehta/rpgdice · GitHub</a>.</p>
+<h2>Graphs</h2>
+<ol>
+<li><img src="./2014/03/dungeon-dice/dw00_success.png#thumb" alt="Graph: Chance of Any Success" title="Graph: Chance of Any Success"></li>
+<li><img src="./2014/03/dungeon-dice/dw01_simplified.png#thumb" alt="Graph: Simplified Results" title="Graph: Simplified Results"></li>
+<li><img src="./2014/03/dungeon-dice/dw02_raw.png#thumb" alt="Graph: Raw Results" title="Graph: Raw Result"></li>
+</ol>
+<h2>Edits</h2>
 <ul>
-<li><a href="http://manpages.ubuntu.com/manpages/lucid/en/man8/auditctl.8.html">man 8 auditctl</a> - a utility to assist controlling the kernel's
-audit system</li>
-<li><a href="http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html">man 8 aureport</a> - a tool that produces summary reports of
-audit daemon logs</li>
-<li><a href="http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html">man 1 dstat</a> - versatile tool for generating system resource
-statistics</li>
-<li><a href="http://manpages.ubuntu.com/manpages/lucid/en/man1/iotop.1.html">man 1 iotop</a> - simple top-like I/O monitor</li>
-<li><a href="http://manpages.ubuntu.com/manpages/lucid/man2/open.2.html">man 2 open</a> - open and possibly create a file or device</li>
+<li>2014-04-01 edit: updated graph labels.</li>
 </ul>
 
   </div>

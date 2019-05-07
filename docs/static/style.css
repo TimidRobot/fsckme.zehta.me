@@ -40,3 +40,10 @@ header nav ul li {
 div.page {
     background: #f1fbfe;
 }
+
+img[src*="#thumb"] {
+  max-width: 100%;
+  height: auto;
+  vertical-align: text-top;
+  padding: 0.25em;
+}

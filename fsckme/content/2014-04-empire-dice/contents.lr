@@ -1,0 +1,53 @@
+_model: blog-post
+---
+title: Star Wars: Edge of the Empire Dice Probabilities
+---
+pub_date: 2014-04-02 16:09
+---
+author: Timid Robot Zehta
+---
+body:
+
+
+## Overview
+
+Each of the graphs below was created by simulating 100,000 dice rolls for each
+die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
+rolls). The work was inspired by [A Treatise on Different Dice-rolling
+Mechanics in RPGs][treatise].  The graphs were created using [TimZehta/rpgdice
+· GitHub][github].
+
+[treatise]: http://rpg-design.wikidot.com/evaluation
+[github]: https://github.com/TimZehta/rpgdice
+
+
+## Graphs
+
+The 2nd line of the title is an attempt to describe the dice simulated. They
+are shown in the top left corner of the graph.
+
+While Despair and Triumph do not cancel each other out, Despair is graphed to
+the left of zero to maintain its sinister meaning.
+
+Probabilties below 0.5% were discarded.
+
+1. ![Graph: Unskilled PC vs Averge Difficulty][sweote00]
+2. ![Graph: Unskilled PC vs Hard Difficulty][sweote01]
+3. ![Graph: Unskilled PC vs Advesary NPC][sweote02]
+4. ![Graph: Talented PC vs Average Difficulty][sweote03]
+5. ![Graph: Talented PC vs Hard Difficulty][sweote04]
+6. ![Graph: Talented PC vs Advesary NPC][sweote05]
+7. ![Graph: Pro PC vs Average Difficulty][sweote06]
+8. ![Graph: Pro PC vs Hard Difficulty][sweote07]
+9. ![Graph: Pro PC vs Advesary NPC][sweote08]
+
+[sweote00]: sweote00_unskilled_pc_vs_average_difficulty.png#thumb "Graph: Unskilled PC vs Averge Difficulty"
+[sweote01]: sweote01_unskilled_pc_vs_hard_difficulty.png#thumb "Graph: Unskilled PC vs Hard Difficulty"
+[sweote02]: sweote02_unskilled_pc_vs_advesary_npc.png#thumb "Graph: Unskilled PC vs Advesary NPC"
+[sweote03]: sweote03_talented_pc_vs_average_difficulty.png#thumb "Graph: Talented PC vs Average Difficulty"
+[sweote04]: sweote04_talented_pc_vs_hard_difficulty.png#thumb "Graph: Talented PC vs Hard Difficulty"
+[sweote05]: sweote05_talented_pc_vs_advesary.png#thumb "Graph: Talented PC vs Advesary NPC"
+[sweote06]: sweote06_pro_pc_vs_average_difficulty.png#thumb "Graph: Pro PC vs Averge Difficulty"
+[sweote07]: sweote07_pro_pc_vs_hard_difficulty.png#thumb "Graph: Pro PC vs Hard Difficulty"
+[sweote08]: sweote08_pro_pc_vs_advesary_npc.png#thumb "Graph: Pro PC vs Advesary NPC"
+
