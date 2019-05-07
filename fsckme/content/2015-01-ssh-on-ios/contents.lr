@@ -1,0 +1,57 @@
+_model: blog-post
+---
+title: SSH on iOS is abysmal
+---
+pub_date: 2015-01-08 19:06
+---
+author: Timid Robot Zehta
+---
+body:
+
+
+## Application Summaries
+
+I'm sorry if you're a SysAdmin with an iOS device. Have some bad news:
+
+
+### iSSH
+
+- Version: 5.7.1
+- Two factor: Yes!
+- ProxyCommand: No
+- Additional Issues:
+  - too-large fonts (even at their smallest, display is less than 80
+    characters)
+
+
+### Prompt 2
+
+- Version: 2.0.3
+- Two Factor: No
+  - shitty custom prompts that make two factor authentication all but
+    impossible
+- ProxyCommand: No
+
+
+#### Serverauditor
+
+- Version: 1.5.4
+- Two Factor: No
+- ProxyCommand: No
+- Additional Issues:
+  - does not support xterm-256color
+
+
+## Why it matters
+
+
+### Two Factor authentication
+
+Two factor authentication significantly increases security. This is especially
+important in a platform (phones and tablets) that are so easy to misplace.
+
+
+### ProxyCommand
+
+ProxyCommand is a SSH option that allows the easy use of bastion hosts. Making
+increased security easier is a huge win. For an example, see cmc: Workflow.

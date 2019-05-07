@@ -1,0 +1,27 @@
+_model: blog-post
+---
+title: Color Coded iTerm2 Windows
+---
+pub_date: 2014-11-03 21:05
+---
+author: Timid Robot Zehta
+---
+body:
+
+
+As a systems administrator, I often have many many terminal windows open. To
+help ensure I am fully aware of which of them are on Production hosts, I color
+code them.
+
+I have finally taken that bit of helpful code and made it as easy for you, dear
+reader, to use: [TimZehta/painted-iterm][github].
+
+Some of the neat things I learned about during the course of this project:
+
+- 256 terminal colors
+- Bash
+  - PROMPT_COMMAND
+  - clean/simple way to remove leading zeros
+- SSH LocalCommand
+
+[github]: https://github.com/TimZehta/painted-iterm

@@ -1,0 +1,41 @@
+_model: blog-post
+---
+title: Apple and Ubuntu OpenSSH Versions
+---
+pub_date: 2015-02-24 09:08
+---
+author: Timid Robot Zehta
+---
+body:
+
+
+## Apple macOS / OS X
+
+OS Version | OpenSSH Version | Library Version
+---------- | --------------- | ---------------
+10.14 Mojave | 7.9p1 | LibreSSL 2.7.3
+10.13 High Sierra | 7.6p1 | LibreSSL 2.6.2
+10.12 Sierra | 7.2p2 | LibreSSL 2.4.1
+10.11 El Capitan | 6.9p1 | LibreSSL 2.1.8
+10.10 Yosemite | 6.2p2 | OSSLShim 0.9.8r 8 Dec 2011
+10.9 Mavericks | 6.2p2 | OSSLShim 0.9.8r 8 Dec 2011
+10.8 Mountain Lion | 5.9p1 | OpenSSL 0.9.8zc 15 Oct 2014
+10.7 Lion | 5.6 | OpenSSL 0.9.8za 5 Jun 2014
+10.6 Snow Leopard | 5.5p1 | OpenSSL 0.9.8l 5 Nov 2009
+10.5 Leopard | 5.1p1 | OpenSSL 0.9.7l 28 Sep 2006
+
+
+## Ubuntu LTS
+
+OS Version | OpenSSH Version | Library Version
+---------- | --------------- | ---------------
+18.04 Bionic | 7.6p1 | OpenSSL 1.0.2n 7 Dec 2017
+16.04 Xenial | 7.2p2 | OpenSSL 1.0.2g-fips 1 Mar 2016
+14.04 Trusty | 6.6p1 | OpenSSL 1.0.1f 6 Jan 2014
+12.04 Precise | 5.9p1 | OpenSSL 1.0.1 14 Mar 2012
+10.04 Lucid | 5.3p1 | OpenSSL 0.9.8k 25 Mar 2009
+ 8.04 Hardy | 4.7p2 |
+
+- [Ubuntu - Package Search Results -- ssh][ubuntu]
+
+[ubuntu]: http://packages.ubuntu.com/search?keywords=ssh&searchon=names&exact=1&suite=all&section=all

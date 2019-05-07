@@ -1,0 +1,70 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../../static/style.css">
+<title>SSH on iOS is abysmal — fsckme</title>
+<body>
+  <header>
+    <h1>fsck me</h1>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li><a href="../../../">Home</a></li>
+          <li><a href="../../../about/">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page">
+  
+  <div class="blog-post">
+    <h2>SSH on iOS is abysmal</h2>
+  <p class="meta">
+    written by
+      Timid Robot Zehta
+    on 2015-01-08 19:06:00
+  </p>
+  <h2>Application Summaries</h2>
+<p>I'm sorry if you're a SysAdmin with an iOS device. Have some bad news:</p>
+<h3>iSSH</h3>
+<ul>
+<li>Version: 5.7.1</li>
+<li>Two factor: Yes!</li>
+<li>ProxyCommand: No</li>
+<li>Additional Issues:<ul>
+<li>too-large fonts (even at their smallest, display is less than 80
+characters)</li>
+</ul>
+</li>
+</ul>
+<h3>Prompt 2</h3>
+<ul>
+<li>Version: 2.0.3</li>
+<li>Two Factor: No<ul>
+<li>shitty custom prompts that make two factor authentication all but
+impossible</li>
+</ul>
+</li>
+<li>ProxyCommand: No</li>
+</ul>
+<h4>Serverauditor</h4>
+<ul>
+<li>Version: 1.5.4</li>
+<li>Two Factor: No</li>
+<li>ProxyCommand: No</li>
+<li>Additional Issues:<ul>
+<li>does not support xterm-256color</li>
+</ul>
+</li>
+</ul>
+<h2>Why it matters</h2>
+<h3>Two Factor authentication</h3>
+<p>Two factor authentication significantly increases security. This is especially
+important in a platform (phones and tablets) that are so easy to misplace.</p>
+<h3>ProxyCommand</h3>
+<p>ProxyCommand is a SSH option that allows the easy use of bastion hosts. Making
+increased security easier is a huge win. For an example, see cmc: Workflow.</p>
+
+  </div>
+  </div>
+  <footer>
+    &copy; Copyright 2019 by Timid Robot Zehta.
+  </footer>
+</body>
