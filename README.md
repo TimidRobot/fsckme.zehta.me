@@ -48,14 +48,18 @@ The built content is located in [`docs/`](docs/).
 
 ### Code
 
-The code is licensed under a Expat/[MIT][mit] License.
+All the code within this repository is licensed under a [Unlicense][unlicense]
+unless otherwise specified. (Much of the code used in this respository is
+standard boilerplate or otherwise *should* be too simple and obvious to
+copyright.)
 
-[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"
+[unlicense]:https://unlicense.org/ "Unlicense.org » Unlicense Yourself: Set Your Code Free"
 
 
 ### Content
 
-The content is licensed under a [Creative Commons Attribution-ShareAlike 4.0
-International License][cc-by-sa].
+All the content within this repository is licensed under a [Creative Commons 
+Attribution-ShareAlike 4.0 International License][cc-by-sa] unless otherwise
+specified.
 
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0"
