@@ -49,3 +49,5 @@ This allowed us to isolate a PHP module that was completely broken (using
 [mandstat]: http://manpages.ubuntu.com/manpages/lucid/en/man1/dstat.1.html
 [maniotop]: http://manpages.ubuntu.com/manpages/lucid/en/man1/iotop.1.html
 [manopen]: http://manpages.ubuntu.com/manpages/lucid/man2/open.2.html
+---
+tags: systems-administration, linux, troubleshooting

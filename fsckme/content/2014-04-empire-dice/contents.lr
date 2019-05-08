@@ -9,7 +9,7 @@ author: Timid Robot Zehta
 body:
 
 
-## Overview
+### Overview
 
 Each of the graphs below was created by simulating 100,000 dice rolls for each
 die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
@@ -21,7 +21,7 @@ Mechanics in RPGs][treatise].  The graphs were created using [TimZehta/rpgdice
 [github]: https://github.com/TimZehta/rpgdice
 
 
-## Graphs
+### Graphs
 
 The 2nd line of the title is an attempt to describe the dice simulated. They
 are shown in the top left corner of the graph.
@@ -51,3 +51,5 @@ Probabilties below 0.5% were discarded.
 [sweote07]: sweote07_pro_pc_vs_hard_difficulty.png#thumb "Graph: Pro PC vs Hard Difficulty"
 [sweote08]: sweote08_pro_pc_vs_advesary_npc.png#thumb "Graph: Pro PC vs Advesary NPC"
 
+---
+tags: open-source, python, tabletop-roleplaying-games

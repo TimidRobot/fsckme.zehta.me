@@ -9,7 +9,7 @@ author: Timid Robot Zehta
 body:
 
 
-## Overview
+### Overview
 
 Each of the graphs below was created by simulating 100,000 dice rolls per
 Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
@@ -20,7 +20,7 @@ The graphs were created using [TimZehta/rpgdice · GitHub][github].
 [github]: https://github.com/TimZehta/rpgdice
 
 
-## Graphs
+### Graphs
 
 1. ![Graph: Chance of Any Success][dw00]
 2. ![Graph: Simplified Results][dw01]
@@ -31,6 +31,8 @@ The graphs were created using [TimZehta/rpgdice · GitHub][github].
 [dw02]: dw02_raw.png#thumb "Graph: Raw Result"
 
 
-## Edits
+### Edits
 
 - 2014-04-01 edit: updated graph labels.
+---
+tags: tabletop-roleplaying-games, python, open-source

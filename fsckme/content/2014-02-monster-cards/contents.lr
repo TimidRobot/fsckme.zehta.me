@@ -9,7 +9,7 @@ author: Timid Robot Zehta
 body:
 
 
-## Overview
+### Overview
 
 I wrote a Python program that allows the generation of [Dungeon World][dungeon]
 Monster Cards. They can be made from the source files containing the Dungeon
@@ -23,7 +23,7 @@ tags.
 [dungeon]: http://www.dungeon-world.com/
 
 
-## ReportLab
+### ReportLab
 
 This project was the first time that I've worked with the
 [ReportLab][reportlab] Python module. It was very refreshing to do non-WYSIWYG
@@ -32,7 +32,7 @@ layout.  Overall my experience was very positive.
 [reportlab]: https://pypi.python.org/pypi/reportlab/
 
 
-## Results
+### Results
 
 - [monster_cards.pdf][monster] (PDF, 39 pages)
 - [back_example.pdf][back] (PDF, 1 page)
@@ -41,3 +41,5 @@ layout.  Overall my experience was very positive.
 [monster]: https://raw.github.com/TimZehta/dw-monster-cards/master/monster_cards.pdf
 [back]: https://raw.github.com/TimZehta/dw-monster-cards/master/back_example.pdf
 [github]: https://github.com/TimZehta/dw-monster-cards
+---
+tags: python, tabletop-roleplaying-games, open-source

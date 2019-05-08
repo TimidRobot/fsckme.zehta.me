@@ -9,7 +9,7 @@ author: Timid Robot Zehta
 body:
 
 
-## Apple macOS / OS X
+### Apple macOS / OS X
 
 OS Version | OpenSSH Version | Library Version
 ---------- | --------------- | ---------------
@@ -25,7 +25,7 @@ OS Version | OpenSSH Version | Library Version
 10.5 Leopard | 5.1p1 | OpenSSL 0.9.7l 28 Sep 2006
 
 
-## Ubuntu LTS
+### Ubuntu LTS
 
 OS Version | OpenSSH Version | Library Version
 ---------- | --------------- | ---------------
@@ -39,3 +39,9 @@ OS Version | OpenSSH Version | Library Version
 - [Ubuntu - Package Search Results -- ssh][ubuntu]
 
 [ubuntu]: http://packages.ubuntu.com/search?keywords=ssh&searchon=names&exact=1&suite=all&section=all
+
+### Edits
+
+- this post has been updated in an effort to keep it current
+---
+tags: ssh, linux, macos
