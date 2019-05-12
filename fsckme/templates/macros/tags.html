@@ -10,7 +10,7 @@
 <h2>Tags</h2>
 <div>
 <ol>
-{%- for tag in site.query("/xxxxxxx-tags") %}
+{%- for tag in site.query("/tags") %}
     <li{%- if tag._id == active %} class="active"{%- endif%}>
         <a href="{{ tag|url }}">{{ tag.name if tag.name else tag._id.title() }}</a>
         ({{ tag.children.count() }})</li>

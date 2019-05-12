@@ -22,7 +22,7 @@
     <h3>Tags:</h3>
     <ul>
     {%- for specified_tag in post.tags %}
-    {%- set tag = site.get("/xxxxxxx-tags/{}".format(specified_tag)) %}
+    {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
     <li><a href="/tags/{{ tag._id }}/">{{ tag.name if tag.name else tag._id.title() }}</a></li>
     {%- endfor %}
     </ul>
