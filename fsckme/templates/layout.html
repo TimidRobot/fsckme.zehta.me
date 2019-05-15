@@ -1,41 +1,72 @@
 {% set name = site.db.config.PROJECT.name -%}
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{%- block title %}Welcome{%- endblock %} - {{ name }}</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{%- block title %}Welcome{%- endblock %} - {{ name }}</title>
+  <meta name="author" content="Timid Robot Zehta">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/static/normalize.css'|url }}">
+  <link rel="stylesheet" href="{{ '/static/skeleton.css'|url }}">
+  <link rel="stylesheet" href="{{ '/static/custom.css'|url }}">
+</head>
 <body>
-  <header>
-    <h1>{{ name }}</h1>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li{%- if this._path == '/' %} class="active"{%- endif
-          %}><a href="{{ '/'|url }}">Home</a></li>
-        {%- for href, title in [
-          ['/tags/', 'Tags'],
-          ['/about/', 'About']
-        ] %}
-          <li{%- if this.is_child_of(href) %} class="active"{%- endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {%- endfor %}
-      </ul>
-    </nav>
-  </header>
-  <div class="page">
-    {% block body %}{%- endblock %}
+  <nav class="container">
+    <div class="row">
+
+      {%- if this._path == '/' %}
+      {%- set active = "active" %}
+      {%- else %}
+      {%- set active = "" %}
+      {%- endif %}
+      <div class="two columns">
+        <a class="{{ active }}" href="{{ '/'|url }}">Home</a>
+      </div>
+      {%- for href, title in [
+        ['/tags/', 'Tags'],
+        ['/about/', 'About']
+      ] %}
+      {%- if this.is_child_of(href) %}
+      {%- set active = "active" %}
+      {%- else %}
+      {%- set active = "" %}
+      {%- endif %}
+      <div class="two columns">
+        <a class="{{ active }}" href="{{ href|url }}">{{ title }}</a>
+      </div>
+      {%- endfor %}
+
+      <div class="six columns title">
+        <h1>{{ name }}</h1>
+      </div>
+
+    </div>
+  </nav>
+  <div class="container page">
+    <div class="row">
+      {% block body %}{%- endblock %}
+    </div>
   </div>
-  <footer>
+  <footer class="container">
     {%- if this._path != '/about' %}
-    <small>
-      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-        <img alt="CC BY-SA 4.0 license button"
-          src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"a/></a></p>
-      <p>All the content on this website is licensed under a <strong>
-        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-        Creative Commons Attribution-ShareAlike 4.0 International License</a>
-        </strong> unless otherwise specified.</p>
-      <p>This is a personal blog. All opinions are my own
-        (<a rel="about" href="/about/">Timid Robot</a>).</p>
-    </small>
+    <div class="row">
+      <div class="two columns">
+        <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          <img alt="CC BY-SA 4.0 license button"
+            src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"a/></a></p>
+      </div>
+      <div class="ten columns">
+        <small>
+          <p>All the content on this website is licensed under a <strong>
+            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+            Creative Commons Attribution-ShareAlike 4.0 International License</a>
+            </strong> unless otherwise specified.</p>
+          <p>This is a personal blog. All opinions are my own
+            (<a rel="about" href="/about/">Timid Robot</a>).</p>
+        </small>
+      </div>
+    </div>
     {%- endif %}
   </footer>
 </body>
+</html>

@@ -37,9 +37,11 @@ The built content is located in [`docs/`](docs/).
 - Software
   - [Lektor Documentation][lektor]: Static Content Management System
   - [Pipenv Documentatio][pipenv]: Python Dev Workflow for Humans
+  - [Skeleton][skeleton]: Responsive CSS Boilerplate
 - Guides
   - [Building a static blog with Lektor | Animesh Bulusu][building]
 
+[skeleton]: http://getskeleton.com/
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
 
 
@@ -63,3 +65,12 @@ Attribution-ShareAlike 4.0 International License][cc-by-sa] unless otherwise
 specified.
 
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0"
+
+
+### Skeleton
+
+All parts of [Skeleton][skeleton-gh] are free to use and abuse under the
+[open-source MIT license][mit].
+
+[skeleton-gh]: https://github.com/dhg/Skeleton
+[mit]: https://github.com/dhg/Skeleton/blob/master/LICENSE.md
