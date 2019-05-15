@@ -24,6 +24,7 @@
     {% block body %}{%- endblock %}
   </div>
   <footer>
+    {%- if this._path != '/about' %}
     <small>
       <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
         <img alt="CC BY-SA 4.0 license button"
@@ -35,5 +36,6 @@
       <p>This is a personal blog. All opinions are my own
         (<a rel="about" href="/about/">Timid Robot</a>).</p>
     </small>
+    {%- endif %}
   </footer>
 </body>

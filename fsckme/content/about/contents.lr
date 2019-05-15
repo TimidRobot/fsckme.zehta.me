@@ -10,7 +10,13 @@ I care.
 
 ### Name
 
-My legal name is Timid Robot Zehta. Please call me **Timid Robot**.
+Please call me "**Timid Robot**" (my full legal name is "Timid Robot Zehta").
+
+
+### Just Me
+
+
+This is a personal blog. All opinions are my own (Timid Robot).
 
 
 ### Moar Me
@@ -24,3 +30,27 @@ My legal name is Timid Robot Zehta. Please call me **Timid Robot**.
 [github]: https://github.com/TimidRobot
 [hackerrank]: https://www.hackerrank.com/TimidRobot
 [twitter]: https://twitter.com/fsckme
+
+
+### License
+
+
+#### Code
+
+All the code within this site is licensed under a [Unlicense][unlicense]
+unless otherwise specified. (Much of the code used in this site is standard
+boilerplate or otherwise *should* be too simple and obvious to copyright.)
+
+[unlicense]:https://unlicense.org/ "Unlicense.org » Unlicense Yourself: Set Your Code Free"
+
+
+#### Content
+
+![CC BY-SA 4.0 license button][cc-by-sa-png]
+
+All the content within this site is licensed under a [Creative Commons 
+Attribution-ShareAlike 4.0 International License][cc-by-sa] unless otherwise
+specified.
+
+[cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png "CC BY-SA 4.0 license button"
+[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0"
