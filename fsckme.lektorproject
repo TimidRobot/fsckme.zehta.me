@@ -1,5 +1,5 @@
 [project]
-name = fsckme
+name = fsck me
 path = fsckme/
 
 [packages]
