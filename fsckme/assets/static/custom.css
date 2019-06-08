@@ -1,4 +1,12 @@
+/* vim: ts=2 sw=2: */
 /*** Page ***/
+.container {
+  max-width: 100%;
+  width: 100%;
+}
+.row {
+  padding: 1rem;
+}
 a, a:hover {
   color: #CC99FF;
 }
@@ -9,7 +17,7 @@ a:hover {
   text-decoration: underline;
 }
 body {
-  background-color: Black;
+  background-color: #CC99FF;
   color: LightGray;
 }
 code {
@@ -20,18 +28,22 @@ h1, h2, h3, h4, h5, h6 {
   color: White;
   font-weight: 300;
   margin-bottom: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
 }
-h1 { font-size: 4.0rem; line-height: 1; }
-h2 { font-size: 3.6rem; line-height: 1; }
-h3 { font-size: 3.0rem; line-height: 1; }
-h4 { font-size: 2.4rem; line-height: 1; }
-h5 { font-size: 1.8rem; line-height: 1; }
-h6 { font-size: 1.5rem; line-height: 1; }
+h1 { font-size: 4.0rem; }
+h2 { font-size: 3.5rem; }
+h3 { font-size: 3.0rem; }
+h4 { font-size: 2.5rem; }
+h5 { font-size: 2.0rem; }
+h6 { font-size: 1.5rem; }
+h2 {
+  background-color: #333;
+  margin-left: -0.75rem;
+  padding: 0.75rem;
+}
 li {
   margin: 0;
-}
-.row {
-  padding: 1rem;
 }
 
 /*** Navigation ***/
@@ -40,9 +52,6 @@ nav a, nav a:hover {
 }
 nav a.active, nav a.active:hover {
   color: #424242;
-}
-nav .row {
-  background-color: #CC99FF;
 }
 nav div.columns {
   font-size: 3.6rem;
@@ -69,7 +78,6 @@ body .page .row  {
 /*** Footer ***/
 footer {
   color: #424242;
-  background-color: #CC99FF;
 }
 footer a, footer a:hover {
   color: White;
