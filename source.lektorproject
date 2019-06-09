@@ -1,6 +1,6 @@
 [project]
 name = TimidRobot
-path = site/
+path = source/
 url = https://timidrobot.github.io/zehta.me/
 
 [packages]

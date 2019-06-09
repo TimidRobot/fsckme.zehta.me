@@ -1,13 +1,13 @@
 # zehta.me
 
-Source for [zehta.me][site].
+Source for [zehta.me][zehta-me].
 
-[site]: https://zehta.me/
+[zehta-me]: https://zehta.me/
 
 
 ## Overview
 
-The source is located in [`site/`](site/).
+The source is located in [`source/`](source/).
 
 The built content is located in [`docs/`](docs/).
 

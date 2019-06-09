@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">fsck me</title>
-  <id>urn:uuid:b5f2cf99-5c8a-3711-9868-c22c445ab641</id>
+  <id>urn:uuid:86a7b020-469b-3d4b-84f0-064968728ad4</id>
   <updated>2016-12-11T14:12:00Z</updated>
   <link href="https://timidrobot.github.io/zehta.me/" />
   <link href="https://timidrobot.github.io/zehta.me/feed.xml" rel="self" />
@@ -11,7 +11,7 @@
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2016/12/feelings-thermometer/">
     <title type="text">Feelings Thermometer</title>
-    <id>urn:uuid:040d9814-949f-3c25-8fa2-82cc2f848505</id>
+    <id>urn:uuid:9b909512-66c3-3dae-96ee-cc29c8df135a</id>
     <updated>2016-12-11T14:12:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2016/12/feelings-thermometer/" />
     <author>
@@ -28,7 +28,7 @@ created my own.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2015/10/emotional-labor/">
     <title type="text">Emotional Labor</title>
-    <id>urn:uuid:62c5e040-c7f2-36c4-bc3c-a70c02657aa5</id>
+    <id>urn:uuid:5ac1fe8b-003c-3f38-8532-56f02ec4a32a</id>
     <updated>2015-10-03T15:45:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2015/10/emotional-labor/" />
     <author>
@@ -45,7 +45,7 @@ The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2015/02/apple-ubuntu-ssh/">
     <title type="text">Apple and Ubuntu OpenSSH Versions</title>
-    <id>urn:uuid:e6570df7-928f-31e2-a404-5dde0e6db3ae</id>
+    <id>urn:uuid:ed688aaf-7f56-305d-8313-d954998abc63</id>
     <updated>2015-02-24T09:08:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2015/02/apple-ubuntu-ssh/" />
     <author>
@@ -163,7 +163,7 @@ versions to make troubleshooting easier:&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2015/01/ssh-on-ios/">
     <title type="text">SSH on iOS is abysmal</title>
-    <id>urn:uuid:3dccf513-7fc3-3977-953f-f72cc5a846b5</id>
+    <id>urn:uuid:281eafce-1033-3227-afd9-c8fb9f7f369f</id>
     <updated>2015-01-08T19:06:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2015/01/ssh-on-ios/" />
     <author>
@@ -206,7 +206,7 @@ increased security easier is a huge win. For an example, see cmc: Workflow.&lt;/
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2014/11/painted-iterm/">
     <title type="text">Color Coded iTerm2 Windows</title>
-    <id>urn:uuid:e09b21f9-d153-38d7-9baf-890bea870cbf</id>
+    <id>urn:uuid:dabf8074-2455-3252-a2fe-dd0230a85971</id>
     <updated>2014-11-03T21:05:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2014/11/painted-iterm/" />
     <author>
@@ -231,7 +231,7 @@ reader, to use: &lt;a href=&quot;https://github.com/TimZehta/painted-iterm&quot;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2014/04/empire-dice/">
     <title type="text">Star Wars: Edge of the Empire Dice Probabilities</title>
-    <id>urn:uuid:893e1a3d-3663-39cd-a3e3-f743dc5f5d7b</id>
+    <id>urn:uuid:872e4bc5-f20a-3027-b037-533decde22d8</id>
     <updated>2014-04-02T16:09:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2014/04/empire-dice/" />
     <author>
@@ -262,7 +262,7 @@ the left of zero to maintain its sinister meaning.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2014/03/trouble-metrics/">
     <title type="text">Troubleshooting collectd / statsd / Graphite</title>
-    <id>urn:uuid:cc8fab70-cdeb-3868-a84f-9b0a26e6353b</id>
+    <id>urn:uuid:3f27076c-ed71-3e65-82a5-61f759829bd2</id>
     <updated>2014-03-31T16:09:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2014/03/trouble-metrics/" />
     <author>
@@ -288,7 +288,7 @@ statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2014/03/dungeon-dice/">
     <title type="text">Dungeon World Dice Probabilities</title>
-    <id>urn:uuid:2f46f845-fdbd-373e-9d47-a65a23c21fd8</id>
+    <id>urn:uuid:591c5fcd-6131-3849-be3f-67107a68b61f</id>
     <updated>2014-03-30T23:16:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2014/03/dungeon-dice/" />
     <author>
@@ -310,7 +310,7 @@ The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdi
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2014/03/rpg-dice/">
     <title type="text">RPG Dice</title>
-    <id>urn:uuid:881d5538-fdd4-309a-b756-81620784b828</id>
+    <id>urn:uuid:85c49d53-92b0-3f6f-ae87-5f906aa3be33</id>
     <updated>2014-03-30T23:09:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2014/03/rpg-dice/" />
     <author>
@@ -329,7 +329,7 @@ known and successful.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2014/02/monster-cards/">
     <title type="text">Dungeon World Monster Cards</title>
-    <id>urn:uuid:31998ef1-2999-3318-8e9a-c35027544d3b</id>
+    <id>urn:uuid:17b32547-d3e4-3057-bf31-65d091538774</id>
     <updated>2014-02-27T20:33:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2014/02/monster-cards/" />
     <author>
@@ -354,7 +354,7 @@ layout.  Overall my experience was very positive.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2013/01/go-to-bed/">
     <title type="text">Go to Bed</title>
-    <id>urn:uuid:44c6501c-84dc-3b72-bb34-98409b31d9e3</id>
+    <id>urn:uuid:24b5ca48-6b29-323b-9b86-e420ae5e53de</id>
     <updated>2013-01-02T09:41:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2013/01/go-to-bed/" />
     <author>
@@ -375,7 +375,7 @@ single task that one fails to notice things in plain sight.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2012/11/mystery-writes/">
     <title type="text">Mystery Writes</title>
-    <id>urn:uuid:c1b90bea-b306-3e56-b4ce-d0e34066a42b</id>
+    <id>urn:uuid:212ed8c0-8278-3cc4-8043-ca0ca9d0a2c9</id>
     <updated>2012-11-01T13:28:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2012/11/mystery-writes/" />
     <author>
@@ -410,7 +410,7 @@ statistics&lt;/li&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2012/10/automation-of-nets/">
     <title type="text">The Automation of Networks of Networks</title>
-    <id>urn:uuid:7bc8f897-7592-3441-8618-e73e3cf24693</id>
+    <id>urn:uuid:0746baaf-583c-336c-9961-a82c5044a9d2</id>
     <updated>2012-10-10T12:58:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2012/10/automation-of-nets/" />
     <author>
@@ -446,7 +446,7 @@ The Insecurity of Networks&lt;/a&gt;)&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2012/10/isolating-ssd/">
     <title type="text">Isolating SSD Firmware Issue</title>
-    <id>urn:uuid:e49d5368-82ee-356b-8128-2b0dfb7abbe4</id>
+    <id>urn:uuid:564e4c48-e33a-3340-ac91-de459575feed</id>
     <updated>2012-10-03T16:10:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2012/10/isolating-ssd/" />
     <author>
@@ -480,7 +480,7 @@ sysadmin a &quot;senior sysadmin&quot;?&lt;/a&gt;&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2012/10/linux-tcp-ip/">
     <title type="text">Linux TCP/IP Tuning</title>
-    <id>urn:uuid:9d9860ff-876d-3cfb-840f-b903d4f84eda</id>
+    <id>urn:uuid:811aec84-24fb-3e2f-8561-c4714d45a886</id>
     <updated>2012-10-03T15:32:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2012/10/linux-tcp-ip/" />
     <author>
@@ -493,7 +493,7 @@ systems that benefit from that granularity of tuning.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/zehta.me/2012/09/to-err-iz/">
     <title type="text">To Err iz Human</title>
-    <id>urn:uuid:917a37fc-4ed8-3bab-a700-9a5005fdb9b4</id>
+    <id>urn:uuid:4c944324-f03f-333d-a496-661cd1181464</id>
     <updated>2012-09-28T12:13:00Z</updated>
     <link href="https://timidrobot.github.io/zehta.me/2012/09/to-err-iz/" />
     <author>
