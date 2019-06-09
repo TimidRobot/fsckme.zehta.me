@@ -64,6 +64,9 @@ img {
 li {
   margin: 0;
 }
+p {
+  margin-bottom: 1rem;
+}
 
 /*** Navigation ***/
 nav a, nav a:hover {
@@ -75,7 +78,7 @@ nav a.active, nav a.active:hover {
 nav div.columns {
   font-size: 3.6rem;
   font-weight: 300;
-  letter-spacing: -.1rem;
+  letter-spacing: -0.1rem;
   line-height: 1;
   margin-bottom: 0;
   margin-top: 0;
@@ -92,6 +95,34 @@ nav div h1 {
 /*** Contents ***/
 .meta {
   font-family: monospace;
+  margin-bottom: 2rem;
+  margin-top: -0.75rem;
+}
+.pagination {
+  background-color: #CC99FF;
+  color: #424242;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: -1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  text-align: center;
+}
+/* Mediium devices (tablets: 550px and up) */
+@media (min-width: 550px) {
+  .pagination {
+    font-size: 3rem;
+  }
+}
+.pagination .disabled {
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+.pagination .current {
+  font-family: monospace;
+}
+.pagination a, .pagination a:hover {
+  color: White;
 }
 body .page .row  {
   background-color: #424242;
