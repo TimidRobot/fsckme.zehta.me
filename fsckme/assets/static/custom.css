@@ -64,6 +64,9 @@ img {
 li {
   margin: 0;
 }
+p {
+  margin-bottom: 1rem;
+}
 
 /*** Navigation ***/
 nav a, nav a:hover {
@@ -92,6 +95,8 @@ nav div h1 {
 /*** Contents ***/
 .meta {
   font-family: monospace;
+  margin-bottom: 2rem;
+  margin-top: -0.75rem;
 }
 body .page .row  {
   background-color: #424242;
