@@ -11,7 +11,7 @@
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2016/12/feelings-thermometer/">
     <title type="text">Feelings Thermometer</title>
-    <id>urn:uuid:64d5b8fa-3e1f-31f6-b1cb-5215a2410da5</id>
+    <id>urn:uuid:834cbea4-3981-3bab-9dae-6a9484ed8551</id>
     <updated>2016-12-11T14:12:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2016/12/feelings-thermometer/" />
     <author>
@@ -28,7 +28,7 @@ created my own.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2015/10/emotional-labor/">
     <title type="text">Emotional Labor</title>
-    <id>urn:uuid:a33b4275-0abc-3ec6-afe3-f88b1e52d966</id>
+    <id>urn:uuid:7e740c29-165d-3f7d-afa8-903e9669c634</id>
     <updated>2015-10-03T15:45:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2015/10/emotional-labor/" />
     <author>
@@ -45,7 +45,7 @@ The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2015/02/apple-ubuntu-ssh/">
     <title type="text">Apple and Ubuntu OpenSSH Versions</title>
-    <id>urn:uuid:18790539-2124-3b4b-b46f-20c2d3e3d30f</id>
+    <id>urn:uuid:f34adbb8-c264-3169-b59e-506aad499eb0</id>
     <updated>2015-02-24T09:08:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2015/02/apple-ubuntu-ssh/" />
     <author>
@@ -163,7 +163,7 @@ versions to make troubleshooting easier:&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2015/01/ssh-on-ios/">
     <title type="text">SSH on iOS is abysmal</title>
-    <id>urn:uuid:493672dd-50a5-3733-9f7a-23b2e937e137</id>
+    <id>urn:uuid:88a35c44-7a44-3385-a794-1d5b249ff0fe</id>
     <updated>2015-01-08T19:06:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2015/01/ssh-on-ios/" />
     <author>
@@ -206,7 +206,7 @@ increased security easier is a huge win. For an example, see cmc: Workflow.&lt;/
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/11/painted-iterm/">
     <title type="text">Color Coded iTerm2 Windows</title>
-    <id>urn:uuid:b3825527-4406-3d1f-86dc-bca5593ce877</id>
+    <id>urn:uuid:e713527e-546b-3d49-b0c0-d284d9c074e9</id>
     <updated>2014-11-03T21:05:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/11/painted-iterm/" />
     <author>
@@ -231,7 +231,7 @@ reader, to use: &lt;a href=&quot;https://github.com/TimZehta/painted-iterm&quot;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/04/empire-dice/">
     <title type="text">Star Wars: Edge of the Empire Dice Probabilities</title>
-    <id>urn:uuid:d1d712c1-0208-3793-9efb-15724786d76f</id>
+    <id>urn:uuid:0e2573d7-c629-3e27-9da9-a337c610ab32</id>
     <updated>2014-04-02T16:09:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/04/empire-dice/" />
     <author>
@@ -262,7 +262,7 @@ the left of zero to maintain its sinister meaning.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/03/trouble-metrics/">
     <title type="text">Troubleshooting collectd / statsd / Graphite</title>
-    <id>urn:uuid:5d8dd5c1-4214-36f0-b361-83a5cdf56c00</id>
+    <id>urn:uuid:29d6a584-c4b7-3e94-bf57-9c6d1772459a</id>
     <updated>2014-03-31T16:09:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/03/trouble-metrics/" />
     <author>
@@ -288,7 +288,7 @@ statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/03/dungeon-dice/">
     <title type="text">Dungeon World Dice Probabilities</title>
-    <id>urn:uuid:0a5d78b6-31ef-3032-8215-7b720968c649</id>
+    <id>urn:uuid:61eed30b-8272-3ee5-8a0c-6dd3e3d0b35a</id>
     <updated>2014-03-30T23:16:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/03/dungeon-dice/" />
     <author>
@@ -310,7 +310,7 @@ The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdi
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/03/rpg-dice/">
     <title type="text">RPG Dice</title>
-    <id>urn:uuid:a868f7ca-581c-3e68-999a-32cef1986b1e</id>
+    <id>urn:uuid:7dd5be4d-1c9c-330b-ac4f-60f4a724fa5f</id>
     <updated>2014-03-30T23:09:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/03/rpg-dice/" />
     <author>
@@ -329,7 +329,7 @@ known and successful.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/02/monster-cards/">
     <title type="text">Dungeon World Monster Cards</title>
-    <id>urn:uuid:6517b583-d216-3590-a579-ac76f075d2e7</id>
+    <id>urn:uuid:6f34e7dd-b8dd-39be-8fd6-4c4587724118</id>
     <updated>2014-02-27T20:33:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/02/monster-cards/" />
     <author>
@@ -354,7 +354,7 @@ layout.  Overall my experience was very positive.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2013/01/go-to-bed/">
     <title type="text">Go to Bed</title>
-    <id>urn:uuid:2ac04a58-93dc-3014-a3c7-a29ae4696f75</id>
+    <id>urn:uuid:0ee14327-25db-30d2-ba29-f3da156abce3</id>
     <updated>2013-01-02T09:41:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2013/01/go-to-bed/" />
     <author>
@@ -375,7 +375,7 @@ single task that one fails to notice things in plain sight.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/11/mystery-writes/">
     <title type="text">Mystery Writes</title>
-    <id>urn:uuid:331110f8-7d20-3eb4-ae89-9a48962575eb</id>
+    <id>urn:uuid:2c96e27e-4197-33b2-8a2c-3609bd574633</id>
     <updated>2012-11-01T13:28:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/11/mystery-writes/" />
     <author>
@@ -410,7 +410,7 @@ statistics&lt;/li&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/10/automation-of-nets/">
     <title type="text">The Automation of Networks of Networks</title>
-    <id>urn:uuid:a717bf86-5d3e-3a61-b286-6d7d23ff6a4a</id>
+    <id>urn:uuid:1fca4a81-94e7-3c25-a7c3-25139b92d9e4</id>
     <updated>2012-10-10T12:58:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/10/automation-of-nets/" />
     <author>
@@ -446,7 +446,7 @@ The Insecurity of Networks&lt;/a&gt;)&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/10/isolating-ssd/">
     <title type="text">Isolating SSD Firmware Issue</title>
-    <id>urn:uuid:113f7ee6-1299-3667-8617-418fac23e74d</id>
+    <id>urn:uuid:bd86b4f0-da2d-3765-bab3-deeb7fcbfcf2</id>
     <updated>2012-10-03T16:10:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/10/isolating-ssd/" />
     <author>
@@ -480,7 +480,7 @@ sysadmin a &quot;senior sysadmin&quot;?&lt;/a&gt;&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/10/linux-tcp-ip/">
     <title type="text">Linux TCP/IP Tuning</title>
-    <id>urn:uuid:cc98e2a8-f328-35ce-9d25-63013b08ace6</id>
+    <id>urn:uuid:1970256e-e641-36b2-92b6-9bcb7cbd12c3</id>
     <updated>2012-10-03T15:32:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/10/linux-tcp-ip/" />
     <author>
@@ -493,7 +493,7 @@ systems that benefit from that granularity of tuning.&lt;/p&gt;
   </entry>
   <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/09/to-err-iz/">
     <title type="text">To Err iz Human</title>
-    <id>urn:uuid:bd1ccb5c-ac20-367e-90de-062295a57c79</id>
+    <id>urn:uuid:c9b467ea-22e2-3641-8848-9b4ce257b996</id>
     <updated>2012-09-28T12:13:00Z</updated>
     <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/09/to-err-iz/" />
     <author>
