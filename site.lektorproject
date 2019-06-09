@@ -1,7 +1,7 @@
 [project]
-name = fsck me
-path = fsckme/
-url = https://timidrobot.github.io/fsckme.zehta.me/
+name = TimidRobot
+path = site/
+url = https://timidrobot.github.io/zehta.me/
 
 [packages]
 lektor-markdown-header-anchors = 0.3.1

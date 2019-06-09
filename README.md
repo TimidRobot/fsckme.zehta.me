@@ -1,13 +1,13 @@
-# fsckme.zehta.me
+# zehta.me
 
-Source for [fsckme.zehta.me][fsckme].
+Source for [zehta.me][site].
 
-[fsckme]: https://fsckme.zehta.me/
+[site]: https://zehta.me/
 
 
 ## Overview
 
-The source is located in [`fsckme/`](fsckme/).
+The source is located in [`site/`](site/).
 
 The built content is located in [`docs/`](docs/).
 
