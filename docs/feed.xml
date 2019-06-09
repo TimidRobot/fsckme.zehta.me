@@ -2,11 +2,509 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">fsck me</title>
   <id>urn:uuid:94323013-754a-3f57-bdf3-390147539da9</id>
-  <updated>2019-06-09T03:41:43.508799Z</updated>
+  <updated>2016-12-11T14:12:00Z</updated>
   <link href="https://timidrobot.github.io/fsckme.zehta.me/" />
-  <link href="https://timidrobot.github.io/fsckme.zehta.me/@atom/blog/feed.xml" rel="self" />
+  <link href="https://timidrobot.github.io/fsckme.zehta.me/feed.xml" rel="self" />
   <author>
     <name></name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2016/12/feelings-thermometer/">
+    <title type="text">Feelings Thermometer</title>
+    <id>urn:uuid:64d5b8fa-3e1f-31f6-b1cb-5215a2410da5</id>
+    <updated>2016-12-11T14:12:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2016/12/feelings-thermometer/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;I didn't like the Feelings Thermometer worksheet my therapist was using so I
+created my own.&lt;/p&gt;
+&lt;p&gt;Here it is for your use (&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;CC BY-SA 4.0&lt;/a&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://drive.google.com/open?id=0B0UUYL6kaNeBUlh3MXh2WG5PRjA&quot;&gt;Feelings Thermometer (Word Document)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://drive.google.com/open?id=0B0UUYL6kaNeBVkY3RUZhZWM2MW8&quot;&gt;Feelings Thermometer (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2015/10/emotional-labor/">
+    <title type="text">Emotional Labor</title>
+    <id>urn:uuid:a33b4275-0abc-3ec6-afe3-f88b1e52d966</id>
+    <updated>2015-10-03T15:45:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2015/10/emotional-labor/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;I recently read an amazing document. It was a digest of a message thread about
+Emotional Labor. Before I was done I knew I wanted to share it with everyone I
+cared about.&lt;/p&gt;
+&lt;p&gt;To that end I collaborated with the creator of the digest to
+update the formatting of the document. I hope the result is very easy and
+comfortable (formatting-wise) to read. Please check it out: &lt;a href=&quot;https://drive.google.com/file/d/0B0UUYL6kaNeBTDBRbkJkeUtabEk/view?usp=sharing&quot;&gt;Emotional Labor:
+The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2015/02/apple-ubuntu-ssh/">
+    <title type="text">Apple and Ubuntu OpenSSH Versions</title>
+    <id>urn:uuid:18790539-2124-3b4b-b46f-20c2d3e3d30f</id>
+    <updated>2015-02-24T09:08:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2015/02/apple-ubuntu-ssh/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;I use and support SSH every working day. I created these tables of OpenSSH
+versions to make troubleshooting easier:&lt;/p&gt;
+&lt;h3 id=&quot;apple-macos-/-os-x&quot;&gt;Apple macOS / OS X&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th&gt;OS Version&lt;/th&gt;
+&lt;th&gt;OpenSSH Version&lt;/th&gt;
+&lt;th&gt;Library Version&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;10.14 Mojave&lt;/td&gt;
+&lt;td&gt;7.9p1&lt;/td&gt;
+&lt;td&gt;LibreSSL 2.7.3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.13 High Sierra&lt;/td&gt;
+&lt;td&gt;7.6p1&lt;/td&gt;
+&lt;td&gt;LibreSSL 2.6.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.12 Sierra&lt;/td&gt;
+&lt;td&gt;7.2p2&lt;/td&gt;
+&lt;td&gt;LibreSSL 2.4.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.11 El Capitan&lt;/td&gt;
+&lt;td&gt;6.9p1&lt;/td&gt;
+&lt;td&gt;LibreSSL 2.1.8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.10 Yosemite&lt;/td&gt;
+&lt;td&gt;6.2p2&lt;/td&gt;
+&lt;td&gt;OSSLShim 0.9.8r 8 Dec 2011&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.9 Mavericks&lt;/td&gt;
+&lt;td&gt;6.2p2&lt;/td&gt;
+&lt;td&gt;OSSLShim 0.9.8r 8 Dec 2011&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.8 Mountain Lion&lt;/td&gt;
+&lt;td&gt;5.9p1&lt;/td&gt;
+&lt;td&gt;OpenSSL 0.9.8zc 15 Oct 2014&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.7 Lion&lt;/td&gt;
+&lt;td&gt;5.6&lt;/td&gt;
+&lt;td&gt;OpenSSL 0.9.8za 5 Jun 2014&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.6 Snow Leopard&lt;/td&gt;
+&lt;td&gt;5.5p1&lt;/td&gt;
+&lt;td&gt;OpenSSL 0.9.8l 5 Nov 2009&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.5 Leopard&lt;/td&gt;
+&lt;td&gt;5.1p1&lt;/td&gt;
+&lt;td&gt;OpenSSL 0.9.7l 28 Sep 2006&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;ubuntu-lts&quot;&gt;Ubuntu LTS&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th&gt;OS Version&lt;/th&gt;
+&lt;th&gt;OpenSSH Version&lt;/th&gt;
+&lt;th&gt;Library Version&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;18.04 Bionic&lt;/td&gt;
+&lt;td&gt;7.6p1&lt;/td&gt;
+&lt;td&gt;OpenSSL 1.0.2n 7 Dec 2017&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16.04 Xenial&lt;/td&gt;
+&lt;td&gt;7.2p2&lt;/td&gt;
+&lt;td&gt;OpenSSL 1.0.2g-fips 1 Mar 2016&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14.04 Trusty&lt;/td&gt;
+&lt;td&gt;6.6p1&lt;/td&gt;
+&lt;td&gt;OpenSSL 1.0.1f 6 Jan 2014&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12.04 Precise&lt;/td&gt;
+&lt;td&gt;5.9p1&lt;/td&gt;
+&lt;td&gt;OpenSSL 1.0.1 14 Mar 2012&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10.04 Lucid&lt;/td&gt;
+&lt;td&gt;5.3p1&lt;/td&gt;
+&lt;td&gt;OpenSSL 0.9.8k 25 Mar 2009&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; 8.04 Hardy&lt;/td&gt;
+&lt;td&gt;4.7p2&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://packages.ubuntu.com/search?keywords=ssh&amp;amp;searchon=names&amp;amp;exact=1&amp;amp;suite=all&amp;amp;section=all&quot;&gt;Ubuntu - Package Search Results -- ssh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;edits&quot;&gt;Edits&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;this post has been updated in an effort to keep it current&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2015/01/ssh-on-ios/">
+    <title type="text">SSH on iOS is abysmal</title>
+    <id>urn:uuid:493672dd-50a5-3733-9f7a-23b2e937e137</id>
+    <updated>2015-01-08T19:06:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2015/01/ssh-on-ios/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;h3 id=&quot;application-summaries&quot;&gt;Application Summaries&lt;/h3&gt;&lt;p&gt;I'm sorry if you're a SysAdmin with an iOS device. Have some bad news:&lt;/p&gt;
+&lt;h4 id=&quot;issh&quot;&gt;iSSH&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Version: 5.7.1&lt;/li&gt;
+&lt;li&gt;Two factor: Yes!&lt;/li&gt;
+&lt;li&gt;ProxyCommand: No&lt;/li&gt;
+&lt;li&gt;Additional Issues:&lt;ul&gt;
+&lt;li&gt;too-large fonts (even at their smallest, display is less than 80
+characters)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;prompt-2&quot;&gt;Prompt 2&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Version: 2.0.3&lt;/li&gt;
+&lt;li&gt;Two Factor: No&lt;ul&gt;
+&lt;li&gt;shitty custom prompts that make two factor authentication all but
+impossible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ProxyCommand: No&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;serverauditor&quot;&gt;Serverauditor&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Version: 1.5.4&lt;/li&gt;
+&lt;li&gt;Two Factor: No&lt;/li&gt;
+&lt;li&gt;ProxyCommand: No&lt;/li&gt;
+&lt;li&gt;Additional Issues:&lt;ul&gt;
+&lt;li&gt;does not support xterm-256color&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;why-it-matters&quot;&gt;Why it matters&lt;/h3&gt;&lt;h4 id=&quot;two-factor-authentication&quot;&gt;Two Factor authentication&lt;/h4&gt;&lt;p&gt;Two factor authentication significantly increases security. This is especially
+important in a platform (phones and tablets) that are so easy to misplace.&lt;/p&gt;
+&lt;h4 id=&quot;proxycommand&quot;&gt;ProxyCommand&lt;/h4&gt;&lt;p&gt;ProxyCommand is a SSH option that allows the easy use of bastion hosts. Making
+increased security easier is a huge win. For an example, see cmc: Workflow.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/11/painted-iterm/">
+    <title type="text">Color Coded iTerm2 Windows</title>
+    <id>urn:uuid:b3825527-4406-3d1f-86dc-bca5593ce877</id>
+    <updated>2014-11-03T21:05:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/11/painted-iterm/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;As a systems administrator, I often have many many terminal windows open. To
+help ensure I am fully aware of which of them are on Production hosts, I color
+code them.&lt;/p&gt;
+&lt;p&gt;I have finally taken that bit of helpful code and made it as easy for you, dear
+reader, to use: &lt;a href=&quot;https://github.com/TimZehta/painted-iterm&quot;&gt;TimZehta/painted-iterm&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Some of the neat things I learned about during the course of this project:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;256 terminal colors&lt;/li&gt;
+&lt;li&gt;Bash&lt;ul&gt;
+&lt;li&gt;PROMPT_COMMAND&lt;/li&gt;
+&lt;li&gt;clean/simple way to remove leading zeros&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SSH LocalCommand&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/04/empire-dice/">
+    <title type="text">Star Wars: Edge of the Empire Dice Probabilities</title>
+    <id>urn:uuid:d1d712c1-0208-3793-9efb-15724786d76f</id>
+    <updated>2014-04-02T16:09:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/04/empire-dice/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;Each of the graphs below was created by simulating 100,000 dice rolls for each
+die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
+rolls). The work was inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling
+Mechanics in RPGs&lt;/a&gt;.  The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice
+· GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;p&gt;The 2nd line of the title is an attempt to describe the dice simulated. They
+are shown in the top left corner of the graph.&lt;/p&gt;
+&lt;p&gt;While Despair and Triumph do not cancel each other out, Despair is graphed to
+the left of zero to maintain its sinister meaning.&lt;/p&gt;
+&lt;p&gt;Probabilties below 0.5% were discarded.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote00_unskilled_pc_vs_average_difficulty.png#thumb&quot; alt=&quot;Graph: Unskilled PC vs Averge Difficulty&quot; title=&quot;Graph: Unskilled PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote01_unskilled_pc_vs_hard_difficulty.png#thumb&quot; alt=&quot;Graph: Unskilled PC vs Hard Difficulty&quot; title=&quot;Graph: Unskilled PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote02_unskilled_pc_vs_advesary_npc.png#thumb&quot; alt=&quot;Graph: Unskilled PC vs Advesary NPC&quot; title=&quot;Graph: Unskilled PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote03_talented_pc_vs_average_difficulty.png#thumb&quot; alt=&quot;Graph: Talented PC vs Average Difficulty&quot; title=&quot;Graph: Talented PC vs Average Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote04_talented_pc_vs_hard_difficulty.png#thumb&quot; alt=&quot;Graph: Talented PC vs Hard Difficulty&quot; title=&quot;Graph: Talented PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote05_talented_pc_vs_advesary.png#thumb&quot; alt=&quot;Graph: Talented PC vs Advesary NPC&quot; title=&quot;Graph: Talented PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote06_pro_pc_vs_average_difficulty.png#thumb&quot; alt=&quot;Graph: Pro PC vs Average Difficulty&quot; title=&quot;Graph: Pro PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote07_pro_pc_vs_hard_difficulty.png#thumb&quot; alt=&quot;Graph: Pro PC vs Hard Difficulty&quot; title=&quot;Graph: Pro PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote08_pro_pc_vs_advesary_npc.png#thumb&quot; alt=&quot;Graph: Pro PC vs Advesary NPC&quot; title=&quot;Graph: Pro PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/03/trouble-metrics/">
+    <title type="text">Troubleshooting collectd / statsd / Graphite</title>
+    <id>urn:uuid:5d8dd5c1-4214-36f0-b361-83a5cdf56c00</id>
+    <updated>2014-03-31T16:09:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/03/trouble-metrics/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;Troubleshooting &lt;a href=&quot;http://graphite.readthedocs.org/en/latest/&quot;&gt;Graphite&lt;/a&gt; can be a bother. Determining where a
+problem lies requires verification of the data at all of the points of
+communication. The best tool I've found for this is ngrep:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo ngrep -lqd any ping tcp dst port 2003
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The following complex command finds ping metrics submitted over TCP to
+Graphite and highlights them using grep:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;match=&amp;#39;ping&amp;#39;; sudo ngrep -lqd any &amp;quot;${match}&amp;quot; tcp dst port 2003 \
+    | grep -E --line-buffered --color=tty &amp;quot;${match}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Changing the protocol and port allows easy inspection of metrics sent to a
+statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
+&lt;p&gt;See the man page for more information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/precise/en/man8/ngrep.8.html&quot;&gt;man 8 ngrep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/03/dungeon-dice/">
+    <title type="text">Dungeon World Dice Probabilities</title>
+    <id>urn:uuid:0a5d78b6-31ef-3032-8215-7b720968c649</id>
+    <updated>2014-03-30T23:16:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/03/dungeon-dice/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;Each of the graphs below was created by simulating 100,000 dice rolls per
+Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
+inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling Mechanics in RPGs&lt;/a&gt;.
+The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice · GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw00_success.png#thumb&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw01_simplified.png#thumb&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw02_raw.png#thumb&quot; alt=&quot;Graph: Raw Results&quot; title=&quot;Graph: Raw Result&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;edits&quot;&gt;Edits&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;2014-04-01 edit: updated graph labels.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/03/rpg-dice/">
+    <title type="text">RPG Dice</title>
+    <id>urn:uuid:a868f7ca-581c-3e68-999a-32cef1986b1e</id>
+    <updated>2014-03-30T23:09:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/03/rpg-dice/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that simulates different RPG dice mechanics (rulesets)
+and creates graphs showing the probability of the different outcomes:
+&lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice · GitHub&lt;/a&gt;!&lt;/p&gt;
+&lt;h3 id=&quot;matplotlib-install&quot;&gt;matplotlib install&lt;/h3&gt;&lt;p&gt;matplotlib is super painful to install on macOS Mavericks 10.9.2. I ended up
+creating an installation script (&lt;a href=&quot;https://github.com/TimZehta/rpgdice/blob/master/install_requirements.sh&quot;&gt;&lt;code&gt;install_requirements.sh&lt;/code&gt;&lt;/a&gt;) to help
+with debugging the mess and allowing me to reliably reproduce success.&lt;/p&gt;
+&lt;h3 id=&quot;ggplot&quot;&gt;ggplot&lt;/h3&gt;&lt;p&gt;This project was the first time I've worked with &lt;a href=&quot;https://github.com/yhat/ggplot/&quot;&gt;ggplot&lt;/a&gt;. I'm very
+glad for the shortcuts it provided. I would love to see it become more well
+known and successful.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2014/02/monster-cards/">
+    <title type="text">Dungeon World Monster Cards</title>
+    <id>urn:uuid:6517b583-d216-3590-a579-ac76f075d2e7</id>
+    <updated>2014-02-27T20:33:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2014/02/monster-cards/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that allows the generation of &lt;a href=&quot;http://www.dungeon-world.com/&quot;&gt;Dungeon World&lt;/a&gt;
+Monster Cards. They can be made from the source files containing the Dungeon
+World monsters or from custom YAML files.&lt;/p&gt;
+&lt;p&gt;I am pleased with the outcome. The formatting does not match the Dungeon World
+text, but the most significant changes are intentional. I think they make the
+cards easier to use. I especially like the way I categorized and ordered the
+tags.&lt;/p&gt;
+&lt;h3 id=&quot;reportlab&quot;&gt;ReportLab&lt;/h3&gt;&lt;p&gt;This project was the first time that I've worked with the
+&lt;a href=&quot;https://pypi.python.org/pypi/reportlab/&quot;&gt;ReportLab&lt;/a&gt; Python module. It was very refreshing to do non-WYSIWYG
+layout.  Overall my experience was very positive.&lt;/p&gt;
+&lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.github.com/TimZehta/dw-monster-cards/master/monster_cards.pdf&quot;&gt;monster_cards.pdf&lt;/a&gt; (PDF, 39 pages)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.github.com/TimZehta/dw-monster-cards/master/back_example.pdf&quot;&gt;back_example.pdf&lt;/a&gt; (PDF, 1 page)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/TimZehta/dw-monster-cards&quot;&gt;TimZehta/dw-monster-cards&lt;/a&gt; (project on GitHub)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2013/01/go-to-bed/">
+    <title type="text">Go to Bed</title>
+    <id>urn:uuid:2ac04a58-93dc-3014-a3c7-a29ae4696f75</id>
+    <updated>2013-01-02T09:41:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2013/01/go-to-bed/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;One of my own troubleshooting or programming rules is to go to bed. Over and
+over again, I have discovered that I will fail to solve a problem if I focus
+too stubbornly on it. If I go to bed, however, the answer is usually waiting
+for me as soon as I wake up or pick up the problem again.&lt;/p&gt;
+&lt;p&gt;I was reminded of this while reading the highly fascinating article, &lt;a href=&quot;http://www.newyorker.com/reporting/2013/01/07/130107fa_fact_green&quot;&gt;Adam
+Green: The Spectacular Thefts of Apollo Robbins, Pickpocket&lt;/a&gt; (linked
+from &lt;a href=&quot;http://www.schneier.com/blog/archives/2013/01/apollo_robbins.html&quot;&gt;Schneier on Security: Apollo Robbins, Pickpocket&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Specifically:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&quot;inattentional blindness,&quot; the phenomenon of focussing so intently on a
+single task that one fails to notice things in plain sight.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/11/mystery-writes/">
+    <title type="text">Mystery Writes</title>
+    <id>urn:uuid:331110f8-7d20-3eb4-ae89-9a48962575eb</id>
+    <updated>2012-11-01T13:28:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/11/mystery-writes/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;We recently observed constant write activity on our development server, while
+watching dstat. With the help of &lt;code&gt;iotop&lt;/code&gt; (&lt;a href=&quot;http://guichaz.free.fr/iotop/&quot;&gt;iotop&lt;/a&gt;), we identified the
+Apache web server was the culprit.&lt;/p&gt;
+&lt;p&gt;But why would apache be doing so many writes? That's not normal behaviori
+(excluding the the logs). We then used auditd to log writes by apache:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo auditctl -a exit,always -S write -F uid=33
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We also logged opens that were not O_RDONLY:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo auditctl -a exit,always -S open -F uid=33 -F a1&amp;#39;!=0&amp;#39;`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This resulted in the following rules:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo auditctl -l LIST_RULES: exit,always uid=33 (0x21) syscall=write LIST_RULES: exit,always uid=33 (0x21) a1!=0 syscall=open
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This allowed us to isolate a PHP module that was completely broken (using
+&lt;code&gt;aureport&lt;/code&gt;).&lt;/p&gt;
+&lt;h3 id=&quot;man-pages&quot;&gt;Man Pages&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/lucid/en/man8/auditctl.8.html&quot;&gt;man 8 auditctl&lt;/a&gt; - a utility to assist controlling the kernel's
+audit system&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html&quot;&gt;man 8 aureport&lt;/a&gt; - a tool that produces summary reports of
+audit daemon logs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html&quot;&gt;man 1 dstat&lt;/a&gt; - versatile tool for generating system resource
+statistics&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/lucid/en/man1/iotop.1.html&quot;&gt;man 1 iotop&lt;/a&gt; - simple top-like I/O monitor&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/lucid/man2/open.2.html&quot;&gt;man 2 open&lt;/a&gt; - open and possibly create a file or device&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/10/automation-of-nets/">
+    <title type="text">The Automation of Networks of Networks</title>
+    <id>urn:uuid:a717bf86-5d3e-3a61-b286-6d7d23ff6a4a</id>
+    <updated>2012-10-10T12:58:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/10/automation-of-nets/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;For me, at least, systems administration is a difficult field to define and
+talk about--especially succinctly. A couple of excellent blog posts suggest the
+following definition for Systems Administration: &lt;strong&gt;the automation of networks
+of networks.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Automation:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Therefore, SREs spend half their time writing code to eliminate what they do
+the other half of their day. When they &quot;automate themselves out of a job&quot; it
+is cause for celebration and they get to pick a new project. There are
+always more projects.&lt;/p&gt;
+&lt;p&gt;(&lt;a href=&quot;http://everythingsysadmin.com/2012/10/whatschangedsre.html&quot;&gt;Everything Sysadmin: Has the job of a Google SRE changed over the
+years?&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Networks of Networks:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Findings so far suggest that networks of networks pose risks of catastrophic
+danger that can exceed the risks in isolated systems. A seemingly benign
+disruption can generate rippling negative effects. Those effects can cost
+millions of dollars, or even billions, when stock markets crash, half of
+India loses power or an Icelandic volcano spews ash into the sky, shutting
+down air travel and overwhelming hotels and rental car companies. In other
+cases, failure within a network of networks can mean the difference between
+a minor disease outbreak or a pandemic, a foiled terrorist attack or one
+that kills thousands of people.&lt;/p&gt;
+&lt;p&gt;(&lt;a href=&quot;http://www.sciencenews.org/view/feature/id/343939/title/When_Networks_Network&quot;&gt;When Networks Network - Science News&lt;/a&gt; via &lt;a href=&quot;http://www.schneier.com/blog/archives/2012/10/the_insecurity_1.html&quot;&gt;Schneier on Security:
+The Insecurity of Networks&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The concept of networks of networks also servers to differentiate system administrators from programmers (not 100% accurate, but helpful none-the-less).&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/10/isolating-ssd/">
+    <title type="text">Isolating SSD Firmware Issue</title>
+    <id>urn:uuid:113f7ee6-1299-3667-8617-418fac23e74d</id>
+    <updated>2012-10-03T16:10:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/10/isolating-ssd/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;On Friday 2012-09-28, my MacBook Pro started freezing. There had been no
+significant software updates that morning (though 10.8.2 came out that week).&lt;/p&gt;
+&lt;p&gt;I didn't want to deal with it, so I took it to the Apple Store. Unfortunately,
+they simply wasted a few days (given the solution found, I'm confident they
+never let it run more than an hour).&lt;/p&gt;
+&lt;p&gt;Once I got it back from the Apple Store without resolution, I knew it would be
+up to me to isolate the issue. I was inspired by &lt;a href=&quot;http://everythingsysadmin.com/2012/09/seniorsysadmins.html&quot;&gt;Everything Sysadmin: What
+makes a sysadmin a &quot;senior sysadmin&quot;?&lt;/a&gt; to proceed methodically.&lt;/p&gt;
+&lt;p&gt;It paid off:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Correct a condition where an incorrect response to a SMART counter will cause
+the m4 drive to become unresponsive after 5184 hours [216 days] of Power-on
+time. The drive will recover after a power cycle, however, this failure will
+repeat once per hour after reaching this point. The condition will allow the
+end user to successfully update firmware, and poses no risk to user or system
+data stored on the drive.&lt;/p&gt;
+&lt;p&gt;(&lt;a href=&quot;http://forum.crucial.com/t5/Solid-State-Drives-SSD/M4-firmware-0309-is-now-available/td-p/80286&quot;&gt;&amp;gt;M4 firmware 0309 is now available - Crucial Community&lt;/a&gt;; found
+via &lt;a href=&quot;http://www.j03l.com/2012/02/mac-freezes-after-hour-crucial-ssd.html&quot;&gt;j03l: MAC Freezes After An Hour - Crucial SSD Problem&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Since the installation of firmware 010G, my MacBook Pro has operated without
+issue!&lt;/p&gt;
+&lt;p&gt;Hopefully, this post will be another signpost for those
+affected.&lt;/p&gt;
+&lt;p&gt;Also, I can't overemphasis this post: &lt;a href=&quot;http://everythingsysadmin.com/2012/09/seniorsysadmins.html&quot;&gt;Everything Sysadmin: What makes a
+sysadmin a &quot;senior sysadmin&quot;?&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/10/linux-tcp-ip/">
+    <title type="text">Linux TCP/IP Tuning</title>
+    <id>urn:uuid:cc98e2a8-f328-35ce-9d25-63013b08ace6</id>
+    <updated>2012-10-03T15:32:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/10/linux-tcp-ip/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;There is a lot of interesting information in this article and related comments:
+&lt;a href=&quot;http://news.ycombinator.com/item?id=4582253&quot;&gt;Linux TCP/IP Tuning | Hacker News&lt;/a&gt;. I look forward to eventually having
+systems that benefit from that granularity of tuning.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/fsckme.zehta.me/2012/09/to-err-iz/">
+    <title type="text">To Err iz Human</title>
+    <id>urn:uuid:bd1ccb5c-ac20-367e-90de-062295a57c79</id>
+    <updated>2012-09-28T12:13:00Z</updated>
+    <link href="https://timidrobot.github.io/fsckme.zehta.me/2012/09/to-err-iz/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;Two articles highlight the potent benefits of errors in AI:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.washingtonpost.com/blogs/ezra-klein/wp/2012/09/26/nate-silvers-the-signal-and-the-noise/&quot;&gt;Nate Silver’s ‘The Signal and the Noise’&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.eurekalert.org/pub_releases/2012-09/uota-aig092612.php&quot;&gt;Artificially intelligent game bots pass the Turing test on Turing's
+centenary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
 </feed>
