@@ -1,5 +1,6 @@
 {#- vim: sts=2 sw=2 ts=2 sr et: #}
-{% set name = site.db.config.PROJECT.name -%}
+{%- set name = site.db.config.PROJECT.name %}
+{%- from "macros/copyright.html" import copyright %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,18 +51,10 @@
   </div>
   <footer class="container">
     {%- if this._path != '/about' %}
+    {{- copyright(this.copyright) }}
     <div class="row">
-      <div class="two columns">
-        <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-          <img alt="CC BY-SA 4.0 license button"
-            src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"a/></a></p>
-      </div>
-      <div class="ten columns">
+      <div class="twelve columns">
         <small>
-          <p>All the content on this website is licensed under a <strong>
-            <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
-            Creative Commons Attribution-ShareAlike 4.0 International License</a>
-            </strong> unless otherwise specified.</p>
           <p>This is a personal blog. All opinions are my own
              (<a rel="about" href="{{ '/about/'|url }}">Timid Robot</a>).</p>
         </small>
