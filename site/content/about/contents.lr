@@ -63,3 +63,11 @@ specified.
 
 [cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png "CC BY-SA 4.0 license button"
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0"
+
+### Skeleton
+
+*All parts of [Skeleton][skeleton-gh] are free to use and abuse under the
+[open-source MIT license][mit].*
+
+[skeleton-gh]: https://github.com/dhg/Skeleton
+[mit]: https://github.com/dhg/Skeleton/blob/master/LICENSE.md

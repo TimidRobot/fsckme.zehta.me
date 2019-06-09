@@ -68,10 +68,13 @@ copyright.)
 
 ### Content
 
+![CC BY-SA 4.0 license button][cc-by-sa-png]
+
 All the content within this repository is licensed under a [Creative Commons 
 Attribution-ShareAlike 4.0 International License][cc-by-sa] unless otherwise
 specified.
 
+[cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png "CC BY-SA 4.0 license button"
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0"
 
 
