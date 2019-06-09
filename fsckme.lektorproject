@@ -4,3 +4,4 @@ path = fsckme/
 
 [packages]
 lektor-markdown-header-anchors = 0.3.1
+lektor-read-full-post = 0.3

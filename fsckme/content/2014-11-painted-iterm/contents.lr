@@ -13,6 +13,8 @@ As a systems administrator, I often have many many terminal windows open. To
 help ensure I am fully aware of which of them are on Production hosts, I color
 code them.
 
+<!-- PLUGIN-READ-FULL-POST -->
+
 I have finally taken that bit of helpful code and made it as easy for you, dear
 reader, to use: [TimZehta/painted-iterm][github].
 

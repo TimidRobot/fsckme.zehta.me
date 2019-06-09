@@ -8,11 +8,16 @@ author: Timid Robot Zehta
 ---
 body:
 
+[iotop]: http://guichaz.free.fr/iotop/
+
 We recently observed constant write activity on our development server, while
-watching dstat. With the help of [`iotop`][iotop], we identified the Apache web
-server was the culprit. But why would apache be doing so many writes? That's
-not normal behavior (excluding the the logs). We then used auditd to log
-writes by apache.
+watching dstat. With the help of `iotop` ([iotop][iotop]), we identified the
+Apache web server was the culprit.
+
+<!-- PLUGIN-READ-FULL-POST -->
+
+But why would apache be doing so many writes? That's not normal behaviori
+(excluding the the logs). We then used auditd to log writes by apache:
 
 ```shell
 sudo auditctl -a exit,always -S write -F uid=33
@@ -43,7 +48,6 @@ This allowed us to isolate a PHP module that was completely broken (using
 - [man 1 iotop][maniotop] - simple top-like I/O monitor
 - [man 2 open][manopen] - open and possibly create a file or device
 
-[iotop]: http://guichaz.free.fr/iotop/
 [manauditctl]: http://manpages.ubuntu.com/manpages/lucid/en/man8/auditctl.8.html
 [manaureport]: http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html
 [mandstat]: http://manpages.ubuntu.com/manpages/lucid/en/man1/dstat.1.html

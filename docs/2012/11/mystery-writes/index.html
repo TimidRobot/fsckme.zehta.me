@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,12 +38,11 @@
     written by
       Timid Robot Zehta
     on 2012-11-01 13:28:00
-  </p>
-  <p>We recently observed constant write activity on our development server, while
-watching dstat. With the help of <a href="http://guichaz.free.fr/iotop/"><code>iotop</code></a>, we identified the Apache web
-server was the culprit. But why would apache be doing so many writes? That's
-not normal behavior (excluding the the logs). We then used auditd to log
-writes by apache.</p>
+  </p><p>We recently observed constant write activity on our development server, while
+watching dstat. With the help of <code>iotop</code> (<a href="http://guichaz.free.fr/iotop/">iotop</a>), we identified the
+Apache web server was the culprit.</p>
+<p>But why would apache be doing so many writes? That's not normal behaviori
+(excluding the the logs). We then used auditd to log writes by apache:</p>
 <pre><code class="lang-shell">sudo auditctl -a exit,always -S write -F uid=33
 </code></pre>
 <p>We also logged opens that were not O_RDONLY:</p>

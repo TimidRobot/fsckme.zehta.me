@@ -13,6 +13,8 @@ talk about--especially succinctly. A couple of excellent blog posts suggest the
 following definition for Systems Administration: **the automation of networks
 of networks.**
 
+<!-- PLUGIN-READ-FULL-POST -->
+
 Automation:
 
 > Therefore, SREs spend half their time writing code to eliminate what they do

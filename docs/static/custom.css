@@ -1,8 +1,24 @@
-/* vim: ts=2 sw=2: */
+/* vim: sts=2 sw=2 ts=2 sr et: */
 /*** Page ***/
+/* Small devices (phones: 550px and down) */
 .container {
   max-width: 100%;
+  padding: 0;
   width: 100%;
+}
+/* Mediium devices (tablets: 550px and up) */
+@media (min-width: 550px) {
+  .container {
+    max-width: 90%;
+    width: 90%;
+  }
+}
+/* Large devices (desktops: 1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+    width: 80%;
+  }
 }
 .row {
   padding: 1rem;
@@ -42,6 +58,9 @@ h2 {
   margin-left: -0.75rem;
   padding: 0.75rem;
 }
+img {
+  max-width: 95%;
+}
 li {
   margin: 0;
 }
@@ -71,6 +90,9 @@ nav div h1 {
 }
 
 /*** Contents ***/
+.meta {
+  font-family: monospace;
+}
 body .page .row  {
   background-color: #424242;
 }

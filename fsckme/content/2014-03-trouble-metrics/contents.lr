@@ -13,6 +13,8 @@ Troubleshooting [Graphite][graphite] can be a bother. Determining where a
 problem lies requires verification of the data at all of the points of
 communication. The best tool I've found for this is ngrep:
 
+<!-- PLUGIN-READ-FULL-POST -->
+
 ```shell
 sudo ngrep -lqd any ping tcp dst port 2003
 ```

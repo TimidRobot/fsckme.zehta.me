@@ -11,11 +11,13 @@ body:
 
 ### Overview
 
+[github]: https://github.com/TimZehta/rpgdice
+
 I wrote a Python program that simulates different RPG dice mechanics (rulesets)
 and creates graphs showing the probability of the different outcomes:
 [TimZehta/rpgdice · GitHub][github]!
 
-[github]: https://github.com/TimZehta/rpgdice
+<!-- PLUGIN-READ-FULL-POST -->
 
 
 ### matplotlib install

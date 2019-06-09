@@ -11,13 +11,15 @@ body:
 
 ### Overview
 
+[treatise]: http://rpg-design.wikidot.com/evaluation
+[github]: https://github.com/TimZehta/rpgdice
+
 Each of the graphs below was created by simulating 100,000 dice rolls per
 Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
 inspired by [A Treatise on Different Dice-rolling Mechanics in RPGs][treatise].
 The graphs were created using [TimZehta/rpgdice · GitHub][github].
 
-[treatise]: http://rpg-design.wikidot.com/evaluation
-[github]: https://github.com/TimZehta/rpgdice
+<!-- PLUGIN-READ-FULL-POST -->
 
 
 ### Graphs

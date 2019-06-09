@@ -1,3 +1,4 @@
+{#- vim: sts=2 sw=2 ts=2 sr et: #}
 {%- macro render_blog_post(post, from_index=false) %}
   <div class="blog-post">
   {%- if from_index %}
@@ -15,19 +16,21 @@
     {%- endif %}
     on {{ post.pub_date }}
   </p>
-  {%- if not from_index %}
-  {{ post.body }}
-  {%- if post.tags %}
+  {%- if from_index %}
+    {{- post.body_short }}
+  {%- else %}
+    {{- post.body }}
+    {%- if post.tags %}
   <div>
     <h3>Tags:</h3>
     <ul>
-    {%- for specified_tag in post.tags %}
-    {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
+      {%- for specified_tag in post.tags %}
+      {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
     <li><a href="/tags/{{ tag._id }}/">{{ tag.name if tag.name else tag._id.title() }}</a></li>
-    {%- endfor %}
+      {%- endfor %}
     </ul>
   </div>
-  {%- endif %}
+    {%- endif %}
   {%- endif %}
   </div>
 {%- endmacro %}

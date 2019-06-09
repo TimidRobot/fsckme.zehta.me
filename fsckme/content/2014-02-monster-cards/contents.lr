@@ -15,6 +15,8 @@ I wrote a Python program that allows the generation of [Dungeon World][dungeon]
 Monster Cards. They can be made from the source files containing the Dungeon
 World monsters or from custom YAML files.
 
+<!-- PLUGIN-READ-FULL-POST -->
+
 I am pleased with the outcome. The formatting does not match the Dungeon World
 text, but the most significant changes are intentional. I think they make the
 cards easier to use. I especially like the way I categorized and ordered the
