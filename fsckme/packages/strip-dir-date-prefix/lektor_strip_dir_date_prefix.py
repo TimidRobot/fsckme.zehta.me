@@ -3,7 +3,7 @@ import re
 from lektor.pluginsystem import Plugin
 
 
-RE_DATE_PREFIX = re.compile(r"^(\d{4}-\d{2}-)(.*)$")
+RE_DATE_PREFIX = re.compile(r"^(\d{8}-)(.*)$")
 
 
 class StripDirDatePrefixPlugin(Plugin):
