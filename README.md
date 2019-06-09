@@ -36,11 +36,19 @@ The built content is located in [`docs/`](docs/).
 
 - Software
   - [Lektor Documentation][lektor]: Static Content Management System
+    - [lektor/lektor-markdown-header-anchors][md-header]: Adds support for
+      anchors and table of contents to Markdown.
+    - [Andrew-Shay/lektor-read-full-post][read-full]: Allows blog listing posts
+      to be shortened with a link to the full post.
+    - [nixjdm/lektor-atom][atom]: Lektor Atom plugin.
   - [Pipenv Documentatio][pipenv]: Python Dev Workflow for Humans
   - [Skeleton][skeleton]: Responsive CSS Boilerplate
 - Guides
   - [Building a static blog with Lektor | Animesh Bulusu][building]
 
+[md-header]: https://github.com/lektor/lektor-markdown-header-anchors
+[read-full]: https://github.com/Andrew-Shay/lektor-read-full-post
+[atom]: https://github.com/nixjdm/lektor-atom
 [skeleton]: http://getskeleton.com/
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
 
@@ -69,8 +77,8 @@ specified.
 
 ### Skeleton
 
-All parts of [Skeleton][skeleton-gh] are free to use and abuse under the
-[open-source MIT license][mit].
+*All parts of [Skeleton][skeleton-gh] are free to use and abuse under the
+[open-source MIT license][mit].*
 
 [skeleton-gh]: https://github.com/dhg/Skeleton
 [mit]: https://github.com/dhg/Skeleton/blob/master/LICENSE.md
