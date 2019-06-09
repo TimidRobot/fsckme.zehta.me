@@ -32,13 +32,19 @@ Mostly work related:
 - [Twitter][twitter]
 
 Mostly personal:
-- [Instagram][instagram]
+- [Instagram][instagram] (I really enjoy photography!)
 
 [cc]: https://creativecommons.org/author/timidcreativecommons-org/
 [github]: https://github.com/TimidRobot
 [hackerrank]: https://www.hackerrank.com/TimidRobot
 [twitter]: https://twitter.com/fsckme
 [instagram]: https://www.instagram.com/timidrobot/ "Timid Robot Zehta (@timidrobot) • Instagram photos and videos"
+
+
+### Encrypted Communication
+
+- You can find me on [Signal](https://signal.org/) via my mobile number
+- [GnuPG public key](Timid_Robot_Zehta__E03BF929__Public.asc)
 
 
 ### License
@@ -64,7 +70,7 @@ specified.
 [cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png "CC BY-SA 4.0 license button"
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0"
 
-### Skeleton
+#### Skeleton
 
 *All parts of [Skeleton][skeleton-gh] are free to use and abuse under the
 [open-source MIT license][mit].*
