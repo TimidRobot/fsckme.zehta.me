@@ -127,6 +127,17 @@ nav div h1 {
 body .page .row  {
   background-color: #424242;
 }
+hr {
+  margin:0;
+  padding:0;
+}
+img[src*="floatright"] {
+  float: right;
+}
+img[src*="vatexttop"] {
+  vertical-align: text-top;
+}
+
 
 /*** Footer ***/
 footer {
