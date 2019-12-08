@@ -248,15 +248,15 @@ are shown in the top left corner of the graph.&lt;/p&gt;
 the left of zero to maintain its sinister meaning.&lt;/p&gt;
 &lt;p&gt;Probabilties below 0.5% were discarded.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote00_unskilled_pc_vs_average_difficulty.png#thumb&quot; alt=&quot;Graph: Unskilled PC vs Averge Difficulty&quot; title=&quot;Graph: Unskilled PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote01_unskilled_pc_vs_hard_difficulty.png#thumb&quot; alt=&quot;Graph: Unskilled PC vs Hard Difficulty&quot; title=&quot;Graph: Unskilled PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote02_unskilled_pc_vs_advesary_npc.png#thumb&quot; alt=&quot;Graph: Unskilled PC vs Advesary NPC&quot; title=&quot;Graph: Unskilled PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote03_talented_pc_vs_average_difficulty.png#thumb&quot; alt=&quot;Graph: Talented PC vs Average Difficulty&quot; title=&quot;Graph: Talented PC vs Average Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote04_talented_pc_vs_hard_difficulty.png#thumb&quot; alt=&quot;Graph: Talented PC vs Hard Difficulty&quot; title=&quot;Graph: Talented PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote05_talented_pc_vs_advesary.png#thumb&quot; alt=&quot;Graph: Talented PC vs Advesary NPC&quot; title=&quot;Graph: Talented PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote06_pro_pc_vs_average_difficulty.png#thumb&quot; alt=&quot;Graph: Pro PC vs Average Difficulty&quot; title=&quot;Graph: Pro PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote07_pro_pc_vs_hard_difficulty.png#thumb&quot; alt=&quot;Graph: Pro PC vs Hard Difficulty&quot; title=&quot;Graph: Pro PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote08_pro_pc_vs_advesary_npc.png#thumb&quot; alt=&quot;Graph: Pro PC vs Advesary NPC&quot; title=&quot;Graph: Pro PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote00_unskilled_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Averge Difficulty&quot; title=&quot;Graph: Unskilled PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote01_unskilled_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Hard Difficulty&quot; title=&quot;Graph: Unskilled PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote02_unskilled_pc_vs_advesary_npc.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Advesary NPC&quot; title=&quot;Graph: Unskilled PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote03_talented_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Average Difficulty&quot; title=&quot;Graph: Talented PC vs Average Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote04_talented_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Hard Difficulty&quot; title=&quot;Graph: Talented PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote05_talented_pc_vs_advesary.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Advesary NPC&quot; title=&quot;Graph: Talented PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote06_pro_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Average Difficulty&quot; title=&quot;Graph: Pro PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote07_pro_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Hard Difficulty&quot; title=&quot;Graph: Pro PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote08_pro_pc_vs_advesary_npc.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Advesary NPC&quot; title=&quot;Graph: Pro PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
   </entry>
@@ -299,12 +299,12 @@ Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
 inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling Mechanics in RPGs&lt;/a&gt;.
 The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice · GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw00_success.png#thumb&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw01_simplified.png#thumb&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw02_raw.png#thumb&quot; alt=&quot;Graph: Raw Results&quot; title=&quot;Graph: Raw Result&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw00_success.png#vatexttop&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw01_simplified.png#vatexttop&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw02_raw.png#vatexttop&quot; alt=&quot;Graph: Raw Results&quot; title=&quot;Graph: Raw Result&quot;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;edits&quot;&gt;Edits&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;2014-04-01 edit: updated graph labels.&lt;/li&gt;
+&lt;li&gt;2014-04-01: updated graph labels.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
@@ -505,6 +505,85 @@ systems that benefit from that granularity of tuning.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.eurekalert.org/pub_releases/2012-09/uota-aig092612.php&quot;&gt;Artificially intelligent game bots pass the Turing test on Turing's
 centenary&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/zehta.me/2002/02/name-tags/">
+    <title type="text">Name Tags</title>
+    <id>urn:uuid:0d24caa3-f540-3885-9199-c75fb8d703f4</id>
+    <updated>2002-02-22T22:22:22Z</updated>
+    <link href="https://timidrobot.github.io/zehta.me/2002/02/name-tags/" />
+    <author>
+      <name>Tim Wheeler</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;../../../2002/02/name-tags/nametags.jpg#floatright&quot; alt=&quot;Tim Wheeler Name Tags&quot; title=&quot;Tim Wheeler Name Tags&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tim Wheeler. Name Tags. 1999 Aug - 2002 Feb&lt;/strong&gt;
+&lt;br&gt;&lt;strong&gt;2 Purchased Plastic Name Tags&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;These name tags are the objects of a performance piece performed daily over two
+and half years. They not only served as the focal point or medium for
+conversations, but often modified or dictated how people interacted with me.
+They made, me at once, distinct and invisible. They placed me on a specific
+socio-economic plane. They positioned me within the spectrum of service
+industry jobs. They were a symbols for which the most common meaning seemed to
+be &quot;approachable.&quot;&lt;/p&gt;
+&lt;p&gt;The habitual (obsessive?) wearing of the name tags also became the symbols with
+which others mapped my identity. The extent to which people not only defined
+me, but drew some sort of stability from the ritual, was evident on the
+occasions when I happened or appeared not to be wearing them.&lt;/p&gt;
+&lt;p&gt;I donated the name tags to the Student for Student Scholarship Fund (SSSF).
+They were sold in the SSSF auction, 2009 Feb 22, for $30. I no longer wear name
+tags for any extend amount of time.&lt;/p&gt;
+&lt;p&gt;It was interesting to see the extent to which people associated the name tags
+with me--the extent to which they formed my identity as it was perceived by
+others. There were times when I wasn’t wearing them that people would talk and
+point as if I had one on. It took months for people I saw every week (or more)
+to realize that I was no longer wearing them.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://timidrobot.github.io/zehta.me/1998/10/jazz-dance/">
+    <title type="text">Jazz Dance</title>
+    <id>urn:uuid:d7affc57-ea63-3875-b6c8-061a69f8c12e</id>
+    <updated>1998-10-22T13:45:00Z</updated>
+    <link href="https://timidrobot.github.io/zehta.me/1998/10/jazz-dance/" />
+    <author>
+      <name>Tim Wheeler</name>
+    </author>
+    <content type="html">&lt;pre&gt;&lt;code&gt;As I watched, the upright bassists hands,
+Became spiders jumping on silken strands.
+The bassist told a primitive tale
+That was interrupted by the trumpets wail.
+The trumpet argued the complexity
+The sax agreed with Melody.
+The drums enforced the upright bass.
+Rhythms feet stomped a monstrous pace.
+    That sent up clouds of dust.
+        The pianist swayed with lust
+        For the moves of Melody.
+
+Hand in Hand, Rhythm and Melody,
+Danced a dance to set us free
+To set sparks in the musicians eyes
+That reinforced the saxs cries
+That gave force to the drummers beat
+And set springs beneath our pounding feet.
+
+A solo sprawled on the throat of the sax
+It loosened our bodies and let our eyes relax
+The guitarist told stories with his hands
+Of distant places and caravans
+The trumpet let out a powerful plea
+Causing us to nod and agree.
+A concentrated look on his face,
+Hammering his notes into place,
+    The pianist made a floor
+On which Rhythm and Melody danced some more.
+They danced above the ground
+As the upright bass lent a solid sound
+And when the drum found his voice
+We were left without choice
+But to sway and stomp some more.
+So we happily stomped and swayed.
+We danced as the jazz band played!
+&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
 </feed>
