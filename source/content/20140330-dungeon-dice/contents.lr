@@ -32,11 +32,11 @@ The graphs were created using [TimZehta/rpgdice · GitHub][github].
 2. ![Graph: Simplified Results][dw01]
 3. ![Graph: Raw Results][dw02]
 
-[dw00]: dw00_success.png#thumb "Graph: Chance of Any Success"
-[dw01]: dw01_simplified.png#thumb "Graph: Simplified Results"
-[dw02]: dw02_raw.png#thumb "Graph: Raw Result"
+[dw00]: dw00_success.png#vatexttop "Graph: Chance of Any Success"
+[dw01]: dw01_simplified.png#vatexttop "Graph: Simplified Results"
+[dw02]: dw02_raw.png#vatexttop "Graph: Raw Result"
 
 
 ### Edits
 
-- 2014-04-01 edit: updated graph labels.
+- 2014-04-01: updated graph labels.
