@@ -20,7 +20,7 @@ The built content is located in [`docs/`](docs/).
     ```
 2. Install [Lektor][lektor] for Python 3 via Pipenv
     ```shell
-    pipenv install --three Lektor
+    pipenv install
     ```
 3. Run Lektor development server (with custom output path)
     ```shell
@@ -53,7 +53,7 @@ The built content is located in [`docs/`](docs/).
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
 
 
-## License
+## Licenses
 
 
 ### Code
