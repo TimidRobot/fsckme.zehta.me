@@ -9,4 +9,5 @@ trap '_es=${?};
     printf " exited with a status of ${_es}\n";
     exit ${_es}' ERR
 
+pipenv run lektor plugins flush-cache
 pipenv run lektor server --output-path ../docs
