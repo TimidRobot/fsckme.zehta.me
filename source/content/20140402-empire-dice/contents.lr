@@ -6,6 +6,10 @@ pub_date: 2014-04-02 16:09
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: open-source, python, tabletop-roleplaying-games
+---
 body:
 
 
@@ -52,6 +56,3 @@ Probabilties below 0.5% were discarded.
 [sweote06]: sweote06_pro_pc_vs_average_difficulty.png#thumb "Graph: Pro PC vs Averge Difficulty"
 [sweote07]: sweote07_pro_pc_vs_hard_difficulty.png#thumb "Graph: Pro PC vs Hard Difficulty"
 [sweote08]: sweote08_pro_pc_vs_advesary_npc.png#thumb "Graph: Pro PC vs Advesary NPC"
-
----
-tags: open-source, python, tabletop-roleplaying-games

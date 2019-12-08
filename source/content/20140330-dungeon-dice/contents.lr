@@ -6,6 +6,10 @@ pub_date: 2014-03-30 23:16
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: tabletop-roleplaying-games, python, open-source
+---
 body:
 
 
@@ -36,5 +40,3 @@ The graphs were created using [TimZehta/rpgdice · GitHub][github].
 ### Edits
 
 - 2014-04-01 edit: updated graph labels.
----
-tags: tabletop-roleplaying-games, python, open-source

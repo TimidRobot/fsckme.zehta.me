@@ -49,18 +49,5 @@
       {% block body %}{%- endblock %}
     </div>
   </div>
-  <footer class="container">
-    {%- if this._path != '/about' %}
-    {{- copyright(this.copyright) }}
-    <div class="row">
-      <div class="twelve columns">
-        <small>
-          <p>This is a personal blog. All opinions are my own
-             (<a rel="about" href="{{ '/about/'|url }}">Timid Robot</a>).</p>
-        </small>
-      </div>
-    </div>
-    {%- endif %}
-  </footer>
 </body>
 </html>

@@ -6,6 +6,10 @@ pub_date: 2014-02-27 20:33
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: python, tabletop-roleplaying-games, open-source
+---
 body:
 
 
@@ -43,5 +47,3 @@ layout.  Overall my experience was very positive.
 [monster]: https://raw.github.com/TimZehta/dw-monster-cards/master/monster_cards.pdf
 [back]: https://raw.github.com/TimZehta/dw-monster-cards/master/back_example.pdf
 [github]: https://github.com/TimZehta/dw-monster-cards
----
-tags: python, tabletop-roleplaying-games, open-source

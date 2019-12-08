@@ -2,4 +2,7 @@
 {%- extends "layout.html" %}
 {%- from "macros/blog.html" import render_blog_post %}
 {%- block title %}{{ this.title }}{%- endblock %}
-{%- block body %}{{ render_blog_post(this) }}{%- endblock %}
+{%- block body %}
+{{ render_blog_post(this) }}
+{{ copyright(this.copyright, this.author, this.pub_date) }}
+{%- endblock %}

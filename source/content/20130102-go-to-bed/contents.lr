@@ -6,7 +6,12 @@ pub_date: 2013-01-02 09:41
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: troubleshooting, emotional-intelligence
+---
 body:
+
 
 One of my own troubleshooting or programming rules is to go to bed. Over and
 over again, I have discovered that I will fail to solve a problem if I focus
@@ -26,5 +31,3 @@ Specifically:
 
 [thefts]: http://www.newyorker.com/reporting/2013/01/07/130107fa_fact_green
 [schneier]: http://www.schneier.com/blog/archives/2013/01/apollo_robbins.html
----
-tags: troubleshooting, emotional-intelligence

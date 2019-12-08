@@ -6,7 +6,12 @@ pub_date: 2012-10-03 16:10
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: ssd, troubleshooting
+---
 body:
+
 
 On Friday 2012-09-28, my MacBook Pro started freezing. There had been no
 significant software updates that morning (though 10.8.2 came out that week).
@@ -45,5 +50,3 @@ sysadmin a "senior sysadmin"?][sysadmin]
 [sysadmin]: http://everythingsysadmin.com/2012/09/seniorsysadmins.html
 [firmware]: http://forum.crucial.com/t5/Solid-State-Drives-SSD/M4-firmware-0309-is-now-available/td-p/80286
 [macfreeze]: http://www.j03l.com/2012/02/mac-freezes-after-hour-crucial-ssd.html
----
-tags: ssd, troubleshooting

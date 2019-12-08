@@ -6,7 +6,12 @@ pub_date: 2012-09-28 12:13
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: systems-administration, troubleshooting
+---
 body:
+
 
 Two articles highlight the potent benefits of errors in AI:
 - [Nate Silver’s ‘The Signal and the Noise’][signal]
@@ -15,5 +20,3 @@ Two articles highlight the potent benefits of errors in AI:
 
 [signal]: http://www.washingtonpost.com/blogs/ezra-klein/wp/2012/09/26/nate-silvers-the-signal-and-the-noise/
 [gamebots]: http://www.eurekalert.org/pub_releases/2012-09/uota-aig092612.php
----
-tags: systems-administration, troubleshooting

@@ -6,6 +6,10 @@ pub_date: 2014-11-03 21:05
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: bash, open-source, macos
+---
 body:
 
 
@@ -27,5 +31,3 @@ Some of the neat things I learned about during the course of this project:
 - SSH LocalCommand
 
 [github]: https://github.com/TimZehta/painted-iterm
----
-tags: bash, open-source, macos

@@ -6,7 +6,12 @@ pub_date: 2012-10-10 12:58
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: automation, systems-administration
+---
 body:
+
 
 For me, at least, systems administration is a difficult field to define and
 talk about--especially succinctly. A couple of excellent blog posts suggest the
@@ -45,5 +50,3 @@ The concept of networks of networks also servers to differentiate system adminis
 [googlesre]: http://everythingsysadmin.com/2012/10/whatschangedsre.html
 [networks]: http://www.sciencenews.org/view/feature/id/343939/title/When_Networks_Network
 [insecurity]: http://www.schneier.com/blog/archives/2012/10/the_insecurity_1.html
----
-tags: automation, systems-administration

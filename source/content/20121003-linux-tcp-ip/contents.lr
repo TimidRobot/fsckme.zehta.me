@@ -6,12 +6,15 @@ pub_date: 2012-10-03 15:32
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: linux, systems-administration
+---
 body:
+
 
 There is a lot of interesting information in this article and related comments:
 [Linux TCP/IP Tuning | Hacker News][news]. I look forward to eventually having
 systems that benefit from that granularity of tuning.
 
 [news]: http://news.ycombinator.com/item?id=4582253
----
-tags: linux, systems-administration

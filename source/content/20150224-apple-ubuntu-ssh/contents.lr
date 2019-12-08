@@ -6,7 +6,12 @@ pub_date: 2015-02-24 09:08
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: ssh, linux, macos
+---
 body:
+
 
 I use and support SSH every working day. I created these tables of OpenSSH
 versions to make troubleshooting easier:
@@ -44,8 +49,7 @@ OS Version    | OpenSSH Version | Library Version
 
 [ubuntu]: http://packages.ubuntu.com/search?keywords=ssh&searchon=names&exact=1&suite=all&section=all
 
+
 ### Edits
 
 - this post has been updated in an effort to keep it current
----
-tags: ssh, linux, macos

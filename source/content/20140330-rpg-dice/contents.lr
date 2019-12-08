@@ -6,6 +6,10 @@ pub_date: 2014-03-30 23:09
 ---
 author: Timid Robot Zehta
 ---
+copyright: by-sa
+---
+tags: python, tabletop-roleplaying-games, open-source
+---
 body:
 
 
@@ -36,5 +40,3 @@ glad for the shortcuts it provided. I would love to see it become more well
 known and successful.
 
 [ggplot]: https://github.com/yhat/ggplot/
----
-tags: python, tabletop-roleplaying-games, open-source
