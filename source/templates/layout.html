@@ -25,7 +25,8 @@
       </div>
       {%- for href, title in [
         ['/tags/', 'Tags'],
-        ['/about/', 'About']
+        ['/resume/', 'Resume'],
+        ['/about/', 'About'],
       ] %}
       {%- if this.is_child_of(href) %}
       {%- set active = "active" %}
@@ -37,7 +38,7 @@
       </div>
       {%- endfor %}
 
-      <div class="six columns title">
+      <div class="four columns title">
         <h1>{{ name }}</h1>
       </div>
 
