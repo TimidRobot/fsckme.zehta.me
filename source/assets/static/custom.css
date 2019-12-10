@@ -200,7 +200,7 @@ hr.copyright, p.copyright {
 }
 /* Large devices (desktops: 1024px and up) */
 @media (min-width: 1024px) {
-  nav div.columns {
+  .pagination {
     font-size: 3rem;
   }
 }
