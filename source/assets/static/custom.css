@@ -63,7 +63,8 @@ h3 {
   padding: 0.75rem;
 }
 h4 {
-  background-color: #393939;
+  background-color: #3d3d3d;
+  border: 2px solid #393939;
   font-size: 2.0rem;
   margin-left: -1.5rem;
   padding: 0.75rem;
@@ -92,18 +93,36 @@ p {
 
 /*** Navigation ***/
 nav a, nav a:hover {
+  color: #cc99ff;
   color: White;
 }
 nav a.active, nav a.active:hover {
+  color: White;
   color: #424242;
 }
+nav div.row {
+  padding-left: 0;
+}
+nav div.navi {
+/*
+  background-color: #c390f6;
+  background-color: #424242;
+*/
+  border: 2px White solid;
+}
+nav div.active {
+  border: 2px #424242 solid;
+}
 nav div.columns {
-  font-size: 3.6rem;
+  font-size: 3.1rem;
   font-weight: 300;
   letter-spacing: -0.1rem;
   line-height: 1;
   margin-bottom: 0;
   margin-top: 0;
+  padding: 0.3rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
 }
 nav div.title {
   text-align: right;
@@ -121,7 +140,7 @@ nav div h1 {
   margin-top: -0.75rem;
 }
 .pagination {
-  background-color: #CC99FF;
+  background-color: #cc99ff;
   color: #424242;
   font-size: 2rem;
   font-weight: 300;

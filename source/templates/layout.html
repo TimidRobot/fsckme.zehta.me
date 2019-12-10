@@ -1,5 +1,5 @@
-{#- vim: sts=2 sw=2 ts=2 sr et: #}
-{%- set name = site.db.config.PROJECT.name %}
+{#- vim: sts=2 sw=2 ts=2 sr et: -#}
+{%- set name = site.db.config.PROJECT.name -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,39 +14,36 @@
 <body>
   <nav class="container">
     <div class="row">
-
-      {%- if this._path == '/' %}
-      {%- set active = "active" %}
+      {%- if this._path == "/" %}
+        {%- set active = "active" %}
       {%- else %}
-      {%- set active = "" %}
+        {%- set active = "" %}
       {%- endif %}
-      <div class="two columns">
+      <div class="two columns navi {{ active }}">
         <a class="{{ active }}" href="{{ '/'|url }}">Home</a>
       </div>
       {%- for href, title in [
-        ['/tags/', 'Tags'],
-        ['/resume/', 'Resume'],
-        ['/about/', 'About'],
+        ["/tags/", "Tags"],
+        ["/resume/", "Resume"],
+        ["/about/", "About"],
       ] %}
       {%- if this.is_child_of(href) %}
-      {%- set active = "active" %}
+        {%- set active = "active" %}
       {%- else %}
-      {%- set active = "" %}
+        {%- set active = "" %}
       {%- endif %}
-      <div class="two columns">
+      <div class="two columns navi {{ active }}">
         <a class="{{ active }}" href="{{ href|url }}">{{ title }}</a>
       </div>
       {%- endfor %}
-
       <div class="four columns title">
         <h1>{{ name }}</h1>
       </div>
-
     </div>
   </nav>
   <div class="container page">
     <div class="row">
-      {% block body %}{%- endblock %}
+{% block body %}{%- endblock %}
     </div>
   </div>
 </body>
