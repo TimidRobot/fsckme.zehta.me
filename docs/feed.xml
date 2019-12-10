@@ -37,6 +37,8 @@ created my own.&lt;/p&gt;
     <content type="html">&lt;p&gt;I recently read an amazing document. It was a digest of a message thread about
 Emotional Labor. Before I was done I knew I wanted to share it with everyone I
 cared about.&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;p&gt;To that end I collaborated with the creator of the digest to
 update the formatting of the document. I hope the result is very easy and
 comfortable (formatting-wise) to read. Please check it out: &lt;a href=&quot;https://drive.google.com/file/d/0B0UUYL6kaNeBTDBRbkJkeUtabEk/view?usp=sharing&quot;&gt;Emotional Labor:
@@ -53,6 +55,8 @@ The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
     </author>
     <content type="html">&lt;p&gt;I use and support SSH every working day. I created these tables of OpenSSH
 versions to make troubleshooting easier:&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;h3 id=&quot;apple-macos-/-os-x&quot;&gt;Apple macOS / OS X&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;&lt;tr&gt;
 &lt;th&gt;OS Version&lt;/th&gt;
@@ -170,6 +174,8 @@ versions to make troubleshooting easier:&lt;/p&gt;
       <name>Timid Robot Zehta</name>
     </author>
     <content type="html">&lt;h3 id=&quot;application-summaries&quot;&gt;Application Summaries&lt;/h3&gt;&lt;p&gt;I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;h4 id=&quot;issh&quot;&gt;iSSH&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Version: 5.7.1&lt;/li&gt;
 &lt;li&gt;Two factor: Yes!&lt;/li&gt;
@@ -215,6 +221,8 @@ increased security easier is a huge win. For an example, see cmc: Workflow.&lt;/
     <content type="html">&lt;p&gt;As a systems administrator, I often have many many terminal windows open. To
 help ensure I am fully aware of which of them are on Production hosts, I color
 code them.&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;p&gt;I have finally taken that bit of helpful code and made it as easy for you, dear
 reader, to use: &lt;a href=&quot;https://github.com/TimZehta/painted-iterm&quot;&gt;TimZehta/painted-iterm&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Some of the neat things I learned about during the course of this project:&lt;/p&gt;
@@ -271,6 +279,8 @@ the left of zero to maintain its sinister meaning.&lt;/p&gt;
     <content type="html">&lt;p&gt;Troubleshooting &lt;a href=&quot;http://graphite.readthedocs.org/en/latest/&quot;&gt;Graphite&lt;/a&gt; can be a bother. Determining where a
 problem lies requires verification of the data at all of the points of
 communication. The best tool I've found for this is ngrep:&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo ngrep -lqd any ping tcp dst port 2003
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The following complex command finds ping metrics submitted over TCP to
@@ -298,6 +308,9 @@ statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
 Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
 inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling Mechanics in RPGs&lt;/a&gt;.
 The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice · GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
+
 &lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw00_success.png#vatexttop&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw01_simplified.png#vatexttop&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
@@ -319,6 +332,9 @@ The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdi
     <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that simulates different RPG dice mechanics (rulesets)
 and creates graphs showing the probability of the different outcomes:
 &lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice · GitHub&lt;/a&gt;!&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
+
 &lt;h3 id=&quot;matplotlib-install&quot;&gt;matplotlib install&lt;/h3&gt;&lt;p&gt;matplotlib is super painful to install on macOS Mavericks 10.9.2. I ended up
 creating an installation script (&lt;a href=&quot;https://github.com/TimZehta/rpgdice/blob/master/install_requirements.sh&quot;&gt;&lt;code&gt;install_requirements.sh&lt;/code&gt;&lt;/a&gt;) to help
 with debugging the mess and allowing me to reliably reproduce success.&lt;/p&gt;
@@ -338,6 +354,8 @@ known and successful.&lt;/p&gt;
     <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that allows the generation of &lt;a href=&quot;http://www.dungeon-world.com/&quot;&gt;Dungeon World&lt;/a&gt;
 Monster Cards. They can be made from the source files containing the Dungeon
 World monsters or from custom YAML files.&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;p&gt;I am pleased with the outcome. The formatting does not match the Dungeon World
 text, but the most significant changes are intentional. I think they make the
 cards easier to use. I especially like the way I categorized and ordered the
@@ -384,6 +402,8 @@ single task that one fails to notice things in plain sight.&lt;/p&gt;
     <content type="html">&lt;p&gt;We recently observed constant write activity on our development server, while
 watching dstat. With the help of &lt;code&gt;iotop&lt;/code&gt; (&lt;a href=&quot;http://guichaz.free.fr/iotop/&quot;&gt;iotop&lt;/a&gt;), we identified the
 Apache web server was the culprit.&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;p&gt;But why would apache be doing so many writes? That's not normal behaviori
 (excluding the the logs). We then used auditd to log writes by apache:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo auditctl -a exit,always -S write -F uid=33
@@ -420,6 +440,8 @@ statistics&lt;/li&gt;
 talk about--especially succinctly. A couple of excellent blog posts suggest the
 following definition for Systems Administration: &lt;strong&gt;the automation of networks
 of networks.&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;p&gt;Automation:&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;Therefore, SREs spend half their time writing code to eliminate what they do
 the other half of their day. When they &quot;automate themselves out of a job&quot; it
@@ -457,6 +479,8 @@ significant software updates that morning (though 10.8.2 came out that week).&lt
 &lt;p&gt;I didn't want to deal with it, so I took it to the Apple Store. Unfortunately,
 they simply wasted a few days (given the solution found, I'm confident they
 never let it run more than an hour).&lt;/p&gt;
+&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
 &lt;p&gt;Once I got it back from the Apple Store without resolution, I knew it would be
 up to me to isolate the issue. I was inspired by &lt;a href=&quot;http://everythingsysadmin.com/2012/09/seniorsysadmins.html&quot;&gt;Everything Sysadmin: What
 makes a sysadmin a &quot;senior sysadmin&quot;?&lt;/a&gt; to proceed methodically.&lt;/p&gt;
@@ -515,7 +539,8 @@ centenary&lt;/a&gt;&lt;/li&gt;
     <author>
       <name>Tim Wheeler</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;img src=&quot;../../../2002/02/name-tags/nametags.jpg#floatright&quot; alt=&quot;Tim Wheeler Name Tags&quot; title=&quot;Tim Wheeler Name Tags&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+&lt;img src=&quot;../../../2002/02/name-tags/nametags.jpg#floatright&quot; alt=&quot;Tim Wheeler Name Tags&quot; title=&quot;Tim Wheeler Name Tags&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Tim Wheeler. Name Tags. 1999 Aug - 2002 Feb&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;2 Purchased Plastic Name Tags&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;These name tags are the objects of a performance piece performed daily over two
@@ -547,7 +572,9 @@ to realize that I was no longer wearing them.&lt;/p&gt;
     <author>
       <name>Tim Wheeler</name>
     </author>
-    <content type="html">&lt;pre&gt;&lt;code&gt;As I watched, the upright bassists hands,
+    <content type="html">&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+
+&lt;pre&gt;&lt;code&gt;As I watched, the upright bassists hands,
 Became spiders jumping on silken strands.
 The bassist told a primitive tale
 That was interrupted by the trumpets wail.
