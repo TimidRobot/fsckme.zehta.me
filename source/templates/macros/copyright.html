@@ -9,41 +9,39 @@
   {%- if not pub_date %}
     {%- set pub_date = "2019-12-07 15:45"|parsedatetime %}
   {%- endif %}
-<hr>
+<hr class="copyright">
   {%- if copyright.lower() == "allrights" %}
-<p>
-  <small>Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. <strong>
-  All rights reserved.</strong></small>
+<p class="copyright">
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. <strong>
+  All rights reserved.</strong>
 </p>
   {%- elif copyright.lower() == "by-sa" %}
-<p>
+<p class="copyright">
   <a rel="license"
      href="https://creativecommons.org/licenses/by-sa/4.0/">
     <img alt="CC BY-SA 4.0 license button"
-         src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"
-         style="vertical-align:middle;"></a>
-  <small>Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. This work
+         src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"></a>
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. This work
   is licensed under a <strong>
   <a rel="license"
      href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
      Attribution-ShareAlike 4.0 International License</a>
-  .</strong></small>
+  .</strong>
 </p>
   {%- elif copyright.lower() == "by" %}
-<p>
+<p class="copyright">
   <a rel="license"
      href="https://creativecommons.org/licenses/by/4.0/">
     <img alt="CC BY 4.0 license button"
-         src="https://licensebuttons.net/l/by/4.0/88x31.png"
-         style="vertical-align:middle;"></a>
-  <small>Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. This work
+         src="https://licensebuttons.net/l/by/4.0/88x31.png"></a>
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. This work
   is licensed under a <strong>
   <a rel="license"
      href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
      Attribution 4.0 International License</a>
-  .</strong></small>
+  .</strong>
 </p>
   {%- else %}
-<p><small>{{ copyright }}</small></p>
+<p class="copyright">{{ copyright }}</p>
   {%- endif %}
 {%- endmacro %}

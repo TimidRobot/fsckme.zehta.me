@@ -1,12 +1,15 @@
 /* vim: sts=2 sw=2 ts=2 sr et: */
 /*** Page ***/
+/* All devices */
+.container {
+  padding: 0;
+}
 /* Small devices (phones: 550px and down) */
 .container {
   max-width: 100%;
-  padding: 0;
   width: 100%;
 }
-/* Mediium devices (tablets: 550px and up) */
+/* Medium devices (tablets: 550px and up) */
 @media (min-width: 550px) {
   .container {
     max-width: 90%;
@@ -104,17 +107,13 @@ nav div.row {
   padding-left: 0;
 }
 nav div.navi {
-/*
-  background-color: #c390f6;
-  background-color: #424242;
-*/
   border: 2px White solid;
 }
 nav div.active {
   border: 2px #424242 solid;
 }
+/* All devices */
 nav div.columns {
-  font-size: 3.1rem;
   font-weight: 300;
   letter-spacing: -0.1rem;
   line-height: 1;
@@ -123,6 +122,22 @@ nav div.columns {
   padding: 0.3rem;
   padding-bottom: 0.6rem;
   text-align: center;
+}
+/* Small devices (phones: 550px and down) */
+nav div.columns {
+  font-size: 2rem;
+}
+/* Medium devices (tablets: 550px and up) */
+@media (min-width: 550px) {
+  nav div.columns {
+    font-size: 2rem;
+  }
+}
+/* Large devices (desktops: 1024px and up) */
+@media (min-width: 1024px) {
+  nav div.columns {
+    font-size: 3rem;
+  }
 }
 nav div.title {
   text-align: right;
@@ -134,44 +149,13 @@ nav div h1 {
 }
 
 /*** Contents ***/
-.meta {
-  font-family: monospace;
-  margin-bottom: 2rem;
-  margin-top: -0.75rem;
-}
-.pagination {
-  background-color: #cc99ff;
-  color: #424242;
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: -1rem;
-  margin-left: -4.5rem;
-  margin-right: -1rem;
-  text-align: center;
-}
-/* Mediium devices (tablets: 550px and up) */
-@media (min-width: 550px) {
-  .pagination {
-    font-size: 3rem;
-  }
-}
-.pagination .disabled {
-  font-weight: 100;
-  letter-spacing: 0.1rem;
-}
-.pagination .current {
-  font-family: monospace;
-}
-.pagination a, .pagination a:hover {
-  color: White;
-}
 body .page .row  {
   background-color: #424242;
-  padding-left:3em;
+  padding-left: 3em;
 }
 hr {
-  margin:0.25em;
-  padding:0;
+  margin: 0.25em;
+  padding: 0;
 }
 img[src*="floatright"] {
   float: right;
@@ -179,7 +163,84 @@ img[src*="floatright"] {
 img[src*="vatexttop"] {
   vertical-align: text-top;
 }
-
+.meta {
+  font-family: monospace;
+  margin-bottom: 2rem;
+  margin-top: -0.75rem;
+}
+div .pagination {
+  border: 2px #cc99ff solid;
+}
+hr.copyright, p.copyright {
+  font-size: smaller;
+  margin-left: -3.25rem;
+}
+.copyright img {
+  vertical-align: middle;
+}
+/* All devices */
+.pagination {
+  background-color: #cc99ff;
+  color: #424242;
+  font-weight: 300;
+  margin-bottom: -1rem;
+  margin-left: -4.5rem;
+  margin-right: -1rem;
+  text-align: center;
+}
+/* Small devices (phones: 550px and down) */
+.pagination {
+  font-size: 2rem;
+}
+/* Medium devices (tablets: 550px and up) */
+@media (min-width: 550px) {
+  .pagination {
+    font-size: 2rem;
+  }
+}
+/* Large devices (desktops: 1024px and up) */
+@media (min-width: 1024px) {
+  nav div.columns {
+    font-size: 3rem;
+  }
+}
+.pagination .disabled {
+  border: 2px #424242 solid;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+.pagination .current {
+  font-family: monospace;
+}
+.pagination a, .pagination a:hover {
+  border: 2px White solid;
+  color: White;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+/* All devices */
+.prev {
+  text-align: left;
+}
+.next {
+  text-align: right;
+}
+/* Small devices (phones: 550px and down) */
+.next, .prev {
+  font-size: 1.5rem;
+}
+/* Medium devices (tablets: 550px and up) */
+@media (min-width: 550px) {
+  .next, .prev {
+    font-size: 1.5rem;
+  }
+}
+/* Large devices (desktops: 1024px and up) */
+@media (min-width: 1024px) {
+  .next, .prev {
+    font-size: 2.5rem;
+  }
+}
 /*** Footer ***/
 footer {
   color: #424242;

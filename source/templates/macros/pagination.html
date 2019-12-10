@@ -2,15 +2,26 @@
 {%- macro render_pagination(pagination) %}
   <div class="pagination">
     {%- if pagination.has_prev %}
-      <a href="{{ pagination.prev|url }}">&vltri; Prev &nbsp;</a>
+    <a href="{{ pagination.for_page(1)|url }}">&#8676;</a>
+    &nbsp; 
+    <a href="{{ pagination.prev|url }}">&#8672; Prev &nbsp;</a>
     {%- else %}
-      <span class="disabled">&vltri; Prev &nbsp;</span>
+    <span class="disabled">&#8676;</span>
+    &nbsp; 
+    <span class="disabled">&#8672; Prev &nbsp;</span>
     {%- endif %}
-      <span class="current">&nbsp;&nbsp;{{ pagination.page }}&nbsp;&nbsp;</span>
+    &nbsp; 
+    <span class="current">&nbsp;&nbsp;{{ pagination.page }}/
+    {{- pagination.pages }}&nbsp;&nbsp;</span>
+    &nbsp; 
     {%- if pagination.has_next %}
-      <a href="{{ pagination.next|url }}">&nbsp; Next &vrtri;</a>
+    <a href="{{ pagination.next|url }}">&nbsp; Next &#8674;</a>
+    &nbsp; 
+    <a href="{{ pagination.for_page(pagination.pages)|url }}">&#8677;</a>
     {%- else %}
-      <span class="disabled">&nbsp; Next &vrtri;</span>
+    <span class="disabled">&nbsp; Next &#8674;</span>
+    &nbsp; 
+    <span class="disabled">&#8677;</span>
     {%- endif %}
   </div>
 {%- endmacro %}

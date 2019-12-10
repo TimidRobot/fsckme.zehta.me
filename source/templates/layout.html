@@ -14,17 +14,17 @@
 <body>
   <nav class="container">
     <div class="row">
-      {%- if this._path == "/" %}
+      {%- if this._model.startswith("blog") %}
         {%- set active = "active" %}
       {%- else %}
         {%- set active = "" %}
       {%- endif %}
       <div class="two columns navi {{ active }}">
-        <a class="{{ active }}" href="{{ '/'|url }}">Home</a>
+        <a class="{{ active }}" href="{{ '/'|url }}">Blog</a>
       </div>
       {%- for href, title in [
         ["/tags/", "Tags"],
-        ["/resume/", "Resume"],
+        ["/resume/", "Résumé"],
         ["/about/", "About"],
       ] %}
       {%- if this.is_child_of(href) %}
