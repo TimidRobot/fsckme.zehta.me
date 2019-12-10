@@ -86,6 +86,7 @@ h6 {
 }
 img {
   max-width: 95%;
+  padding: 1rem;
 }
 li {
   margin: 0;
