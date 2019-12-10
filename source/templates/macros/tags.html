@@ -1,20 +1,53 @@
+{#- vim: sts=2 sw=2 ts=2 sr et: #}
 {%- macro render_post_list(posts) %}
 <ol>
 {%- for post in posts %}
-<li><a href="{{ post|url }}">{{ post.title }}</a></li>
+  <li>{{ post.pub_date.strftime("%Y-%m-%d") }}: <a href="{{ post|url }}">
+      {{- post.title }}</a></li>
 {%- endfor %}
 </ol>
 {%- endmacro %}
 
+
 {%- macro render_cat_nav(active=none) %}
 <h2>Tags</h2>
 <div>
-<ol>
+<ul>
 {%- for tag in site.query("/tags") %}
-    <li{%- if tag._id == active %} class="active"{%- endif%}>
-        <a href="{{ tag|url }}">{{ tag.name if tag.name else tag._id.title() }}</a>
+  <li{%- if tag._id == active %} class="active"{%- endif%}>
+    <a href="{{ tag|url }}">{{ tag.name if tag.name else tag._id.title() }}</a>
         ({{ tag.children.count() }})</li>
 {%- endfor %}
-</ol>
+</ul>
 </div>
+{%- endmacro %}
+
+
+{%- macro render_cats_horizontal(tags) %}
+{%- for specified_tag in tags|sort %}
+{%- if loop.first %}
+{{- "(" }}
+{%- endif %}
+{%- set tag = site.get("/tags/{}".format(specified_tag)) %}
+{{- tag.name if tag.name else tag._id.title() }}
+{%- if loop.last %}
+{{- ")" }}
+{%- else %}
+{{- ", " }}
+{%- endif -%}
+{%- endfor -%}
+{%- endmacro %}
+
+
+{%- macro render_cats_vertical(tags) %}
+  <div>
+    <h3>Tags:</h3>
+    <ul>
+{%- for specified_tag in tags|sort %}
+{%- set tag = site.get("/tags/{}".format(specified_tag)) %}
+    <li><a href="/tags/{{ tag._id }}/">
+        {{- tag.name if tag.name else tag._id.title() }}</a></li>
+{%- endfor %}
+    </ul>
+  </div>
 {%- endmacro %}

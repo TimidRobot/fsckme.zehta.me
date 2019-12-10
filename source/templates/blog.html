@@ -6,7 +6,7 @@
 {%- block body %}
   {%- for child in this.pagination.items %}
     {%- set child = plugin_read_full_post(child) %}
-    {{ render_blog_post(child, from_index=true) }}
+    {{- render_blog_post(child, from_index=true) }}
   {%- endfor %}
-  {{ render_pagination(this.pagination) }}
+  {{- render_pagination(this.pagination) }}
 {%- endblock %}

@@ -1,6 +1,7 @@
 {#- vim: sts=2 sw=2 ts=2 sr et: #}
 {%- extends "layout.html" %}
 {%- from "macros/blog.html" import render_blog_post %}
+{%- from "macros/copyright.html" import copyright %}
 {%- block title %}{{ this.title }}{%- endblock %}
 {%- block body %}
 {{ render_blog_post(this) }}

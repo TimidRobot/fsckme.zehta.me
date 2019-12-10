@@ -1,36 +1,27 @@
 {#- vim: sts=2 sw=2 ts=2 sr et: #}
+{%- from "macros/tags.html" import render_cats_horizontal,
+                                   render_cats_vertical %}
 {%- macro render_blog_post(post, from_index=false) %}
   <div class="blog-post">
   {%- if from_index %}
-    <h2><a href="{{ post|url }}">{{ post.title }}</a></h2>
+  <h2><a href="{{ post|url }}">{{ post.title }}</a></h2>
   {%- else %}
-    <h2>{{ post.title }}</h2>
+  <h2>{{ post.title }}</h2>
   {%- endif %}
   <p class="meta">
-    written by
-    {%- if post.twitter_handle %}
-      <a href="https://twitter.com/{{ post.twitter_handle
-        }}">{{ post.author or post.twitter_handle }}</a>
-    {%- else %}
-      {{ post.author }}
+    by {{ post.author -}}
+    {{- "" }} on {{ post.pub_date.strftime("%Y-%m-%d") }}
+    {%- if from_index and post.tags %}
+    {{- " " }}{{ render_cats_horizontal(post.tags) }}
     {%- endif %}
-    on {{ post.pub_date }}
   </p>
   {%- if from_index %}
-    {{- post.body_short }}
+  {{ post.body_short }}
   {%- else %}
-    {{- post.body }}
-    {%- if post.tags %}
-  <div>
-    <h3>Tags:</h3>
-    <ul>
-      {%- for specified_tag in post.tags %}
-      {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
-    <li><a href="/tags/{{ tag._id }}/">{{ tag.name if tag.name else tag._id.title() }}</a></li>
-      {%- endfor %}
-    </ul>
-  </div>
-    {%- endif %}
+  {{ post.body }}
+  {%- endif %}
+  {%- if not from_index and post.tags %}
+  {{ render_cats_vertical(post.tags) }}
   {%- endif %}
   </div>
 {%- endmacro %}
