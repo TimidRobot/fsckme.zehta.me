@@ -47,14 +47,36 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   letter-spacing: 0;
 }
-h1 { font-size: 4.0rem; }
-h2 { font-size: 3.5rem; }
-h3 { font-size: 3.0rem; }
-h4 { font-size: 2.5rem; }
-h5 { font-size: 2.0rem; }
-h6 { font-size: 1.5rem; }
+h1 {
+  font-size: 3.5rem;
+}
 h2 {
-  background-color: #333;
+  background-color: #292929;
+  font-size: 3.0rem;
+  margin-left: -3.5rem;
+  padding: 0.75rem;
+}
+h3 {
+  background-color: #393939;
+  font-size: 2.5rem;
+  margin-left: -2.5rem;
+  padding: 0.75rem;
+}
+h4 {
+  background-color: #393939;
+  font-size: 2.0rem;
+  margin-left: -1.5rem;
+  padding: 0.75rem;
+}
+h5 {
+  background-color: #393939;
+  font-size: 1.75rem;
+  margin-left: -0.75rem;
+  padding: 0.75rem;
+}
+h6 {
+  background-color: #393939;
+  font-size: 1.5rem;
   margin-left: -0.75rem;
   padding: 0.75rem;
 }
@@ -104,7 +126,7 @@ nav div h1 {
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: -1rem;
-  margin-left: -1rem;
+  margin-left: -4.5rem;
   margin-right: -1rem;
   text-align: center;
 }
@@ -126,9 +148,10 @@ nav div h1 {
 }
 body .page .row  {
   background-color: #424242;
+  padding-left:3em;
 }
 hr {
-  margin:0;
+  margin:0.25em;
   padding:0;
 }
 img[src*="floatright"] {
@@ -137,7 +160,6 @@ img[src*="floatright"] {
 img[src*="vatexttop"] {
   vertical-align: text-top;
 }
-
 
 /*** Footer ***/
 footer {
