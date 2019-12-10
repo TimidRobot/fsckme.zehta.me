@@ -158,8 +158,15 @@ hr {
   margin: 0.25em;
   padding: 0;
 }
+/* Small devices (phones: 550px and down) */
 img[src*="floatright"] {
   float: right;
+}
+/* Medium devices (tablets: 550px and up) */
+@media (min-width: 550px) {
+  img[src*="floatright"] {
+    max-width: 45%;
+  }
 }
 img[src*="vatexttop"] {
   vertical-align: text-top;
