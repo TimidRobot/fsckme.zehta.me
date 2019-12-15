@@ -11,4 +11,4 @@ trap '_es=${?};
 
 pipenv run lektor plugins flush-cache
 pipenv run lektor clean --output-path ../docs --yes
-pipenv run lektor build --output-path ../docs
+pipenv run lektor build --extra-flag minify --output-path ../docs

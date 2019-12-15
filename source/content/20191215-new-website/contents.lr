@@ -33,7 +33,11 @@ repository. See the README there for additional context and links.
 The theme is created using [Skeleton][skeleton] (*responsive CSS Boilerplate*).
 I call it "Queer Deathstar".
 
+The repository includes the non-minified custom CSS:
+[`source/assets/static/custom.css`][customcss].
+
 [skeleton]: http://getskeleton.com/
+[customcss]: https://github.com/TimidRobot/zehta.me/blob/master/source/assets/static/custom.css
 
 
 #### Colors
@@ -74,5 +78,7 @@ td.BluePlum { background-color: var(--BluePlum); color: Black; }
 </tr>
 </table>
 
-Helpful Tools
+
+#### Tools and References
+
 - [Closest Named Web Colors](https://wismuth.com/webcolors.html)

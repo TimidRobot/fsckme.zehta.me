@@ -41,19 +41,22 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 
 - Software
   - [Lektor Documentation][lektor]: Static Content Management System
+    - [nixjdm/lektor-atom][atom]: Lektor Atom plugin.
     - [lektor/lektor-markdown-header-anchors][md-header]: Adds support for
       anchors and table of contents to Markdown.
+    - [pietroalbini/lektor-minify][minify]: Minify build artifacts in a Lektor
+      project
     - [Andrew-Shay/lektor-read-full-post][read-full]: Allows blog listing posts
       to be shortened with a link to the full post.
-    - [nixjdm/lektor-atom][atom]: Lektor Atom plugin.
   - [Pipenv Documentatio][pipenv]: Python Dev Workflow for Humans
   - [Skeleton][skeleton]: Responsive CSS Boilerplate
 - Guides
   - [Building a static blog with Lektor | Animesh Bulusu][building]
 
-[md-header]: https://github.com/lektor/lektor-markdown-header-anchors
-[read-full]: https://github.com/Andrew-Shay/lektor-read-full-post
 [atom]: https://github.com/nixjdm/lektor-atom
+[md-header]: https://github.com/lektor/lektor-markdown-header-anchors
+[minify]: https://github.com/pietroalbini/lektor-minify
+[read-full]: https://github.com/Andrew-Shay/lektor-read-full-post
 [skeleton]: http://getskeleton.com/
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
 
