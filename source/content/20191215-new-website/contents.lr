@@ -1,0 +1,78 @@
+_model: blog-post
+---
+title: New Website
+---
+pub_date: 2019-12-15 13:37
+---
+author: Timid Robot Zehta
+---
+copyright: cc-by-sa
+---
+tags: 2019, python, web-development
+---
+body:
+
+
+[lektor]: https://www.getlektor.com/
+[gh-pages]: https://pages.github.com/
+
+I have a new website! It uses the [Lektor][lektor] static site generator and is
+hosted on [GitHub Pages][gh-pages].
+
+<!-- PLUGIN-READ-FULL-POST -->
+
+The source code for the website is in the [TimidRobot/zehta.me][zehtame]
+repository. See the README there for additional context and links.
+
+
+[zehtame]: https://github.com/TimidRobot/zehta.me
+
+
+### Theme
+
+The theme is created using [Skeleton][skeleton] (*responsive CSS Boilerplate*).
+I call it "Queer Deathstar".
+
+[skeleton]: http://getskeleton.com/
+
+
+#### Colors
+
+<style>
+td.dc {
+  border: 0px Black solid;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: center;
+}
+td.black { background-color: Black; color: White; }
+td.MetaBlack { background-color: var(--MetaBlack); color: White; }
+td.NearBlack { background-color: var(--NearBlack); color: White; }
+td.HeavyGray { background-color: var(--HeavyGray); color: White; }
+td.MediumGray { background-color: var(--MediumGray); color: White; }
+td.AnswerGray { background-color: var(--AnswerGray); color: White; }
+td.LightGray { background-color: LightGray; color: Black; }
+td.White { background-color: White; color: Black; }
+td.BluePlum { background-color: var(--BluePlum); color: Black; }
+</style>
+<table>
+<tr>
+<td class="dc black"><tt>#000000</tt><br><tt>Black</tt></td>
+<td class="dc MetaBlack"><tt>#090909</tt><br><em>--MetaBlack</em></td>
+<td class="dc NearBlack"><tt>#292929</tt><br><em>--NearBlack</em></td>
+</tr>
+<tr>
+<td class="dc HeavyGray"><tt>#393939</tt><br><em>--HeavyGray</em></td>
+<td class="dc MediumGray"><tt>#3d3d3d</tt><br><em>--MediumGray</em></td>
+<td class="dc AnswerGray"><tt>#424242</tt><br><em>--AnswerGray</em></td>
+</tr>
+<tr>
+<td class="dc LightGray"><tt>#d3d3d3</tt><br><tt>LightGray</tt></td>
+<td class="dc White"><tt>#ffffff</tt><br><tt>White</tt></td>
+<td class="dc BluePlum"><tt>#cc99ff</tt><br><em>--BluePlum</em></td>
+</tr>
+</table>
+
+Helpful Tools
+- [Closest Named Web Colors](https://wismuth.com/webcolors.html)
