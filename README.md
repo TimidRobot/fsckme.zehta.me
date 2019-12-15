@@ -32,6 +32,11 @@ The built content is located in [`docs/`](docs/).
 [lektor]: https://www.getlektor.com/docs/
 
 
+## Theme
+
+See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
+
+
 ## Resources
 
 - Software
