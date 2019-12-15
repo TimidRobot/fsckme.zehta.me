@@ -2,6 +2,7 @@
 name = Timid Robot
 path = source/
 url = https://zehta.me/
+url_style = absolute
 
 [packages]
 lektor-atom = 0.3
