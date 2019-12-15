@@ -1,10 +1,10 @@
 {#- vim: sts=2 sw=2 ts=2 sr et: #}
 {%- macro render_post_list(posts) %}
 <ol>
-{%- for post in posts %}
+  {%- for post in posts %}
   <li>{{ post.pub_date.strftime("%Y-%m-%d") }}: <a href="{{ post|url }}">
       {{- post.title }}</a></li>
-{%- endfor %}
+  {%- endfor %}
 </ol>
 {%- endmacro %}
 
@@ -13,11 +13,13 @@
 <h2>Tags</h2>
 <div>
 <ul>
-{%- for tag in site.query("/tags") %}
+  {%- for tag in site.query("/tags") %}
+    {%- set name = tag.name if tag.name else tag._id.title() %}
+    {%- set name = name.replace(" ", "\u00A0") %}
   <li{%- if tag._id == active %} class="active"{%- endif%}>
-    <a href="{{ tag|url }}">{{ tag.name if tag.name else tag._id.title() }}</a>
+    <a href="{{ tag|url }}">{{ name }}</a>
         ({{ tag.children.count() }})</li>
-{%- endfor %}
+  {%- endfor %}
 </ul>
 </div>
 {%- endmacro %}
@@ -25,16 +27,18 @@
 
 {%- macro render_cats_horizontal(tags) %}
 {%- for specified_tag in tags|sort %}
-{%- if loop.first %}
-{{- "(" }}
-{%- endif %}
-{%- set tag = site.get("/tags/{}".format(specified_tag)) %}
-{{- tag.name if tag.name else tag._id.title() }}
-{%- if loop.last %}
-{{- ")" }}
-{%- else %}
-{{- ", " }}
-{%- endif -%}
+  {%- if loop.first %}
+    {{- "(" }}
+  {%- endif %}
+  {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
+  {%- set name = tag.name if tag.name else tag._id.title() %}
+  {%- set name = name.replace(" ", "\u00A0") %}
+  {{- name }}
+  {%- if loop.last %}
+    {{- ")" }}
+  {%- else %}
+    {{- ", " }}
+  {%- endif -%}
 {%- endfor -%}
 {%- endmacro %}
 
@@ -43,11 +47,12 @@
   <div>
     <h3>Tags:</h3>
     <ul>
-{%- for specified_tag in tags|sort %}
-{%- set tag = site.get("/tags/{}".format(specified_tag)) %}
-    <li><a href="/tags/{{ tag._id }}/">
-        {{- tag.name if tag.name else tag._id.title() }}</a></li>
-{%- endfor %}
+  {%- for specified_tag in tags|sort %}
+    {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
+    {%- set name = tag.name if tag.name else tag._id.title() %}
+    {%- set name = name.replace(" ", "\u00A0") %}
+      <li><a href="/tags/{{ tag._id }}/">{{ name }}</a></li>
+  {%- endfor %}
     </ul>
   </div>
 {%- endmacro %}
