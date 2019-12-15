@@ -417,15 +417,15 @@ are shown in the top left corner of the graph.&lt;/p&gt;
 the left of zero to maintain its sinister meaning.&lt;/p&gt;
 &lt;p&gt;Probabilties below 0.5% were discarded.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote00_unskilled_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Averge Difficulty&quot; title=&quot;Graph: Unskilled PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote01_unskilled_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Hard Difficulty&quot; title=&quot;Graph: Unskilled PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote02_unskilled_pc_vs_advesary_npc.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Advesary NPC&quot; title=&quot;Graph: Unskilled PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote03_talented_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Average Difficulty&quot; title=&quot;Graph: Talented PC vs Average Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote04_talented_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Hard Difficulty&quot; title=&quot;Graph: Talented PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote05_talented_pc_vs_advesary.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Advesary NPC&quot; title=&quot;Graph: Talented PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote06_pro_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Average Difficulty&quot; title=&quot;Graph: Pro PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote07_pro_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Hard Difficulty&quot; title=&quot;Graph: Pro PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/04/empire-dice/sweote08_pro_pc_vs_advesary_npc.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Advesary NPC&quot; title=&quot;Graph: Pro PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote00_unskilled_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Averge Difficulty&quot; title=&quot;Graph: Unskilled PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote01_unskilled_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Hard Difficulty&quot; title=&quot;Graph: Unskilled PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote02_unskilled_pc_vs_advesary_npc.png#vatexttop&quot; alt=&quot;Graph: Unskilled PC vs Advesary NPC&quot; title=&quot;Graph: Unskilled PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote03_talented_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Average Difficulty&quot; title=&quot;Graph: Talented PC vs Average Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote04_talented_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Hard Difficulty&quot; title=&quot;Graph: Talented PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote05_talented_pc_vs_advesary.png#vatexttop&quot; alt=&quot;Graph: Talented PC vs Advesary NPC&quot; title=&quot;Graph: Talented PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote06_pro_pc_vs_average_difficulty.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Average Difficulty&quot; title=&quot;Graph: Pro PC vs Averge Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote07_pro_pc_vs_hard_difficulty.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Hard Difficulty&quot; title=&quot;Graph: Pro PC vs Hard Difficulty&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/04/empire-dice/sweote08_pro_pc_vs_advesary_npc.png#vatexttop&quot; alt=&quot;Graph: Pro PC vs Advesary NPC&quot; title=&quot;Graph: Pro PC vs Advesary NPC&quot;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
   </entry>
@@ -468,9 +468,9 @@ Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
 inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling Mechanics in RPGs&lt;/a&gt;.
 The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice · GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw00_success.png#vatexttop&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw01_simplified.png#vatexttop&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
-&lt;li&gt;&lt;img src=&quot;../../../2014/03/dungeon-dice/dw02_raw.png#vatexttop&quot; alt=&quot;Graph: Raw Results&quot; title=&quot;Graph: Raw Result&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw00_success.png#vatexttop&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw01_simplified.png#vatexttop&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw02_raw.png#vatexttop&quot; alt=&quot;Graph: Raw Results&quot; title=&quot;Graph: Raw Result&quot;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;edits&quot;&gt;Edits&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;2014-04-01: updated graph labels.&lt;/li&gt;
@@ -717,7 +717,7 @@ resold at a high cost).&lt;/p&gt;
     <content type="html">&lt;p&gt;&lt;strong&gt;Tim Wheeler. &lt;em&gt;Reminder.&lt;/em&gt; 4 April - 11 April 2002&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;Steel, 41 x 37 x 16 inches&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;North Side of Westlands Building, Sarah Lawrence College&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&quot;../../../2002/04/reminder/side_back_installed.jpg#floatright&quot; alt=&quot;Metal skeleton reminder&quot; title=&quot;Metal skeleton reminder&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;/2002/04/reminder/side_back_installed.jpg#floatright&quot; alt=&quot;Metal skeleton reminder&quot; title=&quot;Metal skeleton reminder&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Reminder&lt;/em&gt; is my conference project for &quot;Sculpture: Explorations&quot; with Tishan
 Hsu. It was positioned next to the Peace Pole on the North Side of Westlands,
 the main administrative building at Sarah Lawrence College. I was only able to
@@ -734,7 +734,7 @@ has been very heavily scarr ed by US foreign policy.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Anti-communism and the National Security Doctrine (DSN) formed part of the
 anti-Soviet strategy of the united States in Latin America. In Guatemala,
 these were first expressed as anti-reformist, then anti-democratic policies,
-culminating in criminal counterinsurgency.&lt;/em&gt; &lt;a href=&quot;../../../2002/04/reminder/#note1&quot;&gt;&lt;1&gt;&lt;/a&gt;&lt;/p&gt;
+culminating in criminal counterinsurgency.&lt;/em&gt; &lt;a href=&quot;/2002/04/reminder/#note1&quot;&gt;&lt;1&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Chiapas was also a crazy stressful place. The human rights worker and nun who
 were our contacts there asked that I not wear my name tag, which could not only
@@ -777,7 +777,7 @@ Silence: Tz'inil Na'Tab'al.&lt;/em&gt; Guatemala: Arte, Color y Texto, S.A. page
     </author>
     <content type="html">&lt;p&gt;&lt;strong&gt;Tim Wheeler. &lt;em&gt;Name Tags.&lt;/em&gt; 1999 Aug - 2002 Feb&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;2 Purchased Plastic Name Tags&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&quot;../../../2002/02/name-tags/nametags.jpg#floatright&quot; alt=&quot;Tim Wheeler Name Tags&quot; title=&quot;Tim Wheeler Name Tags&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;/2002/02/name-tags/nametags.jpg#floatright&quot; alt=&quot;Tim Wheeler Name Tags&quot; title=&quot;Tim Wheeler Name Tags&quot;&gt;&lt;/p&gt;
 &lt;p&gt;These name tags are the objects of a performance piece performed daily over two
 and half years. They not only served as the focal point or medium for
 conversations, but often modified or dictated how people interacted with me.
@@ -856,7 +856,7 @@ We danced as the jazz band played!
     </author>
     <content type="html">&lt;p&gt;&lt;strong&gt;Tim Wheeler. &lt;em&gt;Will Work for Tuition.&lt;/em&gt; 1998 August&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;Two hours panhandling with a borrowed briefcase and tie&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;../../../1998/08/will-work-for-tuition/panhandling.jpg&quot; alt=&quot;Panhandling Collage&quot; title=&quot;Panhandling Collage&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/1998/08/will-work-for-tuition/panhandling.jpg&quot; alt=&quot;Panhandling Collage&quot; title=&quot;Panhandling Collage&quot;&gt;&lt;/p&gt;
 &lt;p&gt;My first dollar made while panhandling outside the Los Angeles courthouse. I
 made a total of $7.00 USD.&lt;/p&gt;
 </content>
