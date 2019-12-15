@@ -10,8 +10,8 @@
   {%- endif %}
   <p class="meta">
     {{ post.pub_date.strftime("%Y-%m-%d, %A") }}, {{ post.author -}}
-    {%- if from_index and post.tags %}
-      {{- " " }}{{ render_cats_horizontal(post.tags) }}
+    {%- if from_index %}
+      {{- render_cats_horizontal(post.pub_date.strftime("%Y"), post.tags) }}
     {%- endif %}
   </p>
   {%- if from_index %}
