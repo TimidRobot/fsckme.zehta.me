@@ -5,7 +5,8 @@
 {%- block title %}{{ this.title }}{%- endblock %}
 {%- block body %}
 {{- render_blog_post(this) }}
-{{- copyright(this.copyright, this.author, this.pub_date) }}
+{{- copyright(this.copyright, this.copyright_author, this.author,
+              this.pub_date) }}
   <div class="pagination">
     {%- if this.has_prev() %}
     <p class="prev">

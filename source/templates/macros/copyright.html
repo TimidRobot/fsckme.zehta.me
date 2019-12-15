@@ -1,10 +1,15 @@
 {#- vim: sts=2 sw=2 ts=2 sr et: #}
-{%- macro copyright(copyright=none, author=none, pub_date=none) %}
-  {%- if not copyright %}
+{%- macro copyright(copyright=none, copyright_author=none, author=none,
+                    pub_date=none) %}
+  {%- if not copyright%}
     {%- set copyright = "by-sa" %}
   {%- endif %}
-  {%- if not author %}
-    {%- set author = "Timid Robot Zehta" %}
+  {%- if not copyright_author or copyright_author == "" %}
+    {%- if author %}
+      {%- set copyright_author = author %}
+    {%- else %}
+      {%- set copyright_author = "Timid Robot Zehta" %}
+    {%- endif %}
   {%- endif %}
   {%- if not pub_date %}
     {%- set pub_date = "2019-12-07 15:45"|parsedatetime %}
@@ -12,30 +17,31 @@
 <hr class="copyright">
   {%- if copyright.lower() == "allrights" %}
 <p class="copyright">
-  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. <strong>
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}
+  . <strong>
   All rights reserved.</strong>
 </p>
-  {%- elif copyright.lower() == "by-sa" %}
+  {%- elif copyright.lower() == "cc-by-sa" %}
 <p class="copyright">
   <a rel="license"
      href="https://creativecommons.org/licenses/by-sa/4.0/">
     <img alt="CC BY-SA 4.0 license button"
          src="https://licensebuttons.net/l/by-sa/4.0/88x31.png"></a>
-  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. This work
-  is licensed under a <strong>
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}
+  . This work is licensed under a <strong>
   <a rel="license"
      href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
      Attribution-ShareAlike 4.0 International License</a>
   .</strong>
 </p>
-  {%- elif copyright.lower() == "by" %}
+  {%- elif copyright.lower() == "cc-by" %}
 <p class="copyright">
   <a rel="license"
      href="https://creativecommons.org/licenses/by/4.0/">
     <img alt="CC BY 4.0 license button"
          src="https://licensebuttons.net/l/by/4.0/88x31.png"></a>
-  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ author }}. This work
-  is licensed under a <strong>
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}
+  . This work is licensed under a <strong>
   <a rel="license"
      href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
      Attribution 4.0 International License</a>

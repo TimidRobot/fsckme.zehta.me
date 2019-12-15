@@ -9,10 +9,9 @@
   <h2>{{ post.title }}</h2>
   {%- endif %}
   <p class="meta">
-    by {{ post.author -}}
-    {{- "" }} on {{ post.pub_date.strftime("%Y-%m-%d") }}
+    {{ post.pub_date.strftime("%Y-%m-%d, %A") }}, {{ post.author -}}
     {%- if from_index and post.tags %}
-    {{- " " }}{{ render_cats_horizontal(post.tags) }}
+      {{- " " }}{{ render_cats_horizontal(post.tags) }}
     {%- endif %}
   </p>
   {%- if from_index %}
