@@ -1,12 +1,13 @@
 {%- extends "layout.html" %}
 {%- from "macros/tags.html" import render_post_list %}
-{%- block title %}tag {{ this._id.title() }} {{super.title}}{%- endblock %}
+{%- set title = this.name if this.name else this._id.title() %}
+{%- block title %}{{ title }} tag{%- endblock %}
 {%- block body %}
-<h2>{{ this._id.title() }} tag</h2>
+<h2>{{ title }} tag</h2>
 <h3>Posts</h4>
 {%- if this.children %}
     {{ render_post_list(this.children) }}
 {%-else%}
-    <p>No posts in tag {{this.name}} yet. May be there is a draft in the works.</p>
+    <p>No posts in tag {{ title }} yet. Maybe there is a draft in the works.</p>
 {%- endif %}
 {%- endblock %}
