@@ -418,7 +418,7 @@ increased security easier is a huge win. For an example, see cmc: Workflow.&lt;/
 help ensure I am fully aware of which of them are on Production hosts, I color
 code them.&lt;/p&gt;
 &lt;p&gt;I have finally taken that bit of helpful code and made it as easy for you, dear
-reader, to use: &lt;a href=&quot;https://github.com/TimZehta/painted-iterm&quot;&gt;TimZehta/painted-iterm&lt;/a&gt;.&lt;/p&gt;
+reader, to use: &lt;a href=&quot;https://github.com/TimidRobot/painted-iterm&quot;&gt;TimidRobot/painted-iterm&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Some of the neat things I learned about during the course of this project:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;256 terminal colors&lt;/li&gt;
@@ -442,7 +442,7 @@ reader, to use: &lt;a href=&quot;https://github.com/TimZehta/painted-iterm&quot;
     <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;Each of the graphs below was created by simulating 100,000 dice rolls for each
 die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
 rolls). The work was inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling
-Mechanics in RPGs&lt;/a&gt;.  The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice
+Mechanics in RPGs&lt;/a&gt;.  The graphs were created using &lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice
 · GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;p&gt;The 2nd line of the title is an attempt to describe the dice simulated. They
 are shown in the top left corner of the graph.&lt;/p&gt;
@@ -499,7 +499,7 @@ statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
     <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;Each of the graphs below was created by simulating 100,000 dice rolls per
 Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
 inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling Mechanics in RPGs&lt;/a&gt;.
-The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice · GitHub&lt;/a&gt;.&lt;/p&gt;
+The graphs were created using &lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice · GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw00_success.png#vatexttop&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw01_simplified.png#vatexttop&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
@@ -520,9 +520,9 @@ The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdi
     </author>
     <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that simulates different RPG dice mechanics (rulesets)
 and creates graphs showing the probability of the different outcomes:
-&lt;a href=&quot;https://github.com/TimZehta/rpgdice&quot;&gt;TimZehta/rpgdice · GitHub&lt;/a&gt;!&lt;/p&gt;
+&lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice · GitHub&lt;/a&gt;!&lt;/p&gt;
 &lt;h3 id=&quot;matplotlib-install&quot;&gt;matplotlib install&lt;/h3&gt;&lt;p&gt;matplotlib is super painful to install on macOS Mavericks 10.9.2. I ended up
-creating an installation script (&lt;a href=&quot;https://github.com/TimZehta/rpgdice/blob/master/install_requirements.sh&quot;&gt;&lt;code&gt;install_requirements.sh&lt;/code&gt;&lt;/a&gt;) to help
+creating an installation script (&lt;a href=&quot;https://github.com/TimidRobot/rpgdice/blob/master/install_requirements.sh&quot;&gt;&lt;code&gt;install_requirements.sh&lt;/code&gt;&lt;/a&gt;) to help
 with debugging the mess and allowing me to reliably reproduce success.&lt;/p&gt;
 &lt;h3 id=&quot;ggplot&quot;&gt;ggplot&lt;/h3&gt;&lt;p&gt;This project was the first time I've worked with &lt;a href=&quot;https://github.com/yhat/ggplot/&quot;&gt;ggplot&lt;/a&gt;. I'm very
 glad for the shortcuts it provided. I would love to see it become more well
@@ -548,9 +548,9 @@ tags.&lt;/p&gt;
 &lt;a href=&quot;https://pypi.python.org/pypi/reportlab/&quot;&gt;ReportLab&lt;/a&gt; Python module. It was very refreshing to do non-WYSIWYG
 layout.  Overall my experience was very positive.&lt;/p&gt;
 &lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://raw.github.com/TimZehta/dw-monster-cards/master/monster_cards.pdf&quot;&gt;monster_cards.pdf&lt;/a&gt; (PDF, 39 pages)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://raw.github.com/TimZehta/dw-monster-cards/master/back_example.pdf&quot;&gt;back_example.pdf&lt;/a&gt; (PDF, 1 page)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/TimZehta/dw-monster-cards&quot;&gt;TimZehta/dw-monster-cards&lt;/a&gt; (project on GitHub)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.github.com/TimidRobot/dw-monster-cards/master/monster_cards.pdf&quot;&gt;monster_cards.pdf&lt;/a&gt; (PDF, 39 pages)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.github.com/TimidRobot/dw-monster-cards/master/back_example.pdf&quot;&gt;back_example.pdf&lt;/a&gt; (PDF, 1 page)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/TimidRobot/dw-monster-cards&quot;&gt;TimidRobot/dw-monster-cards&lt;/a&gt; (project on GitHub)&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
