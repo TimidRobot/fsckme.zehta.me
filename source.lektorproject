@@ -1,7 +1,7 @@
 [project]
 name = TimidRobot
 path = source/
-url = https://timidrobot.github.io/zehta.me/
+url = https://zehta.me/
 
 [packages]
 lektor-markdown-header-anchors = 0.3.1
