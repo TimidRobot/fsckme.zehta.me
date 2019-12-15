@@ -178,10 +178,12 @@ img[src*="floatleft"] {
 img[src*="vatexttop"] {
   vertical-align: text-top;
 }
-.meta {
+p.meta {
+  color: #111;
   font-family: monospace;
-  margin-bottom: 2rem;
   margin-top: -0.75rem;
+  margin-bottom: 2rem;
+  margin-left: -3.5rem;
 }
 div .pagination {
   border: 2px #cc99ff solid;
