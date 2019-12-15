@@ -37,7 +37,7 @@
       </div>
       {%- endfor %}
       <div class="four columns title">
-        <h1>{{ name }}</h1>
+        <h1>{{ name.replace(" ", "\u00A0") }}</h1>
       </div>
     </div>
   </nav>
