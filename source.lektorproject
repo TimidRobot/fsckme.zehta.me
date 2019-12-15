@@ -4,6 +4,6 @@ path = source/
 url = https://zehta.me/
 
 [packages]
+lektor-atom = 0.3
 lektor-markdown-header-anchors = 0.3.1
 lektor-read-full-post = 0.3
-lektor-atom = 0.3
