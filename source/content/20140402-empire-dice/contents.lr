@@ -16,12 +16,12 @@ body:
 ### Overview
 
 [treatise]: http://rpg-design.wikidot.com/evaluation
-[github]: https://github.com/TimZehta/rpgdice
+[github]: https://github.com/TimidRobot/rpgdice
 
 Each of the graphs below was created by simulating 100,000 dice rolls for each
 die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
 rolls). The work was inspired by [A Treatise on Different Dice-rolling
-Mechanics in RPGs][treatise].  The graphs were created using [TimZehta/rpgdice
+Mechanics in RPGs][treatise].  The graphs were created using [TimidRobot/rpgdice
 · GitHub][github].
 
 <!-- PLUGIN-READ-FULL-POST -->

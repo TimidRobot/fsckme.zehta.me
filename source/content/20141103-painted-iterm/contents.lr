@@ -20,7 +20,7 @@ code them.
 <!-- PLUGIN-READ-FULL-POST -->
 
 I have finally taken that bit of helpful code and made it as easy for you, dear
-reader, to use: [TimZehta/painted-iterm][github].
+reader, to use: [TimidRobot/painted-iterm][github].
 
 Some of the neat things I learned about during the course of this project:
 
@@ -30,4 +30,4 @@ Some of the neat things I learned about during the course of this project:
   - clean/simple way to remove leading zeros
 - SSH LocalCommand
 
-[github]: https://github.com/TimZehta/painted-iterm
+[github]: https://github.com/TimidRobot/painted-iterm
