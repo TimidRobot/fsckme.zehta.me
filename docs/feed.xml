@@ -2,13 +2,67 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Blog - Timid Robot</title>
   <id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id>
-  <updated>2019-11-25T11:11:00Z</updated>
+  <updated>2019-12-15T13:37:00Z</updated>
   <link href="https://zehta.me/" />
   <link href="https://zehta.me/feed.xml" rel="self" />
   <author>
     <name>Timid Robot Zehta</name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
+  <entry xml:base="https://zehta.me/2019/12/new-website/">
+    <title type="text">New Website</title>
+    <id>urn:uuid:79e9313c-1c68-3f62-bf84-58e7573c5aa7</id>
+    <updated>2019-12-15T13:37:00Z</updated>
+    <link href="https://zehta.me/2019/12/new-website/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;I have a new website! It uses the &lt;a href=&quot;https://www.getlektor.com/&quot;&gt;Lektor&lt;/a&gt; static site generator and is
+hosted on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The source code for the website is in the &lt;a href=&quot;https://github.com/TimidRobot/zehta.me&quot;&gt;TimidRobot/zehta.me&lt;/a&gt;
+repository. See the README there for additional context and links.&lt;/p&gt;
+&lt;h3 id=&quot;theme&quot;&gt;Theme&lt;/h3&gt;&lt;p&gt;The theme is created using &lt;a href=&quot;http://getskeleton.com/&quot;&gt;Skeleton&lt;/a&gt; (&lt;em&gt;responsive CSS Boilerplate&lt;/em&gt;).
+I call it &quot;Queer Deathstar&quot;.&lt;/p&gt;
+&lt;h4 id=&quot;colors&quot;&gt;Colors&lt;/h4&gt;&lt;p&gt;&lt;style&gt;
+td.dc {
+  border: 0px Black solid;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: center;
+}
+td.black { background-color: Black; color: White; }
+td.MetaBlack { background-color: var(--MetaBlack); color: White; }
+td.NearBlack { background-color: var(--NearBlack); color: White; }
+td.HeavyGray { background-color: var(--HeavyGray); color: White; }
+td.MediumGray { background-color: var(--MediumGray); color: White; }
+td.AnswerGray { background-color: var(--AnswerGray); color: White; }
+td.LightGray { background-color: LightGray; color: Black; }
+td.White { background-color: White; color: Black; }
+td.BluePlum { background-color: var(--BluePlum); color: Black; }
+&lt;/style&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class=&quot;dc black&quot;&gt;&lt;tt&gt;#000000&lt;/tt&gt;&lt;br&gt;&lt;tt&gt;Black&lt;/tt&gt;&lt;/td&gt;
+&lt;td class=&quot;dc MetaBlack&quot;&gt;&lt;tt&gt;#090909&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--MetaBlack&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc NearBlack&quot;&gt;&lt;tt&gt;#292929&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--NearBlack&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;dc HeavyGray&quot;&gt;&lt;tt&gt;#393939&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--HeavyGray&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc MediumGray&quot;&gt;&lt;tt&gt;#3d3d3d&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--MediumGray&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc AnswerGray&quot;&gt;&lt;tt&gt;#424242&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--AnswerGray&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&quot;dc LightGray&quot;&gt;&lt;tt&gt;#d3d3d3&lt;/tt&gt;&lt;br&gt;&lt;tt&gt;LightGray&lt;/tt&gt;&lt;/td&gt;
+&lt;td class=&quot;dc White&quot;&gt;&lt;tt&gt;#ffffff&lt;/tt&gt;&lt;br&gt;&lt;tt&gt;White&lt;/tt&gt;&lt;/td&gt;
+&lt;td class=&quot;dc BluePlum&quot;&gt;&lt;tt&gt;#cc99ff&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--BluePlum&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;&lt;p&gt;Helpful Tools&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wismuth.com/webcolors.html&quot;&gt;Closest Named Web Colors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry xml:base="https://zehta.me/2019/11/empowering-collaboration/">
     <title type="text">Empowering Collaboration in the Common</title>
     <id>urn:uuid:ea8d3146-d381-34a7-aee0-4d393f9ec78b</id>

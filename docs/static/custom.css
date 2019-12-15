@@ -1,4 +1,15 @@
 /* vim: sts=2 sw=2 ts=2 sr et: */
+/*** Variables ***/
+:root {
+  --MetaBlack: #090909;
+  --NearBlack: #292929;
+  --HeavyGray: #393939;
+  --MediumGray: #3d3d3d;
+  --AnswerGray: #424242;
+  --BluePlum: #cc99ff;
+}
+
+
 /*** Page ***/
 /* All devices */
 .container {
@@ -27,7 +38,7 @@
   padding: 1rem;
 }
 a, a:hover {
-  color: #CC99FF;
+  color: var(--BluePlum);
 }
 a {
   text-decoration: none;
@@ -36,12 +47,12 @@ a:hover {
   text-decoration: underline;
 }
 body {
-  background-color: #CC99FF;
+  background-color: var(--BluePlum);
   color: LightGray;
 }
 code {
   background-color: Black;
-  color: Silver;
+  color: LightGray;
 }
 h1, h2, h3, h4, h5, h6 {
   color: White;
@@ -54,32 +65,32 @@ h1 {
   font-size: 3.5rem;
 }
 h2 {
-  background-color: #292929;
+  background-color: var(--NearBlack);
   font-size: 3.0rem;
   margin-left: -3.5rem;
   padding: 0.75rem;
 }
 h3 {
-  background-color: #393939;
+  background-color: var(--HeavyGray);
   font-size: 2.5rem;
   margin-left: -2.5rem;
   padding: 0.75rem;
 }
 h4 {
-  background-color: #3d3d3d;
-  border: 2px solid #393939;
+  background-color: var(--MediumGray);
+  border: 2px solid var(--HeavyGray);
   font-size: 2.0rem;
   margin-left: -1.5rem;
   padding: 0.75rem;
 }
 h5 {
-  background-color: #393939;
+  background-color: var(--HeavyGray);
   font-size: 1.75rem;
   margin-left: -0.75rem;
   padding: 0.75rem;
 }
 h6 {
-  background-color: #393939;
+  background-color: var(--HeavyGray);
   font-size: 1.5rem;
   margin-left: -0.75rem;
   padding: 0.75rem;
@@ -97,12 +108,12 @@ p {
 
 /*** Navigation ***/
 nav a, nav a:hover {
-  color: #cc99ff;
+  color: var(--BluePlum);
   color: White;
 }
 nav a.active, nav a.active:hover {
   color: White;
-  color: #424242;
+  color: var(--AnswerGray);
 }
 nav div.row {
   padding-left: 0;
@@ -111,7 +122,7 @@ nav div.navi {
   border: 2px White solid;
 }
 nav div.active {
-  border: 2px #424242 solid;
+  border: 2px var(--AnswerGray) solid;
 }
 /* All devices */
 nav div.columns {
@@ -141,14 +152,14 @@ nav div.columns {
   }
 }
 nav div.title h1 {
-  color: #292929;
+  color: var(--NearBlack);
   font-size: 5.0rem;
   font-weight: 600;
 }
 
 /*** Contents ***/
 body .page .row  {
-  background-color: #424242;
+  background-color: var(--AnswerGray);
   padding-left: 3em;
 }
 hr {
@@ -179,14 +190,14 @@ img[src*="vatexttop"] {
   vertical-align: text-top;
 }
 p.meta {
-  color: #111;
+  color: var(--MetaBlack);
   font-family: monospace;
   margin-top: -0.75rem;
   margin-bottom: 2rem;
   margin-left: -3.5rem;
 }
 div .pagination {
-  border: 2px #cc99ff solid;
+  border: 2px var(--BluePlum) solid;
 }
 hr.copyright, p.copyright {
   font-size: smaller;
@@ -197,8 +208,8 @@ hr.copyright, p.copyright {
 }
 /* All devices */
 .pagination {
-  background-color: #cc99ff;
-  color: #424242;
+  background-color: var(--BluePlum);
+  color: var(--AnswerGray);
   font-weight: 300;
   margin-bottom: -1rem;
   margin-left: -4.5rem;
@@ -222,7 +233,7 @@ hr.copyright, p.copyright {
   }
 }
 .pagination .disabled {
-  border: 2px #424242 solid;
+  border: 2px var(--AnswerGray) solid;
   font-weight: 100;
   letter-spacing: 0.1rem;
 }
@@ -260,7 +271,7 @@ hr.copyright, p.copyright {
 }
 /*** Footer ***/
 footer {
-  color: #424242;
+  color: var(--AnswerGray);
 }
 footer a, footer a:hover {
   color: White;
