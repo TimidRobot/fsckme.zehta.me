@@ -140,11 +140,8 @@ nav div.columns {
     font-size: 3rem;
   }
 }
-nav div.title {
-  text-align: right;
-}
-nav div h1 {
-  color: Black;
+nav div.title h1 {
+  color: #292929;
   font-size: 5.0rem;
   font-weight: 600;
 }
@@ -165,6 +162,16 @@ img[src*="floatright"] {
 /* Medium devices (tablets: 550px and up) */
 @media (min-width: 550px) {
   img[src*="floatright"] {
+    max-width: 45%;
+  }
+}
+/* Small devices (phones: 550px and down) */
+img[src*="floatleft"] {
+  float: left;
+}
+/* Medium devices (tablets: 550px and up) */
+@media (min-width: 550px) {
+  img[src*="floatleft"] {
     max-width: 45%;
   }
 }

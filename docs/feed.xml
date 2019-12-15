@@ -1,19 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">fsck me</title>
+  <title type="text">Blog - Timid Robot</title>
   <id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id>
-  <updated>2016-12-11T14:12:00Z</updated>
-  <link href="https://timidrobot.github.io/zehta.me/" />
-  <link href="https://timidrobot.github.io/zehta.me/feed.xml" rel="self" />
+  <updated>2019-11-25T11:11:00Z</updated>
+  <link href="https://zehta.me/" />
+  <link href="https://zehta.me/feed.xml" rel="self" />
   <author>
-    <name></name>
+    <name>Timid Robot Zehta</name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2016/12/feelings-thermometer/">
+  <entry xml:base="https://zehta.me/2019/11/empowering-collaboration/">
+    <title type="text">Empowering Collaboration in the Common</title>
+    <id>urn:uuid:ea8d3146-d381-34a7-aee0-4d393f9ec78b</id>
+    <updated>2019-11-25T11:11:00Z</updated>
+    <link href="https://zehta.me/2019/11/empowering-collaboration/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;In the past few months I have been privileged to attend &lt;a href=&quot;https://wikimania.wikimedia.org/wiki/2019:Program&quot;&gt;Wikimania
+2019&lt;/a&gt; and the Google Summer of Code &lt;a href=&quot;https://sites.google.com/view/gsoc-mentorsummit2019/home&quot;&gt;2019 Mentor
+Summit&lt;/a&gt;. At these events I was overwhelmed with the amount of
+care and effort people are putting into their projects and communities.&lt;/p&gt;
+&lt;p&gt;At Wikimania 2019, I was impressed with how much overlap there is between the
+Creative Commons and Wikimedia communities. Both communities are actively
+engaged in expanding the content and participation in the commons--in the
+collection and communities empowered by open content. I have a lot of hope in
+what existing and future collaborations will allow. At the conference, I got to
+see just the tip of the iceberg representing volunteers’ work across the globe.
+I hope we at Creative Commons can continue to keep the demands of our daily
+workloads in perspective and increase collaboration with the global effort.&lt;/p&gt;
+&lt;p&gt;At the GSoC 2019 Mentor Summit I was able to attend a good number of sessions
+on increasing and maintaining participation. Based on the session discussions
+and the work already being done by other organizations, I expect we’ll pursue
+the following strategies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved support for first timers--people who are engaging with code
+repositories for the first time&lt;ul&gt;
+&lt;li&gt;Improve tagging of issues&lt;/li&gt;
+&lt;li&gt;Dedicated documentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Improve support for GSoC and Outreachy program applicants&lt;ul&gt;
+&lt;li&gt;Provide application templates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Participate in social media networks to actively recruit groups who are
+underrepresented in FOSS (free and open source software)&lt;/li&gt;
+&lt;li&gt;Collect anonymous demographic data &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A couple of organization examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Public Lab: &lt;a href=&quot;https://code.publiclab.org/&quot;&gt;Community toolbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Python Software Foundation: &lt;a href=&quot;https://python-gsoc.org/index.html&quot;&gt;Python GSoC – Home&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you to the community and the work you're doing &amp;lt;3&lt;/p&gt;
+&lt;h3 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h3&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/2019-11-25-empowering-collaboration/&quot;&gt;Empowering Collaboration in the Commons — Creative
+Commons on GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://zehta.me/2019/07/host-classification/">
+    <title type="text">Host Classification with SaltStack</title>
+    <id>urn:uuid:52e4c570-d7fa-330c-b459-b8e40bf6869a</id>
+    <updated>2019-07-31T11:11:00Z</updated>
+    <link href="https://zehta.me/2019/07/host-classification/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;Within infrastructure as code, as with all programming, there is a goal to
+reduce redundancy as much as possible. With configuration management,
+duplicated configurations can quickly lead to confusion and unexpected states.
+One of the key ways to reduce configuration duplication is robust host
+classification.&lt;/p&gt;
+&lt;h3 id=&quot;minion-classification&quot;&gt;Minion Classification&lt;/h3&gt;&lt;p&gt;As this post is about SaltStack, the terms &quot;minion classification&quot; for &quot;host
+classification&quot; and &quot;minion&quot; for &quot;host&quot; are used. With Puppet, &quot;node
+classification&quot; and &quot;node&quot; would be used.&lt;/p&gt;
+&lt;p&gt;Minion classification consists of rules that determine what a minion is and
+which states (or configurations) should be applied to it. Good minion
+classification removes or minimizes the necessity of explicitly assigning
+configurations to a minion. Our goal is for the computer to do as much of the
+work as possible.&lt;/p&gt;
+&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;&lt;p&gt;Minions are added and configured from the primary salt server (called the
+salt-master) with the following Minion ID schema: &lt;strong&gt;&lt;code&gt;HST__POD__LOC&lt;/code&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;HST&lt;/code&gt;&lt;/strong&gt; is the hostname or role. It indications what services are running
+on the host or the role that it serves.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;POD&lt;/code&gt;&lt;/strong&gt; is the pod or group. It indicates the logical grouping of the
+host.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;LOC&lt;/code&gt;&lt;/strong&gt; is the location. It indicates where the host is.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;wordpress__prod__us-east-2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wordpress__stage__us-east-2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Minion ID parts are matched against the following list. SaltStack pillar
+data, like Apache2, uses a last declared wins model. The following list is
+organized from least-specific to most-specific:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;1_LOC&lt;/code&gt; (location)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2_POD&lt;/code&gt; (pod/group)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;3_HST&lt;/code&gt; (host/role)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;4_POD__LOC&lt;/code&gt; (pod/group and location)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;5_HST__POD&lt;/code&gt; (host/role and pod/group)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Using our Minion ID examples above, this allows configuration data to be
+specified for both shared data (ex. WordPress security settings that should be
+applied to all WordPress hosts/roles) and specific data (ex. Let's Encrypt
+TLS/SSL settings).&lt;/p&gt;
+&lt;h2 id=&quot;security&quot;&gt;Security&lt;/h2&gt;&lt;p&gt;&lt;em&gt;The only grain which can be safely used is &lt;code&gt;grains['id']&lt;/code&gt; which contains the
+Minion ID.&lt;/em&gt; (&lt;a href=&quot;https://docs.saltstack.com/en/latest/faq.html#is-targeting-using-grain-data-secure&quot;&gt;FAQ Q.21&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;It is important to rely &lt;em&gt;only&lt;/em&gt; on the Minion ID as all other grains can be
+manipulated by the client. This means a compromised client could change its
+grains to collect secrets if a dedicated grain (ex. &lt;code&gt;role&lt;/code&gt;) was used for minion
+classification.&lt;/p&gt;
+&lt;h3 id=&quot;imperfect-work-in-progress&quot;&gt;Imperfect Work in Progress&lt;/h3&gt;&lt;p&gt;This implementation has proven to be robust and helpful. However, there is
+still room for improvement. For example, I will probably refactor &lt;code&gt;HST&lt;/code&gt; to
+&lt;code&gt;ROLE&lt;/code&gt; and &lt;code&gt;POD&lt;/code&gt; to &lt;code&gt;GRP&lt;/code&gt; for added clarity.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback and development is welcomed.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime&quot;&gt;creativecommons/sre-salt-prime&lt;/a&gt; repository is open
+source.&lt;/p&gt;
+&lt;p&gt;This host classification is also documented within it: &lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime/blob/master/docs/Host_Classification.md&quot;&gt;sre-salt-prime/Host_Classification.md at master&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h3&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/saltstack-host-classification/&quot;&gt;Host Classification with SaltStack — Creative Commons on
+GitHub&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://zehta.me/2019/04/open-development/">
+    <title type="text">Open Development with SaltStack</title>
+    <id>urn:uuid:1e4fddaa-b604-3061-b3ae-3917f37f0b6f</id>
+    <updated>2019-04-17T11:11:00Z</updated>
+    <link href="https://zehta.me/2019/04/open-development/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;I am excited to publicize the open source repository for our SaltStack
+configuration: &lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime&quot;&gt;creativecommons/sre-salt-prime&lt;/a&gt;. This is a
+rare offering. Not many configuration management system repositories are open
+sourced. Read on for why this is important to me :)&lt;/p&gt;
+&lt;p&gt;I really like open source software (&lt;a href=&quot;https://opensource.org/osd-annotated&quot;&gt;The Open Source Definition (Annotated) |
+Open Source Initiative&lt;/a&gt;). Over the years it has provided me with access
+and capabilities I would not normally be able to afford.&lt;/p&gt;
+&lt;p&gt;I had very little money in college. My first computer was salvaged from a
+dumpster and ran entirely on open source software. I was once reduced to
+begging a few dollars to satisfy a museum's arbitrarily enforced &quot;suggested
+donation&quot;. Thankfully, open source image manipulation software powered many of
+my art projects.&lt;/p&gt;
+&lt;p&gt;With the exception of typing class in high school and a few training sessions
+at work, I have never received any formal computer training. Instead, I was
+able to teach myself by using and investigating open source software. I have
+been able to determine exactly why open source software behaves the way it does
+by looking at the source code. It is instructive to be able to synthesize
+complex systems as a single user and participate in the same communities as
+SysAdmins using the same software with thousands or millions of users.&lt;/p&gt;
+&lt;p&gt;I've been gainfully employed in the technology sector for over a decade so the
+free cost of open source software is not as necessary to me. However, open
+source software remains very important. As a SysAdmin, I have repeatedly found
+open source communities to be a better resource for support than even the most
+expensive maintenance contract. The ability to make at-will modifications to a
+codebase can save project timelines, and seeing those modifications accepted
+upstream is deeply satisfying.&lt;/p&gt;
+&lt;p&gt;When I started at Creative Commons in the fall of 2018, I began using
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Salt_(software)&quot;&gt;SaltStack&lt;/a&gt; full time. As part of my work on developing
+infrastructure as code at Creative Commons, I created a new open source
+repository for our SaltStack configuration:
+&lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime&quot;&gt;creativecommons/sre-salt-prime&lt;/a&gt;. While working on
+provisioning of AWS resources, I have had trouble finding examples. I learn
+best by example and I know I’m not alone. I hope opening this repository helps
+other Site Reliability Engineers (SREs) and Systems Administrators (SysAdmins).&lt;/p&gt;
+&lt;p&gt;I expect that working in the open will improve the quality of my work. Research
+has not only shown that people produce higher quality work when they expect it
+to be reviewed or shared, but also that open source allows others to provide
+criticism, feedback, and contributions.&lt;/p&gt;
+&lt;p&gt;Perhaps most of all, I hope to give back to the community. I hope it helps
+others learn when they do not have access to proprietary software at home,
+school, or work. I hope that my work in the open might lower the resources
+required to implement open source for others.&lt;/p&gt;
+&lt;h3 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h3&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/open-development-with-saltstack/&quot;&gt;Open Development with SaltStack — Creative Commons on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://zehta.me/2016/12/feelings-thermometer/">
     <title type="text">Feelings Thermometer</title>
     <id>urn:uuid:4a851be6-7833-337f-a79e-dc9144c728c0</id>
     <updated>2016-12-11T14:12:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2016/12/feelings-thermometer/" />
+    <link href="https://zehta.me/2016/12/feelings-thermometer/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -26,11 +195,11 @@ created my own.&lt;/p&gt;
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2015/10/emotional-labor/">
+  <entry xml:base="https://zehta.me/2015/10/emotional-labor/">
     <title type="text">Emotional Labor</title>
     <id>urn:uuid:b1be5842-aeb0-39a7-a786-4a37c3500e78</id>
     <updated>2015-10-03T15:45:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2015/10/emotional-labor/" />
+    <link href="https://zehta.me/2015/10/emotional-labor/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -43,11 +212,11 @@ comfortable (formatting-wise) to read. Please check it out: &lt;a href=&quot;htt
 The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2015/02/apple-ubuntu-ssh/">
+  <entry xml:base="https://zehta.me/2015/02/apple-ubuntu-ssh/">
     <title type="text">Apple and Ubuntu OpenSSH Versions</title>
     <id>urn:uuid:a195f8ab-3d3c-357c-8c35-76cda13bd3cd</id>
     <updated>2015-02-24T09:08:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2015/02/apple-ubuntu-ssh/" />
+    <link href="https://zehta.me/2015/02/apple-ubuntu-ssh/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -161,11 +330,11 @@ versions to make troubleshooting easier:&lt;/p&gt;
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2015/01/ssh-on-ios/">
+  <entry xml:base="https://zehta.me/2015/01/ssh-on-ios/">
     <title type="text">SSH on iOS is abysmal</title>
     <id>urn:uuid:61374a95-2454-3b23-bb6c-24a714598b51</id>
     <updated>2015-01-08T19:06:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2015/01/ssh-on-ios/" />
+    <link href="https://zehta.me/2015/01/ssh-on-ios/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -204,11 +373,11 @@ important in a platform (phones and tablets) that are so easy to misplace.&lt;/p
 increased security easier is a huge win. For an example, see cmc: Workflow.&lt;/p&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2014/11/painted-iterm/">
+  <entry xml:base="https://zehta.me/2014/11/painted-iterm/">
     <title type="text">Color Coded iTerm2 Windows</title>
     <id>urn:uuid:bd1bf1b6-05af-3cc4-87ba-99c20b41a5ef</id>
     <updated>2014-11-03T21:05:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2014/11/painted-iterm/" />
+    <link href="https://zehta.me/2014/11/painted-iterm/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -229,11 +398,11 @@ reader, to use: &lt;a href=&quot;https://github.com/TimZehta/painted-iterm&quot;
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2014/04/empire-dice/">
+  <entry xml:base="https://zehta.me/2014/04/empire-dice/">
     <title type="text">Star Wars: Edge of the Empire Dice Probabilities</title>
     <id>urn:uuid:cd2f67b0-9bff-31e5-8c7a-8f5b20c88908</id>
     <updated>2014-04-02T16:09:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2014/04/empire-dice/" />
+    <link href="https://zehta.me/2014/04/empire-dice/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -260,11 +429,11 @@ the left of zero to maintain its sinister meaning.&lt;/p&gt;
 &lt;/ol&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2014/03/trouble-metrics/">
+  <entry xml:base="https://zehta.me/2014/03/trouble-metrics/">
     <title type="text">Troubleshooting collectd / statsd / Graphite</title>
     <id>urn:uuid:7bec319e-9c4f-3d81-98f9-db4c91e13818</id>
     <updated>2014-03-31T16:09:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2014/03/trouble-metrics/" />
+    <link href="https://zehta.me/2014/03/trouble-metrics/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -286,11 +455,11 @@ statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2014/03/dungeon-dice/">
+  <entry xml:base="https://zehta.me/2014/03/dungeon-dice/">
     <title type="text">Dungeon World Dice Probabilities</title>
     <id>urn:uuid:d53963ad-5254-3049-bfe5-783e98329b0d</id>
     <updated>2014-03-30T23:16:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2014/03/dungeon-dice/" />
+    <link href="https://zehta.me/2014/03/dungeon-dice/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -308,11 +477,11 @@ The graphs were created using &lt;a href=&quot;https://github.com/TimZehta/rpgdi
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2014/03/rpg-dice/">
+  <entry xml:base="https://zehta.me/2014/03/rpg-dice/">
     <title type="text">RPG Dice</title>
     <id>urn:uuid:c0a7b682-daa2-3602-9e36-6496bc0603d5</id>
     <updated>2014-03-30T23:09:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2014/03/rpg-dice/" />
+    <link href="https://zehta.me/2014/03/rpg-dice/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -327,11 +496,11 @@ glad for the shortcuts it provided. I would love to see it become more well
 known and successful.&lt;/p&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2014/02/monster-cards/">
+  <entry xml:base="https://zehta.me/2014/02/monster-cards/">
     <title type="text">Dungeon World Monster Cards</title>
     <id>urn:uuid:515d92ed-3206-3664-a4b4-fa4c59d1569d</id>
     <updated>2014-02-27T20:33:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2014/02/monster-cards/" />
+    <link href="https://zehta.me/2014/02/monster-cards/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -352,11 +521,11 @@ layout.  Overall my experience was very positive.&lt;/p&gt;
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2013/01/go-to-bed/">
+  <entry xml:base="https://zehta.me/2013/01/go-to-bed/">
     <title type="text">Go to Bed</title>
     <id>urn:uuid:9a52773a-1940-3d54-8216-ab9bf7ced306</id>
     <updated>2013-01-02T09:41:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2013/01/go-to-bed/" />
+    <link href="https://zehta.me/2013/01/go-to-bed/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -373,11 +542,11 @@ single task that one fails to notice things in plain sight.&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2012/11/mystery-writes/">
+  <entry xml:base="https://zehta.me/2012/11/mystery-writes/">
     <title type="text">Mystery Writes</title>
     <id>urn:uuid:532d4e0d-587a-3ca3-9772-fc947faae649</id>
     <updated>2012-11-01T13:28:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2012/11/mystery-writes/" />
+    <link href="https://zehta.me/2012/11/mystery-writes/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -408,11 +577,11 @@ statistics&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2012/10/automation-of-nets/">
+  <entry xml:base="https://zehta.me/2012/10/automation-of-nets/">
     <title type="text">The Automation of Networks of Networks</title>
     <id>urn:uuid:3466c878-ee53-3fe3-8b36-caf0d7aefd83</id>
     <updated>2012-10-10T12:58:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2012/10/automation-of-nets/" />
+    <link href="https://zehta.me/2012/10/automation-of-nets/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -444,11 +613,11 @@ The Insecurity of Networks&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The concept of networks of networks also servers to differentiate system administrators from programmers (not 100% accurate, but helpful none-the-less).&lt;/p&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2012/10/isolating-ssd/">
+  <entry xml:base="https://zehta.me/2012/10/isolating-ssd/">
     <title type="text">Isolating SSD Firmware Issue</title>
     <id>urn:uuid:d6538a9a-88b8-3c47-a9c8-b6948dd9e527</id>
     <updated>2012-10-03T16:10:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2012/10/isolating-ssd/" />
+    <link href="https://zehta.me/2012/10/isolating-ssd/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -478,11 +647,11 @@ affected.&lt;/p&gt;
 sysadmin a &quot;senior sysadmin&quot;?&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2012/10/linux-tcp-ip/">
+  <entry xml:base="https://zehta.me/2012/10/linux-tcp-ip/">
     <title type="text">Linux TCP/IP Tuning</title>
     <id>urn:uuid:a2e9b880-d629-33a9-8847-9b7ba87924d5</id>
     <updated>2012-10-03T15:32:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2012/10/linux-tcp-ip/" />
+    <link href="https://zehta.me/2012/10/linux-tcp-ip/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -491,11 +660,11 @@ sysadmin a &quot;senior sysadmin&quot;?&lt;/a&gt;&lt;/p&gt;
 systems that benefit from that granularity of tuning.&lt;/p&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2012/09/to-err-iz/">
+  <entry xml:base="https://zehta.me/2012/09/to-err-iz/">
     <title type="text">To Err iz Human</title>
     <id>urn:uuid:44d04b5f-8230-3cb6-9617-8b58cb53365b</id>
     <updated>2012-09-28T12:13:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2012/09/to-err-iz/" />
+    <link href="https://zehta.me/2012/09/to-err-iz/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -507,11 +676,11 @@ centenary&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2012/09/name-change/">
+  <entry xml:base="https://zehta.me/2012/09/name-change/">
     <title type="text">Name Change</title>
     <id>urn:uuid:a52652dd-6d43-3466-b3d3-769374e44860</id>
     <updated>2012-09-12T08:36:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2012/09/name-change/" />
+    <link href="https://zehta.me/2012/09/name-change/" />
     <author>
       <name>Timid Robot Zehta</name>
     </author>
@@ -537,11 +706,11 @@ There are no 4 character domain names left (except expired ones being
 resold at a high cost).&lt;/p&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2002/04/reminder/">
+  <entry xml:base="https://zehta.me/2002/04/reminder/">
     <title type="text">Reminder</title>
     <id>urn:uuid:c62f8f57-9928-36cc-b2b3-5952b1fc524d</id>
     <updated>2002-04-04T22:22:22Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2002/04/reminder/" />
+    <link href="https://zehta.me/2002/04/reminder/" />
     <author>
       <name>Tim Wheeler</name>
     </author>
@@ -598,11 +767,11 @@ Silence: Tz'inil Na'Tab'al.&lt;/em&gt; Guatemala: Arte, Color y Texto, S.A. page
 &lt;/ul&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/2002/02/name-tags/">
+  <entry xml:base="https://zehta.me/2002/02/name-tags/">
     <title type="text">Name Tags</title>
     <id>urn:uuid:0d24caa3-f540-3885-9199-c75fb8d703f4</id>
     <updated>2002-02-22T22:22:22Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/2002/02/name-tags/" />
+    <link href="https://zehta.me/2002/02/name-tags/" />
     <author>
       <name>Tim Wheeler</name>
     </author>
@@ -630,11 +799,11 @@ point as if I had one on. It took months for people I saw every week (or more)
 to realize that I was no longer wearing them.&lt;/p&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/1998/10/jazz-dance/">
+  <entry xml:base="https://zehta.me/1998/10/jazz-dance/">
     <title type="text">Jazz Dance</title>
     <id>urn:uuid:d7affc57-ea63-3875-b6c8-061a69f8c12e</id>
     <updated>1998-10-22T13:45:00Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/1998/10/jazz-dance/" />
+    <link href="https://zehta.me/1998/10/jazz-dance/" />
     <author>
       <name>Tim Wheeler</name>
     </author>
@@ -677,11 +846,11 @@ We danced as the jazz band played!
 &lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
-  <entry xml:base="https://timidrobot.github.io/zehta.me/1998/08/will-work-for-tuition/">
+  <entry xml:base="https://zehta.me/1998/08/will-work-for-tuition/">
     <title type="text">Will Work for Tuition</title>
     <id>urn:uuid:8e946231-46a1-3a75-8c44-33503ebe9bd5</id>
     <updated>1998-08-18T22:22:22Z</updated>
-    <link href="https://timidrobot.github.io/zehta.me/1998/08/will-work-for-tuition/" />
+    <link href="https://zehta.me/1998/08/will-work-for-tuition/" />
     <author>
       <name>Tim Wheeler</name>
     </author>
