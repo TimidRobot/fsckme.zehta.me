@@ -96,7 +96,7 @@ Full Font Awesome Free license: https://fontawesome.com/license/free.
 In the Font Awesome Free download, the CC BY 4.0 license applies to all icons
 packaged as SVG and JS file types.
 
-** Fonts:** SIL OFL 1.1 License (https://scripts.sil.org/OFL)
+**Fonts:** SIL OFL 1.1 License (https://scripts.sil.org/OFL)
 In the Font Awesome Free download, the SIL OFL license applies to all icons
 packaged as web and desktop font files.
 
