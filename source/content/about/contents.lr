@@ -56,7 +56,7 @@ This is a personal blog. All opinions are my own.
 
 ###  Atom Syndication Format
 
-[`../feed.xml`](../feed.xml)
+[Atom Feed - Blog - Timid Robot`](../feed.xml)
 
 
 ### Licenses
@@ -73,13 +73,35 @@ boilerplate or otherwise *should* be too simple and obvious to copyright.)
 
 #### Content
 
-[![CC BY-SA 4.0 license button][cc-by-sa-png]][cc-by-sa]
+[![CC BY-SA 4.0 license button][cc-by-sa-png]][cc-by-sa1]
 All the content within this site is licensed under a [Creative Commons
-Attribution-ShareAlike 4.0 International License][cc-by-sa] unless otherwise
+Attribution-ShareAlike 4.0 International License][cc-by-sa2] unless otherwise
 specified.
 
 [cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png#floatleft "CC BY-SA 4.0 license button"
-[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0"
+[cc-by-sa1]: https://creativecommons.org/licenses/by-sa/4.0/ "CC BY-SA 4.0"
+[cc-by-sa2]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons Attribution-ShareAlike 4.0 International License"
+
+
+#### Font Awesome
+
+Font Awesome Free is free, open source, and GPL friendly. You can use it for
+commercial projects, open source projects, or really almost whatever you want.
+Full Font Awesome Free license: https://fontawesome.com/license/free.
+
+**Icons:** CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+In the Font Awesome Free download, the CC BY 4.0 license applies to all icons
+packaged as SVG and JS file types.
+
+** Fonts:** SIL OFL 1.1 License (https://scripts.sil.org/OFL)
+In the Font Awesome Free download, the SIL OFL license applies to all icons
+packaged as web and desktop font files.
+
+**Brand Icons:**
+All brand icons are trademarks of their respective owners. The use of these
+trademarks does not indicate endorsement of the trademark holder by Font
+Awesome, nor vice versa. **Please do not use brand logos for any purpose except
+to represent the company, product, or service to which they refer.**
 
 
 #### Skeleton

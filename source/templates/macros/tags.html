@@ -10,14 +10,13 @@
 
 
 {%- macro render_cat_nav(active=none) %}
-<h2>Tags</h2>
+<h2><i class="fas fa-tags"></i> Tags</h2>
 <div>
 <ul>
   {%- for tag in site.query("/tags") %}
     {%- set name = tag.name if tag.name else tag._id.title() %}
     {%- set name = name.replace(" ", "\u00A0") %}
-  <li{%- if tag._id == active %} class="active"{%- endif%}>
-    <a href="{{ tag|url }}">{{ name }}</a>
+  <li><a href="{{ tag|url }}"><i class="fas fa-tag"></i> {{ name }}</a>
         ({{ tag.children.count() }})</li>
   {%- endfor %}
 </ul>
@@ -41,7 +40,7 @@
         {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
         {%- set name = tag.name if tag.name else tag._id.title() %}
         {%- set name = name.replace(" ", "\u00A0") %}
-        {{- name }}
+        {{- "" }}<a href="{{ tag|url }}">{{- name }}</a>
         {%- if loop.last %}
           {{- ")" }}
         {%- else %}
@@ -55,14 +54,18 @@
 
 {%- macro render_cats_vertical(tags) %}
   <div>
-    <h3>Tags:</h3>
+    <h3>Tags</h3>
     <ul>
   {%- for specified_tag in tags|sort %}
     {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
     {%- set name = tag.name if tag.name else tag._id.title() %}
     {%- set name = name.replace(" ", "\u00A0") %}
-      <li><a href="/tags/{{ tag._id }}/">{{ name }}</a></li>
+    <li><a href="/tags/{{ tag._id }}/"><i class="fas fa-tag"></i>
+        {{ name }}</a></li>
   {%- endfor %}
+    <li><a href="{{ "/tags"|url }}"><i class="fas fa-tags"></i>
+        All Tags</a></li>
+    </ul>
     </ul>
   </div>
 {%- endmacro %}

@@ -24,7 +24,7 @@ classification.
 <!-- PLUGIN-READ-FULL-POST -->
 
 
-### Minion Classification
+#### Minion Classification
 
 As this post is about SaltStack, the terms "minion classification" for "host
 classification" and "minion" for "host" are used. With Puppet, "node
@@ -37,7 +37,7 @@ configurations to a minion. Our goal is for the computer to do as much of the
 work as possible.
 
 
-### Implementation
+#### Implementation
 
 Minions are added and configured from the primary salt server (called the
 salt-master) with the following Minion ID schema: **`HST__POD__LOC`**:
@@ -69,7 +69,7 @@ applied to all WordPress hosts/roles) and specific data (ex. Let's Encrypt
 TLS/SSL settings).
 
 
-## Security
+### Security
 
 *The only grain which can be safely used is `grains['id']` which contains the
 Minion ID.* ([FAQ Q.21][FAQ21])
@@ -80,7 +80,7 @@ grains to collect secrets if a dedicated grain (ex. `role`) was used for minion
 classification.
 
 
-### Imperfect Work in Progress
+#### Imperfect Work in Progress
 
 This implementation has proven to be robust and helpful. However, there is
 still room for improvement. For example, I will probably refactor `HST` to
