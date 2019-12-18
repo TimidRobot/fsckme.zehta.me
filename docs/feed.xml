@@ -19,8 +19,6 @@
     </author>
     <content type="html">&lt;p&gt;I have a new website! It uses the &lt;a href=&quot;https://www.getlektor.com/&quot;&gt;Lektor&lt;/a&gt; static site generator and is
 hosted on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;The source code for the website is in the &lt;a href=&quot;https://github.com/TimidRobot/zehta.me&quot;&gt;TimidRobot/zehta.me&lt;/a&gt;
 repository. See the README there for additional context and links.&lt;/p&gt;
 &lt;h3 id=&quot;theme&quot;&gt;Theme&lt;/h3&gt;&lt;p&gt;The theme is created using &lt;a href=&quot;http://getskeleton.com/&quot;&gt;Skeleton&lt;/a&gt; (&lt;em&gt;responsive CSS Boilerplate&lt;/em&gt;).
@@ -77,8 +75,7 @@ td.BluePlum { background-color: var(--BluePlum); color: Black; }
     <content type="html">&lt;p&gt;In the past few months I have been privileged to attend &lt;a href=&quot;https://wikimania.wikimedia.org/wiki/2019:Program&quot;&gt;Wikimania
 2019&lt;/a&gt; and the Google Summer of Code &lt;a href=&quot;https://sites.google.com/view/gsoc-mentorsummit2019/home&quot;&gt;2019 Mentor
 Summit&lt;/a&gt;. At these events I was overwhelmed with the amount of
-care and effort people are putting into their projects and communities.
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;&lt;/p&gt;
+care and effort people are putting into their projects and communities.&lt;/p&gt;
 &lt;p&gt;At Wikimania 2019, I was impressed with how much overlap there is between the
 Creative Commons and Wikimedia communities. Both communities are actively
 engaged in expanding the content and participation in the commons--in the
@@ -129,10 +126,7 @@ reduce redundancy as much as possible. With configuration management,
 duplicated configurations can quickly lead to confusion and unexpected states.
 One of the key ways to reduce configuration duplication is robust host
 classification.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
-
-&lt;h3 id=&quot;minion-classification&quot;&gt;Minion Classification&lt;/h3&gt;&lt;p&gt;As this post is about SaltStack, the terms &quot;minion classification&quot; for &quot;host
+&lt;h4 id=&quot;minion-classification&quot;&gt;Minion Classification&lt;/h4&gt;&lt;p&gt;As this post is about SaltStack, the terms &quot;minion classification&quot; for &quot;host
 classification&quot; and &quot;minion&quot; for &quot;host&quot; are used. With Puppet, &quot;node
 classification&quot; and &quot;node&quot; would be used.&lt;/p&gt;
 &lt;p&gt;Minion classification consists of rules that determine what a minion is and
@@ -140,7 +134,7 @@ which states (or configurations) should be applied to it. Good minion
 classification removes or minimizes the necessity of explicitly assigning
 configurations to a minion. Our goal is for the computer to do as much of the
 work as possible.&lt;/p&gt;
-&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;&lt;p&gt;Minions are added and configured from the primary salt server (called the
+&lt;h4 id=&quot;implementation&quot;&gt;Implementation&lt;/h4&gt;&lt;p&gt;Minions are added and configured from the primary salt server (called the
 salt-master) with the following Minion ID schema: &lt;strong&gt;&lt;code&gt;HST__POD__LOC&lt;/code&gt;&lt;/strong&gt;:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;HST&lt;/code&gt;&lt;/strong&gt; is the hostname or role. It indications what services are running
@@ -168,13 +162,13 @@ organized from least-specific to most-specific:&lt;/p&gt;
 specified for both shared data (ex. WordPress security settings that should be
 applied to all WordPress hosts/roles) and specific data (ex. Let's Encrypt
 TLS/SSL settings).&lt;/p&gt;
-&lt;h2 id=&quot;security&quot;&gt;Security&lt;/h2&gt;&lt;p&gt;&lt;em&gt;The only grain which can be safely used is &lt;code&gt;grains['id']&lt;/code&gt; which contains the
+&lt;h3 id=&quot;security&quot;&gt;Security&lt;/h3&gt;&lt;p&gt;&lt;em&gt;The only grain which can be safely used is &lt;code&gt;grains['id']&lt;/code&gt; which contains the
 Minion ID.&lt;/em&gt; (&lt;a href=&quot;https://docs.saltstack.com/en/latest/faq.html#is-targeting-using-grain-data-secure&quot;&gt;FAQ Q.21&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;It is important to rely &lt;em&gt;only&lt;/em&gt; on the Minion ID as all other grains can be
 manipulated by the client. This means a compromised client could change its
 grains to collect secrets if a dedicated grain (ex. &lt;code&gt;role&lt;/code&gt;) was used for minion
 classification.&lt;/p&gt;
-&lt;h3 id=&quot;imperfect-work-in-progress&quot;&gt;Imperfect Work in Progress&lt;/h3&gt;&lt;p&gt;This implementation has proven to be robust and helpful. However, there is
+&lt;h4 id=&quot;imperfect-work-in-progress&quot;&gt;Imperfect Work in Progress&lt;/h4&gt;&lt;p&gt;This implementation has proven to be robust and helpful. However, there is
 still room for improvement. For example, I will probably refactor &lt;code&gt;HST&lt;/code&gt; to
 &lt;code&gt;ROLE&lt;/code&gt; and &lt;code&gt;POD&lt;/code&gt; to &lt;code&gt;GRP&lt;/code&gt; for added clarity.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Feedback and development is welcomed.&lt;/strong&gt;&lt;/p&gt;
@@ -197,8 +191,6 @@ GitHub&lt;/a&gt;&lt;/p&gt;
 configuration: &lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime&quot;&gt;creativecommons/sre-salt-prime&lt;/a&gt;. This is a
 rare offering. Not many configuration management system repositories are open
 sourced. Read on for why this is important to me :)&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;I really like open source software (&lt;a href=&quot;https://opensource.org/osd-annotated&quot;&gt;The Open Source Definition (Annotated) |
 Open Source Initiative&lt;/a&gt;). Over the years it has provided me with access
 and capabilities I would not normally be able to afford.&lt;/p&gt;
@@ -249,8 +241,7 @@ GitHub&lt;/a&gt;.&lt;/p&gt;
     <author>
       <name>Timid Robot Zehta</name>
     </author>
-    <content type="html">&lt;p&gt;A collection of links in support of selfies:
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;A collection of links in support of selfies:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://youtu.be/VaVWvcuy3Cg&quot; title=&quot;Kero Kero Bonito - Picture This – YouTube&quot;&gt;Kero Kero Bonito - Picture This – YouTube&lt;/a&gt; (2015-03-10)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.bustle.com/articles/9421-feministselfie-reinforces-why-selfies-are-empowering&quot; title=&quot;#FeministSelfie Reinforces Why Selfies Are Empowering&quot;&gt;#FeministSelfie Reinforces Why Selfies Are Empowering&lt;/a&gt; (2013-11-21)&lt;/li&gt;
@@ -274,8 +265,6 @@ think&lt;/a&gt; (2015-07-23)&lt;/li&gt;
     </author>
     <content type="html">&lt;p&gt;I didn't like the Feelings Thermometer worksheet my therapist was using so I
 created my own.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;Here it is for your use (&lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0/&quot;&gt;CC BY-SA 4.0&lt;/a&gt;):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://drive.google.com/open?id=0B0UUYL6kaNeBUlh3MXh2WG5PRjA&quot;&gt;Feelings Thermometer (Word Document)&lt;/a&gt;&lt;/li&gt;
@@ -294,8 +283,6 @@ created my own.&lt;/p&gt;
     <content type="html">&lt;p&gt;I recently read an amazing document. It was a digest of a message thread about
 Emotional Labor. Before I was done I knew I wanted to share it with everyone I
 cared about.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;To that end I collaborated with the creator of the digest to
 update the formatting of the document. I hope the result is very easy and
 comfortable (formatting-wise) to read. Please check it out: &lt;a href=&quot;https://drive.google.com/file/d/0B0UUYL6kaNeBTDBRbkJkeUtabEk/view?usp=sharing&quot;&gt;Emotional Labor:
@@ -310,8 +297,7 @@ The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
     <author>
       <name>Timid Robot Zehta</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-&lt;img src=&quot;/2015/06/maybe-its-valvoline/furiosa_maybe_its_valvoline.png&quot; alt=&quot;Maybe she&amp;#39;s borth with it--maybe it&amp;#39;s Valvoline&quot; title=&quot;Maybe she&amp;#39;s borth with it--maybe it&amp;#39;s Valvoline&quot;&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/2015/06/maybe-its-valvoline/furiosa_maybe_its_valvoline.png&quot; alt=&quot;Maybe she&amp;#39;s borth with it--maybe it&amp;#39;s Valvoline&quot; title=&quot;Maybe she&amp;#39;s borth with it--maybe it&amp;#39;s Valvoline&quot;&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry xml:base="https://zehta.me/2015/02/apple-ubuntu-ssh/">
@@ -324,8 +310,6 @@ The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
     </author>
     <content type="html">&lt;p&gt;I use and support SSH every working day. I created these tables of OpenSSH
 versions to make troubleshooting easier:&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;h3 id=&quot;apple-macos-/-os-x&quot;&gt;Apple macOS / OS X&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;&lt;tr&gt;
 &lt;th&gt;OS Version&lt;/th&gt;
@@ -443,8 +427,6 @@ versions to make troubleshooting easier:&lt;/p&gt;
       <name>Timid Robot Zehta</name>
     </author>
     <content type="html">&lt;h3 id=&quot;application-summaries&quot;&gt;Application Summaries&lt;/h3&gt;&lt;p&gt;I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;h4 id=&quot;issh&quot;&gt;iSSH&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Version: 5.7.1&lt;/li&gt;
 &lt;li&gt;Two factor: Yes!&lt;/li&gt;
@@ -490,8 +472,6 @@ increased security easier is a huge win. For an example, see cmc: Workflow.&lt;/
     <content type="html">&lt;p&gt;As a systems administrator, I often have many many terminal windows open. To
 help ensure I am fully aware of which of them are on Production hosts, I color
 code them.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;I have finally taken that bit of helpful code and made it as easy for you, dear
 reader, to use: &lt;a href=&quot;https://github.com/TimidRobot/painted-iterm&quot;&gt;TimidRobot/painted-iterm&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Some of the neat things I learned about during the course of this project:&lt;/p&gt;
@@ -519,9 +499,6 @@ die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
 rolls). The work was inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling
 Mechanics in RPGs&lt;/a&gt;.  The graphs were created using &lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice
 · GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
-
 &lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;p&gt;The 2nd line of the title is an attempt to describe the dice simulated. They
 are shown in the top left corner of the graph.&lt;/p&gt;
 &lt;p&gt;While Despair and Triumph do not cancel each other out, Despair is graphed to
@@ -551,8 +528,6 @@ the left of zero to maintain its sinister meaning.&lt;/p&gt;
     <content type="html">&lt;p&gt;Troubleshooting &lt;a href=&quot;http://graphite.readthedocs.org/en/latest/&quot;&gt;Graphite&lt;/a&gt; can be a bother. Determining where a
 problem lies requires verification of the data at all of the points of
 communication. The best tool I've found for this is ngrep:&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo ngrep -lqd any ping tcp dst port 2003
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The following complex command finds ping metrics submitted over TCP to
@@ -580,9 +555,6 @@ statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
 Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
 inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling Mechanics in RPGs&lt;/a&gt;.
 The graphs were created using &lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice · GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
-
 &lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw00_success.png#vatexttop&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw01_simplified.png#vatexttop&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
@@ -604,9 +576,6 @@ The graphs were created using &lt;a href=&quot;https://github.com/TimidRobot/rpg
     <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that simulates different RPG dice mechanics (rulesets)
 and creates graphs showing the probability of the different outcomes:
 &lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice · GitHub&lt;/a&gt;!&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
-
 &lt;h3 id=&quot;matplotlib-install&quot;&gt;matplotlib install&lt;/h3&gt;&lt;p&gt;matplotlib is super painful to install on macOS Mavericks 10.9.2. I ended up
 creating an installation script (&lt;a href=&quot;https://github.com/TimidRobot/rpgdice/blob/master/install_requirements.sh&quot;&gt;&lt;code&gt;install_requirements.sh&lt;/code&gt;&lt;/a&gt;) to help
 with debugging the mess and allowing me to reliably reproduce success.&lt;/p&gt;
@@ -626,8 +595,6 @@ known and successful.&lt;/p&gt;
     <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that allows the generation of &lt;a href=&quot;http://www.dungeon-world.com/&quot;&gt;Dungeon World&lt;/a&gt;
 Monster Cards. They can be made from the source files containing the Dungeon
 World monsters or from custom YAML files.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;I am pleased with the outcome. The formatting does not match the Dungeon World
 text, but the most significant changes are intentional. I think they make the
 cards easier to use. I especially like the way I categorized and ordered the
@@ -654,8 +621,6 @@ layout.  Overall my experience was very positive.&lt;/p&gt;
 over again, I have discovered that I will fail to solve a problem if I focus
 too stubbornly on it. If I go to bed, however, the answer is usually waiting
 for me as soon as I wake up or pick up the problem again.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;I was reminded of this while reading the highly fascinating article, &lt;a href=&quot;http://www.newyorker.com/reporting/2013/01/07/130107fa_fact_green&quot;&gt;Adam
 Green: The Spectacular Thefts of Apollo Robbins, Pickpocket&lt;/a&gt; (linked
 from &lt;a href=&quot;http://www.schneier.com/blog/archives/2013/01/apollo_robbins.html&quot;&gt;Schneier on Security: Apollo Robbins, Pickpocket&lt;/a&gt;).&lt;/p&gt;
@@ -676,8 +641,6 @@ single task that one fails to notice things in plain sight.&lt;/p&gt;
     <content type="html">&lt;p&gt;We recently observed constant write activity on our development server, while
 watching dstat. With the help of &lt;code&gt;iotop&lt;/code&gt; (&lt;a href=&quot;http://guichaz.free.fr/iotop/&quot;&gt;iotop&lt;/a&gt;), we identified the
 Apache web server was the culprit.&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;But why would apache be doing so many writes? That's not normal behaviori
 (excluding the the logs). We then used auditd to log writes by apache:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo auditctl -a exit,always -S write -F uid=33
@@ -714,8 +677,6 @@ statistics&lt;/li&gt;
 talk about--especially succinctly. A couple of excellent blog posts suggest the
 following definition for Systems Administration: &lt;strong&gt;the automation of networks
 of networks.&lt;/strong&gt;&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;Automation:&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;Therefore, SREs spend half their time writing code to eliminate what they do
 the other half of their day. When they &quot;automate themselves out of a job&quot; it
@@ -753,8 +714,6 @@ significant software updates that morning (though 10.8.2 came out that week).&lt
 &lt;p&gt;I didn't want to deal with it, so I took it to the Apple Store. Unfortunately,
 they simply wasted a few days (given the solution found, I'm confident they
 never let it run more than an hour).&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
 &lt;p&gt;Once I got it back from the Apple Store without resolution, I knew it would be
 up to me to isolate the issue. I was inspired by &lt;a href=&quot;http://everythingsysadmin.com/2012/09/seniorsysadmins.html&quot;&gt;Everything Sysadmin: What
 makes a sysadmin a &quot;senior sysadmin&quot;?&lt;/a&gt; to proceed methodically.&lt;/p&gt;
@@ -815,9 +774,6 @@ centenary&lt;/a&gt;&lt;/li&gt;
     </author>
     <content type="html">&lt;p&gt;&lt;strong&gt;My legal name, Timid Robot Zehta, was chosen by me and changed via court
 order.&lt;/strong&gt;&lt;/p&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
-
 &lt;h3 id=&quot;faq&quot;&gt;FAQ&lt;/h3&gt;&lt;h4 id=&quot;q.-what-do-you-prefer-to-be-called?&quot;&gt;Q. What do you prefer to be called?&lt;/h4&gt;&lt;p&gt;Please call me by my nickname (my first and middle name):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Legal Name:&lt;/strong&gt; Timid&amp;nbsp;Robot&amp;nbsp;Zehta&lt;/li&gt;
@@ -855,8 +811,7 @@ resold at a high cost).&lt;/p&gt;
     </author>
     <content type="html">&lt;p&gt;&lt;strong&gt;Tim Wheeler. &lt;em&gt;Reminder.&lt;/em&gt; 4 April - 11 April 2002&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;Steel, 41 x 37 x 16 inches&lt;/strong&gt;
-&lt;br&gt;&lt;strong&gt;North Side of Westlands Building, Sarah Lawrence College&lt;/strong&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+&lt;br&gt;&lt;strong&gt;North Side of Westlands Building, Sarah Lawrence College&lt;/strong&gt;&lt;br&gt;
 &lt;img src=&quot;/2002/04/reminder/side_back_installed.jpg#floatright&quot; alt=&quot;Metal skeleton reminder&quot; title=&quot;Metal skeleton reminder&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Reminder&lt;/em&gt; is my conference project for &quot;Sculpture: Explorations&quot; with Tishan
 Hsu. It was positioned next to the Peace Pole on the North Side of Westlands,
@@ -916,8 +871,7 @@ Silence: Tz'inil Na'Tab'al.&lt;/em&gt; Guatemala: Arte, Color y Texto, S.A. page
       <name>Tim Wheeler</name>
     </author>
     <content type="html">&lt;p&gt;&lt;strong&gt;Tim Wheeler. &lt;em&gt;Name Tags.&lt;/em&gt; 1999 Aug - 2002 Feb&lt;/strong&gt;
-&lt;br&gt;&lt;strong&gt;2 Purchased Plastic Name Tags&lt;/strong&gt;
-&lt;!-- PLUGIN-READ-FULL-POST --&gt;
+&lt;br&gt;&lt;strong&gt;2 Purchased Plastic Name Tags&lt;/strong&gt;&lt;br&gt;
 &lt;img src=&quot;/2002/02/name-tags/nametags.jpg#floatright&quot; alt=&quot;Tim Wheeler Name Tags&quot; title=&quot;Tim Wheeler Name Tags&quot;&gt;&lt;/p&gt;
 &lt;p&gt;These name tags are the objects of a performance piece performed daily over two
 and half years. They not only served as the focal point or medium for
@@ -948,9 +902,7 @@ to realize that I was no longer wearing them.&lt;/p&gt;
     <author>
       <name>Tim Wheeler</name>
     </author>
-    <content type="html">&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-
-&lt;pre&gt;&lt;code&gt;As I watched, the upright bassists hands,
+    <content type="html">&lt;pre&gt;&lt;code&gt;As I watched, the upright bassists hands,
 Became spiders jumping on silken strands.
 The bassist told a primitive tale
 That was interrupted by the trumpets wail.
@@ -999,8 +951,7 @@ We danced as the jazz band played!
     </author>
     <content type="html">&lt;p&gt;&lt;strong&gt;Tim Wheeler. &lt;em&gt;Will Work for Tuition.&lt;/em&gt; 1998 August&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;Two hours panhandling with a borrowed briefcase and tie&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- PLUGIN-READ-FULL-POST --&gt;
-&lt;img src=&quot;/1998/08/will-work-for-tuition/panhandling.jpg&quot; alt=&quot;Panhandling Collage&quot; title=&quot;Panhandling Collage&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/1998/08/will-work-for-tuition/panhandling.jpg&quot; alt=&quot;Panhandling Collage&quot; title=&quot;Panhandling Collage&quot;&gt;&lt;/p&gt;
 &lt;p&gt;My first dollar made while panhandling outside the Los Angeles courthouse. I
 made a total of $7.00 USD.&lt;/p&gt;
 </content>
