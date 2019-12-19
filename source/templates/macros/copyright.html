@@ -17,9 +17,8 @@
 <hr class="copyright">
   {%- if copyright.lower() == "allrights" %}
 <p class="copyright">
-  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}
-  . <strong>
-  All rights reserved.</strong>
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}.
+  <strong>All rights reserved.</strong>
 </p>
   {%- elif copyright.lower() == "cc-by-sa" %}
 <p class="copyright">
@@ -27,13 +26,12 @@
      href="https://creativecommons.org/licenses/by-sa/4.0/">
     <img alt="CC BY-SA 4.0 license button"
          src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"></a>
-  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}
-  . This work is licensed under a <strong>
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}.
+  This work is licensed under a <strong>
   <a rel="license"
      title="Creative Commons Attribution-ShareAlike 4.0 International License"
      href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
-     Attribution-ShareAlike 4.0 International License</a>
-  .</strong>
+     Attribution-ShareAlike 4.0 International License</a>.</strong>
 </p>
   {%- elif copyright.lower() == "cc-by" %}
 <p class="copyright">
@@ -41,13 +39,12 @@
      href="https://creativecommons.org/licenses/by/4.0/">
     <img alt="CC BY 4.0 license button"
          src="https://licensebuttons.net/l/by/4.0/80x15.png"></a>
-  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}
-  . This work is licensed under a <strong>
+  Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}.
+  This work is licensed under a <strong>
   <a rel="license"
      title="Creative Commons Attribution 4.0 International License"
      href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
-     Attribution 4.0 International License</a>
-  .</strong>
+     Attribution 4.0 International License</a>.</strong>
 </p>
   {%- else %}
 <p class="copyright">{{ copyright }}</p>

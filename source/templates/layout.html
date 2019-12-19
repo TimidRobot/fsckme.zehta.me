@@ -22,24 +22,24 @@
         <h1>{{ name.replace(" ", "\u00A0") }}</h1>
       </div>
       {%- if this._model.startswith("blog") or this.is_child_of("/tags/") %}
-        {%- set active = "active" %}
+        {%- set linkstatus = "linkactive" %}
       {%- else %}
-        {%- set active = "" %}
+        {%- set linkstatus = "linkinactive" %}
       {%- endif %}
-      <div class="three columns navi {{ active }}">
-        <a class="{{ active }}" href="{{ '/'|url }}"><i class="fas fa-newspaper"></i> Blog</a>
+      <div class="three columns navi {{ linkstatus }}">
+        <a class="{{ linkstatus }}" href="{{ '/'|url }}"><i class="fas fa-newspaper"></i> Blog</a>
       </div>
       {%- for href, fa, title in [
         ["/resume/", "fa-laptop", "Résumé"],
         ["/about/", "fa-address-card", "About"],
       ] %}
       {%- if this.is_child_of(href) %}
-        {%- set active = "active" %}
+        {%- set linkstatus = "linkactive" %}
       {%- else %}
-        {%- set active = "" %}
+        {%- set linkstatus = "linkinactive" %}
       {%- endif %}
-      <div class="three columns navi {{ active }}">
-        <a class="{{ active }}" href="{{ href|url }}">
+      <div class="three columns navi {{ linkstatus }}">
+        <a class="{{ linkstatus }}" href="{{ href|url }}">
         <i class="fas {{ fa }}"></i> {{ title }}</a>
       </div>
       {%- endfor %}
