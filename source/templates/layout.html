@@ -30,7 +30,7 @@
         <a class="{{ linkstatus }}" href="{{ '/'|url }}"><i class="fas fa-newspaper"></i> Blog</a>
       </div>
       {%- for href, fa, title in [
-        ["/resume/", "fa-laptop", "Résumé"],
+        ["/resume/", "fa-laptop-code", "Résumé"],
         ["/about/", "fa-address-card", "About"],
       ] %}
       {%- if this.is_child_of(href) %}
