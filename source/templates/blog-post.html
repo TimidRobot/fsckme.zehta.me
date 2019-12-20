@@ -9,16 +9,16 @@
               this.pub_date) }}
   <div class="pagination">
     {%- if this.has_prev() %}
-    <p class="prev">
+    <span class="prev">
     <a href="{{ this.get_siblings().prev_page|url }}">
       &#8672; {{ this.get_siblings().prev_page.title }}</a>
-    </p>
+    </span>
     {%- endif %}
     {%- if this.has_next() %}
-    <p class="next">
+    <span class="next">
     <a href="{{ this.get_siblings().next_page|url }}">
       {{ this.get_siblings().next_page.title }} &#8674;</a>
-    </p>
+    </span>
     {%- endif %}
   </div>
 {%- endblock %}
