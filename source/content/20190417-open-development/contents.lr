@@ -15,6 +15,10 @@ tags: 2019, creative-commons, open-source, saltstack, systems-administration
 body:
 
 
+[sre-salt-prime-repo]:https://github.com/creativecommons/sre-salt-prime
+[osd]:https://opensource.org/osd-annotated
+[saltstack-wikipedia]:https://en.wikipedia.org/wiki/Salt_(software)
+
 I am excited to publicize the open source repository for our SaltStack
 configuration: [creativecommons/sre-salt-prime][sre-salt-prime-repo]. This is a
 rare offering. Not many configuration management system repositories are open
@@ -66,10 +70,6 @@ Perhaps most of all, I hope to give back to the community. I hope it helps
 others learn when they do not have access to proprietary software at home,
 school, or work. I hope that my work in the open might lower the resources
 required to implement open source for others.
-
-[sre-salt-prime-repo]:https://github.com/creativecommons/sre-salt-prime
-[osd]:https://opensource.org/osd-annotated
-[saltstack-wikipedia]:https://en.wikipedia.org/wiki/Salt_(software)
 
 
 ### Originally Published
