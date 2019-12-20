@@ -161,10 +161,6 @@ p {
   text-align: justify;
 }
 p + p, ol + p, ul + p {
-  /*
-  border: 0 Red solid;
-  border-width: 1px 0 0 0;
-  */
   margin-top: 2rem;
 }
 ol {
@@ -237,7 +233,10 @@ nav div.title h1 {    /*SmDev*/ font-size: 2.25rem; }
 /*** Contents ****************************************************************/
 body .page .row  {
   background-color: var(--AnswerGray);
-  padding-left: 3em;
+  padding-left: 4.5rem;
+}
+body .page .row ol, body .page .row p, body .page .row ul {
+  padding-right: 1rem;
 }
 div .pagination {
   border: 2px var(--BluePlum) solid;
