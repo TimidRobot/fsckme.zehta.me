@@ -8,12 +8,12 @@
   {%- else %}
   <h2>{{ post.title }}</h2>
   {%- endif %}
-  <p class="meta">
+  <div class="meta">
     {{ post.pub_date.strftime("%Y %b %d") }}, {{ post.author -}}
     {%- if from_index %}
       {{- render_cats_horizontal(post.pub_date.strftime("%Y"), post.tags) }}
     {%- endif %}
-  </p>
+  </div>
   {%- if from_index %}
   {{ post.body_short }}
   {%- else %}

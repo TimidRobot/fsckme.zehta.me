@@ -108,44 +108,42 @@ code {
 h1, h2, h3, h4, h5, h6 {
   color: White;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin: 2rem 0 0 0;
   line-height: 1;
   letter-spacing: 0;
+  padding: 0.75rem;
 }
 h1 {
   font-size: 3.5rem;
+  padding: 0.5rem 0 0 0;
 }
 h2 {
   background-color: var(--NearBlack);
   font-size: 3.0rem;
+  margin-top: 0;
   margin-left: -3.5rem;
-  padding: 0.75rem;
 }
 h3 {
   background-color: var(--HeavyGray);
   clear: both;
   font-size: 2.5rem;
   margin-left: -2.5rem;
-  padding: 0.75rem;
 }
 h4 {
   background-color: var(--MediumGray);
   border: 2px solid var(--HeavyGray);
   font-size: 2.0rem;
   margin-left: -1.5rem;
-  padding: 0.75rem;
 }
 h5 {
   background-color: var(--HeavyGray);
   font-size: 1.75rem;
   margin-left: -0.75rem;
-  padding: 0.75rem;
 }
 h6 {
   background-color: var(--HeavyGray);
   font-size: 1.5rem;
   margin-left: -0.75rem;
-  padding: 0.75rem;
 }
 hr {
   margin: 0.25em;
@@ -159,13 +157,21 @@ li {
   margin: 0.25rem 0 0.25rem 0;
 }
 p {
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 0.5rem 0;
+  text-align: justify;
+}
+p + p, ol + p, ul + p {
+  /*
+  border: 0 Red solid;
+  border-width: 1px 0 0 0;
+  */
+  margin-top: 2rem;
 }
 ol {
   list-style: decimal outside;
 }
-ol ol, ol ul, ul ol, ul ul {
-  margin: 0 0 0 3rem;
+ol, ol ol, ol ul, ul, ul ol, ul ul {
+  margin: 0 0 0 2.25rem;
   font-size: 100%;
 }
 ul {
@@ -255,14 +261,12 @@ p.copyright img {
   padding: 0;
   vertical-align: middle;
 }
-p.meta {
+.meta {
   color: var(--MetaBlack);
   font-family: monospace;
-  margin-top: -0.75rem;
-  margin-bottom: 1rem;
-  margin-left: -3.5rem;
+  margin: -0.25rem 0 1rem -3.5rem;
 }
-p.meta a, p.meta a:hover {
+.meta a, .meta a:hover {
   color: var(--MetaBlack);
   font-size: smaller;
 }
@@ -270,9 +274,7 @@ p.meta a, p.meta a:hover {
   background-color: var(--BluePlum);
   color: var(--AnswerGray);
   font-weight: 300;
-  margin-bottom: -1rem;
-  margin-left: -4.5rem;
-  margin-right: -1rem;
+  margin: 0 -1rem -1rem -4.5rem;
   text-align: center;
 }
 .pagination {     /*SmDev*/ font-size: 2rem; }
