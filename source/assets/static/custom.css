@@ -18,6 +18,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+a[href*="#fnote"], a[name^="fnote"] {
+  font-size: 80%;
+  position: relative;
+  top: -0.5em;
+}
 a[href$=".asc"]:before {
   font-family: "Font Awesome 5 Free"; font-weight: 900;
   content: "\f023\00a0";
@@ -55,6 +60,14 @@ a[href*="instagram.com"]:before {
   font-family: "Font Awesome 5 Brands"; font-weight: 400;
   content: "\f16d\00a0";
 }
+a[href*="opensource.org"]:before {
+  font-family: "Font Awesome 5 Brands"; font-weight: 400;
+  content: "\f41a\00a0";
+}
+a[href*="python.org"]:before, a[href*="python-gsoc.org"]:before {
+  font-family: "Font Awesome 5 Brands"; font-weight: 400;
+  content: "\f3e2\00a0";
+}
 a[href*="twitter.com"]:before {
   font-family: "Font Awesome 5 Brands"; font-weight: 400;
   content: "\f099\00a0";
@@ -66,6 +79,10 @@ a[href*="ubuntu.com"]:before {
 a[href*="unlicense.org"]:before {
   font-family: "Font Awesome 5 Brands"; font-weight: 400;
   content: "\f4ec\00a0";
+}
+a[href*="wikipedia.org"]:before {
+  font-family: "Font Awesome 5 Brands"; font-weight: 400;
+  content: "\f266\00a0";
 }
 a[href*="youtu.be"]:before {
   font-family: "Font Awesome 5 Brands"; font-weight: 400;
