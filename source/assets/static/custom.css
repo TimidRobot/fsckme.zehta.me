@@ -161,9 +161,15 @@ li {
 p {
   margin-bottom: 1rem;
 }
+ol {
+  list-style: decimal outside;
+}
 ol ol, ol ul, ul ol, ul ul {
   margin: 0 0 0 3rem;
   font-size: 100%;
+}
+ul {
+  list-style: circle outside;
 }
 .container {
   padding: 0;
