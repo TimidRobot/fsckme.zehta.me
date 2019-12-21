@@ -39,6 +39,8 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 
 ## Resources
 
+- Content
+  - [Free and Brand Icons | Font Awesome][icons]
 - Software
   - [Lektor Documentation][lektor]: Static Content Management System
     - [nixjdm/lektor-atom][atom]: Lektor Atom plugin.
@@ -52,13 +54,18 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
   - [Skeleton][skeleton]: Responsive CSS Boilerplate
 - Guides
   - [Building a static blog with Lektor | Animesh Bulusu][building]
+- Web Development
+  - [CSS Selectors Reference][selectors]
 
+
+[icons]: https://fontawesome.com/icons?d=gallery&s=brands&m=free
 [atom]: https://github.com/nixjdm/lektor-atom
 [md-header]: https://github.com/lektor/lektor-markdown-header-anchors
 [minify]: https://github.com/pietroalbini/lektor-minify
 [read-full]: https://github.com/Andrew-Shay/lektor-read-full-post
 [skeleton]: http://getskeleton.com/
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
+[selectors]: https://www.w3schools.com/cssref/css_selectors.asp
 
 
 ## Licenses
