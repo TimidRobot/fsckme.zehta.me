@@ -21,13 +21,22 @@
       <div class="three columns title">
         <h1>{{ name.replace(" ", "\u00A0") }}</h1>
       </div>
-      {%- if this._model.startswith("blog") or this.is_child_of("/tags/") %}
+      {%- if this._model.startswith("blog") %}
         {%- set linkstatus = "linkactive" %}
       {%- else %}
         {%- set linkstatus = "linkinactive" %}
       {%- endif %}
-      <div class="three columns navi {{ linkstatus }}">
+      <div class="two columns navi {{ linkstatus }}">
         <a class="{{ linkstatus }}" href="{{ '/'|url }}"><i class="fas fa-newspaper"></i> Blog</a>
+      </div>
+      {%- if this.is_child_of("/tags/") %}
+        {%- set linkstatus = "linkactive" %}
+      {%- else %}
+        {%- set linkstatus = "linkinactive" %}
+      {%- endif %}
+      <div class="one columns navi {{ linkstatus }}">
+        <a class="{{ linkstatus }}" href="{{ '/tags/'|url }}">
+          <small><i class="fas fa-tags"></i></small></a>
       </div>
       {%- for href, fa, title in [
         ["/resume/", "fa-laptop-code", "Résumé"],

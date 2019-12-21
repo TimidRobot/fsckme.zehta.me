@@ -2,5 +2,11 @@
 {%- from "macros/tags.html" import render_cat_nav %}
 {%- block title %}Tags {{ super.title }}{%- endblock %}
 {%- block body %}
-{{ render_cat_nav(active=none) }}
+<h2><i class="fas fa-tags"></i> Tags</h2>
+<div class="five columns">
+{{ render_cat_nav(active=none, tags_type="Content") }}
+</div>
+<div class="five columns">
+{{ render_cat_nav(active=none, tags_type="Date") }}
+</div>
 {%- endblock %}
