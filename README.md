@@ -24,7 +24,7 @@ The built content is located in [`docs/`](docs/).
     ```
 3. Run Lektor development server (with custom output path)
     ```shell
-    ./run.sh
+    ./server.sh
     ```
    - access development site at http://127.0.0.1:5000/
 
