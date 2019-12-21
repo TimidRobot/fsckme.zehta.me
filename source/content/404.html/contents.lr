@@ -2,5 +2,6 @@ title: 404 Not Found
 ---
 body:
 
-No page exists for the URL that you specified. Please double-check the URL or
-use the navigation, above.
+
+<i class="fas fa-exclamation-circle"></i> No page exists for the URL that you
+specified. Please double-check the URL or use the navigation, above.
