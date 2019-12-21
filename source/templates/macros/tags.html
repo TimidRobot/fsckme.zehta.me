@@ -16,10 +16,11 @@
     {%- set name = tag.name if tag.name else tag._id.title() %}
     {%- if not name|int(default=False) and tags_type == "Content" %}
       {%- set name = name.replace(" ", "\u00A0") %}
-  <li><a href="{{ tag|url }}"><i class="fas fa-tag"></i>&nbsp;{{ name }}</a>
+      {%- set name = name.replace("and\u00A0", "and ") %}
+  <li><a href="{{ tag|url }}"><i class="fas fa-tag"></i> {{ name }}</a>
       ({{ tag.children.count() }})</li>
     {%- elif name|int(default=False) and tags_type == "Date" %}
-  <li><a href="{{ tag|url }}"><i class="fas fa-tag"></i>&nbsp;{{ name }}</a>
+  <li><a href="{{ tag|url }}"><i class="fas fa-tag"></i> {{ name }}</a>
       ({{ tag.children.count() }})</li>
     {%- endif %}
   {%- endfor %}
@@ -64,12 +65,12 @@
     {%- set name = tag.name if tag.name else tag._id.title() %}
     {%- set name = name.replace(" ", "\u00A0") %}
     <li>
-      <a href="{{ tag|url }}/"><i class="fas fa-tag"></i>&nbsp;{{ name }}</a>
+      <a href="{{ tag|url }}/"><i class="fas fa-tag"></i> {{ name }}</a>
     </li>
   {%- endfor %}
     <li>
       <a href="{{ "/tags/"|url }}">
-        <i class="fas fa-tags"></i>&nbsp;<strong>All Tags</strong></a>
+        <i class="fas fa-tags"></i> <strong>All Tags</strong></a>
     </li>
   </ul>
 </div>
