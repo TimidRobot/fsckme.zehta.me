@@ -269,6 +269,9 @@ img[src*="floatright"] {    /*SmallDev*/ float: right; }
 img[src*="vatexttop"] {
   vertical-align: text-top;
 }
+li.list-item-post {
+  padding-left: 2rem;
+}
 p.copyright img {
   padding: 0;
   vertical-align: middle;
