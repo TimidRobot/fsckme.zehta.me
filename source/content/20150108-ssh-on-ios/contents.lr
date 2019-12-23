@@ -13,13 +13,13 @@ tags: 2015, ios, ssh
 body:
 
 
-### Application Summaries
+## Application Summaries
 
 I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:
 
 <!-- PLUGIN-READ-FULL-POST -->
 
-#### iSSH
+### iSSH
 
 - Version: 5.7.1
 - Two factor: Yes!
@@ -29,7 +29,7 @@ I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:
     characters)
 
 
-#### Prompt 2
+### Prompt 2
 
 - Version: 2.0.3
 - Two Factor: No
@@ -38,7 +38,7 @@ I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:
 - ProxyCommand: No
 
 
-#### Serverauditor
+### Serverauditor
 
 - Version: 1.5.4
 - Two Factor: No
@@ -47,16 +47,16 @@ I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:
   - does not support xterm-256color
 
 
-### Why it matters
+## Why it matters
 
 
-#### Two Factor authentication
+### Two Factor authentication
 
 Two factor authentication significantly increases security. This is especially
 important in a platform (phones and tablets) that are so easy to misplace.
 
 
-#### ProxyCommand
+### ProxyCommand
 
 ProxyCommand is a SSH option that allows the easy use of bastion hosts. Making
 increased security easier is a huge win. For an example, see cmc: Workflow.

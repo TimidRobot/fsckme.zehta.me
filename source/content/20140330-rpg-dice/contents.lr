@@ -13,7 +13,7 @@ tags: 2014, floss, python, trpg
 body:
 
 
-### Overview
+## Overview
 
 [github]: https://github.com/TimidRobot/rpgdice
 
@@ -24,7 +24,7 @@ and creates graphs showing the probability of the different outcomes:
 <!-- PLUGIN-READ-FULL-POST -->
 
 
-### matplotlib install
+## matplotlib install
 
 matplotlib is super painful to install on macOS Mavericks 10.9.2. I ended up
 creating an installation script ([`install_requirements.sh`][install]) to help
@@ -33,7 +33,7 @@ with debugging the mess and allowing me to reliably reproduce success.
 [install]: https://github.com/TimidRobot/rpgdice/blob/master/install_requirements.sh
 
 
-### ggplot
+## ggplot
 
 This project was the first time I've worked with [ggplot][ggplot]. I'm very
 glad for the shortcuts it provided. I would love to see it become more well

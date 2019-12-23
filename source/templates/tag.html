@@ -3,7 +3,7 @@
 {%- set title = this.name if this.name else this._id.title() %}
 {%- block title %}{{ title }} tag{%- endblock %}
 {%- block body %}
-<h2><i class="fas fa-tag"></i> {{ title }}</h2>
+<h1><i class="fas fa-tag"></i> {{ title }}</h1>
 <h3>Posts</h3>
 {%- if this.children %}
     {{ render_post_list(this.children) }}

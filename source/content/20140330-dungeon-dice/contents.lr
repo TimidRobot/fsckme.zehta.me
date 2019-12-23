@@ -13,7 +13,7 @@ tags: 2014, floss, python, trpg
 body:
 
 
-### Overview
+## Overview
 
 [treatise]: http://rpg-design.wikidot.com/evaluation
 [github]: https://github.com/TimidRobot/rpgdice
@@ -26,7 +26,7 @@ The graphs were created using [TimidRobot/rpgdice · GitHub][github].
 <!-- PLUGIN-READ-FULL-POST -->
 
 
-### Graphs
+## Graphs
 
 1. ![Graph: Chance of Any Success][dw00]
 2. ![Graph: Simplified Results][dw01]
@@ -37,6 +37,6 @@ The graphs were created using [TimidRobot/rpgdice · GitHub][github].
 [dw02]: dw02_raw.png#vatexttop "Graph: Raw Result"
 
 
-### Edits
+## Edits
 
 - 2014-04-01: updated graph labels.

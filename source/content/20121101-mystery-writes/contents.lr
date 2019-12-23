@@ -42,7 +42,7 @@ This allowed us to isolate a PHP module that was completely broken (using
 `aureport`).
 
 
-### Man Pages
+## Man Pages
 
 - [man 8 auditctl][manauditctl] - a utility to assist controlling the kernel's
   audit system

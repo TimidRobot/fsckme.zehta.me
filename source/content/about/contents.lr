@@ -3,7 +3,7 @@ title: About
 body:
 
 
-### I Care
+## I Care
 
 ![Timid Robot in Powderhorn Park Copyright (c) 2019 Timid Robot Zehta. All
 rights reserved.][powderhorn]
@@ -14,7 +14,7 @@ reserved.][gravitar]
 [gravitar]: https://www.gravatar.com/avatar/0c6675c5986c79aeeb3d91e971bc2a9c.jpg?size=300 "Timid Robot Gravitar. Copyright (c) 2019 Timid Robot Zehta. All rights reserved."
 
 
-### Name
+## Name
 
 Please call me by my nickname (my first and middle name):
 - **Legal Name:** Timid&nbsp;Robot&nbsp;Zehta
@@ -25,12 +25,12 @@ Please call me by my nickname (my first and middle name):
 Also see [Name Change](/2012/09/name-change/).
 
 
-### Just Me
+## Just Me
 
 This is a personal blog. All opinions are my own.
 
 
-### Moar Me
+## Moar Me
 
 - From most to least work related:
   - [Creative Commons][cc]
@@ -46,21 +46,21 @@ This is a personal blog. All opinions are my own.
 [instagram]: https://www.instagram.com/timidrobot/ "Timid Robot Zehta (@timidrobot) • Instagram photos and videos"
 
 
-### Encrypted Communication
+## Encrypted Communication
 
 - You can find me on [Signal](https://signal.org/) via my mobile number
 - [GnuPG public key](Timid_Robot_Zehta__E03BF929__Public.asc)
 
 
-###  Atom Syndication Format
+##  Atom Syndication Format
 
 [Atom Feed - Blog - Timid Robot`](../feed.xml)
 
 
-### Licenses
+## Licenses
 
 
-#### Code
+### Code
 
 All the code within this site is licensed under a [Unlicense][unlicense]
 unless otherwise specified. (Much of the code used in this site is standard
@@ -69,7 +69,7 @@ boilerplate or otherwise *should* be too simple and obvious to copyright.)
 [unlicense]:https://unlicense.org/ "Unlicense.org » Unlicense Yourself: Set Your Code Free"
 
 
-#### Content
+### Content
 
 [![CC BY-SA 4.0 license button][cc-by-sa-png]][cc-by-sa1]
 All the content within this site is licensed under a [Creative Commons
@@ -81,7 +81,7 @@ specified.
 [cc-by-sa2]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons Attribution-ShareAlike 4.0 International License"
 
 
-#### Font Awesome
+### Font Awesome
 
 Font Awesome Free is free, open source, and GPL friendly. You can use it for
 commercial projects, open source projects, or really almost whatever you want.
@@ -102,7 +102,7 @@ Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
 
-#### Skeleton
+### Skeleton
 
 *All parts of [Skeleton][skeleton-gh] are free to use and abuse under the
 [open-source MIT license][mit].*

@@ -112,30 +112,30 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
   padding: 0.75rem;
 }
-h2 {
+h1 {
   background-color: var(--NearBlack);
   font-size: 3.0rem;
   margin-top: 0;
   margin-left: -3.5rem;
 }
-h3 {
+h2 {
   background-color: var(--HeavyGray);
   clear: both;
   font-size: 2.5rem;
   margin-left: -2.5rem;
 }
-h4 {
+h3 {
   background-color: var(--MediumGray);
   border: 2px solid var(--HeavyGray);
   font-size: 2.0rem;
   margin-left: -1.5rem;
 }
-h5 {
+h4 {
   background-color: var(--HeavyGray);
   font-size: 1.75rem;
   margin-left: -0.75rem;
 }
-h6 {
+h5 {
   background-color: var(--HeavyGray);
   font-size: 1.5rem;
   margin-left: -0.75rem;
