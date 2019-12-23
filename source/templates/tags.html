@@ -4,9 +4,14 @@
 {%- block body %}
 <h1><i class="fas fa-tags"></i> Tags</h1>
 <div class="five columns">
-{{ render_cat_nav(active=none, tags_type="Content") }}
+    {{- render_cat_nav(active=none, tags_type="Content") }}
 </div>
 <div class="five columns">
-{{ render_cat_nav(active=none, tags_type="Date") }}
+    {{- render_cat_nav(active=none, tags_type="Date") }}
+    <h2>All Posts</h2>
+    <ul>
+        <li><a href="{{ "/tags/zzz/"|url }}">All Posts</a></li>
+    </ul>
 </div>
+
 {%- endblock %}

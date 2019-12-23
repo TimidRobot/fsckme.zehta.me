@@ -10,9 +10,9 @@
 
 
 {%- macro render_cat_nav(active=none, tags_type=none) %}
-<h3>{{ tags_type }} Tags</h3>
+<h2>{{ tags_type }} Tags</h2>
 <ul>
-  {%- for tag in site.query("/tags") %}
+  {%- for tag in site.query("/tags").filter(F._id != "zzz") %}
     {%- set name = tag.name if tag.name else tag._id.title() %}
     {%- if not name|int(default=False) and tags_type == "Content" %}
       {%- set name = name.replace(" ", "\u00A0") %}
@@ -31,9 +31,9 @@
 {%- macro render_cats_horizontal(year, tags) %}
   {%- if tags %}
     {%- set tags_filtered = [] %}
-    {%- for tag in tags|sort %}
-      {%- if tag != year %}
-        {%- set _ =  tags_filtered.append(tag) %}
+    {%- for tag in tags %}
+      {%- if tag != year and tag != "zzz" %}
+        {%- set _ = tags_filtered.append(tag) %}
       {%- endif %}
     {%- endfor %}
     {% if tags_filtered %}
@@ -60,18 +60,16 @@
 <div>
   <h3>Tags</h3>
   <ul>
-  {%- for specified_tag in tags|sort %}
+  {%- for specified_tag in tags %}
     {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
-    {%- set name = tag.name if tag.name else tag._id.title() %}
-    {%- set name = name.replace(" ", "\u00A0") %}
-    <li>
-      <a href="{{ tag|url }}/"><i class="fas fa-tag"></i> {{ name }}</a>
-    </li>
+    {%- if tag._id != "zzz" %}
+      {%- set name = tag.name if tag.name else tag._id.title() %}
+      {%- set name = name.replace(" ", "\u00A0") %}
+      <li>
+        <a href="{{ tag|url }}/"><i class="fas fa-tag"></i> {{ name }}</a>
+      </li>
+    {%- endif %}
   {%- endfor %}
-    <li>
-      <a href="{{ "/tags/"|url }}">
-        <i class="fas fa-tags"></i> <strong>All Tags</strong></a>
-    </li>
   </ul>
 </div>
 {%- endmacro %}
