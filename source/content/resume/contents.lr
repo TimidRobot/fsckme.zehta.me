@@ -16,10 +16,24 @@ body:
 
 ### Core Systems Managers
 
-[Creative Commons][cc], 2018 Oct - Current
+[Creative Commons][cc], 2018 Oct - *Current*
 
 - Systems Administration / Site Reliability Engineering
+  - Backend Programming and Application Support
+    - Bash, Python
+  - Cloud Administration
+    - Amazon Web Services (AWS)
+  - GNU/Linux and Service Administration
+  - Infrastructure as Code
+    - SaltStack, Terraform
+  - SaaS Management
 - Information Technology
+  - Documentation
+  - Project Management
+  - Staff support
+- Free/Libre and Open Source Software Community Support
+  - Mentoring
+  - Project Administration
 
 [cc]: https://creativecommons.org/
 
