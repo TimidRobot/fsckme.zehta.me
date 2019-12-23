@@ -44,7 +44,6 @@ The repository includes the non-minified custom CSS:
 
 <style>
 td.dc {
-  border: 0px Black solid;
   margin: 1rem;
   padding: 1rem;
   text-align: center;
@@ -59,22 +58,28 @@ td.AnswerGray { background-color: var(--AnswerGray); color: White; }
 td.LightGray { background-color: LightGray; color: Black; }
 td.White { background-color: White; color: Black; }
 td.BluePlum { background-color: var(--BluePlum); color: Black; }
+td.PinkPlum { background-color: var(--PinkPlum); color: Black; }
 </style>
 <table>
 <tr>
 <td class="dc black"><tt>#000000</tt><br><tt>Black</tt></td>
 <td class="dc MetaBlack"><tt>#090909</tt><br><em>--MetaBlack</em></td>
-<td class="dc NearBlack"><tt>#292929</tt><br><em>--NearBlack</em></td>
 </tr>
 <tr>
+<td class="dc NearBlack"><tt>#292929</tt><br><em>--NearBlack</em></td>
 <td class="dc HeavyGray"><tt>#393939</tt><br><em>--HeavyGray</em></td>
+</tr>
+<tr>
 <td class="dc MediumGray"><tt>#3d3d3d</tt><br><em>--MediumGray</em></td>
 <td class="dc AnswerGray"><tt>#424242</tt><br><em>--AnswerGray</em></td>
 </tr>
 <tr>
 <td class="dc LightGray"><tt>#d3d3d3</tt><br><tt>LightGray</tt></td>
 <td class="dc White"><tt>#ffffff</tt><br><tt>White</tt></td>
+</tr>
+<tr>
 <td class="dc BluePlum"><tt>#cc99ff</tt><br><em>--BluePlum</em></td>
+<td class="dc PinkPlum"><tt>#dea4f4</tt><br><em>--PinkPlum</em></td>
 </tr>
 </table>
 
@@ -82,3 +87,8 @@ td.BluePlum { background-color: var(--BluePlum); color: Black; }
 #### Tools and References
 
 - [Closest Named Web Colors](https://wismuth.com/webcolors.html)
+
+
+### Edits
+
+- 2019-12-22: Added `--PinkPlum`

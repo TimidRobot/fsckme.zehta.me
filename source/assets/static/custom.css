@@ -7,15 +7,14 @@
   --MediumGray: #3d3d3d;
   --AnswerGray: #424242;
   --BluePlum: #cc99ff;
+  --PinkPlum: #dea4f4;
 }
 /*** Default/Page ************************************************************/
-a, a:hover {
-  color: var(--BluePlum);
-}
-a {
+a, div.row a {
+  color: var(--PinkPlum);
   text-decoration: none;
 }
-a:hover {
+a:hover, div.row a:hover {
   text-decoration: underline;
 }
 a[href*="#fnote"], a[name^="fnote"] {
@@ -92,7 +91,7 @@ a[title*="CC BY"]:before {
   content: "";
 }
 a img {
-  border: 1px var(--BluePlum) solid;
+  border: 1px var(--PinkPlum) solid;
 }
 blockquote {
   font-style: italic;
@@ -112,10 +111,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   letter-spacing: 0;
   padding: 0.75rem;
-}
-h1 {
-  margin: 0 0 0 0;
-  padding: 0.5rem 0 0 0;
 }
 h2 {
   background-color: var(--NearBlack);
@@ -183,24 +178,18 @@ ul {
 @media (min-width: 1024px) {
   .container {  /*LgDev*/ max-width: 960px; width: 80%; }
 }
-.row {
-  padding: 1rem;
-}
 /*** Navigation **************************************************************/
-nav a, nav a:hover {
-  color: White;
+nav a {
+  border: 2px var(--AnswerGray) solid;
+  padding: 0 1rem 0 1rem;
 }
-nav a.linkactive, nav a.linkactive:hover {
-  color: var(--AnswerGray);
+nav div.linkactive a {
+  border-color: var(--MetaBlack);
 }
 nav div.columns {
-  font-weight: 300;
-  letter-spacing: -0.1rem;
-  line-height: 1;
   margin-bottom: 0;
   margin-top: 0;
-  padding: 0.3rem;
-  padding-bottom: 0.6rem;
+  padding: 0;
   text-align: center;
 }
 nav div.columns {   /*SmDev*/ font-size: 2rem; }
@@ -210,25 +199,49 @@ nav div.columns {   /*SmDev*/ font-size: 2rem; }
 @media (min-width: 1024px) {
   nav div.columns { /*LgDev*/ font-size: 3rem; }
 }
+nav div.linkactive, nav div.linkinactive {
+  background-color: var(--AnswerGray);
+  float: right;
+  margin-bottom: 0.75rem;
+  margin-left: 0.75rem;
+  padding: 0 3px 0 3px;
+  white-space: nowrap;
+}
 nav div.linkactive {
-  border: 2px var(--AnswerGray) solid;
+  background-color: var(--MetaBlack);
 }
-nav div.linkinactive {
-  border: 2px White solid;
+nav div.linkactive:hover a, nav div.linkinactive:hover a {
+  border-color: var(--PinkPlum);
+  color: var(--PinkPlum);
+  text-decoration: none;
 }
-nav div.title h1 {
+nav div.navgroup {
+  float: right;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+nav div.title {
+  padding: 0.5rem 0 0.5rem 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: center;
+}
+nav div.title a {
+  border: 0 Black Solid;
   color: var(--NearBlack);
   font-family: monospace;
   font-variant: small-caps;
-  font-weight: 600;
-  line-height: 0.75;
 }
-nav div.title h1 {    /*SmDev*/ font-size: 2.25rem; }
+nav div.title a:hover {
+  text-decoration: none;
+}
+nav div.title a {   /*SmDev*/ font-size: 2.25rem; }
 @media (min-width: 550px) {
-  nav div.title h1 {  /*MdDev*/ font-size: 2.25rem; }
+  nav div.title a { /*MdDev*/ font-size: 2.25rem; }
 }
 @media (min-width: 1024px) {
-  nav div.title h1 {  /*LgDev*/ font-size: 3.5rem; }
+  nav div.title a { /*LgDev*/ font-size: 3.5rem; }
 }
 /*** Contents ****************************************************************/
 body .page .row  {
@@ -239,7 +252,7 @@ body .page .row ol, body .page .row p, body .page .row ul {
   padding-right: 1rem;
 }
 div .pagination {
-  border: 2px var(--BluePlum) solid;
+  border: 2px var(--PinkPlum) solid;
 }
 hr.copyright, p.copyright {
   font-size: smaller;
@@ -260,60 +273,66 @@ p.copyright img {
   padding: 0;
   vertical-align: middle;
 }
-.meta {
+div.meta {
   color: var(--MetaBlack);
   font-family: monospace;
   line-height: 90%;
   margin: 0.25rem 0 1rem -3.5rem;
 }
-.meta a, .meta a:hover {
+div.meta a, div.meta a:hover {
   color: var(--MetaBlack);
   font-size: smaller;
 }
-.pagination {
-  background-color: var(--BluePlum);
-  color: var(--AnswerGray);
-  font-weight: 300;
-  margin: 0 -1rem -2rem -4.5rem;
-  overflow: auto;
+/*** Footer ******************************************************************/
+div.footer {    /*SmDev*/ font-size: 2rem; }
+@media (min-width: 550px) {
+  div.footer {  /*MdDev*/ font-size: 2rem; }
+}
+@media (min-width: 1024px) {
+  div.footer {  /*LgDev*/ font-size: 3rem; }
+}
+div.footer a {
+  border: 2px var(--AnswerGray) solid;
+  color: var(--PinkPlum);
+  padding: 0 1rem 0 1rem;
+}
+div.pages-next a:hover, div.pages-prev a:hover,
+div.post-next a:hover, div.post-prev a:hover {
+  border-color: var(--PinkPlum);
+  text-decoration: none;
+}
+.pages-next, .pages-prev, .post-next, .post-prev {
+  background-color: var(--AnswerGray);
+  color: var(--MetaBlack);
+  color: LightGray;
+  padding: 1px 3px 1px 3px;
+}
+.pages-next, .post-next {
+  float: right;
+  margin: 1rem 0 0 1rem;
+}
+.pages-prev, .post-prev {
+  float: left;
+  margin: 1rem 1rem 0 0;
+}
+.pages-current {
+  color: White;
+  font-family: monospace;
+  margin: 0.5rem;
   text-align: center;
 }
-.pagination {     /*SmDev*/ font-size: 2rem; }
+div.footer .disabled {
+  background-color: inherit;
+}
+.post-next, .post-prev {    /*SmDev*/ font-size: 1.5rem; }
 @media (min-width: 550px) {
-  .pagination {   /*MdDev*/ font-size: 2rem; }
+  .post-next, .post-prev {  /*MdDev*/ font-size: 1.5rem; }
 }
 @media (min-width: 1024px) {
-  .pagination {   /*LgDev*/ font-size: 3rem; }
-}
-.pagination .current {
-  font-family: monospace;
-}
-.pagination .disabled {
-  border: 2px var(--AnswerGray) solid;
-  font-weight: 100;
-  letter-spacing: 0.1rem;
-}
-.pagination a, .pagination a:hover {
-  border: 2px White solid;
-  color: White;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-.prev {
-  float: left;
-}
-.next {
-  float: right;
-}
-.next, .prev {    /*SmDev*/ font-size: 1.5rem; }
-@media (min-width: 550px) {
-  .next, .prev {  /*MdDev*/ font-size: 1.5rem; }
-}
-@media (min-width: 1024px) {
-  .next, .prev {  /*LgDev*/ font-size: 2.5rem; }
+  .post-next, .post-prev {  /*LgDev*/ font-size: 2.5rem; }
 }
 /*** Footer ******************************************************************/
-.bottomrobot {
+.bottombot {
   color: var(--NearBlack);
   font-size: 2rem;
   padding: 2rem;

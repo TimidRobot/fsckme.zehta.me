@@ -1,12 +1,62 @@
 {#- vim: sts=2 sw=2 ts=2 sr et: #}
 {%- extends "layout.html" %}
 {%- from "macros/blog.html" import render_blog_post %}
-{%- from "macros/pagination.html" import render_pagination %}
 {%- block title %}{{ this.title }}{% endblock %}
 {%- block body %}
   {%- for child in this.pagination.items %}
     {%- set child = plugin_read_full_post(child) %}
     {{- render_blog_post(child, from_index=true) }}
   {%- endfor %}
-  {{- render_pagination(this.pagination) }}
+{%- endblock %}
+{%- block footer %}
+  {%- set postsnav = this.pagination %}
+  <div class="row">
+    <div class="five columns">
+      {%- if postsnav.has_prev %}
+         <div class="pages-prev">
+          <a href="{{ postsnav.for_page(1)|url }}">
+            <i class="fas fa-angle-double-left"></i>
+          </a>
+        </div>
+        <div class="pages-prev">
+          <a href="{{ postsnav.prev|url }}">
+            <i class="fas fa-angle-left"></i> Prev
+          </a>
+        </div>
+      {%- else %}
+        <div class="pages-prev disabled">
+          <i class="fas fa-angle-double-left"></i>
+        </div>
+        <div class="pages-prev disabled">
+          <i class="fas fa-angle-left"></i> Prev
+        </div>
+      {%- endif %}
+    </div>
+    <div class="two columns">
+      <div class="pages-current">
+        {{ postsnav.page }}/{{- postsnav.pages }}
+      </div>
+    </div>
+    <div class="five columns">
+      {%- if postsnav.has_next %}
+        <div class="pages-next">
+          <a href="{{ postsnav.for_page(postsnav.pages)|url }}">
+            <i class="fas fa-angle-double-right"></i>
+          </a>
+        </div>
+         <div class="pages-next">
+          <a href="{{ postsnav.next|url }}">
+            Next <i class="fas fa-angle-right"></i>
+          </a>
+        </div>
+     {%- else %}
+        <div class="pages-next disabled">
+          <i class="fas fa-angle-double-right"></i>
+        </div>
+        <div class="pages-next disabled">
+          Next <i class="fas fa-angle-right"></i>
+        </div>
+      {%- endif %}
+    </div>
+  </div>
 {%- endblock %}

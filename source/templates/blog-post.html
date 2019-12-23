@@ -7,18 +7,30 @@
 {{- render_blog_post(this) }}
 {{- copyright(this.copyright, this.copyright_author, this.author,
               this.pub_date) }}
-  <div class="pagination">
-    {%- if this.has_prev() %}
-    <span class="prev">
+{%- endblock %}
+{%- block footer %}
+  {%- if this.has_prev() %}
+    {%- set prev_title = this.get_siblings().prev_page.title %}
+    {%- if prev_title|length > 30 %}
+      {%- set prev_title = prev_title[0:27] ~ "..." %}
+    {%- endif %}
+    <div class="post-prev">
     <a href="{{ this.get_siblings().prev_page|url }}">
-      &#8672; {{ this.get_siblings().prev_page.title }}</a>
-    </span>
+      <i class="fas fa-angle-left"></i>
+      {{ prev_title }}
+    </a>
+    </div>
+  {%- endif %}
+  {%- if this.has_next() %}
+    {%- set next_title = this.get_siblings().next_page.title %}
+    {%- if next_title|length > 30 %}
+      {%- set next_title = next_title[0:27] ~ "..." %}
     {%- endif %}
-    {%- if this.has_next() %}
-    <span class="next">
+    <div class="post-next">
     <a href="{{ this.get_siblings().next_page|url }}">
-      {{ this.get_siblings().next_page.title }} &#8674;</a>
-    </span>
-    {%- endif %}
-  </div>
+      {{ next_title }}
+      <i class="fas fa-angle-right"></i>
+    </a>
+    </div>
+  {%- endif %}
 {%- endblock %}
