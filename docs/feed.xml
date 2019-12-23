@@ -21,11 +21,11 @@
 hosted on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The source code for the website is in the &lt;a href=&quot;https://github.com/TimidRobot/zehta.me&quot;&gt;TimidRobot/zehta.me&lt;/a&gt;
 repository. See the README there for additional context and links.&lt;/p&gt;
-&lt;h3 id=&quot;theme&quot;&gt;Theme&lt;/h3&gt;&lt;p&gt;The theme is created using &lt;a href=&quot;http://getskeleton.com/&quot;&gt;Skeleton&lt;/a&gt; (&lt;em&gt;responsive CSS Boilerplate&lt;/em&gt;).
+&lt;h2 id=&quot;theme&quot;&gt;Theme&lt;/h2&gt;&lt;p&gt;The theme is created using &lt;a href=&quot;http://getskeleton.com/&quot;&gt;Skeleton&lt;/a&gt; (&lt;em&gt;responsive CSS Boilerplate&lt;/em&gt;).
 I call it &quot;Queer Deathstar&quot;.&lt;/p&gt;
 &lt;p&gt;The repository includes the non-minified custom CSS:
 &lt;a href=&quot;https://github.com/TimidRobot/zehta.me/blob/master/source/assets/static/custom.css&quot;&gt;&lt;code&gt;source/assets/static/custom.css&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&quot;colors&quot;&gt;Colors&lt;/h4&gt;&lt;p&gt;&lt;style&gt;
+&lt;h3 id=&quot;colors&quot;&gt;Colors&lt;/h3&gt;&lt;p&gt;&lt;style&gt;
 td.dc {
   margin: 1rem;
   padding: 1rem;
@@ -64,10 +64,10 @@ td.PinkPlum { background-color: var(--PinkPlum); color: Black; }
 &lt;td class=&quot;dc BluePlum&quot;&gt;&lt;tt&gt;#cc99ff&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--BluePlum&lt;/em&gt;&lt;/td&gt;
 &lt;td class=&quot;dc PinkPlum&quot;&gt;&lt;tt&gt;#dea4f4&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--PinkPlum&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/table&gt;&lt;h4 id=&quot;tools-and-references&quot;&gt;Tools and References&lt;/h4&gt;&lt;ul&gt;
+&lt;/table&gt;&lt;h3 id=&quot;tools-and-references&quot;&gt;Tools and References&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://wismuth.com/webcolors.html&quot;&gt;Closest Named Web Colors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;edits&quot;&gt;Edits&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;edits&quot;&gt;Edits&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;2019-12-22: Added &lt;code&gt;--PinkPlum&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -117,7 +117,7 @@ underrepresented in FOSS (free and open source software)&lt;/li&gt;
 &lt;li&gt;Python Software Foundation: &lt;a href=&quot;https://python-gsoc.org/index.html&quot;&gt;Python GSoC – Home&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Thank you to the community and the work you're doing &amp;lt;3&lt;/p&gt;
-&lt;h3 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h3&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/2019-11-25-empowering-collaboration/&quot;&gt;Empowering Collaboration in the Commons — Creative
+&lt;h2 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h2&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/2019-11-25-empowering-collaboration/&quot;&gt;Empowering Collaboration in the Commons — Creative
 Commons on GitHub&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
@@ -134,7 +134,7 @@ reduce redundancy as much as possible. With configuration management,
 duplicated configurations can quickly lead to confusion and unexpected states.
 One of the key ways to reduce configuration duplication is robust host
 classification.&lt;/p&gt;
-&lt;h4 id=&quot;minion-classification&quot;&gt;Minion Classification&lt;/h4&gt;&lt;p&gt;As this post is about SaltStack, the terms &quot;minion classification&quot; for &quot;host
+&lt;h3 id=&quot;minion-classification&quot;&gt;Minion Classification&lt;/h3&gt;&lt;p&gt;As this post is about SaltStack, the terms &quot;minion classification&quot; for &quot;host
 classification&quot; and &quot;minion&quot; for &quot;host&quot; are used. With Puppet, &quot;node
 classification&quot; and &quot;node&quot; would be used.&lt;/p&gt;
 &lt;p&gt;Minion classification consists of rules that determine what a minion is and
@@ -142,7 +142,7 @@ which states (or configurations) should be applied to it. Good minion
 classification removes or minimizes the necessity of explicitly assigning
 configurations to a minion. Our goal is for the computer to do as much of the
 work as possible.&lt;/p&gt;
-&lt;h4 id=&quot;implementation&quot;&gt;Implementation&lt;/h4&gt;&lt;p&gt;Minions are added and configured from the primary salt server (called the
+&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;&lt;p&gt;Minions are added and configured from the primary salt server (called the
 salt-master) with the following Minion ID schema: &lt;strong&gt;&lt;code&gt;HST__POD__LOC&lt;/code&gt;&lt;/strong&gt;:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;&lt;code&gt;HST&lt;/code&gt;&lt;/strong&gt; is the hostname or role. It indications what services are running
@@ -170,20 +170,20 @@ organized from least-specific to most-specific:&lt;/p&gt;
 specified for both shared data (ex. WordPress security settings that should be
 applied to all WordPress hosts/roles) and specific data (ex. Let's Encrypt
 TLS/SSL settings).&lt;/p&gt;
-&lt;h3 id=&quot;security&quot;&gt;Security&lt;/h3&gt;&lt;p&gt;&lt;em&gt;The only grain which can be safely used is &lt;code&gt;grains['id']&lt;/code&gt; which contains the
+&lt;h2 id=&quot;security&quot;&gt;Security&lt;/h2&gt;&lt;p&gt;&lt;em&gt;The only grain which can be safely used is &lt;code&gt;grains['id']&lt;/code&gt; which contains the
 Minion ID.&lt;/em&gt; (&lt;a href=&quot;https://docs.saltstack.com/en/latest/faq.html#is-targeting-using-grain-data-secure&quot;&gt;FAQ Q.21&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;It is important to rely &lt;em&gt;only&lt;/em&gt; on the Minion ID as all other grains can be
 manipulated by the client. This means a compromised client could change its
 grains to collect secrets if a dedicated grain (ex. &lt;code&gt;role&lt;/code&gt;) was used for minion
 classification.&lt;/p&gt;
-&lt;h4 id=&quot;imperfect-work-in-progress&quot;&gt;Imperfect Work in Progress&lt;/h4&gt;&lt;p&gt;This implementation has proven to be robust and helpful. However, there is
+&lt;h3 id=&quot;imperfect-work-in-progress&quot;&gt;Imperfect Work in Progress&lt;/h3&gt;&lt;p&gt;This implementation has proven to be robust and helpful. However, there is
 still room for improvement. For example, I will probably refactor &lt;code&gt;HST&lt;/code&gt; to
 &lt;code&gt;ROLE&lt;/code&gt; and &lt;code&gt;POD&lt;/code&gt; to &lt;code&gt;GRP&lt;/code&gt; for added clarity.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Feedback and development is welcomed.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The &lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime&quot;&gt;creativecommons/sre-salt-prime&lt;/a&gt; repository is open
 source.&lt;/p&gt;
 &lt;p&gt;This host classification is also documented within it: &lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime/blob/master/docs/Host_Classification.md&quot;&gt;sre-salt-prime/Host_Classification.md at master&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h3&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/saltstack-host-classification/&quot;&gt;Host Classification with SaltStack — Creative Commons on
+&lt;h2 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h2&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/saltstack-host-classification/&quot;&gt;Host Classification with SaltStack — Creative Commons on
 GitHub&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
@@ -237,7 +237,7 @@ criticism, feedback, and contributions.&lt;/p&gt;
 others learn when they do not have access to proprietary software at home,
 school, or work. I hope that my work in the open might lower the resources
 required to implement open source for others.&lt;/p&gt;
-&lt;h3 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h3&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/open-development-with-saltstack/&quot;&gt;Open Development with SaltStack — Creative Commons on
+&lt;h2 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h2&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/open-development-with-saltstack/&quot;&gt;Open Development with SaltStack — Creative Commons on
 GitHub&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
@@ -318,7 +318,7 @@ The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
     </author>
     <content type="html">&lt;p&gt;I use and support SSH every working day. I created these tables of OpenSSH
 versions to make troubleshooting easier:&lt;/p&gt;
-&lt;h3 id=&quot;apple-macos-/-os-x&quot;&gt;Apple macOS / OS X&lt;/h3&gt;&lt;table&gt;
+&lt;h2 id=&quot;apple-macos-/-os-x&quot;&gt;Apple macOS / OS X&lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;&lt;tr&gt;
 &lt;th&gt;OS Version&lt;/th&gt;
 &lt;th&gt;OpenSSH Version&lt;/th&gt;
@@ -378,7 +378,7 @@ versions to make troubleshooting easier:&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&quot;ubuntu-lts&quot;&gt;Ubuntu LTS&lt;/h3&gt;&lt;table&gt;
+&lt;h2 id=&quot;ubuntu-lts&quot;&gt;Ubuntu LTS&lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;&lt;tr&gt;
 &lt;th&gt;OS Version&lt;/th&gt;
 &lt;th&gt;OpenSSH Version&lt;/th&gt;
@@ -421,7 +421,7 @@ versions to make troubleshooting easier:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://packages.ubuntu.com/search?keywords=ssh&amp;amp;searchon=names&amp;amp;exact=1&amp;amp;suite=all&amp;amp;section=all&quot;&gt;Ubuntu - Package Search Results -- ssh&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;edits&quot;&gt;Edits&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;edits&quot;&gt;Edits&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;this post has been updated in an effort to keep it current&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -434,8 +434,8 @@ versions to make troubleshooting easier:&lt;/p&gt;
     <author>
       <name>Timid Robot Zehta</name>
     </author>
-    <content type="html">&lt;h3 id=&quot;application-summaries&quot;&gt;Application Summaries&lt;/h3&gt;&lt;p&gt;I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:&lt;/p&gt;
-&lt;h4 id=&quot;issh&quot;&gt;iSSH&lt;/h4&gt;&lt;ul&gt;
+    <content type="html">&lt;h2 id=&quot;application-summaries&quot;&gt;Application Summaries&lt;/h2&gt;&lt;p&gt;I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:&lt;/p&gt;
+&lt;h3 id=&quot;issh&quot;&gt;iSSH&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Version: 5.7.1&lt;/li&gt;
 &lt;li&gt;Two factor: Yes!&lt;/li&gt;
 &lt;li&gt;ProxyCommand: No&lt;/li&gt;
@@ -445,7 +445,7 @@ characters)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;prompt-2&quot;&gt;Prompt 2&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id=&quot;prompt-2&quot;&gt;Prompt 2&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Version: 2.0.3&lt;/li&gt;
 &lt;li&gt;Two Factor: No&lt;ul&gt;
 &lt;li&gt;shitty custom prompts that make two factor authentication all but
@@ -454,7 +454,7 @@ impossible&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;ProxyCommand: No&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;serverauditor&quot;&gt;Serverauditor&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id=&quot;serverauditor&quot;&gt;Serverauditor&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Version: 1.5.4&lt;/li&gt;
 &lt;li&gt;Two Factor: No&lt;/li&gt;
 &lt;li&gt;ProxyCommand: No&lt;/li&gt;
@@ -463,9 +463,9 @@ impossible&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;why-it-matters&quot;&gt;Why it matters&lt;/h3&gt;&lt;h4 id=&quot;two-factor-authentication&quot;&gt;Two Factor authentication&lt;/h4&gt;&lt;p&gt;Two factor authentication significantly increases security. This is especially
+&lt;h2 id=&quot;why-it-matters&quot;&gt;Why it matters&lt;/h2&gt;&lt;h3 id=&quot;two-factor-authentication&quot;&gt;Two Factor authentication&lt;/h3&gt;&lt;p&gt;Two factor authentication significantly increases security. This is especially
 important in a platform (phones and tablets) that are so easy to misplace.&lt;/p&gt;
-&lt;h4 id=&quot;proxycommand&quot;&gt;ProxyCommand&lt;/h4&gt;&lt;p&gt;ProxyCommand is a SSH option that allows the easy use of bastion hosts. Making
+&lt;h3 id=&quot;proxycommand&quot;&gt;ProxyCommand&lt;/h3&gt;&lt;p&gt;ProxyCommand is a SSH option that allows the easy use of bastion hosts. Making
 increased security easier is a huge win. For an example, see cmc: Workflow.&lt;/p&gt;
 </content>
   </entry>
@@ -502,12 +502,12 @@ reader, to use: &lt;a href=&quot;https://github.com/TimidRobot/painted-iterm&quo
     <author>
       <name>Timid Robot Zehta</name>
     </author>
-    <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;Each of the graphs below was created by simulating 100,000 dice rolls for each
+    <content type="html">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;&lt;p&gt;Each of the graphs below was created by simulating 100,000 dice rolls for each
 die in each graph (400,000 to 900,000 rolls per graph and 6,000,000 total
 rolls). The work was inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling
 Mechanics in RPGs&lt;/a&gt;.  The graphs were created using &lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice
 · GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;p&gt;The 2nd line of the title is an attempt to describe the dice simulated. They
+&lt;h2 id=&quot;graphs&quot;&gt;Graphs&lt;/h2&gt;&lt;p&gt;The 2nd line of the title is an attempt to describe the dice simulated. They
 are shown in the top left corner of the graph.&lt;/p&gt;
 &lt;p&gt;While Despair and Triumph do not cancel each other out, Despair is graphed to
 the left of zero to maintain its sinister meaning.&lt;/p&gt;
@@ -559,16 +559,16 @@ statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
     <author>
       <name>Timid Robot Zehta</name>
     </author>
-    <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;Each of the graphs below was created by simulating 100,000 dice rolls per
+    <content type="html">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;&lt;p&gt;Each of the graphs below was created by simulating 100,000 dice rolls per
 Ability Score (500,000 rolls per graph and 1,500,000 total rolls). The work was
 inspired by &lt;a href=&quot;http://rpg-design.wikidot.com/evaluation&quot;&gt;A Treatise on Different Dice-rolling Mechanics in RPGs&lt;/a&gt;.
 The graphs were created using &lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice · GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;graphs&quot;&gt;Graphs&lt;/h3&gt;&lt;ol&gt;
+&lt;h2 id=&quot;graphs&quot;&gt;Graphs&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw00_success.png#vatexttop&quot; alt=&quot;Graph: Chance of Any Success&quot; title=&quot;Graph: Chance of Any Success&quot;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw01_simplified.png#vatexttop&quot; alt=&quot;Graph: Simplified Results&quot; title=&quot;Graph: Simplified Results&quot;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;img src=&quot;/2014/03/dungeon-dice/dw02_raw.png#vatexttop&quot; alt=&quot;Graph: Raw Results&quot; title=&quot;Graph: Raw Result&quot;&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&quot;edits&quot;&gt;Edits&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;edits&quot;&gt;Edits&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;2014-04-01: updated graph labels.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -581,13 +581,13 @@ The graphs were created using &lt;a href=&quot;https://github.com/TimidRobot/rpg
     <author>
       <name>Timid Robot Zehta</name>
     </author>
-    <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that simulates different RPG dice mechanics (rulesets)
+    <content type="html">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;&lt;p&gt;I wrote a Python program that simulates different RPG dice mechanics (rulesets)
 and creates graphs showing the probability of the different outcomes:
 &lt;a href=&quot;https://github.com/TimidRobot/rpgdice&quot;&gt;TimidRobot/rpgdice · GitHub&lt;/a&gt;!&lt;/p&gt;
-&lt;h3 id=&quot;matplotlib-install&quot;&gt;matplotlib install&lt;/h3&gt;&lt;p&gt;matplotlib is super painful to install on macOS Mavericks 10.9.2. I ended up
+&lt;h2 id=&quot;matplotlib-install&quot;&gt;matplotlib install&lt;/h2&gt;&lt;p&gt;matplotlib is super painful to install on macOS Mavericks 10.9.2. I ended up
 creating an installation script (&lt;a href=&quot;https://github.com/TimidRobot/rpgdice/blob/master/install_requirements.sh&quot;&gt;&lt;code&gt;install_requirements.sh&lt;/code&gt;&lt;/a&gt;) to help
 with debugging the mess and allowing me to reliably reproduce success.&lt;/p&gt;
-&lt;h3 id=&quot;ggplot&quot;&gt;ggplot&lt;/h3&gt;&lt;p&gt;This project was the first time I've worked with &lt;a href=&quot;https://github.com/yhat/ggplot/&quot;&gt;ggplot&lt;/a&gt;. I'm very
+&lt;h2 id=&quot;ggplot&quot;&gt;ggplot&lt;/h2&gt;&lt;p&gt;This project was the first time I've worked with &lt;a href=&quot;https://github.com/yhat/ggplot/&quot;&gt;ggplot&lt;/a&gt;. I'm very
 glad for the shortcuts it provided. I would love to see it become more well
 known and successful.&lt;/p&gt;
 </content>
@@ -600,17 +600,17 @@ known and successful.&lt;/p&gt;
     <author>
       <name>Timid Robot Zehta</name>
     </author>
-    <content type="html">&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;&lt;p&gt;I wrote a Python program that allows the generation of &lt;a href=&quot;http://www.dungeon-world.com/&quot;&gt;Dungeon World&lt;/a&gt;
+    <content type="html">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;&lt;p&gt;I wrote a Python program that allows the generation of &lt;a href=&quot;http://www.dungeon-world.com/&quot;&gt;Dungeon World&lt;/a&gt;
 Monster Cards. They can be made from the source files containing the Dungeon
 World monsters or from custom YAML files.&lt;/p&gt;
 &lt;p&gt;I am pleased with the outcome. The formatting does not match the Dungeon World
 text, but the most significant changes are intentional. I think they make the
 cards easier to use. I especially like the way I categorized and ordered the
 tags.&lt;/p&gt;
-&lt;h3 id=&quot;reportlab&quot;&gt;ReportLab&lt;/h3&gt;&lt;p&gt;This project was the first time that I've worked with the
+&lt;h2 id=&quot;reportlab&quot;&gt;ReportLab&lt;/h2&gt;&lt;p&gt;This project was the first time that I've worked with the
 &lt;a href=&quot;https://pypi.python.org/pypi/reportlab/&quot;&gt;ReportLab&lt;/a&gt; Python module. It was very refreshing to do non-WYSIWYG
 layout.  Overall my experience was very positive.&lt;/p&gt;
-&lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://raw.github.com/TimidRobot/dw-monster-cards/master/monster_cards.pdf&quot;&gt;monster_cards.pdf&lt;/a&gt; (PDF, 39 pages)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://raw.github.com/TimidRobot/dw-monster-cards/master/back_example.pdf&quot;&gt;back_example.pdf&lt;/a&gt; (PDF, 1 page)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/TimidRobot/dw-monster-cards&quot;&gt;TimidRobot/dw-monster-cards&lt;/a&gt; (project on GitHub)&lt;/li&gt;
@@ -661,7 +661,7 @@ Apache web server was the culprit.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This allowed us to isolate a PHP module that was completely broken (using
 &lt;code&gt;aureport&lt;/code&gt;).&lt;/p&gt;
-&lt;h3 id=&quot;man-pages&quot;&gt;Man Pages&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;man-pages&quot;&gt;Man Pages&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/lucid/en/man8/auditctl.8.html&quot;&gt;man 8 auditctl&lt;/a&gt; - a utility to assist controlling the kernel's
 audit system&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html&quot;&gt;man 8 aureport&lt;/a&gt; - a tool that produces summary reports of
@@ -782,29 +782,29 @@ centenary&lt;/a&gt;&lt;/li&gt;
     </author>
     <content type="html">&lt;p&gt;&lt;strong&gt;My legal name, Timid Robot Zehta, was chosen by me and changed via court
 order.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&quot;faq&quot;&gt;FAQ&lt;/h3&gt;&lt;h4 id=&quot;q.-what-do-you-prefer-to-be-called?&quot;&gt;Q. What do you prefer to be called?&lt;/h4&gt;&lt;p&gt;Please call me by my nickname (my first and middle name):&lt;/p&gt;
+&lt;h2 id=&quot;faq&quot;&gt;FAQ&lt;/h2&gt;&lt;h3 id=&quot;q.-what-do-you-prefer-to-be-called?&quot;&gt;Q. What do you prefer to be called?&lt;/h3&gt;&lt;p&gt;Please call me by my nickname (my first and middle name):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Legal Name:&lt;/strong&gt; Timid&amp;nbsp;Robot&amp;nbsp;Zehta&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Nickname:&lt;/strong&gt; Timid&amp;nbsp;Robot&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Pronouns:&lt;/strong&gt; they/them/theirs&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Honorific:&lt;/strong&gt; Mx&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;q.-when-did-you-change-your-name?&quot;&gt;Q. When did you change your name?&lt;/h4&gt;&lt;p&gt;2012 September.&lt;/p&gt;
-&lt;h4 id=&quot;q.-what-are-your-previous-names?&quot;&gt;Q. What are your previous names?&lt;/h4&gt;&lt;p&gt;The name assigned to me at birth was Timothy Robert Wheeler. For a few years
+&lt;h3 id=&quot;q.-when-did-you-change-your-name?&quot;&gt;Q. When did you change your name?&lt;/h3&gt;&lt;p&gt;2012 September.&lt;/p&gt;
+&lt;h3 id=&quot;q.-what-are-your-previous-names?&quot;&gt;Q. What are your previous names?&lt;/h3&gt;&lt;p&gt;The name assigned to me at birth was Timothy Robert Wheeler. For a few years
 prior to 2012, it was Timothy Robert Baldoni.&lt;/p&gt;
-&lt;h4 id=&quot;q.-why-timid?&quot;&gt;Q. Why Timid?&lt;/h4&gt;&lt;p&gt;I like it. It fills me with delight. It can be abbreviated &quot;Tim&quot;. A wider
+&lt;h3 id=&quot;q.-why-timid?&quot;&gt;Q. Why Timid?&lt;/h3&gt;&lt;p&gt;I like it. It fills me with delight. It can be abbreviated &quot;Tim&quot;. A wider
 ranger of people know what it means. I'm an introvert.&lt;/p&gt;
 &lt;p&gt;Additionally, I am very pleased to disassociate myself with a name that
 professes a belief.&lt;/p&gt;
-&lt;h4 id=&quot;q.-why-robot?&quot;&gt;Q. Why Robot?&lt;/h4&gt;&lt;p&gt;I really like it. It fills me with more delight than &quot;Timid&quot;. It can be
+&lt;h3 id=&quot;q.-why-robot?&quot;&gt;Q. Why Robot?&lt;/h3&gt;&lt;p&gt;I really like it. It fills me with more delight than &quot;Timid&quot;. It can be
 abbreviated &quot;Rob&quot;. I mean no disrespect to my namesake. I am also under no
 obligation to honor a man I never knew. I do regret loosing a name with
 germanic origins--that reflects my heritage. Domo arigato!&lt;/p&gt;
-&lt;h4 id=&quot;q.-why-zehta?&quot;&gt;Q. Why Zehta?&lt;/h4&gt;&lt;p&gt;It comes from the SI prefix &quot;zetta-&quot;, meaning a sextillion of something. That's
+&lt;h3 id=&quot;q.-why-zehta?&quot;&gt;Q. Why Zehta?&lt;/h3&gt;&lt;p&gt;It comes from the SI prefix &quot;zetta-&quot;, meaning a sextillion of something. That's
 a big number. It starts with &quot;Z&quot;, making it easy to find my name on lists. It
 is short and I could secure the domain name. Also see &lt;a href=&quot;https://en.wikipedia.org/wiki/Zetta-&quot;&gt;Zetta- -
 Wikipedia&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&quot;q.-you-based-your-selection-of-a-surname-on-available-domain-names?&quot;&gt;Q. You based your selection of a surname on available domain names?&lt;/h4&gt;&lt;p&gt;Yes, most of my world is connected to the Internet--most of my favorite things.
+&lt;h3 id=&quot;q.-you-based-your-selection-of-a-surname-on-available-domain-names?&quot;&gt;Q. You based your selection of a surname on available domain names?&lt;/h3&gt;&lt;p&gt;Yes, most of my world is connected to the Internet--most of my favorite things.
 There are no 4 character domain names left (except expired ones being
 resold at a high cost).&lt;/p&gt;
 </content>
@@ -864,7 +864,7 @@ meddling, to right the wrongs and stop the killings?&quot; They told us to simpl
 tell their story—to tell everyone we could the necessity of involvement here in
 the U.S., to ask that our government and our corporations to quit killing in
 our name.&lt;/p&gt;
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a name=&quot;fnote1&quot;&gt;(1)&lt;/a&gt; Report of the Commission for Historical
 Clarification Conclusions and Recommendations (CEH). &lt;a href=&quot;/2002/04/reminder/CEHreport-english.pdf&quot;&gt;&lt;em&gt;Guatemala Memory of
 Silence: Tz'inil Na'Tab'al&lt;/em&gt; (PDF)&lt;/a&gt;. Guatemala: Arte, Color y Texto,
