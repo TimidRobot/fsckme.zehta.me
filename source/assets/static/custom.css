@@ -339,6 +339,7 @@ div.footer .disabled {
   text-align: center;
 }
 /*** Content Hacks ***********************************************************/
-h3[id="references-available-upon-request"] {
+[id="references-available-upon-request"] {
+  background-color: transparent;
   text-align: center;
 }
