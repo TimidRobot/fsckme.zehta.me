@@ -39,32 +39,38 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 
 ## Resources
 
-- Content
-  - [Free and Brand Icons | Font Awesome][icons]
-- Software
+- Software and Third-party Content
   - [Lektor Documentation][lektor]: Static Content Management System
-    - [nixjdm/lektor-atom][atom]: Lektor Atom plugin.
-    - [lektor/lektor-markdown-header-anchors][md-header]: Adds support for
-      anchors and table of contents to Markdown.
-    - [pietroalbini/lektor-minify][minify]: Minify build artifacts in a Lektor
-      project
-    - [Andrew-Shay/lektor-read-full-post][read-full]: Allows blog listing posts
-      to be shortened with a link to the full post.
-  - [Pipenv Documentatio][pipenv]: Python Dev Workflow for Humans
+    - [Plugins][plugins]:
+      - [nixjdm/lektor-atom][atom]: Lektor Atom plugin.
+      - [lektor/lektor-markdown-header-anchors][md-header]: Adds support for
+        anchors and table of contents to Markdown.
+      - [lektor/lektor-markdown-highlighter][highlighter]: Adds support for
+        syntax highlighting through Pygments to Lektor's markdown support
+      - [pietroalbini/lektor-minify][minify]: Minify build artifacts in a
+        Lektor project
+      - [Andrew-Shay/lektor-read-full-post][read-full]: Allows blog listing
+        posts to be shortened with a link to the full post.
+  - [Pipenv Documentation][pipenv]: Python Dev Workflow for Humans
   - [Skeleton][skeleton]: Responsive CSS Boilerplate
+  - [Free and Brand Icons | Font Awesome][icons]
 - Guides
   - [Building a static blog with Lektor | Animesh Bulusu][building]
 - Web Development
+  - [Closest Named Web Colors][closecolors]
   - [CSS Selectors Reference][selectors]
 
 
 [icons]: https://fontawesome.com/icons?d=gallery&s=brands&m=free
+[plugins]: https://www.getlektor.com/docs/plugins/
 [atom]: https://github.com/nixjdm/lektor-atom
 [md-header]: https://github.com/lektor/lektor-markdown-header-anchors
+[highlighter]: https://github.com/lektor/lektor-markdown-highlighter
 [minify]: https://github.com/pietroalbini/lektor-minify
 [read-full]: https://github.com/Andrew-Shay/lektor-read-full-post
 [skeleton]: http://getskeleton.com/
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
+[closecolors]: https://wismuth.com/webcolors.html
 [selectors]: https://www.w3schools.com/cssref/css_selectors.asp
 
 

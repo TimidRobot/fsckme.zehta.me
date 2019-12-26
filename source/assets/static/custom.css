@@ -8,6 +8,7 @@
   --AnswerGray: #424242;
   --BluePlum: #cc99ff;
   --PinkPlum: #dea4f4;
+  --MolokaiText: #f8f8f2;
 }
 /*** Default/Page ************************************************************/
 a, div.row a {
@@ -98,10 +99,6 @@ blockquote {
 }
 body {
   background-color: var(--BluePlum);
-  color: LightGray;
-}
-code {
-  background-color: Black;
   color: LightGray;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -246,10 +243,7 @@ nav div.title a {   /*SmDev*/ font-size: 2.25rem; }
 /*** Contents ****************************************************************/
 body .page .row  {
   background-color: var(--AnswerGray);
-  padding-left: 4.5rem;
-}
-body .page .row ol, body .page .row p, body .page .row ul {
-  padding-right: 1rem;
+  padding: 0.5rem 1rem 0.5rem 4.5rem;
 }
 div .pagination {
   border: 2px var(--PinkPlum) solid;
@@ -285,6 +279,23 @@ div.meta {
 div.meta a, div.meta a:hover {
   color: var(--MetaBlack);
   font-size: smaller;
+}
+/*** Contents: Code **********************************************************/
+code {
+  background-color: inherit;
+  border: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+pre > code {
+  padding: 0;
+}
+div.hll pre {
+  padding: 0.5rem;
+  border: 1px dotted var(--MolokaiText);
+  border-radius: 0.5rem;
 }
 /*** Footer ******************************************************************/
 div.footer {    /*SmDev*/ font-size: 2rem; }
