@@ -536,13 +536,13 @@ the left of zero to maintain its sinister meaning.&lt;/p&gt;
     <content type="html">&lt;p&gt;Troubleshooting &lt;a href=&quot;http://graphite.readthedocs.org/en/latest/&quot;&gt;Graphite&lt;/a&gt; can be a bother. Determining where a
 problem lies requires verification of the data at all of the points of
 communication. The best tool I've found for this is ngrep:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo ngrep -lqd any ping tcp dst port 2003
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo ngrep -lqd any ping tcp dst port &lt;span class=&quot;m&quot;&gt;2003&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The following complex command finds ping metrics submitted over TCP to
 Graphite and highlights them using grep:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;match=&amp;#39;ping&amp;#39;; sudo ngrep -lqd any &amp;quot;${match}&amp;quot; tcp dst port 2003 \
-    | grep -E --line-buffered --color=tty &amp;quot;${match}&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;ping&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; sudo ngrep -lqd any &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; tcp dst port &lt;span class=&quot;m&quot;&gt;2003&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -E --line-buffered --color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;tty &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Changing the protocol and port allows easy inspection of metrics sent to a
 statsd listener, from carbon-aggregator to carbon-cache, etc.&lt;/p&gt;
 &lt;p&gt;See the man page for more information:&lt;/p&gt;
@@ -651,14 +651,14 @@ watching dstat. With the help of &lt;code&gt;iotop&lt;/code&gt; (&lt;a href=&quo
 Apache web server was the culprit.&lt;/p&gt;
 &lt;p&gt;But why would apache be doing so many writes? That's not normal behaviori
 (excluding the the logs). We then used auditd to log writes by apache:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo auditctl -a exit,always -S write -F uid=33
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo auditctl -a exit,always -S write -F &lt;span class=&quot;nv&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;33&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;We also logged opens that were not O_RDONLY:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo auditctl -a exit,always -S open -F uid=33 -F a1&amp;#39;!=0&amp;#39;`
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo auditctl -a exit,always -S open -F &lt;span class=&quot;nv&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;33&lt;/span&gt; -F a1&lt;span class=&quot;s1&quot;&gt;&amp;#39;!=0&amp;#39;&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This resulted in the following rules:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-shell&quot;&gt;sudo auditctl -l LIST_RULES: exit,always uid=33 (0x21) syscall=write LIST_RULES: exit,always uid=33 (0x21) a1!=0 syscall=open
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo auditctl -l LIST_RULES: exit,always &lt;span class=&quot;nv&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;33&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;0x21&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;syscall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;write LIST_RULES: exit,always &lt;span class=&quot;nv&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;33&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;0x21&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; a1!&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;syscall&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;open
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This allowed us to isolate a PHP module that was completely broken (using
 &lt;code&gt;aureport&lt;/code&gt;).&lt;/p&gt;
 &lt;h2 id=&quot;man-pages&quot;&gt;Man Pages&lt;/h2&gt;&lt;ul&gt;
