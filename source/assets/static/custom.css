@@ -111,12 +111,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   background-color: var(--NearBlack);
+  border: 1px solid var(--MetaBlack);
   font-size: 3.0rem;
   margin-top: 0;
   margin-left: -3.5rem;
 }
 h2 {
   background-color: var(--HeavyGray);
+  border: 1px solid var(--NearBlack);
   clear: both;
   font-size: 2.5rem;
   margin-left: -2.5rem;
@@ -176,13 +178,6 @@ ul {
   .container {  /*LgDev*/ max-width: 960px; width: 80%; }
 }
 /*** Navigation **************************************************************/
-nav a {
-  border: 2px solid var(--AnswerGray);
-  padding: 0 1rem 0 1rem;
-}
-nav div.linkactive a {
-  border-color: var(--MetaBlack);
-}
 nav div.columns {
   margin-bottom: 0;
   margin-top: 0;
@@ -197,7 +192,6 @@ nav div.columns {   /*SmDev*/ font-size: 2rem; }
   nav div.columns { /*LgDev*/ font-size: 3rem; }
 }
 nav div.linkactive, nav div.linkinactive {
-  background-color: var(--AnswerGray);
   float: right;
   margin-bottom: 0.75rem;
   margin-left: 0.75rem;
@@ -205,9 +199,22 @@ nav div.linkactive, nav div.linkinactive {
   white-space: nowrap;
 }
 nav div.linkactive {
-  background-color: var(--MetaBlack);
+  background-color: var(--NearBlack);
+  border: 2px solid var(--MetaBlack);
 }
-nav div.linkactive:hover a, nav div.linkinactive:hover a {
+nav div.linkactive a {
+  border: 2px solid var(--NearBlack);
+  padding: 0 1rem 0 1rem;
+}
+nav div.linkinactive {
+  background-color: var(--HeavyGray);
+  border: 2px solid var(--NearBlack);
+}
+nav div.linkinactive a {
+  border: 2px solid var(--HeavyGray);
+  padding: 0 1rem 0 1rem;
+}
+nav div.linkactive a:hover, nav div.linkinactive a:hover {
   border-color: var(--PinkPlum);
   color: var(--PinkPlum);
   text-decoration: none;
@@ -355,5 +362,6 @@ div.footer .disabled {
 /*** Content Hacks ***********************************************************/
 [id="references-available-upon-request"] {
   background-color: transparent;
+  border-color: transparent;
   text-align: center;
 }
