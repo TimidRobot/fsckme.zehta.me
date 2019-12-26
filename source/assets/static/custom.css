@@ -130,12 +130,18 @@ h3 {
   margin-left: -1.5rem;
 }
 h4 {
-  background-color: var(--HeavyGray);
+  background-color: inherit;
+  border: 2px solid var(--HeavyGray);
   font-size: 1.75rem;
   margin-left: -0.75rem;
 }
 h5 {
-  background-color: var(--HeavyGray);
+  background-color: Orange;
+  font-size: 1.5rem;
+  margin-left: -0.75rem;
+}
+h6 {
+  background-color: Red;
   font-size: 1.5rem;
   margin-left: -0.75rem;
 }
