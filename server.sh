@@ -9,4 +9,5 @@ trap '_es=${?};
     printf " exited with a status of ${_es}\n";
     exit ${_es}' ERR
 
-pipenv run lektor server --extra-flag minify --output-path ../docs
+printf "\e[1m\e[7m %-80s\e[0m\n" 'Lektor: server'
+pipenv run lektor server --output-path ../docs
