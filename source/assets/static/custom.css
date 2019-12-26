@@ -92,7 +92,7 @@ a[title*="CC BY"]:before {
   content: "";
 }
 a img {
-  border: 1px var(--PinkPlum) solid;
+  border: 1px solid var(--PinkPlum);
 }
 blockquote {
   font-style: italic;
@@ -138,7 +138,7 @@ h5 {
   margin-left: -0.75rem;
 }
 hr {
-  margin: 0.25em;
+  margin: 2rem 0.25em 0.25rem 0.25rem;
   padding: 0;
 }
 img {
@@ -177,7 +177,7 @@ ul {
 }
 /*** Navigation **************************************************************/
 nav a {
-  border: 2px var(--AnswerGray) solid;
+  border: 2px solid var(--AnswerGray);
   padding: 0 1rem 0 1rem;
 }
 nav div.linkactive a {
@@ -225,7 +225,7 @@ nav div.title {
   vertical-align: center;
 }
 nav div.title a {
-  border: 0 Black Solid;
+  border: 0 solid Black;
   color: var(--NearBlack);
   font-family: monospace;
   font-variant: small-caps;
@@ -246,7 +246,7 @@ body .page .row  {
   padding: 0.5rem 1rem 0.5rem 4.5rem;
 }
 div .pagination {
-  border: 2px var(--PinkPlum) solid;
+  border: 2px solid var(--PinkPlum);
 }
 hr.copyright, p.copyright {
   font-size: smaller;
@@ -306,7 +306,7 @@ div.footer {    /*SmDev*/ font-size: 2rem; }
   div.footer {  /*LgDev*/ font-size: 3rem; }
 }
 div.footer a {
-  border: 2px var(--AnswerGray) solid;
+  border: 2px solid var(--AnswerGray);
   color: var(--PinkPlum);
   padding: 0 1rem 0 1rem;
 }
