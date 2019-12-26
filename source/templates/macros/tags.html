@@ -60,7 +60,7 @@
 
 {%- macro render_cats_vertical(tags) %}
 <div>
-  <h3>Tags</h3>
+  <h2>Tags</h2>
   <ul>
   {%- for specified_tag in tags %}
     {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
