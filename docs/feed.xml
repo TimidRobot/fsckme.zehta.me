@@ -121,44 +121,26 @@ repository. See the README there for additional context and links.&lt;/p&gt;
 I call it &quot;Queer Deathstar&quot;.&lt;/p&gt;
 &lt;p&gt;The repository includes the non-minified custom CSS:
 &lt;a href=&quot;https://github.com/TimidRobot/zehta.me/blob/master/source/assets/static/custom.css&quot;&gt;&lt;code&gt;source/assets/static/custom.css&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&quot;colors&quot;&gt;Colors&lt;/h3&gt;&lt;p&gt;&lt;style&gt;
-td.dc {
-  margin: 1rem;
-  padding: 1rem;
-  text-align: center;
-  vertical-align: center;
-}
-td.black { background-color: Black; color: White; }
-td.MetaBlack { background-color: var(--MetaBlack); color: White; }
-td.NearBlack { background-color: var(--NearBlack); color: White; }
-td.HeavyGray { background-color: var(--HeavyGray); color: White; }
-td.MediumGray { background-color: var(--MediumGray); color: White; }
-td.AnswerGray { background-color: var(--AnswerGray); color: White; }
-td.LightGray { background-color: LightGray; color: Black; }
-td.White { background-color: White; color: Black; }
-td.BluePlum { background-color: var(--BluePlum); color: Black; }
-td.PinkPlum { background-color: var(--PinkPlum); color: Black; }
-&lt;/style&gt;&lt;/p&gt;
-&lt;table&gt;
+&lt;h3 id=&quot;colors&quot;&gt;Colors&lt;/h3&gt;&lt;table&gt;
 &lt;tr&gt;
-&lt;td class=&quot;dc black&quot;&gt;&lt;tt&gt;#000000&lt;/tt&gt;&lt;br&gt;&lt;tt&gt;Black&lt;/tt&gt;&lt;/td&gt;
-&lt;td class=&quot;dc MetaBlack&quot;&gt;&lt;tt&gt;#090909&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--MetaBlack&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc Black&quot;&gt;&lt;code&gt;#000000&lt;/code&gt;&lt;br&gt;&lt;code&gt;Black&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;dc MetaBlack&quot;&gt;&lt;code&gt;#090909&lt;/code&gt;&lt;br&gt;&lt;em&gt;--MetaBlack&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td class=&quot;dc NearBlack&quot;&gt;&lt;tt&gt;#292929&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--NearBlack&lt;/em&gt;&lt;/td&gt;
-&lt;td class=&quot;dc HeavyGray&quot;&gt;&lt;tt&gt;#393939&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--HeavyGray&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc NearBlack&quot;&gt;&lt;code&gt;#292929&lt;/code&gt;&lt;br&gt;&lt;em&gt;--NearBlack&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc HeavyGray&quot;&gt;&lt;code&gt;#393939&lt;/code&gt;&lt;br&gt;&lt;em&gt;--HeavyGray&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td class=&quot;dc MediumGray&quot;&gt;&lt;tt&gt;#3d3d3d&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--MediumGray&lt;/em&gt;&lt;/td&gt;
-&lt;td class=&quot;dc AnswerGray&quot;&gt;&lt;tt&gt;#424242&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--AnswerGray&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc MediumGray&quot;&gt;&lt;code&gt;#3d3d3d&lt;/code&gt;&lt;br&gt;&lt;em&gt;--MediumGray&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc AnswerGray&quot;&gt;&lt;code&gt;#424242&lt;/code&gt;&lt;br&gt;&lt;em&gt;--AnswerGray&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td class=&quot;dc LightGray&quot;&gt;&lt;tt&gt;#d3d3d3&lt;/tt&gt;&lt;br&gt;&lt;tt&gt;LightGray&lt;/tt&gt;&lt;/td&gt;
-&lt;td class=&quot;dc White&quot;&gt;&lt;tt&gt;#ffffff&lt;/tt&gt;&lt;br&gt;&lt;tt&gt;White&lt;/tt&gt;&lt;/td&gt;
+&lt;td class=&quot;dc LightGray&quot;&gt;&lt;code&gt;#d3d3d3&lt;/code&gt;&lt;br&gt;&lt;code&gt;LightGray&lt;/code&gt;&lt;/td&gt;
+&lt;td class=&quot;dc White&quot;&gt;&lt;code&gt;#ffffff&lt;/code&gt;&lt;br&gt;&lt;code&gt;White&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td class=&quot;dc BluePlum&quot;&gt;&lt;tt&gt;#cc99ff&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--BluePlum&lt;/em&gt;&lt;/td&gt;
-&lt;td class=&quot;dc PinkPlum&quot;&gt;&lt;tt&gt;#dea4f4&lt;/tt&gt;&lt;br&gt;&lt;em&gt;--PinkPlum&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc BluePlum&quot;&gt;&lt;code&gt;#cc99ff&lt;/code&gt;&lt;br&gt;&lt;em&gt;--BluePlum&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc PinkPlum&quot;&gt;&lt;code&gt;#dea4f4&lt;/code&gt;&lt;br&gt;&lt;em&gt;--PinkPlum&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;&lt;h3 id=&quot;tools-and-references&quot;&gt;Tools and References&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://wismuth.com/webcolors.html&quot;&gt;Closest Named Web Colors&lt;/a&gt;&lt;/li&gt;
