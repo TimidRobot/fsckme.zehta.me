@@ -3,6 +3,13 @@
 {%- from "macros/blog.html" import render_blog_post %}
 {%- from "macros/copyright.html" import copyright %}
 {%- block title %}{{ this.title }}{%- endblock %}
+{%- block head %}
+  {%- if this.css %}
+  <style>
+  {{- this.css }}
+  </style>
+  {%- endif %}
+{%- endblock %}
 {%- block body %}
 {{- render_blog_post(this) }}
 {{- copyright(this.copyright, this.copyright_author, this.author,
