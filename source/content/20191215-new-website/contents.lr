@@ -10,6 +10,25 @@ copyright: cc-by-sa
 ---
 tags: 2019, python, webdev, zzz
 ---
+css:
+td.dc {
+  border: 0 solid Red;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: center;
+}
+td.Black { background-color: Black; color: White; }
+td.MetaBlack { background-color: var(--MetaBlack); color: White; }
+td.NearBlack { background-color: var(--NearBlack); color: White; }
+td.HeavyGray { background-color: var(--HeavyGray); color: White; }
+td.MediumGray { background-color: var(--MediumGray); color: White; }
+td.AnswerGray { background-color: var(--AnswerGray); color: White; }
+td.LightGray { background-color: LightGray; color: Black; }
+td.White { background-color: White; color: Black; }
+td.BluePlum { background-color: var(--BluePlum); color: Black; }
+td.PinkPlum { background-color: var(--PinkPlum); color: Black; }
+---
 body:
 
 
@@ -42,44 +61,26 @@ The repository includes the non-minified custom CSS:
 
 ### Colors
 
-<style>
-td.dc {
-  margin: 1rem;
-  padding: 1rem;
-  text-align: center;
-  vertical-align: center;
-}
-td.black { background-color: Black; color: White; }
-td.MetaBlack { background-color: var(--MetaBlack); color: White; }
-td.NearBlack { background-color: var(--NearBlack); color: White; }
-td.HeavyGray { background-color: var(--HeavyGray); color: White; }
-td.MediumGray { background-color: var(--MediumGray); color: White; }
-td.AnswerGray { background-color: var(--AnswerGray); color: White; }
-td.LightGray { background-color: LightGray; color: Black; }
-td.White { background-color: White; color: Black; }
-td.BluePlum { background-color: var(--BluePlum); color: Black; }
-td.PinkPlum { background-color: var(--PinkPlum); color: Black; }
-</style>
 <table>
 <tr>
-<td class="dc black"><tt>#000000</tt><br><tt>Black</tt></td>
-<td class="dc MetaBlack"><tt>#090909</tt><br><em>--MetaBlack</em></td>
+<td class="dc Black"><code>#000000</code><br><code>Black</code></td>
+<td class="dc MetaBlack"><code>#090909</code><br><em>--MetaBlack</em></td>
 </tr>
 <tr>
-<td class="dc NearBlack"><tt>#292929</tt><br><em>--NearBlack</em></td>
-<td class="dc HeavyGray"><tt>#393939</tt><br><em>--HeavyGray</em></td>
+<td class="dc NearBlack"><code>#292929</code><br><em>--NearBlack</em></td>
+<td class="dc HeavyGray"><code>#393939</code><br><em>--HeavyGray</em></td>
 </tr>
 <tr>
-<td class="dc MediumGray"><tt>#3d3d3d</tt><br><em>--MediumGray</em></td>
-<td class="dc AnswerGray"><tt>#424242</tt><br><em>--AnswerGray</em></td>
+<td class="dc MediumGray"><code>#3d3d3d</code><br><em>--MediumGray</em></td>
+<td class="dc AnswerGray"><code>#424242</code><br><em>--AnswerGray</em></td>
 </tr>
 <tr>
-<td class="dc LightGray"><tt>#d3d3d3</tt><br><tt>LightGray</tt></td>
-<td class="dc White"><tt>#ffffff</tt><br><tt>White</tt></td>
+<td class="dc LightGray"><code>#d3d3d3</code><br><code>LightGray</code></td>
+<td class="dc White"><code>#ffffff</code><br><code>White</code></td>
 </tr>
 <tr>
-<td class="dc BluePlum"><tt>#cc99ff</tt><br><em>--BluePlum</em></td>
-<td class="dc PinkPlum"><tt>#dea4f4</tt><br><em>--PinkPlum</em></td>
+<td class="dc BluePlum"><code>#cc99ff</code><br><em>--BluePlum</em></td>
+<td class="dc PinkPlum"><code>#dea4f4</code><br><em>--PinkPlum</em></td>
 </tr>
 </table>
 
