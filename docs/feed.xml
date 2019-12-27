@@ -2,13 +2,107 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Blog - Timid Robot</title>
   <id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id>
-  <updated>2019-12-15T13:37:00Z</updated>
+  <updated>2019-12-26T13:37:00Z</updated>
   <link href="https://zehta.me/" />
   <link href="https://zehta.me/feed.xml" rel="self" />
   <author>
     <name>Timid Robot Zehta</name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
+  <entry xml:base="https://zehta.me/2019/12/recommending-a-policy/">
+    <title type="text">Recommending a Friendly Space policy for Queering Wikipedia</title>
+    <id>urn:uuid:0c27bd59-7567-3e42-9bd0-53045aa0d231</id>
+    <updated>2019-12-26T13:37:00Z</updated>
+    <link href="https://zehta.me/2019/12/recommending-a-policy/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;For the &lt;a href=&quot;https://meta.wikimedia.org/wiki/Queering_Wikipedia&quot;&gt;Queering Wikipedia Conference 2020&lt;/a&gt;, I recommend using the
+&lt;a href=&quot;https://www.contributor-covenant.org/&quot;&gt;Contributor Covenant&lt;/a&gt; with updated examples of unacceptable
+behavior.&lt;/p&gt;
+&lt;p&gt;While the &lt;a href=&quot;https://meta.wikimedia.org/wiki/Friendly_space_policies#General_friendly_space_policy_for_Wikimedia_events&quot;&gt;General friendly space policy for Wikimedia events&lt;/a&gt; is
+a good start, it lacks definitions of harrassment that may better protect LGBT+
+individuals and it lacks specifics about enforcement.&lt;/p&gt;
+&lt;h2 id=&quot;contributor-covenant&quot;&gt;Contributor Covenant&lt;/h2&gt;&lt;p&gt;The &lt;a href=&quot;https://www.contributor-covenant.org/version/2/0/code_of_conduct&quot;&gt;Contributor Covenant v2.0&lt;/a&gt; is a mature code of conduct that
+has been very widely adopted. It is self-contained, well worded, and easy to communicate. It has more robust documentation on enforcement. With a few changes,
+it can better protect members of the LGBT+ communities:&lt;/p&gt;
+&lt;h3 id=&quot;our-standards:-examples-of-unacceptable-behavior&quot;&gt;Our Standards: Examples of unacceptable behavior&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Update the use of sexualized language or imagery to allow relevent content&lt;ul&gt;
+&lt;li&gt;Adapted from &lt;a href=&quot;https://meta.wikimedia.org/wiki/Wikimedia_New_York_City/Code_of_Conduct&quot;&gt;Wikimedia New York City/Code of Conduct - Meta&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add deliberate misgendering or use of &quot;dead&quot; or rejected names&lt;ul&gt;
+&lt;li&gt;Adapted from &lt;a href=&quot;https://lgbtq.technology/coc.html&quot;&gt;Code of Conduct - LGBTQ in Technology&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add questioning or challenging someone's stated self-identity or chosen
+labels&lt;ul&gt;
+&lt;li&gt;Adapted from &lt;a href=&quot;https://lgbtq.technology/coc.html&quot;&gt;Code of Conduct - LGBTQ in Technology&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add continued one-on-one communication after requests to cease&lt;ul&gt;
+&lt;li&gt;Adapted from &lt;a href=&quot;https://lgbtq.technology/coc.html&quot;&gt;Code of Conduct - LGBTQ in Technology&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Update publishing others' private information with additional examples
+specific to LGBT+ communities&lt;ul&gt;
+&lt;li&gt;Adapted from &lt;a href=&quot;https://meta.wikimedia.org/wiki/Wikimedia_New_York_City/Code_of_Conduct&quot;&gt;Wikimedia New York City/Code of Conduct - Meta&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;updated-stanza&quot;&gt;Updated Stanza&lt;/h4&gt;&lt;blockquote&gt;&lt;ul&gt;
+&lt;li&gt;The use of sexualized language or imagery not directly related to
+conference content (conference content might include: history of gender in
+images, HIV awareness, etc.)&lt;/li&gt;
+&lt;li&gt;Sexual attention or advances of any kind&lt;/li&gt;
+&lt;li&gt;Trolling, insulting or derogatory comments, and personal or political
+attacks&lt;/li&gt;
+&lt;li&gt;Deliberate misgendering or use of &quot;dead&quot; or rejected names&lt;/li&gt;
+&lt;li&gt;Questioning or challenging someone's stated self-identity or chosen labels,
+even if they conflict with your own views&lt;/li&gt;
+&lt;li&gt;Making general statements about groups you do not belong to&lt;/li&gt;
+&lt;li&gt;Continued one-on-one communication after requests to cease&lt;/li&gt;
+&lt;li&gt;Public or private harassment&lt;/li&gt;
+&lt;li&gt;Publishing others' private information (including, but not limited to: age,
+contact information, gender, legal name, orientation, trans status,
+workplace) without  their explicit permission&lt;/li&gt;
+&lt;li&gt;Other conduct which could reasonably be considered inappropriate in a
+professional setting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;markdown-file-comparison&quot;&gt;Markdown File Comparison&lt;/h4&gt;&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gd&quot;&gt;--- Contributor Convenant 2.0&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+++ Recommended for Queering Wikipedia&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;@@ -18,12 +18,20 @@&lt;/span&gt;
+
+ Examples of unacceptable behavior include:
+
+&lt;span class=&quot;gd&quot;&gt;-* The use of sexualized language or imagery, and sexual attention or&lt;/span&gt;
+&lt;span class=&quot;gd&quot;&gt;-  advances of any kind&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+* The use of sexualized language or imagery not directly related to conference&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+  content (conference content might include: history of gender in images, HIV&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+  awareness, etc.)&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+* Sexual attention or advances of any kind&lt;/span&gt;
+ * Trolling, insulting or derogatory comments, and personal or political attacks
+&lt;span class=&quot;gi&quot;&gt;+* Deliberate misgendering or use of &amp;quot;dead&amp;quot; or rejected names&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+* Questioning or challenging someone&amp;#39;s stated self-identity or chosen labels,&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+  even if they conflict with your own views&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+* Making general statements about groups you do not belong to&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+* Continued one-on-one communication after requests to cease&lt;/span&gt;
+ * Public or private harassment
+&lt;span class=&quot;gd&quot;&gt;-* Publishing others&amp;#39; private information, such as a physical or email&lt;/span&gt;
+&lt;span class=&quot;gd&quot;&gt;-  address, without their explicit permission&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+* Publishing others&amp;#39; private information (including, but not limited to: age,&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+  contact information, gender, legal name, orientation, trans status,&lt;/span&gt;
+&lt;span class=&quot;gi&quot;&gt;+  workplace) without their explicit permission&lt;/span&gt;
+ * Other conduct which could reasonably be considered inappropriate in a
+   professional setting
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;enforcement&quot;&gt;Enforcement&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Important!&lt;/strong&gt; You must add a contact method to the placeholder in the
+document so that people know how to report violations. (&lt;a href=&quot;https://www.contributor-covenant.org/&quot;&gt;Contributor
+Covenant&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
   <entry xml:base="https://zehta.me/2019/12/new-website/">
     <title type="text">New Website</title>
     <id>urn:uuid:79e9313c-1c68-3f62-bf84-58e7573c5aa7</id>
