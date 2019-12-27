@@ -1,0 +1,116 @@
+_model: blog-post
+---
+title: Recommending a Friendly Space policy for Queering Wikipedia
+---
+pub_date: 2019-12-26 13:37
+---
+author: Timid Robot Zehta
+---
+copyright: cc-by-sa
+---
+tags: 2019, community, zzz
+---
+body:
+
+
+[covenant]: https://www.contributor-covenant.org/
+[queering]: https://meta.wikimedia.org/wiki/Queering_Wikipedia
+[metafriendly]: https://meta.wikimedia.org/wiki/Friendly_space_policies#General_friendly_space_policy_for_Wikimedia_events
+
+For the [Queering Wikipedia Conference 2020][queering], I recommend using the
+[Contributor Covenant][covenant] with updated examples of unacceptable
+behavior.
+
+<!-- PLUGIN-READ-FULL-POST -->
+
+While the [General friendly space policy for Wikimedia events][metafriendly] is
+a good start, it lacks definitions of harrassment that may better protect LGBT+
+individuals and it lacks specifics about enforcement.
+
+
+## Contributor Covenant
+
+The [Contributor Covenant v2.0][covenant20] is a mature code of conduct that
+has been very widely adopted. It is self-contained, well worded, and easy to communicate. It has more robust documentation on enforcement. With a few changes,
+it can better protect members of the LGBT+ communities:
+
+[covenant20]: https://www.contributor-covenant.org/version/2/0/code_of_conduct
+
+
+### Our Standards: Examples of unacceptable behavior
+
+1. Update the use of sexualized language or imagery to allow relevent content
+   - Adapted from [Wikimedia New York City/Code of Conduct - Meta][nyccoc]
+2. Add deliberate misgendering or use of "dead" or rejected names
+   - Adapted from [Code of Conduct - LGBTQ in Technology][lgtqitcoc]
+3. Add questioning or challenging someone's stated self-identity or chosen
+   labels
+   - Adapted from [Code of Conduct - LGBTQ in Technology][lgtqitcoc]
+4. Add continued one-on-one communication after requests to cease
+   - Adapted from [Code of Conduct - LGBTQ in Technology][lgtqitcoc]
+5. Update publishing others' private information with additional examples
+   specific to LGBT+ communities
+   - Adapted from [Wikimedia New York City/Code of Conduct - Meta][nyccoc]
+
+[nyccoc]: https://meta.wikimedia.org/wiki/Wikimedia_New_York_City/Code_of_Conduct
+[lgtqitcoc]: https://lgbtq.technology/coc.html
+
+
+#### Updated Stanza
+
+> * The use of sexualized language or imagery not directly related to
+>   conference content (conference content might include: history of gender in
+>   images, HIV awareness, etc.)
+> * Sexual attention or advances of any kind
+> * Trolling, insulting or derogatory comments, and personal or political
+>   attacks
+> * Deliberate misgendering or use of "dead" or rejected names
+> * Questioning or challenging someone's stated self-identity or chosen labels,
+>   even if they conflict with your own views
+> * Making general statements about groups you do not belong to
+> * Continued one-on-one communication after requests to cease
+> * Public or private harassment
+> * Publishing others' private information (including, but not limited to: age,
+>   contact information, gender, legal name, orientation, trans status,
+>   workplace) without  their explicit permission
+> * Other conduct which could reasonably be considered inappropriate in a
+>   professional setting
+
+
+#### Markdown File Comparison
+
+```diff
+--- Contributor Convenant 2.0
++++ Recommended for Queering Wikipedia
+@@ -18,12 +18,20 @@
+ 
+ Examples of unacceptable behavior include:
+ 
+-* The use of sexualized language or imagery, and sexual attention or
+-  advances of any kind
++* The use of sexualized language or imagery not directly related to conference
++  content (conference content might include: history of gender in images, HIV
++  awareness, etc.)
++* Sexual attention or advances of any kind
+ * Trolling, insulting or derogatory comments, and personal or political attacks
++* Deliberate misgendering or use of "dead" or rejected names
++* Questioning or challenging someone's stated self-identity or chosen labels,
++  even if they conflict with your own views
++* Making general statements about groups you do not belong to
++* Continued one-on-one communication after requests to cease
+ * Public or private harassment
+-* Publishing others' private information, such as a physical or email
+-  address, without their explicit permission
++* Publishing others' private information (including, but not limited to: age,
++  contact information, gender, legal name, orientation, trans status,
++  workplace) without their explicit permission
+ * Other conduct which could reasonably be considered inappropriate in a
+   professional setting
+```
+
+
+### Enforcement
+
+> **Important!** You must add a contact method to the placeholder in the
+> document so that people know how to report violations. ([Contributor
+> Covenant][covenant])
