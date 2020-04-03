@@ -2,13 +2,131 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Blog - Timid Robot</title>
   <id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id>
-  <updated>2019-12-26T13:37:00Z</updated>
+  <updated>2020-04-03T15:06:00Z</updated>
   <link href="https://zehta.me/" />
   <link href="https://zehta.me/feed.xml" rel="self" />
   <author>
     <name>Timid Robot Zehta</name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
+  <entry xml:base="https://zehta.me/2020/04/nvmee-on-debian-on-aws/">
+    <title type="text">NVMEe on Debian on AWS</title>
+    <id>urn:uuid:91060860-d2b3-312a-a103-47d324588141</id>
+    <updated>2020-04-03T15:06:00Z</updated>
+    <link href="https://zehta.me/2020/04/nvmee-on-debian-on-aws/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;&lt;p&gt;The current Creative Commons infrastructure buildouts use Debian GNU/Linux AWS
+EC2 instances with EBS volumes. Depending on chance (or race conditions), the
+mapping of block devices can be different from one host to another or between
+reboots.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Occasionally, devices can respond to discovery in a different order in
+subsequent instance starts, which causes the device name to change.&lt;/em&gt;
+(&lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nvme-ebs-volumes.html&quot; title=&quot;Amazon EBS and NVMe on Linux Instances - Amazon Elastic Compute Cloud&quot;&gt;Amazon EBS and NVMe on Linux Instances - Amazon Elastic Compute
+Cloud&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;our-solution&quot;&gt;Our Solution&lt;/h2&gt;&lt;p&gt;Modern Amazon Linux AMIs resolve this by providing a &lt;code&gt;udev&lt;/code&gt; rule, but Debian
+GNU/Linux does not yet do this. To ensure our systems are configured correctly,
+At Creative Commons, we use the device specified during provisioning (ex.
+&lt;code&gt;/dev/xvdf&lt;/code&gt;) to identify the correct NVMEe device. We then format it with a
+label that can be used mounting during subsequent reboots.&lt;/p&gt;
+&lt;p&gt;Thankfully, AWS documents the the device specified during provisioning (ex. &lt;code&gt;/dev/xvdf&lt;/code&gt;):&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;For Nitro-based instances, the block device mappings that are specified in
+the Amazon EC2 console when you are attaching an EBS volume or during
+AttachVolume or RunInstances API calls are captured in the vendor-specific
+data field of the NVMe controller identification.&lt;/em&gt;
+(&lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/nvme-ebs-volumes.html&quot; title=&quot;Amazon EBS and NVMe on Linux Instances - Amazon Elastic Compute Cloud&quot;&gt;Amazon EBS and NVMe on Linux Instances - Amazon Elastic Compute
+Cloud&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We use SaltStack (&lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime&quot; title=&quot;creativecommons/sre-salt-prime: Site Reliability Engineering / DevOps SaltStack configuration files&quot;&gt;&lt;code&gt;creativecommons/sre-salt-prime&lt;/code&gt;&lt;/a&gt;) to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install the &lt;code&gt;nvme-cli&lt;/code&gt; package&lt;/li&gt;
+&lt;li&gt;Use the &lt;code&gt;nvme&lt;/code&gt; command to detect which &lt;code&gt;/dev/nvme?n?&lt;/code&gt; contains &lt;em&gt;spec&lt;/em&gt; (ex.
+&lt;code&gt;xvdf&lt;/code&gt;) in the NVMe vendor specific data&lt;/li&gt;
+&lt;li&gt;Create a symlink (ex. &lt;code&gt;/dev/xvdf -&amp;gt; /dev/nvme1n1&lt;/code&gt;) so that SaltStack can use
+&lt;code&gt;/dev/xvdf&lt;/code&gt; for the initial setup&lt;/li&gt;
+&lt;li&gt;Perform the intial setup&lt;/li&gt;
+&lt;li&gt;Delete the symlink since:&lt;ol&gt;
+&lt;li&gt;The initial setup formatted the volume with a label that is used to mount
+the filesystem&lt;/li&gt;
+&lt;li&gt;There is no guarantee the symlink will be accurate on subsequent reboots
+and it might cause confusion&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime/blob/master/states/mount/init.sls&quot;&gt;&lt;code&gt;states/mount/init.sls&lt;/code&gt;&lt;/a&gt; state includes a complex shell
+command (with Jinja2 variables) that loops through the NVMe devices and finds
+the correct one:&lt;/p&gt;
+&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; n in /dev/nvme?n?
+&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; nvme id-ctrl -v &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -q &lt;span class=&quot;s1&quot;&gt;&amp;#39;^0000:.*{{ spec_short }}&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+        ln -s &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt; spec_long &lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Example variable values:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th&gt;Jinja2 Variable&lt;/th&gt;
+&lt;th&gt;Example Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;{{ spec_short }}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;xvdf&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;{{ spec_long }}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/dev/xvdf&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;related-links&quot;&gt;Related Links&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.debian.org/Cloud/AmazonEC2Image/Buster&quot; title=&quot;Cloud/AmazonEC2Image/Buster - Debian Wiki&quot;&gt;Cloud/AmazonEC2Image/Buster - Debian Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://packages.debian.org/buster/nvme-cli&quot; title=&quot;Debian -- Details of package nvme-cli in buster&quot;&gt;&lt;code&gt;nvme-cli&lt;/code&gt; package details in Debian buster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Debian buster — Debian Manpages&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://manpages.debian.org/buster/nvme-cli/nvme.1.en.html&quot;&gt;nvme(1) — nvme-cli&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://manpages.debian.org/buster/nvme-cli/nvme-id-ctrl.1.en.html&quot;&gt;nvme-id-ctrl(1) — nvme-cli&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;other-solutions&quot;&gt;Other Solutions&lt;/h2&gt;&lt;p&gt;While doing additional research for this blog post, I found additional
+solutions to the same problem. They're all good, but I apprecite the simplicity
+of a temporary symlink for setup versus maintaining custom udev rules (maybe I
+can help contribute a udev based solution to Debian or Debian's EC2 image). I
+can also easily imagine a more complex solution being a better fit if/when our
+infrastructure provisioining become more complex.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/oogali/ebs-automatic-nvme-mapping&quot; title=&quot;oogali/ebs-automatic-nvme-mapping: Automatic mapping of EBS volumes via NVMe block devices to standard block device paths&quot;&gt;oogali/ebs-automatic-nvme-mapping&lt;/a&gt;: Automatic mapping of EBS volumes via NVMe block devices to standard block device paths&lt;ul&gt;
+&lt;li&gt;udev rule that invokes a Bash script to create symlinks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CoreOS&lt;ul&gt;
+&lt;li&gt;udev rules that invokes a Bash script to create symlinks&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/coreos/init/blob/master/udev/rules.d/90-cloud-storage.rules&quot;&gt;&lt;code&gt;udev/rules.d/90-cloud-storage.rules&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/coreos/init/blob/master/udev/bin/cloud_aws_ebs_nvme_id&quot;&gt;&lt;code&gt;udev/bin/cloud_aws_ebs_nvme_id&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/jalaziz/c22c8464cb602bc2b8d0a339b013a9c4&quot;&gt;AWS EBS NVMe udev rules&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;udev rule that invokes a Pyton script to create symlinks&lt;/li&gt;
+&lt;li&gt;this is a copy as Amazon only provides access to the source of Amazon Linux
+from within an Amazon Linux AMI: &lt;em&gt;The yumdownloader --source command line
+tool provided in the Amazon Linux AMI enables viewing of source code inside
+of an Amazon EC2.&lt;/em&gt; (&lt;a href=&quot;https://aws.amazon.com/amazon-linux-ami/faqs/&quot; title=&quot;Amazon Linux AMI FAQs&quot;&gt;Amazon Linux AMI FAQs&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;originally-published&quot;&gt;Originally Published&lt;/h2&gt;&lt;p&gt;Originally published &lt;a href=&quot;https://opensource.creativecommons.org/blog/entries/2020-04-03-nvmee-on-debian-on-aws/&quot; title=&quot;NVMEe on Debian on AWS — Creative Commons on GitHub&quot;&gt;NVMEe on Debian on AWS — Creative Commons on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
   <entry xml:base="https://zehta.me/2019/12/recommending-a-policy/">
     <title type="text">Recommending a Friendly Space policy for Queering Wikipedia</title>
     <id>urn:uuid:0c27bd59-7567-3e42-9bd0-53045aa0d231</id>
