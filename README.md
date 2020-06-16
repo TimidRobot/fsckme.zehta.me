@@ -12,6 +12,14 @@ The source is located in [`source/`](source/).
 The built content is located in [`docs/`](docs/).
 
 
+## Default Branch
+
+Unfortunately, I can't set the *default* branch to `main` as GitHub pages does
+not respect the *default* branch--it is hardcoded to use `master`. For
+additional context, see [Change default branch to main · Issue #2 ·
+TimidRobot/zehta.me](https://github.com/TimidRobot/zehta.me/issues/2)
+
+
 ## Development
 
 1. Install [Pipenv][pipenv]
