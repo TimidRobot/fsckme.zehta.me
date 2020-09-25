@@ -27,7 +27,7 @@ td.AnswerGray { background-color: var(--AnswerGray); color: White; }
 td.LightGray { background-color: LightGray; color: Black; }
 td.White { background-color: White; color: Black; }
 td.BluePlum { background-color: var(--BluePlum); color: Black; }
-td.PinkPlum { background-color: var(--PinkPlum); color: Black; }
+td.DarkRoyal { background-color: var(--DarkRoyal); color: White; }
 ---
 body:
 
@@ -80,7 +80,7 @@ The repository includes the non-minified custom CSS:
 </tr>
 <tr>
 <td class="dc BluePlum"><code>#cc99ff</code><br><em>--BluePlum</em></td>
-<td class="dc PinkPlum"><code>#dea4f4</code><br><em>--PinkPlum</em></td>
+<td class="dc DarkRoyal"><code>#221122</code><br><em>--DarkRoyal</em></td>
 </tr>
 </table>
 
@@ -92,4 +92,5 @@ The repository includes the non-minified custom CSS:
 
 ## Edits
 
+- 2020-09-24: Added `--DarkRoyal` and removed `--PinkPlum`
 - 2019-12-22: Added `--PinkPlum`
