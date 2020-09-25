@@ -29,10 +29,15 @@ setup(
     py_modules=["lektor_strip_dir_date_prefix"],
     # url='[link to your repository]',
     version="0.2",
-    classifiers=["Framework :: Lektor", "Environment :: Plugins",],
+    classifiers=[
+        "Environment :: Plugins",
+        "Framework :: Lektor",
+        "Programming Language :: Python :: 3",
+    ],
     entry_points={
         "lektor.plugins": [
-            "strip-dir-date-prefix = lektor_strip_dir_date_prefix:StripDirDatePrefixPlugin",
+            "strip-dir-date-prefix ="
+            " lektor_strip_dir_date_prefix:StripDirDatePrefixPlugin",
         ]
     },
 )

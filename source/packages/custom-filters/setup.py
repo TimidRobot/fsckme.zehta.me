@@ -29,7 +29,11 @@ setup(
     py_modules=["lektor_custom_filters"],
     # url='[link to your repository]',
     version="0.1",
-    classifiers=["Framework :: Lektor", "Environment :: Plugins",],
+    classifiers=[
+        "Environment :: Plugins",
+        "Framework :: Lektor",
+        "Programming Language :: Python :: 3",
+    ],
     entry_points={
         "lektor.plugins": [
             "custom-filters = lektor_custom_filters:CustomFiltersPlugin",
