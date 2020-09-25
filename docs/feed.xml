@@ -2,13 +2,58 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Blog - Timid Robot</title>
   <id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id>
-  <updated>2020-04-03T15:06:00Z</updated>
+  <updated>2020-09-24T20:05:00Z</updated>
   <link href="https://zehta.me/" />
   <link href="https://zehta.me/feed.xml" rel="self" />
   <author>
     <name>Timid Robot Zehta</name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
+  <entry xml:base="https://zehta.me/2020/09/cleaning-cat-safe-plants/">
+    <title type="text">Air Cleaning and Cat Safe Plants</title>
+    <id>urn:uuid:25e0909e-cb98-3e9a-8d71-a2645687f79e</id>
+    <updated>2020-09-24T20:05:00Z</updated>
+    <link href="https://zehta.me/2020/09/cleaning-cat-safe-plants/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;I'm moving to a new apartment soon and it has a good number of windows with
+lots of light. I'm excited to buy some plants and I wanted to know which ones
+are non-toxic to Mochi cat, have been shown to help clean the air, and are
+easier to acquire and care for.&lt;/p&gt;
+&lt;h2 id=&quot;recommended&quot;&gt;Recommended&lt;/h2&gt;&lt;p&gt;I recommend the following plants based on how well they clean the air:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bamboo palm&lt;/strong&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Chamaedorea&quot;&gt;Chamaedorea seifrizii&lt;/a&gt;)&lt;ul&gt;
+&lt;li&gt;non-toxic to cats per &lt;a href=&quot;https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/chamaedorea&quot;&gt;ASPCA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Boston fern&lt;/strong&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Nephrolepis_exaltata&quot;&gt;Nephrolepis exaltata&lt;/a&gt; 'Bostoniensis')&lt;ul&gt;
+&lt;li&gt;non-toxic to cats per &lt;a href=&quot;https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/boston-fern&quot;&gt;ASPCA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Royal Horticultural Society (RHS): &lt;a href=&quot;https://www.rhs.org.uk/Plants/58296/Nephrolepis-exaltata-Bostoniensis/Details&quot;&gt;Award of Garden Merit (AGM)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lady palm&lt;/strong&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Rhapis_excelsa&quot;&gt;Rhapis excelsa&lt;/a&gt;)&lt;ul&gt;
+&lt;li&gt;non-toxic to cats per &lt;a href=&quot;https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lady-palm&quot;&gt;ASPCA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Royal Horticultural Society (RHS): &lt;a href=&quot;https://www.rhs.org.uk/Plants/14466/Rhapis-excelsa/Details&quot;&gt;Award of Garden Merit (AGM)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Parlour palm&lt;/strong&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Chamaedorea_elegans&quot;&gt;Chamaedorea elegans&lt;/a&gt;)&lt;ul&gt;
+&lt;li&gt;non-toxic to cats per &lt;a href=&quot;https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/chamaedorea&quot;&gt;ASPCA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Royal Horticultural Society (RHS): &lt;a href=&quot;https://www.rhs.org.uk/Plants/29185/Chamaedorea-elegans/Details&quot;&gt;Award of Garden Merit (AGM)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pygmy date palm&lt;/strong&gt; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Phoenix_roebelenii&quot;&gt;Phoenix roebelenii&lt;/a&gt;)&lt;ul&gt;
+&lt;li&gt;non-toxic to cats per &lt;a href=&quot;https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/miniature-date-palm&quot;&gt;ASPCA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Royal Horticultural Society (RHS): &lt;a href=&quot;https://www.rhs.org.uk/Plants/12771/Phoenix-roebelenii/Details&quot;&gt;Award of Garden Merit (AGM)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;full-list-and-comparison&quot;&gt;Full List and Comparison&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2020/09/cleaning-cat-safe-plants/Air_Cleaning_and_Cat_Safe_Plants.pdf&quot;&gt;Air_Cleaning_and_Cat_Safe_Plants.pdf&lt;/a&gt;
+[110 KB]&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry xml:base="https://zehta.me/2020/04/nvmee-on-debian-on-aws/">
     <title type="text">NVMEe on Debian on AWS</title>
     <id>urn:uuid:91060860-d2b3-312a-a103-47d324588141</id>
@@ -258,12 +303,13 @@ I call it &quot;Queer Deathstar&quot;.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&quot;dc BluePlum&quot;&gt;&lt;code&gt;#cc99ff&lt;/code&gt;&lt;br&gt;&lt;em&gt;--BluePlum&lt;/em&gt;&lt;/td&gt;
-&lt;td class=&quot;dc PinkPlum&quot;&gt;&lt;code&gt;#dea4f4&lt;/code&gt;&lt;br&gt;&lt;em&gt;--PinkPlum&lt;/em&gt;&lt;/td&gt;
+&lt;td class=&quot;dc DarkRoyal&quot;&gt;&lt;code&gt;#221122&lt;/code&gt;&lt;br&gt;&lt;em&gt;--DarkRoyal&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;&lt;h3 id=&quot;tools-and-references&quot;&gt;Tools and References&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://wismuth.com/webcolors.html&quot;&gt;Closest Named Web Colors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;edits&quot;&gt;Edits&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;2020-09-24: Added &lt;code&gt;--DarkRoyal&lt;/code&gt; and removed &lt;code&gt;--PinkPlum&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;2019-12-22: Added &lt;code&gt;--PinkPlum&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
