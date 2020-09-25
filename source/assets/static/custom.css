@@ -7,12 +7,12 @@
   --MediumGray: #3d3d3d;
   --AnswerGray: #424242;
   --BluePlum: #cc99ff;
-  --PinkPlum: #dea4f4;
+  --DarkRoyal: #221122;
   --MolokaiText: #f8f8f2;
 }
 /*** Default/Page ************************************************************/
 a, div.row a {
-  color: var(--PinkPlum);
+  color: var(--BluePlum);
   text-decoration: none;
 }
 a:hover, div.row a:hover {
@@ -92,13 +92,13 @@ a[title*="CC BY"]:before {
   content: "";
 }
 a img {
-  border: 1px solid var(--PinkPlum);
+  border: 1px solid var(--BluePlum);
 }
 blockquote {
   font-style: italic;
 }
 body {
-  background-color: var(--BluePlum);
+  background-color: var(--DarkRoyal);
   color: LightGray;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -221,8 +221,8 @@ nav div.linkinactive a {
   padding: 0 1rem 0 1rem;
 }
 nav div.linkactive a:hover, nav div.linkinactive a:hover {
-  border-color: var(--PinkPlum);
-  color: var(--PinkPlum);
+  border-color: var(--BluePlum);
+  color: var(--BluePlum);
   text-decoration: none;
 }
 nav div.navgroup {
@@ -239,7 +239,7 @@ nav div.title {
 }
 nav div.title a {
   border: 0 solid Black;
-  color: var(--NearBlack);
+  color: LightGray;
   font-family: monospace;
   font-variant: small-caps;
 }
@@ -259,7 +259,7 @@ body .page .row  {
   padding: 0.5rem 1rem 0.5rem 4.5rem;
 }
 div .pagination {
-  border: 2px solid var(--PinkPlum);
+  border: 2px solid var(--BluePlum);
 }
 hr.copyright, p.copyright {
   font-size: smaller;
@@ -320,12 +320,12 @@ div.footer {    /*SmDev*/ font-size: 2rem; }
 }
 div.footer a {
   border: 2px solid var(--AnswerGray);
-  color: var(--PinkPlum);
+  color: var(--BluePlum);
   padding: 0 1rem 0 1rem;
 }
 div.pages-next a:hover, div.pages-prev a:hover,
 div.post-next a:hover, div.post-prev a:hover {
-  border-color: var(--PinkPlum);
+  border-color: var(--BluePlum);
   text-decoration: none;
 }
 .pages-next, .pages-prev, .post-next, .post-prev {
@@ -360,7 +360,7 @@ div.footer .disabled {
 }
 /*** Footer ******************************************************************/
 .bottombot {
-  color: var(--NearBlack);
+  color: LightGray;
   font-size: 2rem;
   padding: 2rem;
   text-align: center;
