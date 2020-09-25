@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 # Standard library
 import os.path
+
 # Third-party
 import jinja2
 
 
 env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(searchpath="./"),
-    autoescape=jinja2.select_autoescape(['html', 'xml'])
+    autoescape=jinja2.select_autoescape(["html", "xml"]),
 )
-template = env.get_template('redirects/template.html')
+template = env.get_template("redirects/template.html")
 assets = "source/assets"
 with open("redirects/mapping.txt") as mapping_pointer:
     for line in mapping_pointer.readlines():

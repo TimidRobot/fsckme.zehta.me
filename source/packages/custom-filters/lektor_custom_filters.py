@@ -11,4 +11,5 @@ class CustomFiltersPlugin(Plugin):
         def parsedatetime_filter(value):
             datetime_obj = parser.parse(value)
             return datetime_obj
+
         self.env.jinja_env.filters["parsedatetime"] = parsedatetime_filter

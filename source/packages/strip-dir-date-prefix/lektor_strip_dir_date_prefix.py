@@ -17,4 +17,5 @@ class StripDirDatePrefixPlugin(Plugin):
                 return matches[2]
             else:
                 return value
+
         self.env.jinja_env.filters["stripdateprefix"] = stripdateprefix_filter
