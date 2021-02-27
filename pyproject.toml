@@ -3,7 +3,6 @@ exclude = '''
 (
     \.git
   | docs
-  | source/packages
 )
 '''
 line-length = 79
@@ -25,5 +24,4 @@ no_lines_before = 'LOCALFOLDER'
 profile = 'black'
 skip_glob = [
     '*/docs/*',
-    '*/source/packages/*',
 ]
