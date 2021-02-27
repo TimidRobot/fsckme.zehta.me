@@ -9,8 +9,8 @@ trap '_es=${?};
     printf " exited with a status of ${_es}\n";
     exit ${_es}' ERR
 
-printf "\e[1m\e[7m %-80s\e[0m\n" 'Lektor: cleaning build folder (/docs)'
-pipenv run lektor clean --output-path ../docs --yes
+printf "\e[1m\e[7m %-80s\e[0m\n" 'Removing contents of build dir (docs/)'
+rm -rf docs/*
 echo
 echo
 printf "\e[1m\e[7m %-80s\e[0m\n" 'Lektor: uninstalling all plugins'
