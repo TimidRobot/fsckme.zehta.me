@@ -22,6 +22,9 @@ setup(
     author="Timid Robot Zehta",
     author_email="timidrobot@zehta.me",
     description=description,
+    install_requires=[
+        "python-dateutil",
+    ],
     keywords="Lektor plugin",
     license="Unlicense",
     long_description=readme,
@@ -30,7 +33,7 @@ setup(
     packages=find_packages(),
     py_modules=["lektor_custom_filters"],
     # url='[link to your repository]',
-    version="0.1",
+    version="0.2",
     classifiers=[
         "Environment :: Plugins",
         "Framework :: Lektor",
