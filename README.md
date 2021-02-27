@@ -88,8 +88,8 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 
 ### Code
 
-All the code within this repository is licensed under a [Unlicense][unlicense]
-unless otherwise specified. (Much of the code used in this respository is
+**Unless otherwise specified,** the code within this repository is licensed
+under a [Unlicense][unlicense]. (Much of the code used in this respository is
 standard boilerplate or otherwise *should* be too simple and obvious to
 copyright.)
 
@@ -98,14 +98,14 @@ copyright.)
 
 ### Content
 
-![CC BY-SA 4.0 license button][cc-by-sa-png]
+[![CC BY-SA 4.0 license button][cc-by-sa-png]][cc-by-sa1]
+**Unless otherwise specified,** the content within this repository is licensed
+under a [Creative Commons Attribution-ShareAlike 4.0 International
+License][cc-by-sa2].
 
-All the content within this repository is licensed under a [Creative Commons 
-Attribution-ShareAlike 4.0 International License][cc-by-sa] unless otherwise
-specified (there are many that are otherwise specified).
-
-[cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png "CC BY-SA 4.0 license button"
-[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0"
+[cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png#floatleft "CC BY-SA 4.0 license button"
+[cc-by-sa1]: https://creativecommons.org/licenses/by-sa/4.0/ "CC BY-SA 4.0"
+[cc-by-sa2]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons Attribution-ShareAlike 4.0 International License"
 
 
 ### Font Awesome
