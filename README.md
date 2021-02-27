@@ -51,7 +51,13 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
         Lektor project
       - [Andrew-Shay/lektor-read-full-post][read-full]: Allows blog listing
         posts to be shortened with a link to the full post.
-  - [Pipenv Documentation][pipenv]: Python Dev Workflow for Humans
+  - Python Tooling
+    - [Black][black]: the uncompromising Python code formatter
+    - [flake8][flake8]: a python tool that glues together pep8, pyflakes,
+      mccabe, and third-party plugins to check the style and quality of some
+      python code.
+    - [isort][isort]: A Python utility / library to sort imports.
+    - [Pipenv Documentation][pipenv]: Python Dev Workflow for Humans
   - [Skeleton][skeleton]: Responsive CSS Boilerplate
   - [Free and Brand Icons | Font Awesome][icons]
 - Guides
@@ -68,6 +74,9 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 [highlighter]: https://github.com/lektor/lektor-markdown-highlighter
 [minify]: https://github.com/pietroalbini/lektor-minify
 [read-full]: https://github.com/Andrew-Shay/lektor-read-full-post
+[black]: https://github.com/psf/black
+[flake8]: https://gitlab.com/pycqa/flake8
+[isort]: https://pycqa.github.io/isort/
 [skeleton]: http://getskeleton.com/
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
 [closecolors]: https://wismuth.com/webcolors.html
