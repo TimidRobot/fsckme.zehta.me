@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
+# Standard library
 import re
-from lektor.pluginsystem import Plugin
 
+# Third-party
+from lektor.pluginsystem import Plugin
 
 RE_DATE_PREFIX = re.compile(r"^(\d{8}-)(.*)$")
 

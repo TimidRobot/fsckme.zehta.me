@@ -1,8 +1,10 @@
+# Standard library
 import ast
 import io
 import re
 
-from setuptools import setup, find_packages
+# Third-party
+from setuptools import find_packages, setup
 
 with io.open("README.md", "rt", encoding="utf8") as f:
     readme = f.read()
