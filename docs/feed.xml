@@ -8,7 +8,7 @@
   <author>
     <name>Timid Robot Zehta</name>
   </author>
-  <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3">Lektor Atom Plugin</generator>
+  <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3.1">Lektor Atom Plugin</generator>
   <entry xml:base="https://zehta.me/2020/09/cleaning-cat-safe-plants/">
     <title type="text">Air Cleaning and Cat Safe Plants</title>
     <id>urn:uuid:25e0909e-cb98-3e9a-8d71-a2645687f79e</id>
@@ -103,7 +103,7 @@ and it might cause confusion&lt;/li&gt;
 &lt;p&gt;The &lt;a href=&quot;https://github.com/creativecommons/sre-salt-prime/blob/master/states/mount/init.sls&quot;&gt;&lt;code&gt;states/mount/init.sls&lt;/code&gt;&lt;/a&gt; state includes a complex shell
 command (with Jinja2 variables) that loops through the NVMe devices and finds
 the correct one:&lt;/p&gt;
-&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; n in /dev/nvme?n?
+&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; n &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /dev/nvme?n?
 &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; nvme id-ctrl -v &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -q &lt;span class=&quot;s1&quot;&gt;&amp;#39;^0000:.*{{ spec_short }}&amp;#39;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
