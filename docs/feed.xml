@@ -2,13 +2,62 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Blog - Timid Robot</title>
   <id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id>
-  <updated>2020-09-24T20:05:00Z</updated>
+  <updated>2021-03-21T19:47:00Z</updated>
   <link href="https://zehta.me/" />
   <link href="https://zehta.me/feed.xml" rel="self" />
   <author>
     <name>Timid Robot Zehta</name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.3.1">Lektor Atom Plugin</generator>
+  <entry xml:base="https://zehta.me/2021/03/relp-anarchy-sheet/">
+    <title type="text">Relationship Anarchy Worksheet</title>
+    <id>urn:uuid:47103d99-26a2-3b01-b26a-c01b70b040ab</id>
+    <updated>2021-03-21T19:47:00Z</updated>
+    <link href="https://zehta.me/2021/03/relp-anarchy-sheet/" />
+    <author>
+      <name>Timid Robot Zehta</name>
+    </author>
+    <content type="html">&lt;p&gt;The &lt;a href=&quot;/2021/03/relp-anarchy-sheet/RelpAnarchySheet.pdf&quot;&gt;RelpAnarchySheet.pdf&lt;/a&gt; (152 KB) is a worksheet
+designed with the goal of making relationship negotiatings more successful. I
+really liked the various Relationship Anarchy Smorgasbords, but I wanted a more
+interactive tool.&lt;/p&gt;
+&lt;h2 id=&quot;changelog&quot;&gt;Changelog&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;2021-03-21&lt;ul&gt;
+&lt;li&gt;Smorgasbord&lt;ul&gt;
+&lt;li&gt;added Communication Response: considerate response&lt;/li&gt;
+&lt;li&gt;renamed Social Partners to Relationship Publicity&lt;/li&gt;
+&lt;li&gt;replaced Social Partners: events with work&lt;/li&gt;
+&lt;li&gt;replaced Life Partners: shared goals with long term goals&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Instructions&lt;ul&gt;
+&lt;li&gt;added HALT and note about definitions to instructions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;References and Influences&lt;ul&gt;
+&lt;li&gt;improved formatting Worksheets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added QR code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2021-03-10&lt;ul&gt;
+&lt;li&gt;initial version, heavily influenced by:&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/polyamory/comments/ehmjaq/i_made_my_own_version_of_the_relationship_anarchy/&quot;&gt;I made my own version of the Relationship Anarchy Smorgasbord! -
+r/Polyamory&lt;/a&gt;, 2019-12-30&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.facebook.com/sugarbutch/posts/if-youve-been-to-one-of-my-classes-you-know-that-i-love-chart-and-graphics-to-br/10162392581120714/&quot;&gt;Relationship Anarchy Smörgåsbord: a tool for discussion (version 5) -
+Sinclair Sexsmith - Posts | Facebook&lt;/a&gt;, 2019-03-29&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/polyamory/comments/5jebwg/relationship_anarchy_smorgasbord_choose_your/&quot;&gt;Relationship Anarchy Smorgasbord! Choose your Adventure! -
+r/Polyamory&lt;/a&gt;, 2016-12-20&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://qpadvice.tumblr.com/post/98302305387/hello-recently-i-was-surprised-by-the-amount-of&quot;&gt;Queer Platonic Relationship Request Form - Queerplatonic and Aromantic
+Advice&lt;/a&gt;, 2014-09-24&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry xml:base="https://zehta.me/2020/09/cleaning-cat-safe-plants/">
     <title type="text">Air Cleaning and Cat Safe Plants</title>
     <id>urn:uuid:25e0909e-cb98-3e9a-8d71-a2645687f79e</id>
@@ -50,7 +99,7 @@ easier to acquire and care for.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;full-list-and-comparison&quot;&gt;Full List and Comparison&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;/2020/09/cleaning-cat-safe-plants/Air_Cleaning_and_Cat_Safe_Plants.pdf&quot;&gt;Air_Cleaning_and_Cat_Safe_Plants.pdf&lt;/a&gt;
-[110 KB]&lt;/li&gt;
+(110 KB)&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
