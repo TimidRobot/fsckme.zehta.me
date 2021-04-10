@@ -53,8 +53,8 @@ This allowed us to isolate a PHP module that was completely broken (using
 - [man 1 iotop][maniotop] - simple top-like I/O monitor
 - [man 2 open][manopen] - open and possibly create a file or device
 
-[manauditctl]: http://manpages.ubuntu.com/manpages/lucid/en/man8/auditctl.8.html
-[manaureport]: http://manpages.ubuntu.com/manpages/lucid/en/man8/aureport.8.html
-[mandstat]: http://manpages.ubuntu.com/manpages/lucid/en/man1/dstat.1.html
-[maniotop]: http://manpages.ubuntu.com/manpages/lucid/en/man1/iotop.1.html
-[manopen]: http://manpages.ubuntu.com/manpages/lucid/man2/open.2.html
+[manauditctl]: http://manpages.ubuntu.com/manpages/focal/en/man8/auditctl.8.html
+[manaureport]: http://manpages.ubuntu.com/manpages/focal/en/man8/aureport.8.html
+[mandstat]: http://manpages.ubuntu.com/manpages/focal/en/man1/dstat.1.html
+[maniotop]: http://manpages.ubuntu.com/manpages/focal/en/man1/iotop.1.html
+[manopen]: http://manpages.ubuntu.com/manpages/focal/man2/open.2.html
