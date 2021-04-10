@@ -39,6 +39,9 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 
 ## Resources
 
+Thank you to the free and open source software, open content, and non-profits
+that contributed to me being able to create and maintain this blog!
+
 - Software and Third-party Content
   - [Lektor Documentation][lektor]: Static Content Management System
     - [Plugins][plugins]:
@@ -65,7 +68,8 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 - Web Development
   - [Closest Named Web Colors][closecolors]
   - [CSS Selectors Reference][selectors]
-
+- Link rot
+  - [Wayback Machine][wayback] by the [Internet Archive][archive]
 
 [icons]: https://fontawesome.com/icons?d=gallery&s=brands&m=free
 [plugins]: https://www.getlektor.com/docs/plugins/
@@ -81,6 +85,8 @@ See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
 [closecolors]: https://wismuth.com/webcolors.html
 [selectors]: https://www.w3schools.com/cssref/css_selectors.asp
+[wayback]: https://web.archive.org/
+[archive]: https://archive.org/
 
 
 ## Licenses
