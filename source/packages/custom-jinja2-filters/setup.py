@@ -11,7 +11,7 @@ with io.open("README.md", "rt", encoding="utf8") as f:
 
 _description_re = re.compile(r"description\s+=\s+(?P<description>.*)")
 
-with open("lektor_strip_dir_date_prefix.py", "rb") as f:
+with open("lektor_custom_jinja2_filters.py", "rb") as f:
     description = str(
         ast.literal_eval(
             _description_re.search(f.read().decode("utf-8")).group(1)
@@ -20,17 +20,20 @@ with open("lektor_strip_dir_date_prefix.py", "rb") as f:
 
 setup(
     author="Timid Robot Zehta",
-    author_email="timidrobot@zehta.me",
+    author_email="timid.robot@zehta.me",
     description=description,
+    install_requires=[
+        "python-dateutil",
+    ],
     keywords="Lektor plugin",
     license="Unlicense",
     long_description=readme,
     long_description_content_type="text/markdown",
-    name="lektor-strip-dir-date-prefix",
+    name="lektor-custom-jinja2-filters",
     packages=find_packages(),
-    py_modules=["lektor_strip_dir_date_prefix"],
+    py_modules=["lektor_custom_jinja2_filters"],
     # url='[link to your repository]',
-    version="0.2",
+    version="0.3",
     classifiers=[
         "Environment :: Plugins",
         "Framework :: Lektor",
@@ -38,8 +41,8 @@ setup(
     ],
     entry_points={
         "lektor.plugins": [
-            "strip-dir-date-prefix ="
-            " lektor_strip_dir_date_prefix:StripDirDatePrefixPlugin",
+            "custom-jinja2-filters ="
+            " lektor_custom_jinja2_filters:CustomJinja2FiltersPlugin",
         ]
     },
 )

@@ -37,6 +37,13 @@ The built content is located in [`docs/`](docs/).
 See [New Website - Timid Robot](https://zehta.me/2019/12/new-website/).
 
 
+### Custom Lektor Plugins
+
+- [`source/packages/custom-jinja2-filters`][custom-jinja2-filters]
+
+[custom-jinja2-filters]: source/packages/custom-jinja2-filters
+
+
 ## Resources
 
 Thank you to the free and open source software, open content, and non-profits
