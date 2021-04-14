@@ -17,7 +17,11 @@ body:
 
 **Please consider using the international date format (ex. `2021-04-14` or
 `YYYY-MM-DD`)** instead of a local date format (ex. `4/14/2021` or
-`D/MM/YYYY`).  The international date format is not only unambiguous and easier
+`D/MM/YYYY`).
+
+<!-- PLUGIN-READ-FULL-POST -->
+
+The international date format is not only unambiguous and easier
 to sort, it participates in internationalism instead of contributing to
 colonization, imperialism, and nationalism.
 
