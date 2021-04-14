@@ -19,7 +19,8 @@
     </author>
     <content type="html">&lt;h2 id=&quot;please-use-the-international-date-format&quot;&gt;Please use the international date format&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Please consider using the international date format (ex. &lt;code&gt;2021-04-14&lt;/code&gt; or
 &lt;code&gt;YYYY-MM-DD&lt;/code&gt;)&lt;/strong&gt; instead of a local date format (ex. &lt;code&gt;4/14/2021&lt;/code&gt; or
-&lt;code&gt;D/MM/YYYY&lt;/code&gt;).  The international date format is not only unambiguous and easier
+&lt;code&gt;D/MM/YYYY&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;The international date format is not only unambiguous and easier
 to sort, it participates in internationalism instead of contributing to
 colonization, imperialism, and nationalism.&lt;/p&gt;
 &lt;p&gt;While it may be less intuitive in regional contexts, it is an educational
