@@ -1,0 +1,66 @@
+_model: blog-post
+---
+title: Pychological Safety and the Unix Room
+---
+pub_date: 2021-04-16 00:29
+---
+author: Timid Robot Zehta
+---
+copyright: cc-by-sa
+---
+tags: 2021, community, emotional-intelligence
+---
+body:
+
+Ever since I first read it in 2014, the following quote has stuck with me. I've
+added it almost every internal company wiki I've managed.
+
+> One odd detail that I think was vital to how the group [at Bell Labs]
+> functioned was a result of the first Unix being run on a clunky minicomputer
+> with terminals in the machine room.
+<!-- PLUGIN-READ-FULL-POST -->
+> People working on the system congregated in the room - to use the computer,
+> you pretty much had to be there.  (This idea didn't seem odd back then; it
+> was a natural evolution of the old hour-at-a-time way of booking machines
+> like the IBM 7090.) The folks liked working that way, so when the machine was
+> moved to a different room from the terminals, even when it was possible to
+> connect from your private office, there was still a `Unix room' with a bunch
+> of terminals where people would congregate, code, design, and just hang out.
+> (The coffee machine was there too.) The Unix room still exists, and it may be
+> the greatest cultural reason for the success of Unix as a technology. More
+> groups could profit from its lesson, but it's really hard to add a
+> Unix-room-like space to an existing organization. You need the culture to
+> encourage people not to hide in their offices, you need a way of using
+> systems that makes a public machine a viable place to work - typically by
+> storing the data somewhere other than the 'desktop' - and you need people
+> [...] hanging out in the room, but if you can make it work, it's magical.
+>
+> ([Rob Pike Responds - Slashdot][slashdot], 2004-10-18, retreived 2021-04-17)
+
+[slashdot]: https://interviews.slashdot.org/story/04/10/18/1153211/rob-pike-responds
+
+There's a lot of reasons I like this quote. It offers a historical example of
+the importance of socializing and building trust for teams to have brilliant
+output (ex. psychological safety).
+
+One thing that it illustrates that I haven't read much about is how often
+relationships and collaborations are driven by unrelated circumstances.
+The Unix room was created by the reality of terminals in the machine room.
+Similarly, in college I observed that most of the long lasting friendships
+were based on first year dorm assignments. I've also seen a good amount of
+media about long lasting friendships based on traumatic circumstances and
+shared adversity.
+
+As I think about remote working, I wonder how people can be pushed together by
+circumstances and whether those circumstances can be designed instead of
+identified after the fact. I wonder how companies and organizations can create
+virtual Unix rooms. I do not hope for awkward Unix room skeuomorphismis, but
+intentional constraints that make it more likely for people to be close enough
+to offer help and create positive feedback loops of excitement.
+
+
+## Related
+
+- [Psychological safety - Wikipedia](https://en.wikipedia.org/wiki/Psychological_safety)
+- [Rob Pike - Wikipedia](https://en.wikipedia.org/wiki/Rob_Pike)
+- [Bell Labs - Wikipedia](https://en.wikipedia.org/wiki/Bell_Labs)
