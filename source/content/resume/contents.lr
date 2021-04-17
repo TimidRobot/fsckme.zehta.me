@@ -11,28 +11,30 @@ body:
 - Quick and self-motivated learner
 
 
+## Open Source
+
+- [github.com/TimidRobot](https://github.com/TimidRobot)
+
+
 ## Experience
 
 
-### Core Systems Managers
+### Core Systems Manager
 
-[Creative Commons][cc], 2018 Oct - *Current*
+`2018 Oct -` *current*, **[Creative Commons][cc]**, Full-Time Remote
 
 - Systems Administration / Site Reliability Engineering
-  - Backend Programming and Application Support
-    - Bash, Python
-  - Cloud Administration
-    - Amazon Web Services (AWS)
+  - Backend Programming and Application Support (Bash, Python)
+  - Cloud Administration (Amazon Web Services [AWS])
   - GNU/Linux and Service Administration
-  - Infrastructure as Code
-    - SaltStack, Terraform
+  - Infrastructure as Code (Docker, GitHub Actions, SaltStack, Terraform)
   - SaaS Management
 - Information Technology
   - Documentation
   - Project Management
   - Staff support
 - Free/Libre and Open Source Software Community Support
-  - Mentoring
+  - Mentoring (GSoC, Outreachy, and community submissions)
   - Project Administration
 
 [cc]: https://creativecommons.org/
@@ -40,63 +42,34 @@ body:
 
 ### Senior Operations Engineer
 
-Clockwork, 2010 Sep - 2018 Oct
+`2010 Sep - 2018 Oct`, **Clockwork**, Minneapolis, MN
 
-- Automation and Infrastructure as Code
-  - Bash, CloudFormation, Facter, Puppet, Python
-- Cloud Administration
-  - Amazon Web Services (AWS)
-- Hardware Administration
-  - Appliances, Networking, Servers
-- Monitoring and Reporting
-  - Collectd, Graphite, Icinga, logrep, Syslog
-- Teamwork
-  - DevOps Advocacy, Documentation, Mentoring, OpenSource Advocacy, Training
-- Virtualization Administration
-  - DRBD, Ganeti, KVM, Linux
+- Automation and Infrastructure as Code (Bash, CloudFormation, Facter, Puppet,
+  Python)
+- Cloud Administration (Amazon Web Services [AWS])
+- Hardware Administration (Appliances, Networking, Servers)
+- Monitoring and Reporting (Collectd, Graphite, Icinga, logrep, Syslog)
+- Teamwork (DevOps Advocacy, Documentation, Mentoring, OpenSource Advocacy,
+  Training)
+- Virtualization Administration (DRBD, Ganeti, KVM, Linux)
 
 
 ### Director of Information Technology Systems
 
-[Minneapolis College of Art and Design][mcad], 2009 Oct - 2010 Aug
+`2009 Oct - 2010 Aug`, **[Minneapolis College of Art and Design][mcad]**,
+Minneapolis, MN
 
-- Manage Linux SysAdmin, Mac SysAdmin, NetAdmin, Windows SysAdmin
-  - Made multiple hires
+- Manage Linux SysAdmin, Mac SysAdmin, NetAdmin, and Windows SysAdmin
+- Project Management, including the research, implementation, and
+  administration of complex systems and services
 - Server Administration Coverage (Mac OS X Server, Windows Server, Ubuntu
-  GNU/Linux)
-  - Active Directory, Bash/Bourne Shell, FreeRADIUS, Google Apps, ISC BIND9,
-    ISC DHCPD, Mailman, Nagios, Open Directory, OpenLDAP, Postfix, Radmind,
-    Subversion
-- Project Management, including the research, implementation, and
-  administration of:
-  - Account Management Tools (Microsoft SQL Server, OpenLDAP, Perl, SQLite,
-    YAML)
-  - Google Apps Migration and associated LDAP refactoring
-  - Annual Business IT Audit
-  - Student Information Systems Upgrade (Jenzabar EX)
+  Linux)
 
 
-### Systems Administrator, Systems Administrator II
+### Systems Administrator II, Systems Administrator
 
-[Minneapolis College of Art and Design][mcad], 2004 Feb - 2009 Sep
-
-- Manage DBA and HelpDesk Specialist
-- Server Administration (Mac OS X Server, Windows Server 2003, Ubuntu
-  GNU/Linux)
-  - Transitioned to Windows Server 2003 from Windows 2000 and NT Server
-- Microsoft Workstation Administration (BDD, SMS, Windows XP Pro, WSUS)
-  - Transitioned to Windows XP Pro from Windows 200 and Windows NT
-  - Transitioned to Microsoft BDD (now Microsoft MDT) from Symantec Ghost
-- Database Administration (Microsoft SQL Server 2005)
-  - Transitioned from MS SQL Server 7 and 2000, Pervasive SQL, and Sybase SQL
-- Project Management, including the research, implementation, and
-  administration of:
-  - Operating system deployment and maintenance: BDD, WSUS
-  - Application deployment and maintenance: F-Secure, SMS, WSUS
-  - Help Desk ticket tracking: Request Tracker
-  - Collaborative documentation: PmWiki
-  - Software licensing and compliance
-- Provided Staff Support
+`2004 Feb - 2009 Sep`, **[Minneapolis College of Art and Design][mcad]**,
+Minneapolis, MN
 
 [mcad]: https://mcad.edu/
 
@@ -106,27 +79,21 @@ Clockwork, 2010 Sep - 2018 Oct
 
 ### B.A. in Liberal Arts
 
-[Sarah Lawrence College][slc], 1998 Sep - 2002 May
+`1998 Sep - 2002 May`, **[Sarah Lawrence College][slc]**, Bronxville, NY
 
 [slc]: https://www.sarahlawrence.edu/
 
 
-### Crossing Borders Gender and Social Change in Mesoamerica
+#### Study Abroad
 
-[Center for Global Education and Experience][cgee] (Augsburg University), 2000
-Aug - 2000 Dec
+`2000 Aug - 2001 May`, **[Center for Global Education and Experience][cgee]
+(Augsburg University)**, Cuernavaca, MOR, Mexico
 
-- Included travel in Arizona, Sonora, Morelos, Guatemala, and El Salvador
+- *Crossing Borders Gender and Social Change in Mesoamerica* (first semester)
+- *Gender and the Environment: Latin American Perspectives* (second semester)
+- Traveled in Arizona, Sonora, Morelos, Chiapas, Guatemala, and El Salvador
 
 [cgee]: https://www.augsburg.edu/global/
-
-
-### Gender and the Environment: Latin American Perspectives
-
-[Center for Global Education and Experience][cgee] (Augsburg University), 2001
-Jan - 2001 May
-
-- Included travel in Arizona, Sonora, Morelos, Chiapas, and Guatemala
 
 
 ## References available upon request
