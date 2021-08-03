@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [packages]
-black = "==20.8b1"
+black = "==21.7b0"
 # Cryptography 3.4+ requires Rust to build
 # https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst
 cryptography = "==3.3.2"
