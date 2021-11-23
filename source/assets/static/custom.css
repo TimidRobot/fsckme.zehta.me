@@ -284,13 +284,14 @@ p.copyright img {
   vertical-align: middle;
 }
 div.meta {
-  color: var(--MetaBlack);
+  background-color: var(--NearBlack);
+  color: LightGray;
   font-family: monospace;
   line-height: 90%;
   margin: 0.25rem 0 1rem -3.5rem;
+  padding: 0.25rem;
 }
 div.meta a, div.meta a:hover {
-  color: var(--MetaBlack);
   font-size: smaller;
 }
 /*** Contents: Code **********************************************************/
