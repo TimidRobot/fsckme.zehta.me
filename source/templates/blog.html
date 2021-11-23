@@ -14,12 +14,12 @@
     <div class="five columns">
       {%- if postsnav.has_prev %}
          <div class="pages-prev">
-          <a href="{{ postsnav.for_page(1)|url }}">
+          <a href="{{ postsnav.for_page(1)|url }}" title="first page">
             <i class="fas fa-angle-double-left"></i>
           </a>
         </div>
         <div class="pages-prev">
-          <a href="{{ postsnav.prev|url }}">
+          <a href="{{ postsnav.prev|url }}" title="previous page">
             <i class="fas fa-angle-left"></i> Prev
           </a>
         </div>
@@ -40,12 +40,13 @@
     <div class="five columns">
       {%- if postsnav.has_next %}
         <div class="pages-next">
-          <a href="{{ postsnav.for_page(postsnav.pages)|url }}">
+          <a href="{{ postsnav.for_page(postsnav.pages)|url }}"
+             title="last page">
             <i class="fas fa-angle-double-right"></i>
           </a>
         </div>
          <div class="pages-next">
-          <a href="{{ postsnav.next|url }}">
+          <a href="{{ postsnav.next|url }}" title="next page">
             Next <i class="fas fa-angle-right"></i>
           </a>
         </div>
