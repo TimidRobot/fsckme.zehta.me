@@ -26,7 +26,7 @@ The built content is located in [`docs/`](docs/).
     ```shell
     ./server.sh
     ```
-   - access development site at http://127.0.0.1:5000/
+   - access development site at [`127.0.0.1:5000`](http://127.0.0.1:5000/)
 
 [pipenv]: https://docs.pipenv.org/en/latest/
 [lektor]: https://www.getlektor.com/docs/
