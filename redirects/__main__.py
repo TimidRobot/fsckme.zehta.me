@@ -5,8 +5,8 @@ import sys
 import traceback
 
 # Third-party
-import colorama
 import jinja2
+from colorama import Back, Fore, Style, init
 
 
 class ScriptError(Exception):
@@ -16,28 +16,23 @@ class ScriptError(Exception):
         super(ScriptError, self).__init__(message)
 
 
-def print_pair(key, value, pad):
-    style_key = f"{colorama.Style.BRIGHT}{colorama.Fore.GREEN}"
-    style_sep = f"{colorama.Fore.GREEN}"
-    style_reset = colorama.Style.RESET_ALL
-    pad = " " * (pad - len(key))
-    key = f"{style_key}{key}{style_reset}{style_sep}:{style_reset}"
+def print_pair(key, value):
+    pad = " " * (19 - len(key))
+    key = (
+        f"{Style.BRIGHT}{Fore.GREEN}{key}{Style.RESET_ALL}"
+        f"{Style.DIM}:{Style.RESET_ALL}"
+    )
     print(f"{pad}{key} {value}")
 
 
 def main():
-    colorama.init(autoreset=True)
+    init(autoreset=True)
     env = jinja2.Environment(
         loader=jinja2.FileSystemLoader(searchpath="./"),
         autoescape=jinja2.select_autoescape(["html", "xml"]),
     )
     template = env.get_template("redirects/template.html")
-    assets = "source/assets"
-    style_count = f"{colorama.Back.MAGENTA}{colorama.Fore.BLACK}"
-    style_file = (
-        f"{colorama.Back.MAGENTA}{colorama.Style.BRIGHT}{colorama.Fore.WHITE}"
-    )
-    style_link = f"{colorama.Style.BRIGHT}{colorama.Fore.BLUE}"
+    assets = os.path.join("source", "assets")
     print()
     i = 1
     with open("redirects/mapping.txt") as mapping_pointer:
@@ -45,17 +40,27 @@ def main():
             if line.startswith("#"):
                 continue
             source, target = line.split()
-            html_file = os.path.join(assets, source.lstrip("/"))
-            print(f"{style_count}{i:>02}. {style_file}{html_file}")
-            print_pair("source", source, 15)
-            print_pair("target", target, 15)
-            print_pair("test link", "", 15)
-            print(f"{style_link}http://127.0.0.1:5000{source}")
+            source_file = os.path.join(assets, source.lstrip("/"))
+            docs_file = os.path.join("docs", source.lstrip("/"))
+            pad = " " * (79 - 8 - len(source_file))
+            print(
+                f"{Back.MAGENTA}{Fore.BLACK}{i:>02}.{'':>5}"
+                f"{Back.MAGENTA}{Style.BRIGHT}{Fore.WHITE}{source_file}{pad}"
+            )
+            print(f"{'':>17}{Fore.MAGENTA}{docs_file}")
+            print_pair("URL path source", source)
+            print_pair("URL path target", target)
+            print_pair("URL test link", "")
+            print(f"{Style.BRIGHT}{Fore.BLUE}http://127.0.0.1:5000{source}")
+            # Note that this writes a manually formatted HTML file to the
+            # source directory. On build, it will be minified by Lektor.
             contents = template.render(TARGET=target)
-            file_dir = os.path.dirname(html_file)
+            contents.strip()
+            contents = f"{contents}\n"
+            file_dir = os.path.dirname(source_file)
             os.makedirs(file_dir, exist_ok=True)
-            with open(html_file, "w+") as html_file_pointer:
-                html_file_pointer.write(contents)
+            with open(source_file, "w+") as source_file_pointer:
+                source_file_pointer.write(contents)
             print()
             i += 1
 
