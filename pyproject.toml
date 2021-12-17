@@ -1,7 +1,7 @@
 [tool.black]
 exclude = '''
 (
-    \.git
+  \.git
   | docs
 )
 '''
