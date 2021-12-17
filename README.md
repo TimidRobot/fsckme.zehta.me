@@ -68,6 +68,9 @@ that contributed to me being able to create and maintain this blog!
       python code.
     - [isort][isort]: A Python utility / library to sort imports.
     - [Pipenv Documentation][pipenv]: Python Dev Workflow for Humans
+  - Redirects ([`redirects/`](redirects/))
+    - [tartley/colorama][colorama]: Simple cross-platform colored terminal text in Python
+    - [Jinja — Jinja Documentation (3.0.x)][jinja]
   - [Skeleton][skeleton]: Responsive CSS Boilerplate
   - [Free and Brand Icons | Font Awesome][icons]
 - Guides
@@ -88,6 +91,8 @@ that contributed to me being able to create and maintain this blog!
 [black]: https://github.com/psf/black
 [flake8]: https://gitlab.com/pycqa/flake8
 [isort]: https://pycqa.github.io/isort/
+[colorama]: https://github.com/tartley/colorama
+[jinja]: https://jinja.palletsprojects.com/en/3.0.x/
 [skeleton]: http://getskeleton.com/
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
 [closecolors]: https://wismuth.com/webcolors.html
