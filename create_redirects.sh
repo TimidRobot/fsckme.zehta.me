@@ -9,4 +9,4 @@ trap '_es=${?};
     printf " exited with a status of ${_es}\n";
     exit ${_es}' ERR
 
-pipenv run python redirects/make_redirects.py
+pipenv run python redirects

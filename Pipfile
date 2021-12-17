@@ -5,6 +5,7 @@ verify_ssl = true
 
 [packages]
 black = "==21.12b0"
+colorama ="*"
 flake8 = "*"
 lektor = "*"
 isort = "*"
