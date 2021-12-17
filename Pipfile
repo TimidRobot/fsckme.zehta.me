@@ -4,15 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [packages]
-black = "==21.11b1"
-# Cryptography 3.4+ requires Rust to build
-# https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst
-cryptography = "==3.3.2"
+black = "==21.12b0"
 flake8 = "*"
 lektor = "*"
 isort = "*"
-# https://github.com/pypa/wheel/issues/385
-wheel = ">=0.36.1"
 
 [requires]
 python_version = "3.9"
