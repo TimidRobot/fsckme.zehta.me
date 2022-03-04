@@ -37,13 +37,28 @@ all content instead of only content that has changed.
         ```
      - access development site at [`127.0.0.1:8080`](http://127.0.0.1:8080/)
    - Rebuild output, as necessary
-    ```shell
-    ./build.sh
-    ```
+        ```shell
+        ./build.sh
+        ```
 
 [pipenv]: https://docs.pipenv.org/en/latest/
 [lektor]: https://www.getlektor.com/docs/
 [installdocker]: https://docs.docker.com/engine/install/
+
+
+#### `build.sh` Usage
+
+```
+Usage:  build.sh [OPTIONS]
+
+Options:
+    -h  Show this help message and exit
+    -p  Pretify HTML and skip minify
+    -x  Clear Lektor plugins
+
+Description:
+    Build website in docs/ dirctory.
+```
 
 
 ### Lektor Server
