@@ -51,8 +51,12 @@ that contributed to me being able to create and maintain this blog!
 
 - Software and Third-party Content
   - [Lektor Documentation][lektor]: Static Content Management System
+    - [lektor/lektor][lektorgh]: The lektor static file content management
+      system (GitHub)
     - [Plugins][plugins]:
       - [nixjdm/lektor-atom][atom]: Lektor Atom plugin.
+      - [chaos-bodensee/lektor-html-pretify][pretify]: Lektor plugin to pretify
+        HTML
       - [lektor/lektor-markdown-header-anchors][md-header]: Adds support for
         anchors and table of contents to Markdown.
       - [lektor/lektor-markdown-highlighter][highlighter]: Adds support for
@@ -69,7 +73,8 @@ that contributed to me being able to create and maintain this blog!
     - [isort][isort]: A Python utility / library to sort imports.
     - [Pipenv Documentation][pipenv]: Python Dev Workflow for Humans
   - Redirects ([`redirects/`](redirects/))
-    - [tartley/colorama][colorama]: Simple cross-platform colored terminal text in Python
+    - [tartley/colorama][colorama]: Simple cross-platform colored terminal text
+      in Python
     - [Jinja — Jinja Documentation (3.0.x)][jinja]
   - [Skeleton][skeleton]: Responsive CSS Boilerplate
   - [Free and Brand Icons | Font Awesome][icons]
@@ -81,9 +86,10 @@ that contributed to me being able to create and maintain this blog!
 - Link rot
   - [Wayback Machine][wayback] by the [Internet Archive][archive]
 
-[icons]: https://fontawesome.com/icons?d=gallery&s=brands&m=free
+[lektorgh]: https://github.com/lektor/lektor
 [plugins]: https://www.getlektor.com/docs/plugins/
 [atom]: https://github.com/nixjdm/lektor-atom
+[pretify]: https://github.com/chaos-bodensee/lektor-html-pretify
 [md-header]: https://github.com/lektor/lektor-markdown-header-anchors
 [highlighter]: https://github.com/lektor/lektor-markdown-highlighter
 [minify]: https://github.com/pietroalbini/lektor-minify
@@ -94,6 +100,7 @@ that contributed to me being able to create and maintain this blog!
 [colorama]: https://github.com/tartley/colorama
 [jinja]: https://jinja.palletsprojects.com/en/3.0.x/
 [skeleton]: http://getskeleton.com/
+[icons]: https://fontawesome.com/icons?d=gallery&s=brands&m=free
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
 [closecolors]: https://wismuth.com/webcolors.html
 [selectors]: https://www.w3schools.com/cssref/css_selectors.asp
