@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog - Timid Robot</title><link href="https://zehta.me/" rel="alternate"></link><link href="https://zehta.me/feed.xml" rel="self"></link><id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id><updated>2021-04-16T00:29:00Z</updated><author><name>Timid Robot Zehta</name></author><entry><title>Pychological Safety and the Unix Room</title><link href="https://zehta.me/2021/04/unix-room/" rel="alternate"></link><updated>2021-04-16T00:29:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:f57d495e-3ca5-36a4-9119-2dd6c26061c5</id><content type="html">&lt;p&gt;Ever since I first read it in 2014, the following quote has stuck with me. I've
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog - Timid Robot</title><link href="https://zehta.me/" rel="alternate"></link><link href="https://zehta.me/feed.xml" rel="self"></link><id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id><updated>2021-04-16T00:29:00Z</updated><author><name>Timid Robot Zehta</name></author><entry><title>Pychological Safety and the Unix Room</title><link href="https://zehta.me/2021/04/unix-room/" rel="alternate"></link><updated>2021-04-16T00:29:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:f57d495e-3ca5-36a4-9119-2dd6c26061c5</id><content type="html">&lt;p&gt;Ever since I first read it in 2004, the following quote has stuck with me. I've
 added it almost every internal company wiki I've managed.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;One odd detail that I think was vital to how the group [at Bell Labs]
 functioned was a result of the first Unix being run on a clunky minicomputer
@@ -50,7 +50,7 @@ to sort, it participates in internationalism instead of contributing to
 colonization, imperialism, and nationalism.&lt;/p&gt;
 &lt;p&gt;While it may be less intuitive in regional contexts, it is an educational
 opportunity requiring relatively low effort.&lt;/p&gt;
-&lt;h2 id="xkcd"&gt;xkcd&lt;/h2&gt;&lt;p&gt;&lt;img src="https://imgs.xkcd.com/comics/iso_8601_2x.png" alt="&amp;#34;xkcd: ISO 8601&amp;#34; by Randall Munroe is licensed under CC-BY-NC 2.5"&gt;&lt;/p&gt;
+&lt;h2 id="xkcd"&gt;xkcd&lt;/h2&gt;&lt;p&gt;&lt;img src="https://imgs.xkcd.com/comics/iso_8601_2x.png" alt="&amp;quot;xkcd: ISO 8601&amp;quot; by Randall Munroe is licensed under CC-BY-NC 2.5"&gt;&lt;/p&gt;
 &lt;p&gt;"&lt;a href="https://xkcd.com/1179/"&gt;xkcd: ISO 8601&lt;/a&gt;" by Randall Munroe is licensed under &lt;a href="http://creativecommons.org/licenses/by-nc/2.5/"&gt;CC-BY-NC 2.5&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For an explanation of the comic (ex. the meaning of the dates in the gray
 area), see &lt;a href="https://www.explainxkcd.com/wiki/index.php/1179:_ISO_8601"&gt;1179: ISO 8601 - explain xkcd&lt;/a&gt;.&lt;/p&gt;
@@ -296,32 +296,32 @@ workplace) without  their explicit permission&lt;/li&gt;
 professional setting&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h4 id="markdown-file-comparison"&gt;Markdown File Comparison&lt;/h4&gt;&lt;div class="hll"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- Contributor Convenant 2.0&lt;/span&gt;
-&lt;span class="gi"&gt;+++ Recommended for Queering Wikipedia&lt;/span&gt;
-&lt;span class="gu"&gt;@@ -18,12 +18,20 @@&lt;/span&gt;
+&lt;h4 id="markdown-file-comparison"&gt;Markdown File Comparison&lt;/h4&gt;&lt;div class="hll"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- Contributor Convenant 2.0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+++ Recommended for Queering Wikipedia&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -18,12 +18,20 @@&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
- Examples of unacceptable behavior include:
+&lt;span class="w"&gt; &lt;/span&gt;Examples of unacceptable behavior include:&lt;span class="w"&gt;&lt;/span&gt;
 
-&lt;span class="gd"&gt;-* The use of sexualized language or imagery, and sexual attention or&lt;/span&gt;
-&lt;span class="gd"&gt;-  advances of any kind&lt;/span&gt;
-&lt;span class="gi"&gt;+* The use of sexualized language or imagery not directly related to conference&lt;/span&gt;
-&lt;span class="gi"&gt;+  content (conference content might include: history of gender in images, HIV&lt;/span&gt;
-&lt;span class="gi"&gt;+  awareness, etc.)&lt;/span&gt;
-&lt;span class="gi"&gt;+* Sexual attention or advances of any kind&lt;/span&gt;
- * Trolling, insulting or derogatory comments, and personal or political attacks
-&lt;span class="gi"&gt;+* Deliberate misgendering or use of &amp;quot;dead&amp;quot; or rejected names&lt;/span&gt;
-&lt;span class="gi"&gt;+* Questioning or challenging someone&amp;#39;s stated self-identity or chosen labels,&lt;/span&gt;
-&lt;span class="gi"&gt;+  even if they conflict with your own views&lt;/span&gt;
-&lt;span class="gi"&gt;+* Making general statements about groups you do not belong to&lt;/span&gt;
-&lt;span class="gi"&gt;+* Continued one-on-one communication after requests to cease&lt;/span&gt;
- * Public or private harassment
-&lt;span class="gd"&gt;-* Publishing others&amp;#39; private information, such as a physical or email&lt;/span&gt;
-&lt;span class="gd"&gt;-  address, without their explicit permission&lt;/span&gt;
-&lt;span class="gi"&gt;+* Publishing others&amp;#39; private information (including, but not limited to: age,&lt;/span&gt;
-&lt;span class="gi"&gt;+  contact information, gender, legal name, orientation, trans status,&lt;/span&gt;
-&lt;span class="gi"&gt;+  workplace) without their explicit permission&lt;/span&gt;
- * Other conduct which could reasonably be considered inappropriate in a
-   professional setting
+&lt;span class="gd"&gt;-* The use of sexualized language or imagery, and sexual attention or&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gd"&gt;-  advances of any kind&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+* The use of sexualized language or imagery not directly related to conference&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+  content (conference content might include: history of gender in images, HIV&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+  awareness, etc.)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+* Sexual attention or advances of any kind&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;* Trolling, insulting or derogatory comments, and personal or political attacks&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+* Deliberate misgendering or use of &amp;quot;dead&amp;quot; or rejected names&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+* Questioning or challenging someone&amp;#39;s stated self-identity or chosen labels,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+  even if they conflict with your own views&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+* Making general statements about groups you do not belong to&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+* Continued one-on-one communication after requests to cease&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;* Public or private harassment&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gd"&gt;-* Publishing others&amp;#39; private information, such as a physical or email&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gd"&gt;-  address, without their explicit permission&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+* Publishing others&amp;#39; private information (including, but not limited to: age,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+  contact information, gender, legal name, orientation, trans status,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="gi"&gt;+  workplace) without their explicit permission&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;* Other conduct which could reasonably be considered inappropriate in a&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt; &lt;/span&gt;  professional setting&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="enforcement"&gt;Enforcement&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Important!&lt;/strong&gt; You must add a contact method to the placeholder in the
 document so that people know how to report violations. (&lt;a href="https://www.contributor-covenant.org/"&gt;Contributor
