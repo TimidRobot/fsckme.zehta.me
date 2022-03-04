@@ -14,6 +14,12 @@ The built content is located in [`docs/`](docs/).
 
 ## Development
 
+
+### Docker NGINX and Lektor build
+
+This option serves content more reliably (more like GitHub Pages), but rebuilds
+all content instead of only content that has changed.
+
 1. Install [Pipenv][pipenv]
     ```shell
     brew install pipenv
@@ -22,7 +28,38 @@ The built content is located in [`docs/`](docs/).
     ```shell
     pipenv install
     ```
-3. Run Lektor development server (with custom output path)
+3. Install Docker ([Install Docker Engine | Docker
+   Documentation][installdocker])
+4. Run Docker NGINX and Lektor build
+   - Run NGINX webserver via Docker
+        ```shell
+        docker compose up; docker compose down
+        ```
+     - access development site at [`127.0.0.1:8080`](http://127.0.0.1:8080/)
+   - Rebuild output, as necessary
+    ```shell
+    ./build.sh
+    ```
+
+[pipenv]: https://docs.pipenv.org/en/latest/
+[lektor]: https://www.getlektor.com/docs/
+[installdocker]: https://docs.docker.com/engine/install/
+
+
+### Lektor Server
+
+This option process changes faster (only rebuilding changed content), but also
+injects Lektor admin UX and is slower than NGINX (bad for performance testing).
+
+1. Install [Pipenv][pipenv]
+    ```shell
+    brew install pipenv
+    ```
+2. Install [Lektor][lektor] and other Python 3 dependencies via Pipenv
+    ```shell
+    pipenv install
+    ```
+3. Run Lektor development server
     ```shell
     ./server.sh
     ```

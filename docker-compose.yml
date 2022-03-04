@@ -1,0 +1,14 @@
+# https://docs.docker.com/compose/compose-file/compose-file-v3/
+
+version: "3.6"
+
+services:
+
+  nginx:
+    # https://hub.docker.com/_/nginx
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    restart: always
+    volumes:
+      - ./docs/:/usr/share/nginx/html:ro
