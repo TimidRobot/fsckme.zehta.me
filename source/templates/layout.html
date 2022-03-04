@@ -4,9 +4,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{%- block title %}Welcome{%- endblock %} - {{ name }}</title>
   <meta name="author" content="Timid Robot Zehta">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ '/static/normalize.css'|url }}">
   <link rel="stylesheet" href="{{ '/static/skeleton.css'|url }}">
   <link rel="stylesheet" href="{{ '/static/fa/css/fontawesome.css'|url }}">
@@ -20,7 +20,7 @@
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
   <!-- Open Graph -->
   <meta property="og:site_name" content="Timid Robot's website">
-  <meta property="og:url" content="https://zehta.me.me/">
+  <meta property="og:url" content="https://zehta.me/">
   <meta property="og:title" content="Blog">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://zehta.me/favicon-590x310.png">
@@ -31,7 +31,9 @@
   <!-- Plausible web stats -->
   <script async defer data-domain="zehta.me"
           src="https://stats.zehta.me/js/plausible.outbound-links.js"></script>
-  <script>window.plausible = window.plausible || function() {(window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  <script>
+    window.plausible = window.plausible || function() {(window.plausible.q = window.plausible.q || []).push(arguments) }
+  </script>
   <!-- template: block head -->
   {%- block head%}{%- endblock %}
 </head>
