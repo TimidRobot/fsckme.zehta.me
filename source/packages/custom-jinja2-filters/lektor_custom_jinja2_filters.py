@@ -11,7 +11,7 @@ RE_DATE_PREFIX = re.compile(r"^(\d{8}-)(.*)$")
 
 class CustomJinja2FiltersPlugin(Plugin):
     name = "custom-jinja2-filters"
-    description = u"Custom Jinja2 filters"
+    description = "Custom Jinja2 filters"
 
     def on_setup_env(self, **extra):
         def parsedatetime_filter(value):
