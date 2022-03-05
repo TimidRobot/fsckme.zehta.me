@@ -191,23 +191,30 @@ License][cc-by-sa].
 
 ### Font Awesome
 
-> Font Awesome Free is free, open source, and GPL friendly. You can use it for
-> commercial projects, open source projects, or really almost whatever you
-> want. Full Font Awesome Free license: https://fontawesome.com/license/free.
-
-> **Icons:** CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+[Free License | Font Awesome](https://fontawesome.com/license/free) (retreived
+`2022-03-04`):
+> **Icons — [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)**
+>
 > In the Font Awesome Free download, the CC BY 4.0 license applies to all icons
-> packaged as SVG and JS file types.
+> packaged as `.svg` and `.js` files types.
 
-> **Fonts:** SIL OFL 1.1 License (https://scripts.sil.org/OFL)
+> **Fonts — [SIL OFL 1.1 License](https://scripts.sil.org/OFL)**
+>
 > In the Font Awesome Free download, the SIL OFL license applies to all icons
 > packaged as web and desktop font files.
 
-> **Brand Icons:**
-> All brand icons are trademarks of their respective owners. The use of these
-> trademarks does not indicate endorsement of the trademark holder by Font
-> Awesome, nor vice versa. **Please do not use brand logos for any purpose
-> except to represent the company, product, or service to which they refer.**
+> **Code — [MIT License](https://opensource.org/licenses/MIT)**
+>
+> In the Font Awesome Free download, the MIT license applies to all non-font
+> and non-icon files.
+
+> **Brand Icons**
+>
+> All [brand icons](https://fontawesome.com/search?p=1&s=brands) are trademarks
+> of their respective owners. The use of these trademarks does not indicate
+> endorsement of the trademark holder by Font Awesome, nor vice versa. **Please
+> do not use brand logos for any purpose except to represent the company,
+> product, or service to which they refer.**
 
 
 ### Skeleton
