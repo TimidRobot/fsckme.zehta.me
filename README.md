@@ -180,14 +180,13 @@ boilerplate or otherwise *should* be too simple and obvious to copyright.)
 
 ### Content
 
-[![CC BY-SA 4.0 license button][cc-by-sa-png]][cc-by-sa1]
+[![CC BY-SA 4.0 license button][cc-by-sa-png]][cc-by-sa]
 **Unless otherwise specified,** the content within this repository is licensed
 under a [Creative Commons Attribution-ShareAlike 4.0 International
-License][cc-by-sa2].
+License][cc-by-sa].
 
 [cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png#floatleft "CC BY-SA 4.0 license button"
-[cc-by-sa1]: https://creativecommons.org/licenses/by-sa/4.0/ "CC BY-SA 4.0"
-[cc-by-sa2]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons Attribution-ShareAlike 4.0 International License"
+[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons Attribution-ShareAlike 4.0 International License"
 
 
 ### Font Awesome

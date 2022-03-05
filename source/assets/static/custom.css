@@ -84,7 +84,7 @@ a[href*="youtu.be"]:before {
   font-family: "Font Awesome 5 Brands"; font-weight: 400;
   content: "\f167\00a0";
 }
-a[title*="CC BY"]:before {
+a[title$="button)"]:before {
   content: "";
 }
 a img {
