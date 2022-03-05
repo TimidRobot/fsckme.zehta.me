@@ -62,12 +62,17 @@ This is a personal blog. All opinions are my own.
 
 ### Code
 
-**Unless otherwise specified,** the code within this repository is licensed
-under a [Unlicense][unlicense]. (Much of the code used in this respository is
-standard boilerplate or otherwise *should* be too simple and obvious to
-copyright.)
+[![CC0 dedication button][cc-zero-png]][cc-zero]
+**Unless otherwise specified,** the code within this repository is dedicated,
+with all copyright and related and neighboring rights, to the public domain
+worldwide. It is distributed without any warranty. ([CC0 1.0 Universal (CC0
+1.0) Public Domain Dedication][cc-zero])
 
-[unlicense]:https://unlicense.org/ "Unlicense.org » Unlicense Yourself: Set Your Code Free"
+(It is my opinion that much of the code used in this respository is standard
+boilerplate or otherwise *should* be too simple and obvious to copyright.)
+
+[cc-zero-png]: https://licensebuttons.net/l/zero/1.0/88x31.png#floatleft "CC0 1.0 dedication button"
+[cc-zero]: https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
 
 
 ### Content

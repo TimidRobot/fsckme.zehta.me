@@ -76,10 +76,6 @@ a[href*="ubuntu.com"]:before {
   font-family: "Font Awesome 5 Brands"; font-weight: 400;
   content: "\f7df\00a0";
 }
-a[href*="unlicense.org"]:before {
-  font-family: "Font Awesome 5 Brands"; font-weight: 400;
-  content: "\f4ec\00a0";
-}
 a[href*="wikipedia.org"]:before {
   font-family: "Font Awesome 5 Brands"; font-weight: 400;
   content: "\f266\00a0";

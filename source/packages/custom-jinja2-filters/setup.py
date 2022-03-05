@@ -26,7 +26,7 @@ setup(
         "python-dateutil",
     ],
     keywords="Lektor plugin",
-    license="Unlicense",
+    license="CC0-1.0",
     long_description=readme,
     long_description_content_type="text/markdown",
     name="lektor-custom-jinja2-filters",
@@ -37,6 +37,7 @@ setup(
     classifiers=[
         "Environment :: Plugins",
         "Framework :: Lektor",
+        "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
         "Programming Language :: Python :: 3",
     ],
     entry_points={
