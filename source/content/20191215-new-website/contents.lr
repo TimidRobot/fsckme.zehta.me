@@ -10,24 +10,7 @@ copyright: cc-by-sa
 ---
 tags: 2019, python, webdev, zzz
 ---
-css:
-td.dc {
-  border: 0 solid Red;
-  margin: 1rem;
-  padding: 1rem;
-  text-align: center;
-  vertical-align: center;
-}
-td.Black { background-color: Black; color: White; }
-td.MetaBlack { background-color: var(--MetaBlack); color: White; }
-td.NearBlack { background-color: var(--NearBlack); color: White; }
-td.HeavyGray { background-color: var(--HeavyGray); color: White; }
-td.MediumGray { background-color: var(--MediumGray); color: White; }
-td.AnswerGray { background-color: var(--AnswerGray); color: White; }
-td.LightGray { background-color: LightGray; color: Black; }
-td.White { background-color: White; color: Black; }
-td.BluePlum { background-color: var(--BluePlum); color: Black; }
-td.DarkRoyal { background-color: var(--DarkRoyal); color: White; }
+css: /static/20191215-new-website.css
 ---
 body:
 
@@ -87,9 +70,11 @@ The repository includes the non-minified custom CSS:
 ### Tools and References
 
 - [Closest Named Web Colors](https://wismuth.com/webcolors.html)
+- [Measure page quality - web.dev](https://web.dev/measure/)
 
 
 ## Edits
 
+- 2022-03-05: Added web.dev and removed martial theme name
 - 2020-09-24: Added `--DarkRoyal` and removed `--PinkPlum`
 - 2019-12-22: Added `--PinkPlum`

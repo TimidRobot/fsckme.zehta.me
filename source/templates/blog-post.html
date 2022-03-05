@@ -5,9 +5,7 @@
 {%- block title %}{{ this.title }}{%- endblock %}
 {%- block head %}
   {%- if this.css %}
-  <style>
-  {{- this.css }}
-  </style>
+  <link rel="stylesheet" href="{{ this.css|url }}">
   {%- endif %}
 {%- endblock %}
 {%- block body %}
