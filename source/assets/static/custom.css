@@ -308,14 +308,14 @@ div.hll pre {
   border-radius: 0.5rem;
 }
 /*** Footer ******************************************************************/
-div.footer {    /*SmDev*/ font-size: 2rem; }
+nav.footer {    /*SmDev*/ font-size: 2rem; }
 @media (min-width: 550px) {
-  div.footer {  /*MdDev*/ font-size: 2rem; }
+  nav.footer {  /*MdDev*/ font-size: 2rem; }
 }
 @media (min-width: 1024px) {
-  div.footer {  /*LgDev*/ font-size: 3rem; }
+  nav.footer {  /*LgDev*/ font-size: 3rem; }
 }
-div.footer a {
+nav.footer a {
   border: 2px solid var(--AnswerGray);
   color: var(--BluePlum);
   padding: 0 1rem 0 1rem;
@@ -345,7 +345,7 @@ div.post-next a:hover, div.post-prev a:hover {
   margin: 0.5rem;
   text-align: center;
 }
-div.footer .disabled {
+nav.footer .disabled {
   background-color: inherit;
 }
 .post-next, .post-prev {    /*SmDev*/ font-size: 1.5rem; }
