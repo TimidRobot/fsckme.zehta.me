@@ -20,7 +20,8 @@
       {%- set prev_title = prev_title[0:27] ~ "..." %}
     {%- endif %}
     <div class="post-prev">
-    <a href="{{ this.get_siblings().prev_page|url }}">
+      <a href="{{ this.get_siblings().prev_page|url }}"
+         title="Previous post: {{ this.get_siblings().prev_page.title }}">
       <i class="fas fa-angle-left"></i>
       {{ prev_title }}
     </a>
@@ -32,7 +33,8 @@
       {%- set next_title = next_title[0:27] ~ "..." %}
     {%- endif %}
     <div class="post-next">
-    <a href="{{ this.get_siblings().next_page|url }}">
+    <a href="{{ this.get_siblings().next_page|url }}"
+       title="Next post: {{ this.get_siblings().next_page.title }}">
       {{ next_title }}
       <i class="fas fa-angle-right"></i>
     </a>
