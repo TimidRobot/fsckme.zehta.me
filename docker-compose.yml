@@ -5,6 +5,10 @@ version: "3.6"
 services:
 
   nginx:
+    command: sh -c "
+      echo 'Starting static webserver at http://127.0.0.1:8080/'
+      && nginx -g 'daemon off;'
+      "
     # https://hub.docker.com/_/nginx
     image: nginx:alpine
     ports:
@@ -12,3 +16,4 @@ services:
     restart: always
     volumes:
       - ./docs/:/usr/share/nginx/html:ro
+      - ./nginx-conf.d/:/etc/nginx/conf.d:ro
