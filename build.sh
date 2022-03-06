@@ -77,3 +77,5 @@ else
 fi
 echo
 echo
+
+./sri_hashes.sh

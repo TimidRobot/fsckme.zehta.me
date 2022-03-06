@@ -5,6 +5,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' stats.zehta.me; img-src 'self' licensebuttons.net www.gravatar.com">
   <title>{%- block title %}Welcome{%- endblock %} - {{ name }}</title>
   <meta name="author" content="Timid Robot Zehta">
   <link rel="stylesheet" href="{{ '/static/normalize.css'|url }}">
@@ -31,10 +33,12 @@
   <!-- Plausible web stats -->
   <!-- - https://plausible.io/docs/outbound-link-click-tracking -->
   <script async defer data-domain="zehta.me"
-          src="https://stats.zehta.me/js/plausible.outbound-links.js"></script>
+    src="https://stats.zehta.me/js/plausible.outbound-links.js"></script>
   <!-- - https://plausible.io/docs/custom-event-goals -->
   <!-- - https://plausible.io/docs/error-pages-tracking-404 -->
-  <script async defer src="/static/custom_events.js"></script>
+  <script async defer
+    integrity="sha384-pgIDlHOsV/3+TBW/dJ9Se+XEBP30T0a9Z/8vWxDLwYSvrMdLhZb60Pqbvd/UxLJT"
+    src="/static/custom_events.js"></script>
   <!-- template: block head -->
   {%- block head%}{%- endblock %}
 </head>

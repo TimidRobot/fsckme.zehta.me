@@ -5,6 +5,8 @@ body:
 
 <!-- Plausible web stats -->
 <!-- - https://plausible.io/docs/error-pages-tracking-404 -->
-<script async defer src="/static/event404.js"></script>
+<script async defer
+  integrity="sha384-m8l/rwxdbE7rf05vAHGNXO3Ibo8Xw47A6yxanEZN+96acLtYo5Ulqi9iw4UhrM5d"
+  src="/static/event404.js"></script>
 <i class="fas fa-exclamation-circle"></i> No page exists for the URL that you
 specified. Please double-check the URL or use the navigation, above.
