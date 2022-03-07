@@ -118,11 +118,11 @@ License][cc-by-sa].
 
 ### normalize.css
 
-normalize.css is [licensed][normalizelicensed] under the Expat/[MIT][mit]
-License.
+@csstools/normalize.css is dedicated, with all copyright and related and 
+neighboring rights, to the public domain worldwide. It is distributed without
+any warranty. ([CC0 1.0 Universal (CC0 1.0) Public Domain Dedication][cc-zero])
 
-[normalizelicensed]: https://github.com/necolas/normalize.css/blob/master/LICENSE.md
-[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"
+[cc-zero]: https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
 
 
 ### Skeleton

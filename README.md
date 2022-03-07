@@ -129,7 +129,7 @@ that contributed to me being able to create and maintain this blog!
       in Python
     - [Jinja — Jinja Documentation (3.0.x)][jinja]
   - CSS / Layout
-    - [necolas/normalize.css][normalize]: A modern alternative to CSS resets
+    - [csstools/normalize.css][normalize]: A cross-browser CSS foundation
     - [Skeleton][skeleton]: Responsive CSS Boilerplate
   - [Free and Brand Icons | Font Awesome][icons]
 - Guides
@@ -153,7 +153,7 @@ that contributed to me being able to create and maintain this blog!
 [isort]: https://pycqa.github.io/isort/
 [colorama]: https://github.com/tartley/colorama
 [jinja]: https://jinja.palletsprojects.com/en/3.0.x/
-[normalize]: https://github.com/necolas/normalize.css
+[normalize]: https://github.com/csstools/normalize.css
 [skeleton]: http://getskeleton.com/
 [icons]: https://fontawesome.com/icons?d=gallery&s=brands&m=free
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
@@ -221,11 +221,11 @@ License][cc-by-sa].
 
 ### normalize.css
 
-normalize.css is [licensed][normalizelicensed] under the Expat/[MIT][mit]
-License.
+@csstools/normalize.css is dedicated, with all copyright and related and
+neighboring rights, to the public domain worldwide. It is distributed without
+any warranty. ([CC0 1.0 Universal (CC0 1.0) Public Domain Dedication][cc-zero])
 
-[normalizelicensed]: https://github.com/necolas/normalize.css/blob/master/LICENSE.md
-[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"
+[cc-zero]: https://creativecommons.org/publicdomain/zero/1.0/ "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
 
 
 ### Skeleton
