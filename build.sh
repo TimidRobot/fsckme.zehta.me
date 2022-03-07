@@ -67,6 +67,8 @@ if [[ -n "${CLEAR_PLUGINS:-}" ]]; then
     echo
 fi
 
+./combine_css.sh
+
 if [[ -n "${PRETIFY:-}" ]]
 then
     printf "\e[1m\e[7m %-80s\e[0m\n" 'Lektor: building site with pretify'
