@@ -128,7 +128,9 @@ that contributed to me being able to create and maintain this blog!
     - [tartley/colorama][colorama]: Simple cross-platform colored terminal text
       in Python
     - [Jinja — Jinja Documentation (3.0.x)][jinja]
-  - [Skeleton][skeleton]: Responsive CSS Boilerplate
+  - CSS / Layout
+    - [necolas/normalize.css][normalize]: A modern alternative to CSS resets
+    - [Skeleton][skeleton]: Responsive CSS Boilerplate
   - [Free and Brand Icons | Font Awesome][icons]
 - Guides
   - [Building a static blog with Lektor | Animesh Bulusu][building]
@@ -151,6 +153,7 @@ that contributed to me being able to create and maintain this blog!
 [isort]: https://pycqa.github.io/isort/
 [colorama]: https://github.com/tartley/colorama
 [jinja]: https://jinja.palletsprojects.com/en/3.0.x/
+[normalize]: https://github.com/necolas/normalize.css
 [skeleton]: http://getskeleton.com/
 [icons]: https://fontawesome.com/icons?d=gallery&s=brands&m=free
 [building]: https://animesh.blog/building-a-static-blog-with-lektor/
@@ -188,7 +191,6 @@ License][cc-by-sa].
 [cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png#floatleft "CC BY-SA 4.0 license button"
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/ "Creative Commons Attribution-ShareAlike 4.0 International License"
 
-
 ### Font Awesome
 
 [Free License | Font Awesome](https://fontawesome.com/license/free) (retreived
@@ -217,10 +219,19 @@ License][cc-by-sa].
 > product, or service to which they refer.**
 
 
+### normalize.css
+
+normalize.css is [licensed][normalizelicensed] under the Expat/[MIT][mit]
+License.
+
+[normalizelicensed]: https://github.com/necolas/normalize.css/blob/master/LICENSE.md
+[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"
+
+
 ### Skeleton
 
-> All parts of [Skeleton][skeleton-gh] are free to use and abuse under the
-> [open-source MIT license][mit].
+Skeleton is [licensed][skeletonlicensed] under the Expat/[MIT][mit]
+License.
 
-[skeleton-gh]: https://github.com/dhg/Skeleton
-[mit]: https://github.com/dhg/Skeleton/blob/master/LICENSE.md
+[skeletonlicensed]: https://github.com/dhg/Skeleton/blob/master/LICENSE.md
+[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"

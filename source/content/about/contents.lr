@@ -116,10 +116,19 @@ License][cc-by-sa].
 > product, or service to which they refer.**
 
 
+### normalize.css
+
+normalize.css is [licensed][normalizelicensed] under the Expat/[MIT][mit]
+License.
+
+[normalizelicensed]: https://github.com/necolas/normalize.css/blob/master/LICENSE.md
+[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"
+
+
 ### Skeleton
 
-> All parts of [Skeleton][skeleton-gh] are free to use and abuse under the
-> [open-source MIT license][mit].
+Skeleton is [licensed][skeletonlicensed] under the Expat/[MIT][mit]
+License.
 
-[skeleton-gh]: https://github.com/dhg/Skeleton
-[mit]: https://github.com/dhg/Skeleton/blob/master/LICENSE.md
+[skeletonlicensed]: https://github.com/dhg/Skeleton/blob/master/LICENSE.md
+[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"

@@ -3,42 +3,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' stats.zehta.me; img-src 'self' licensebuttons.net www.gravatar.com">
+    content="default-src 'self'; script-src 'self' stats.zehta.me; style-src 'self' cdnjs.cloudflare.com; img-src 'self' licensebuttons.net www.gravatar.com; font-src 'self' cdnjs.cloudflare.com"/>
   <title>{%- block title %}Welcome{%- endblock %} - {{ name }}</title>
   <meta name="author" content="Timid Robot Zehta">
-  <link rel="stylesheet" href="{{ '/static/normalize.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/skeleton.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/fa/css/fontawesome.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/fa/css/brands.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/fa/css/solid.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/pygments-monokai.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/custom.css'|url }}">
+  <!-- Combined layout styles -->
+  <link rel="stylesheet" href="{{ '/static/layout.css'|url }}"
+    integrity="sha512-Njb53KyWQ2incncIl5J/GxrqqOPhtACFddwTfnl2yM4Q82lMvoxmHueR+gjXHcd2xQb85rQGayjp11xz3e8jsA=="/>
+  <!-- Font Awesome -->
+  <!-- - https://cdnjs.com/libraries/font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" integrity="sha512-8Vtie9oRR62i7vkmVUISvuwOeipGv8Jd+Sur/ORKDD5JiLgTGeBSkI3ISOhc730VGvA5VVQPwKIKlmi+zMZ71w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" integrity="sha512-bSncow0ApIhONbz+pNI52n0trz5fMWbgteHsonaPk42JbunIeM9ee+zTYAUP1eLPky5wP0XZ7MSLAPxKkwnlzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" integrity="sha512-6/gTF62BJ06BajySRzTm7i8N2ZZ6StspU9uVWDdoBiuuNu5rs1a8VwiJ7skCz2BcvhpipLKfFerXkuzs+npeKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom Style -->
+  <link rel="stylesheet" href="{{ '/static/custom.css'|url }}"
+    integrity="sha512-EP8iYHR7dkDF4mOVAfK38ulM2miMmji5WT44FufLicnM7xKzqioSgwbvnnj7CZpwKo0yp+A1HrxZGT3+5Du4Rg=="/>
   <!-- favicons -->
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
   <!-- Open Graph -->
   <meta property="og:site_name" content="Timid Robot's website">
-  <meta property="og:url" content="https://zehta.me/">
-  <meta property="og:title" content="Blog">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://zehta.me/favicon-590x310.png">
-  <meta property="og:image:width" content="590">
-  <meta property="og:image:height" content="310">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="logo">
+  <meta property="og:url" content="https://zehta.me/"/>
+  <meta property="og:title" content="Blog"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://zehta.me/favicon-590x310.png"/>
+  <meta property="og:image:width" content="590"/>
+  <meta property="og:image:height" content="310"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:alt" content="logo"/>
   <!-- Plausible web stats -->
   <!-- - https://plausible.io/docs/outbound-link-click-tracking -->
   <script async defer data-domain="zehta.me"
     src="https://stats.zehta.me/js/plausible.outbound-links.js"></script>
   <!-- - https://plausible.io/docs/custom-event-goals -->
   <!-- - https://plausible.io/docs/error-pages-tracking-404 -->
-  <script async defer
-    integrity="sha384-pgIDlHOsV/3+TBW/dJ9Se+XEBP30T0a9Z/8vWxDLwYSvrMdLhZb60Pqbvd/UxLJT"
-    src="/static/custom_events.js"></script>
+  <script async defer src="/static/custom_events.js"
+    integrity="sha512-Yco6ythX09Ej3MVugS5Hk/3hY4bDZro0BEHVOQ+ININxUgZFaYBoTpAK8klGyHQUgc81I6jSD9wbt3SjlAeWNA=="></script>
   <!-- template: block head -->
   {%- block head%}{%- endblock %}
 </head>
