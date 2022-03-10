@@ -53,7 +53,7 @@ def main():
             print_pair("URL path source", source)
             print_pair("URL path target", target)
             print_pair("URL test link", "")
-            print(f"{Style.BRIGHT}{Fore.BLUE}http://127.0.0.1:5000{source}")
+            print(f"{Style.BRIGHT}{Fore.BLUE}http://127.0.0.1:8080{source}")
             # Note that this writes a manually formatted HTML file to the
             # source directory. On build, it will be minified by Lektor.
             contents = template.render(TARGET=target)
