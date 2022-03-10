@@ -1,11 +1,13 @@
 {#- vim: sts=2 sw=2 ts=2 sr et: #}
 {%- macro render_post_list(posts) %}
-<ol>
+<ol reversed>
   {%- for post in posts %}
-  <li class="list-item-post">
-    {{ post.pub_date.strftime("%Y-%m-%d") }}:
-    <a href="{{ post|url }}">{{- post.title }}</a>
-  </li>
+  {%- if post._model == "blog-post" %}
+    <li class="list-item-post">
+      <code>{{ post.pub_date.strftime("%Y %b %d") }}</code>:
+      <a href="{{ post|url }}">{{- post.title }}</a>
+    </li>
+  {%- endif %}
   {%- endfor %}
 </ol>
 {%- endmacro %}
@@ -14,7 +16,7 @@
 {%- macro render_cat_nav(active=none, tags_type=none) %}
 <h2>{{ tags_type }} Tags</h2>
 <ul>
-  {%- for tag in site.query("/tags").filter(F._id != "zzz") %}
+  {%- for tag in site.query("/tags").filter(F._id != "all") %}
     {%- set name = tag.name if tag.name else tag._id.title() %}
     {%- if not name|int(default=False) and tags_type == "Content" %}
       {%- set name = name.replace(" ", "\u00A0") %}
@@ -34,7 +36,7 @@
   {%- if tags %}
     {%- set tags_filtered = [] %}
     {%- for tag in tags %}
-      {%- if tag != year and tag != "zzz" %}
+      {%- if tag != year and tag != "all" %}
         {%- set _ = tags_filtered.append(tag) %}
       {%- endif %}
     {%- endfor %}
@@ -64,7 +66,7 @@
   <ul>
   {%- for specified_tag in tags %}
     {%- set tag = site.get("/tags/{}".format(specified_tag)) %}
-    {%- if tag._id != "zzz" %}
+    {%- if tag._id != "all" %}
       {%- set name = tag.name if tag.name else tag._id.title() %}
       {%- set name = name.replace(" ", "\u00A0") %}
       <li>

@@ -272,8 +272,14 @@ img[src*="floatright"] {    /*SmallDev*/ float: right; }
 img[src*="vatexttop"] {
   vertical-align: text-top;
 }
+li.list-item-post::marker {
+  font-family: monospace;
+}
 li.list-item-post {
   padding-left: 2rem;
+}
+li.list-item-post > code {
+  font-size: smaller;
 }
 p.copyright img {
   padding: 0;

@@ -5,9 +5,14 @@
 {%- block body %}
 <h1><i class="fas fa-tag"></i> {{ title }}</h1>
 <h2>Posts</h2>
-{%- if this.children %}
+{%- if this._id == "all" %}
+  {% set root = site.get('/') %}
+  {{ render_post_list(root.children) }}
+{%- else %}
+  {%- if this.children %}
     {{ render_post_list(this.children) }}
-{%-else%}
+  {%- else%}
     <p>No posts in tag {{ title }} yet. Maybe there is a draft in the works.</p>
+  {%- endif %}
 {%- endif %}
 {%- endblock %}
