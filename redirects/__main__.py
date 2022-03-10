@@ -41,6 +41,8 @@ def main():
                 continue
             source, target = line.split()
             source_file = os.path.join(assets, source.lstrip("/"))
+            if source_file.endswith("/"):
+                source_file = f"{source_file}index.html"
             docs_file = os.path.join("docs", source.lstrip("/"))
             pad = " " * (79 - 8 - len(source_file))
             print(
