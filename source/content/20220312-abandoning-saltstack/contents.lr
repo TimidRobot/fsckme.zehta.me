@@ -12,8 +12,8 @@ tags: 2022, saltstack
 ---
 body:
 
-I really wanted to use SaltStack to configure my home linux router. It would be
-wonderful to manage that infrastrucuter as code. Unfortunately, it does not
+I really wanted to use SaltStack to configure my home Linux router. It would be
+wonderful to manage that infrastructure as code. Unfortunately, it does not
 seem tenable for me.
 
 <!-- PLUGIN-READ-FULL-POST -->
