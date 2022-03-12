@@ -1,0 +1,131 @@
+_model: blog-post
+---
+title: Abandoning SaltStack?
+---
+pub_date: 2022-03-12 12:30
+---
+author: Timid Robot Zehta
+---
+copyright: cc-by-sa
+---
+tags: 2022, saltstack
+---
+body:
+
+I really wanted to use SaltStack to configure my home linux router. It would be
+wonderful to manage that infrastrucuter as code. Unfortunately, it does not
+seem tenable for me.
+
+<!-- PLUGIN-READ-FULL-POST -->
+
+
+## Issues at Home
+
+
+### Does not support Python 3.8+ on macOS
+
+My goal was to be able to push configurations using `salt-ssh` from my macOS
+laptop. SaltStack claims macOS is supported. [Salt Project][saltproject]
+(emphasis added):
+> Salt is tested and packaged to run on CentOS, Debian, RHEL, Ubuntu,
+> **MacOS**, Windows, and more.
+
+I originally installed SaltStack via homebrew, but had to switch to a Python
+3.7 virtual environment due to:
+- `2020-06-21`: [[BUG] AttributeError: 'Process' object has no attribute
+  '_args_for_getstate' · Issue #57742 · saltstack/salt][i57742]
+<!-- x_ fix vim markdown highlight issue -->
+- `2022-01-09`: [[BUG] salt-ssh fails due to attempting to pickle _thread._local
+  object · Issue #61435 · saltstack/salt][i61435]
+<!-- x_ fix vim markdown highlight issue -->
+
+These issues have exists since the release of Python 3.8 on `2019-10-14`.
+
+[saltproject]: https://docs.saltproject.io/en/3004/topics/about_salt_project.html
+[i57742]: https://github.com/saltstack/salt/issues/57742
+[i61435]: https://github.com/saltstack/salt/issues/61435
+
+
+### Cannot use gitfs with salt-ssh
+
+With SaltStack appearing to work, I wanted to use SaltStack Formulas.
+Unfortunately, that option has been unsupported since 2005:
+- `2015-5-12`: [Cannot use gitfs with salt-ssh · Issue #23576 ·
+  saltstack/salt][i23576]
+
+I tried to symlink git submodules in, but I encountered the same error.
+
+[i23576]: https://github.com/saltstack/salt/issues/23576
+
+
+### Docker images unmaintained
+
+I thought I might have fewer issues if I might moved my use case closer to the
+SaltStack mainstream by using a SaltStack docker image. SaltStack `3004` was
+release 145 days ago on `2021-10-18`. Unfortunately, as of today
+(`2022-03-12`), there is not yet a `3004` docker image. [saltstack/salt -
+Docker Image | Docker Hub][dockersalt]:
+> **Supported tags and respective `Dockerfile` links**
+>
+> - `3004rc1`, `rc`
+> - `3003.3`, `3003.2`, `3003.1`, `3003`, `latest`
+
+[dockersalt]: https://hub.docker.com/r/saltstack/salt
+
+I realize I could create my own docker image, but I encountered this when my
+capacity for workarounds was already at its limit.
+
+
+## Issues at Work
+
+
+### Lack of Open Community
+
+In learning and using SaltStack, I've frequently come up against a terrible
+lack of examples and documentation of SaltStack in use. It seems to be getting
+worse as the few examples I did find are becoming outdated.
+
+At work, I've tried to use SaltStack in the open so others can build on my
+work. I've blogged about it previously ([SaltStack tag - Timid
+Robot](/tags/saltstack/)). So far, engagement has been nonexistent.
+
+I spent years working with Puppet, which had a much stronger community.
+
+
+### Incomplete Migration from Python 2.7 to Python 3
+
+I use `boto_rds` for provisioning:
+- `2022-01-31`: [[BUG] boto_rds.subnet_group_present broken · Issue #61555 ·
+  saltstack/salt][i61555]
+
+[i61555]: https://github.com/saltstack/salt/issues/61555
+
+
+### More `salt-ssh` Trouble
+
+I use `salt-ssh` for the initial setup of newly provisioned EC2 instances:
+- `2022-01-27`: [[BUG] salt-ssh requires the distro python package · Issue
+  #61535 · saltstack/salt][i61535]
+
+[i61535]: https://github.com/saltstack/salt/issues/61535
+
+
+### Overwhelming Backlog
+
+The backlog contains many ancient and higher severity issues that deal with the
+functionality I am interested in (ex. `salt-ssh`):
+- [Issues · saltstack/salt][saltissues]
+
+[saltissues]: https://github.com/saltstack/salt/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-asc
+
+
+## Conclusion
+
+I really wanted to love SaltStack. I love Python. I love a lot of the design
+decisions made by SaltStack. It seems like the core use case (avoiding
+`salt-ssh`, orchestration, and provisioning) is viable. SaltStack might work very very well for you. I respect the developers (especially the volunteer developers) who are working on a great product. Unfortunately, it doesn't feel like SaltStack will work well for me.
+
+I expect that next I'll try Ansible at home:
+- [Ansible Community Documentation][ansibledocs]
+
+[ansibledocs]: https://docs.ansible.com/ansible_community.html
