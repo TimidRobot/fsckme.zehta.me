@@ -63,8 +63,8 @@ I tried to symlink git submodules in, but I encountered the same error.
 I thought I might have fewer issues if I might moved my use case closer to the
 SaltStack mainstream by using a SaltStack docker image. SaltStack `3004` was
 release 145 days ago on `2021-10-18`. Unfortunately, as of today
-(`2022-03-12`), there is not yet a `3004` docker image. [saltstack/salt -
-Docker Image | Docker Hub][dockersalt]:
+(`2022-03-12`--still true as of `2022-05-03`), there is not yet a `3004` docker
+image. [saltstack/salt - Docker Image | Docker Hub][dockersalt]:
 > **Supported tags and respective `Dockerfile` links**
 >
 > - `3004rc1`, `rc`
@@ -123,9 +123,37 @@ functionality I am interested in (ex. `salt-ssh`):
 
 I really wanted to love SaltStack. I love Python. I love a lot of the design
 decisions made by SaltStack. It seems like the core use case (avoiding
-`salt-ssh`, orchestration, and provisioning) is viable. SaltStack might work very very well for you. I respect the developers (especially the volunteer developers) who are working on a great product. Unfortunately, it doesn't feel like SaltStack will work well for me.
+`salt-ssh`, orchestration, and provisioning) is viable. SaltStack might work
+very very well for you. I respect the developers (especially the volunteer
+developers) who are working on a great product. Unfortunately, it doesn't feel
+like SaltStack will work well for me.
 
 I expect that next I'll try Ansible at home:
 - [Ansible Community Documentation][ansibledocs]
 
 [ansibledocs]: https://docs.ansible.com/ansible_community.html
+
+
+## Response
+
+2022-03-16: Gareth J. Greenaway provided [a good response][twitterresponse] to
+this post on Twitter.
+
+[twitterresponse]: https://twitter.com/garethgreenaway/status/1504121699372974082?s=20&t=2sVPB8iytlNVglrK3Lnl5Q
+
+
+## Ansible Success
+
+2022-05-03: Not long after writing this post, my firewall's RAM was damaged by
+a blackout and I had to rebuild it. I was able to do fairly quickly, even
+though I was learning Ansible at the same time. So far, I've really enjoyed
+Ansible. My only complaint is that it is slow (though fast enough for my
+needs).
+
+
+## Edits
+
+- 2022-05-03
+  - Added recheck date to Docker images unmaintained section
+  - Added Response section
+  - Added Ansible Success section
