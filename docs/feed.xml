@@ -27,8 +27,8 @@ saltstack/salt&lt;/a&gt;&lt;/li&gt;
 &lt;h3 id="docker-images-unmaintained"&gt;Docker images unmaintained&lt;/h3&gt;&lt;p&gt;I thought I might have fewer issues if I might moved my use case closer to the
 SaltStack mainstream by using a SaltStack docker image. SaltStack &lt;code&gt;3004&lt;/code&gt; was
 release 145 days ago on &lt;code&gt;2021-10-18&lt;/code&gt;. Unfortunately, as of today
-(&lt;code&gt;2022-03-12&lt;/code&gt;), there is not yet a &lt;code&gt;3004&lt;/code&gt; docker image. &lt;a href="https://hub.docker.com/r/saltstack/salt"&gt;saltstack/salt -
-Docker Image | Docker Hub&lt;/a&gt;:&lt;/p&gt;
+(&lt;code&gt;2022-03-12&lt;/code&gt;--still true as of &lt;code&gt;2022-05-03&lt;/code&gt;), there is not yet a &lt;code&gt;3004&lt;/code&gt; docker
+image. &lt;a href="https://hub.docker.com/r/saltstack/salt"&gt;saltstack/salt - Docker Image | Docker Hub&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Supported tags and respective &lt;code&gt;Dockerfile&lt;/code&gt; links&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;3004rc1&lt;/code&gt;, &lt;code&gt;rc&lt;/code&gt;&lt;/li&gt;
@@ -61,10 +61,28 @@ functionality I am interested in (ex. &lt;code&gt;salt-ssh&lt;/code&gt;):&lt;/p&
 &lt;/ul&gt;
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;&lt;p&gt;I really wanted to love SaltStack. I love Python. I love a lot of the design
 decisions made by SaltStack. It seems like the core use case (avoiding
-&lt;code&gt;salt-ssh&lt;/code&gt;, orchestration, and provisioning) is viable. SaltStack might work very very well for you. I respect the developers (especially the volunteer developers) who are working on a great product. Unfortunately, it doesn't feel like SaltStack will work well for me.&lt;/p&gt;
+&lt;code&gt;salt-ssh&lt;/code&gt;, orchestration, and provisioning) is viable. SaltStack might work
+very very well for you. I respect the developers (especially the volunteer
+developers) who are working on a great product. Unfortunately, it doesn't feel
+like SaltStack will work well for me.&lt;/p&gt;
 &lt;p&gt;I expect that next I'll try Ansible at home:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://docs.ansible.com/ansible_community.html"&gt;Ansible Community Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="response"&gt;Response&lt;/h2&gt;&lt;p&gt;2022-03-16: Gareth J. Greenaway provided &lt;a href="https://twitter.com/garethgreenaway/status/1504121699372974082?s=20&amp;amp;t=2sVPB8iytlNVglrK3Lnl5Q"&gt;a good response&lt;/a&gt; to
+this post on Twitter.&lt;/p&gt;
+&lt;h2 id="ansible-success"&gt;Ansible Success&lt;/h2&gt;&lt;p&gt;2022-05-03: Not long after writing this post, my firewall's RAM was damaged by
+a blackout and I had to rebuild it. I was able to do fairly quickly, even
+though I was learning Ansible at the same time. So far, I've really enjoyed
+Ansible. My only complaint is that it is slow (though fast enough for my
+needs).&lt;/p&gt;
+&lt;h2 id="edits"&gt;Edits&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;2022-05-03&lt;ul&gt;
+&lt;li&gt;Added recheck date to Docker images unmaintained section&lt;/li&gt;
+&lt;li&gt;Added Response section&lt;/li&gt;
+&lt;li&gt;Added Ansible Success section&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>Pychological Safety and the Unix Room</title><link href="https://zehta.me/2021/04/unix-room/" rel="alternate"></link><updated>2021-04-16T00:29:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:f57d495e-3ca5-36a4-9119-2dd6c26061c5</id><content type="html">&lt;p&gt;Ever since I first read it in 2004, the following quote has stuck with me. I've
 added it almost every internal company wiki I've managed.&lt;/p&gt;
@@ -807,7 +825,7 @@ The graphs were created using &lt;a href="https://github.com/TimidRobot/rpgdice"
 &lt;li&gt;&lt;img src="/2014/03/dungeon-dice/dw02_raw.png#vatexttop" alt="Graph: Raw Results" title="Graph: Raw Result"&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="edits"&gt;Edits&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;2014-04-01: updated graph labels.&lt;/li&gt;
+&lt;li&gt;2014-04-01: updated graph labels&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>RPG Dice</title><link href="https://zehta.me/2014/03/rpg-dice/" rel="alternate"></link><updated>2014-03-30T23:09:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:c0a7b682-daa2-3602-9e36-6496bc0603d5</id><content type="html">&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;&lt;p&gt;I wrote a Python program that simulates different RPG dice mechanics (rulesets)
 and creates graphs showing the probability of the different outcomes:
@@ -961,8 +979,8 @@ Wikipedia&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="q-you-based-your-selection-of-a-surname-on-available-domain-names"&gt;Q. You based your selection of a surname on available domain names?&lt;/h3&gt;&lt;p&gt;Yes, most of my world is connected to the Internet--most of my favorite things.
 There are no 4 character domain names left (except expired ones being
 resold at a high cost).&lt;/p&gt;
-&lt;h3 id="updated"&gt;Updated&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Updated &lt;code&gt;2022-03-16&lt;/code&gt;&lt;/li&gt;
+&lt;h3 id="edits"&gt;Edits&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;2022-03-16: Revised answers&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>Reminder</title><link href="https://zehta.me/2002/04/reminder/" rel="alternate"></link><updated>2002-04-04T22:22:22Z</updated><author><name>Tim Wheeler</name></author><id>urn:uuid:c62f8f57-9928-36cc-b2b3-5952b1fc524d</id><content type="html">&lt;p&gt;&lt;strong&gt;Tim Wheeler. &lt;em&gt;Reminder.&lt;/em&gt; 4 April - 11 April 2002&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;Steel, 41 x 37 x 16 inches&lt;/strong&gt;
