@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog - Timid Robot</title><link href="https://zehta.me/" rel="alternate"></link><link href="https://zehta.me/feed.xml" rel="self"></link><id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id><updated>2022-03-12T12:30:00Z</updated><author><name>Timid Robot Zehta</name></author><entry><title>Abandoning SaltStack?</title><link href="https://zehta.me/2022/03/abandoning-saltstack/" rel="alternate"></link><updated>2022-03-12T12:30:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:c193569c-a21a-3293-94a5-6000bf6fbbd6</id><content type="html">&lt;p&gt;I really wanted to use SaltStack to configure my home Linux router. It would be
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog - Timid Robot</title><link href="https://zehta.me/" rel="alternate"></link><link href="https://zehta.me/feed.xml" rel="self"></link><id>urn:uuid:c08854d2-4f24-3a5f-8594-e9081c5cf2ef</id><updated>2022-07-09T19:32:00Z</updated><author><name>Timid Robot Zehta</name></author><entry><title>Emotional Labor Revisited</title><link href="https://zehta.me/2022/07/emotional-labor-revisited/" rel="alternate"></link><updated>2022-07-09T19:32:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:8ef916d3-9374-3249-99ba-db532bd66119</id><content type="html">&lt;p&gt;Back in 2015, I read an amazing document. It was a digest of a message thread
+about Emotional Labor. Before I was done I knew I wanted to share it with
+everyone I cared about.&lt;/p&gt;
+&lt;p&gt;To that end I collaborated with the creator of the digest to
+update the formatting of the document. I hope the result is very easy and
+comfortable (formatting-wise) to read. Please check it out: &lt;strong&gt;&lt;a href="/2015/10/emotional-labor/Emotional_Labor_-_The_MetaFilter_Thread_Condensed.pdf"&gt;Emotional Labor:
+The MetaFilter Thread Condensed (PDF)&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It's been top of mind lately. Since a Google security change broke the original
+link, I've been replying almost every day to someone asking for access.&lt;/p&gt;
+&lt;h2 id="feedback-over-the-years"&gt;Feedback Over the Years&lt;/h2&gt;&lt;p&gt;Since my email address is in the document, I've been fortunate enough to
+receive feedback over the years. Most of it simply expresses gratitude. Here
+are some anonymized excerpts about the content itself:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2022 Jun 04&lt;/code&gt;&lt;blockquote&gt;&lt;p&gt;Still relevant in 2022&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2019 Jul 05&lt;/code&gt;&lt;blockquote&gt;&lt;p&gt;I know it's a few years on but I actually only very recently found it and
+it's been lifechanging to say the least!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2017 Apr 30&lt;/code&gt;&lt;blockquote&gt;&lt;p&gt;I already shared this with a couple of friends and can't stop talking about
+it. All of the women with whom I talked about this had the same feelings
+and were shocked to see it was so common and had a name. I think that's
+actually the most important thing: this EXISTS and putting words on it
+helps so much.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2016 Jul 07&lt;/code&gt;&lt;blockquote&gt;&lt;p&gt;While reading it, I found aspects of women's struggles within relationships
+that I hadn't heard before, and it has given me a lot to think about.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2016 Feb 09&lt;/code&gt;&lt;blockquote&gt;&lt;p&gt;I read the condensed document [...] and found food for thought and room for
+personal improvement. Thanks for taking the time to make it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2015 Dec 19&lt;/code&gt;&lt;blockquote&gt;&lt;p&gt;It's just a really remarkable, moving, organized, enlightening,
+sanity-restoring thing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="in-the-media"&gt;In the Media&lt;/h2&gt;&lt;p&gt;Unfortunately, I haven't had any success tring to get the broken PDF links in
+the articles updated.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2017 Sep 27&lt;/code&gt;: &lt;a href="https://www.harpersbazaar.com/culture/features/a12063822/emotional-labor-gender-equality/"&gt;Stop Calling Women Nags — How Emotional Labor is Dragging
+Down Gender Equality&lt;/a&gt; (Harper's Bazaar)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2016 Jan 06&lt;/code&gt;: &lt;a href="https://www.themarysue.com/emotional-labor-pdf/"&gt;Metafilter's Thread On Emotional Labor, in PDF Form | The
+Mary Sue&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="original-post"&gt;Original Post&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2015 Oct 03&lt;/code&gt;: &lt;a href="/2015/10/emotional-labor/"&gt;Emotional Labor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content></entry><entry><title>Abandoning SaltStack?</title><link href="https://zehta.me/2022/03/abandoning-saltstack/" rel="alternate"></link><updated>2022-03-12T12:30:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:c193569c-a21a-3293-94a5-6000bf6fbbd6</id><content type="html">&lt;p&gt;I really wanted to use SaltStack to configure my home Linux router. It would be
 wonderful to manage that infrastructure as code. Unfortunately, it does not
 seem tenable for me.&lt;/p&gt;
 &lt;h2 id="issues-at-home"&gt;Issues at Home&lt;/h2&gt;&lt;h3 id="does-not-support-python-3-8-on-macos"&gt;Does not support Python 3.8+ on macOS&lt;/h3&gt;&lt;p&gt;My goal was to be able to push configurations using &lt;code&gt;salt-ssh&lt;/code&gt; from my macOS
