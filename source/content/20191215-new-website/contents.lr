@@ -73,8 +73,8 @@ The repository includes the non-minified custom CSS:
 - [Measure page quality - web.dev](https://web.dev/measure/)
 
 
-## Edits
+## Updates
 
-- 2022-03-05: Added web.dev and removed martial theme name
-- 2020-09-24: Added `--DarkRoyal` and removed `--PinkPlum`
-- 2019-12-22: Added `--PinkPlum`
+- `2022 Mar 05`: Added web.dev and removed martial theme name
+- `2020 Sep 24`: Added `--DarkRoyal` and removed `--PinkPlum`
+- `2019 Dec 22`: Added `--PinkPlum`

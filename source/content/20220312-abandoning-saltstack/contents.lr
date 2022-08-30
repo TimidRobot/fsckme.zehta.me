@@ -151,9 +151,9 @@ Ansible. My only complaint is that it is slow (though fast enough for my
 needs).
 
 
-## Edits
+## Updates
 
-- 2022-05-03
+- `2022 May 03`:
   - Added recheck date to Docker images unmaintained section
   - Added Response section
   - Added Ansible Success section
