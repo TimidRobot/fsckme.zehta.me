@@ -12,6 +12,12 @@ link, I've been replying almost every day to someone asking for access.&lt;/p&gt
 receive feedback over the years. Most of it simply expresses gratitude. Here
 are some anonymized excerpts about the content itself:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2022 Aug 29&lt;/code&gt;&lt;blockquote&gt;&lt;p&gt;I'm a relationship counselor. A common relationship issue (as you might
+expect) is emotional labor, and people often don't have language for what
+they're trying to express. A brilliantly written, skillfully edited
+document is just what they need.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;2022 Jun 04&lt;/code&gt;&lt;blockquote&gt;&lt;p&gt;Still relevant in 2022&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -49,6 +55,9 @@ Mary Sue&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="original-post"&gt;Original Post&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;2015 Oct 03&lt;/code&gt;: &lt;a href="/2015/10/emotional-labor/"&gt;Emotional Labor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2022 Aug 30&lt;/code&gt;: Added feedback&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>Abandoning SaltStack?</title><link href="https://zehta.me/2022/03/abandoning-saltstack/" rel="alternate"></link><updated>2022-03-12T12:30:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:c193569c-a21a-3293-94a5-6000bf6fbbd6</id><content type="html">&lt;p&gt;I really wanted to use SaltStack to configure my home Linux router. It would be
 wonderful to manage that infrastructure as code. Unfortunately, it does not
@@ -127,8 +136,8 @@ a blackout and I had to rebuild it. I was able to do fairly quickly, even
 though I was learning Ansible at the same time. So far, I've really enjoyed
 Ansible. My only complaint is that it is slow (though fast enough for my
 needs).&lt;/p&gt;
-&lt;h2 id="edits"&gt;Edits&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;2022-05-03&lt;ul&gt;
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2022 May 03&lt;/code&gt;:&lt;ul&gt;
 &lt;li&gt;Added recheck date to Docker images unmaintained section&lt;/li&gt;
 &lt;li&gt;Added Response section&lt;/li&gt;
 &lt;li&gt;Added Ansible Success section&lt;/li&gt;
@@ -499,10 +508,10 @@ repository. See the README there for additional context and links.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://wismuth.com/webcolors.html"&gt;Closest Named Web Colors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://web.dev/measure/"&gt;Measure page quality - web.dev&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="edits"&gt;Edits&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;2022-03-05: Added web.dev and removed martial theme name&lt;/li&gt;
-&lt;li&gt;2020-09-24: Added &lt;code&gt;--DarkRoyal&lt;/code&gt; and removed &lt;code&gt;--PinkPlum&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;2019-12-22: Added &lt;code&gt;--PinkPlum&lt;/code&gt;&lt;/li&gt;
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2022 Mar 05&lt;/code&gt;: Added web.dev and removed martial theme name&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2020 Sep 24&lt;/code&gt;: Added &lt;code&gt;--DarkRoyal&lt;/code&gt; and removed &lt;code&gt;--PinkPlum&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;2019 Dec 22&lt;/code&gt;: Added &lt;code&gt;--PinkPlum&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>Empowering Collaboration in the Commons</title><link href="https://zehta.me/2019/11/empowering-collaboration/" rel="alternate"></link><updated>2019-11-25T11:11:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:ea8d3146-d381-34a7-aee0-4d393f9ec78b</id><content type="html">&lt;p&gt;In the past few months I have been privileged to attend &lt;a href="https://wikimania.wikimedia.org/wiki/2019:Program"&gt;Wikimania
 2019&lt;/a&gt; and the Google Summer of Code &lt;a href="https://sites.google.com/view/gsoc-mentorsummit2019/home"&gt;2019 Mentor
@@ -670,8 +679,8 @@ cared about.&lt;/p&gt;
 update the formatting of the document. I hope the result is very easy and
 comfortable (formatting-wise) to read. Please check it out: &lt;a href="/2015/10/emotional-labor/Emotional_Labor_-_The_MetaFilter_Thread_Condensed.pdf"&gt;Emotional Labor:
 The MetaFilter Thread Condensed (PDF)&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="edits"&gt;Edits&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;2022 Jul 18&lt;/code&gt;: added link to updated post&lt;/li&gt;
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2022 Jul 18&lt;/code&gt;: added link to &lt;a href="/2022/07/emotional-labor-revisited/"&gt;Emotional Labor Revisited&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;2022 Apr 26&lt;/code&gt;: updated document URL after Google broke the the previous one&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>Maybe It's Valvoline</title><link href="https://zehta.me/2015/06/maybe-its-valvoline/" rel="alternate"></link><updated>2015-06-09T22:17:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:ae918cf2-230a-3df2-b34d-131d128b2158</id><content type="html">&lt;p&gt;&lt;img src="/2015/06/maybe-its-valvoline/furiosa_maybe_its_valvoline.png" alt="Maybe she&amp;#39;s borth with it--maybe it&amp;#39;s Valvoline" title="Maybe she&amp;#39;s borth with it--maybe it&amp;#39;s Valvoline"&gt;&lt;/p&gt;
@@ -780,7 +789,7 @@ versions to make troubleshooting easier:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://packages.ubuntu.com/search?keywords=ssh&amp;amp;searchon=names&amp;amp;exact=1&amp;amp;suite=all&amp;amp;section=all"&gt;Ubuntu - Package Search Results -- ssh&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="edits"&gt;Edits&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;this post has been updated in an effort to keep it current&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>SSH on iOS is abysmal</title><link href="https://zehta.me/2015/01/ssh-on-ios/" rel="alternate"></link><updated>2015-01-08T19:06:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:61374a95-2454-3b23-bb6c-24a714598b51</id><content type="html">&lt;h2 id="application-summaries"&gt;Application Summaries&lt;/h2&gt;&lt;p&gt;I'm sorry if you're a SysAdmin with an iOS device. I have some bad news:&lt;/p&gt;
@@ -877,8 +886,8 @@ The graphs were created using &lt;a href="https://github.com/TimidRobot/rpgdice"
 &lt;li&gt;&lt;img src="/2014/03/dungeon-dice/dw01_simplified.png#vatexttop" alt="Graph: Simplified Results" title="Graph: Simplified Results"&gt;&lt;/li&gt;
 &lt;li&gt;&lt;img src="/2014/03/dungeon-dice/dw02_raw.png#vatexttop" alt="Graph: Raw Results" title="Graph: Raw Result"&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="edits"&gt;Edits&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;2014-04-01: updated graph labels&lt;/li&gt;
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2014 Apr 01&lt;/code&gt;: updated graph labels&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>RPG Dice</title><link href="https://zehta.me/2014/03/rpg-dice/" rel="alternate"></link><updated>2014-03-30T23:09:00Z</updated><author><name>Timid Robot Zehta</name></author><id>urn:uuid:c0a7b682-daa2-3602-9e36-6496bc0603d5</id><content type="html">&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;&lt;p&gt;I wrote a Python program that simulates different RPG dice mechanics (rulesets)
 and creates graphs showing the probability of the different outcomes:
@@ -1032,8 +1041,8 @@ Wikipedia&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="q-you-based-your-selection-of-a-surname-on-available-domain-names"&gt;Q. You based your selection of a surname on available domain names?&lt;/h3&gt;&lt;p&gt;Yes, most of my world is connected to the Internet--most of my favorite things.
 There are no 4 character domain names left (except expired ones being
 resold at a high cost).&lt;/p&gt;
-&lt;h3 id="edits"&gt;Edits&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;2022-03-16: Revised answers&lt;/li&gt;
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2022 Mar 16&lt;/code&gt;: Revised answers&lt;/li&gt;
 &lt;/ul&gt;
 </content></entry><entry><title>Reminder</title><link href="https://zehta.me/2002/04/reminder/" rel="alternate"></link><updated>2002-04-04T22:22:22Z</updated><author><name>Tim Wheeler</name></author><id>urn:uuid:c62f8f57-9928-36cc-b2b3-5952b1fc524d</id><content type="html">&lt;p&gt;&lt;strong&gt;Tim Wheeler. &lt;em&gt;Reminder.&lt;/em&gt; 4 April - 11 April 2002&lt;/strong&gt;
 &lt;br&gt;&lt;strong&gt;Steel, 41 x 37 x 16 inches&lt;/strong&gt;
