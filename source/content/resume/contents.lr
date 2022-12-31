@@ -39,7 +39,8 @@ body:
   - Improve our code quality through automation, code reviews, and unit tests
   - Deploy and manage infrastructure as code (IaC) (ex. Docker, GitHub Actions)
 - Project Management and Collaboration
-  - Manage key projects (ex. CC Legal DB, CC Legal Tools)
+  - Manage key projects (ex. CC Legal DB, CC Legal Tools, Quantifying the
+    Commons)
   - Participate in oncall rotation
   - Provide support (ex. GitHub Pull Request reviews) and coverage for team
     members
