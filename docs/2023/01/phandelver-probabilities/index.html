@@ -1,0 +1,599 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="default-src 'self'; connect-src 'self' stats.zehta.me; font-src 'self' cdnjs.cloudflare.com; img-src 'self' licensebuttons.net www.gravatar.com; script-src 'self' stats.zehta.me; style-src 'self' cdnjs.cloudflare.com;" http-equiv="Content-Security-Policy"/><title>Phandelver Probabilities - Timid Robot</title><meta content="Timid Robot Zehta" name="author"/><link href="/static/layout.css" integrity="sha512-rorP8qAZ973h10zwAm48StvvcfOMbJk7XQM0pOxxOsn73evY/105dw5e4GlE99VdrX0j6MTtVlR1bpCfmbNlsg==" rel="stylesheet"/><link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" integrity="sha512-8Vtie9oRR62i7vkmVUISvuwOeipGv8Jd+Sur/ORKDD5JiLgTGeBSkI3ISOhc730VGvA5VVQPwKIKlmi+zMZ71w==" referrerpolicy="no-referrer" rel="stylesheet"/><link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" integrity="sha512-bSncow0ApIhONbz+pNI52n0trz5fMWbgteHsonaPk42JbunIeM9ee+zTYAUP1eLPky5wP0XZ7MSLAPxKkwnlzw==" referrerpolicy="no-referrer" rel="stylesheet"/><link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" integrity="sha512-6/gTF62BJ06BajySRzTm7i8N2ZZ6StspU9uVWDdoBiuuNu5rs1a8VwiJ7skCz2BcvhpipLKfFerXkuzs+npeKA==" referrerpolicy="no-referrer" rel="stylesheet"/><link href="/static/custom.css" integrity="sha512-KAN4CbGFfDQ1oO6+IXKyhSDpoOi8FKzPaF/VHu4QSGKo8nwogPE8Tq9V3cMpzETp7p1Ufd76XYjo5SDGmvrw3Q==" rel="stylesheet"/><link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/><link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/><link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/><meta content="Timid Robot's website" property="og:site_name"/><meta content="https://zehta.me/" property="og:url"/><meta content="Blog" property="og:title"/><meta content="website" property="og:type"/><meta content="https://zehta.me/favicon-590x310.png" property="og:image"/><meta content="590" property="og:image:width"/><meta content="310" property="og:image:height"/><meta content="image/png" property="og:image:type"/><meta content="logo" property="og:image:alt"/><script async="" data-domain="zehta.me" defer="" src="https://stats.zehta.me/js/plausible.outbound-links.js"></script><script async="" defer="" integrity="sha512-Yco6ythX09Ej3MVugS5Hk/3hY4bDZro0BEHVOQ+ININxUgZFaYBoTpAK8klGyHQUgc81I6jSD9wbt3SjlAeWNA==" src="/static/custom_events.js"></script></head><body><nav class="container"><div class="row"><div class="three columns title"><a href="/">Timid Robot</a></div><div class="nine columns navi"><div class="navgroup"><div class="linkinactive"><a class="linkinactive" href="/about/"><i class="fas fa-address-card"></i> About</a></div><div class="linkinactive"><a class="linkinactive" href="/resume/"><i class="fas fa-laptop-code"></i> Résumé</a></div></div><div class="navgroup"><div class="linkinactive"><a class="linkinactive" href="/tags/"><i class="fas fa-tags"></i> Tags</a></div><div class="linkactive"><a class="linkactive" href="/"><i class="fas fa-newspaper"></i> Blog</a></div></div></div></div></nav><main class="container page"><div class="row"><div class="blog-post"><h1>Phandelver Probabilities</h1><div class="meta">2023 Jan 16, Timid Robot Zehta</div><p>Let's use the Python programming language to explore some of the dice roll probabilities in a D&amp;D 5e adventure. I personally find math easier to understand when it's expressed as Python code and I want to improve my familiarity with plotting (graphing) using the <code>matplotlib</code> Python library.</p><h2 id="setup">Setup</h2><h3 id="d-d-specifics">D&amp;D Specifics</h3><p>We'll be looking at the first encounter of the <em>Lost Mine of Phandelver</em> adventure using the pregenerated characters (see <strong>Notes and References</strong>, below).</p><h3 id="python-imports-and-globals">Python Imports and Globals</h3><p>First we'll load the Python imports and globals:</p><div class="hll"><pre><span></span><span class="c1"># Standard library</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+<span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">fmean</span>
+
+<span class="c1"># Third-party</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plot</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">"ggplot"</span><span class="p">)</span>
+</pre></div><h3 id="probability">Probability</h3><p>The basic formula for probability is the frequency (identified outcomes) divided by the total possible outcomes. For example</p><div class="hll"><pre><span></span><span class="n">frequency</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># any given number on a d20 occurs once</span>
+<span class="n">total_possible_outcomes</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># there are 20 sides</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">"Rolling any given number on a d20 has a probability of:"</span>
+    <span class="sa">f</span><span class="s2">" </span><span class="si">{</span><span class="n">frequency</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">total_possible_outcomes</span><span class="si">}</span><span class="s2"> or"</span>
+    <span class="sa">f</span><span class="s2">" </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">frequency</span> <span class="o">/</span> <span class="n">total_possible_outcomes</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="si">}</span><span class="s2">%"</span>
+<span class="p">)</span>
+</pre></div><pre><code>Rolling any given number on a d20 has a probability of: 1/20 or 5%
+</code></pre><h3 id="dice-numpy-arrays">Dice Numpy Arrays</h3><p>We can use the <code>numpy</code> library to make things easier for ourselves. Its array objects work very nicely with plotting and we can quickly generate the range of numbers used by dice using its functions:</p><div class="hll"><pre><span></span><span class="k">def</span> <span class="nf">dice</span><span class="p">(</span><span class="n">formula</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Create numpy array from dice formula (example: 3d6 + 2)</span>
+<span class="sd">    """</span>
+    <span class="n">modifier</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">count</span><span class="p">,</span> <span class="n">faces</span> <span class="o">=</span> <span class="n">formula</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"d"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">count</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">count</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="k">if</span> <span class="s2">"+"</span> <span class="ow">in</span> <span class="n">faces</span><span class="p">:</span>
+        <span class="n">faces</span><span class="p">,</span> <span class="n">modifier</span> <span class="o">=</span> <span class="n">faces</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"+"</span><span class="p">)</span>
+        <span class="n">modifier</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">modifier</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="k">elif</span> <span class="s2">"-"</span> <span class="ow">in</span> <span class="n">faces</span><span class="p">:</span>
+        <span class="n">faces</span><span class="p">,</span> <span class="n">modifier</span> <span class="o">=</span> <span class="n">faces</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"-"</span><span class="p">)</span>
+        <span class="n">modifier</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="sa">f</span><span class="s2">"-</span><span class="si">{</span><span class="n">modifier</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">faces</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">array</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span>
+        <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">count</span><span class="p">)</span> <span class="o">+</span> <span class="n">modifier</span><span class="p">,</span> <span class="p">(</span><span class="n">faces</span> <span class="o">*</span> <span class="n">count</span><span class="p">)</span> <span class="o">+</span> <span class="n">modifier</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">array</span>
+
+
+<span class="n">d4</span> <span class="o">=</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"d4"</span><span class="p">)</span>
+<span class="n">d6</span> <span class="o">=</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"d6"</span><span class="p">)</span>
+<span class="n">d8</span> <span class="o">=</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"d8"</span><span class="p">)</span>
+<span class="n">d12</span> <span class="o">=</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"d12"</span><span class="p">)</span>
+<span class="n">d20</span> <span class="o">=</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"d20"</span><span class="p">)</span>
+</pre></div><h3 id="simple-plot">Simple Plot</h3><p>The probability plot of a single dice roll is fairly boring:</p><div class="hll"><pre><span></span><span class="c1"># d20 is defined above</span>
+
+<span class="c1"># Determine frequency of each number (will return an array contain twenty 1s)</span>
+<span class="n">frequency</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">d20</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># Create probability array for rolling each number</span>
+<span class="n">probability</span> <span class="o">=</span> <span class="p">(</span><span class="n">frequency</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">d20</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot for result probability of a normal d20 roll</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">d20</span><span class="p">,</span> <span class="n">probability</span><span class="p">)</span>
+
+<span class="c1"># Configure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Probability of rolling each number on a d20"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Die result"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">d20</span><span class="p">))</span>
+<span class="c1"># Configure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">AutoMinorLocator</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_7_1.png"/></p><h2 id="ability-checks">Ability Checks</h2><p>It's a little more interesting, however, if we plot the chance of exceeding a number when rolling a d20. In D&amp;D 5e the number that must be matched or exceeded is the Difficulty Class (DC). It's also worth noting that Armor Class (AC) is simply a specific type of DC. More interesting still are the probability plots for rolls with <a href="https://www.dndbeyond.com/sources/basic-rules/using-ability-scores#AdvantageandDisadvantage">advantage and disadvantage</a>:</p><div class="hll"><pre><span></span><span class="c1"># d20 is defined above</span>
+
+
+<span class="k">def</span> <span class="nf">annotate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">probability</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Annotate top of bar plot with exact probability percentage</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">probability</span> <span class="o">&gt;=</span> <span class="mf">100.0</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">probability</span><span class="si">:</span><span class="s2">0.0f</span><span class="si">}</span><span class="s2">%"</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">probability</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">%"</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+        <span class="n">text</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">probability</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
+        <span class="n">fontsize</span><span class="o">=</span><span class="s2">"xx-small"</span><span class="p">,</span>
+        <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">,</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+        <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"top"</span><span class="p">,</span>
+        <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="p">)</span>
+
+
+<span class="c1"># Create probability array for rolling DC or higher with advantage</span>
+<span class="n">advantage_roll</span> <span class="o">=</span> <span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">d20</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="n">d20</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">d20</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="c1"># Create probability array for rolling DC or higher on a d20</span>
+<span class="n">normal_roll</span> <span class="o">=</span> <span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">d20</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">d20</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">d20</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="c1"># Create probability array for rolling DC or higher with disadvantage</span>
+<span class="n">disadvantage_roll</span> <span class="o">=</span> <span class="p">(((</span><span class="nb">len</span><span class="p">(</span><span class="n">d20</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">d20</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">d20</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">axs</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot and annotation for success probability with advantage</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">d20</span><span class="p">,</span> <span class="n">advantage_roll</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"C2"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"with advantage"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">probability</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">advantage_roll</span><span class="p">):</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">d20</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">probability</span><span class="p">)</span>
+<span class="c1"># Create bar plot and annotation for success probability of a normal d20 roll</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">d20</span><span class="p">,</span> <span class="n">normal_roll</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"C6"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"normal d20 roll"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">probability</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">normal_roll</span><span class="p">):</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax2</span><span class="p">,</span> <span class="n">d20</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">probability</span><span class="p">,</span> <span class="s2">"black"</span><span class="p">)</span>
+<span class="c1"># Create bar plot and annotation for success probability with disadvantage</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">d20</span><span class="p">,</span>
+    <span class="n">disadvantage_roll</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">bottom</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"C1"</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">"with disadvantage"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">probability</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">disadvantage_roll</span><span class="p">):</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax3</span><span class="p">,</span> <span class="n">d20</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">probability</span><span class="p">)</span>
+
+<span class="c1"># Configure Title</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Probability of rolling DC or higher"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axs</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">d20</span><span class="p">))</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"DC (Difficulty Class)"</span><span class="p">)</span>
+<span class="c1"># Configure Y Axis</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axs</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">())</span>
+<span class="c1"># Configure Legend for each axis</span>
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axs</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_9_0.png"/></p><p>Or all together:</p><div class="hll"><pre><span></span><span class="c1"># annotate(), d20, advantage_roll, normal_roll, and disadvantage_roll are defined above</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot for success probability with advantage</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">d20</span><span class="p">,</span>
+    <span class="n">advantage_roll</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">bottom</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"C2"</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">"with advantage"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">probability</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">advantage_roll</span><span class="p">):</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">d20</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">probability</span><span class="p">)</span>
+<span class="c1"># Create bar plot for success probability of a normal d20 roll</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">d20</span><span class="p">,</span>
+    <span class="n">normal_roll</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">bottom</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"C6"</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">"normal d20 roll"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">probability</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">normal_roll</span><span class="p">):</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">d20</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">probability</span><span class="p">,</span> <span class="s2">"black"</span><span class="p">)</span>
+<span class="c1"># Create bar plot for success probability with disadvantage</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">d20</span><span class="p">,</span>
+    <span class="n">disadvantage_roll</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">bottom</span><span class="o">=-</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"C1"</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">"with disadvantage"</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">probability</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">disadvantage_roll</span><span class="p">):</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">d20</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">probability</span><span class="p">)</span>
+
+<span class="c1"># Configure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Probability of rolling DC or higher"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"DC (Difficulty Class)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">d20</span><span class="p">))</span>
+<span class="c1"># Configure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1"># Configure Legend</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_11_1.png"/></p><h2 id="goblin-ambush">Goblin Ambush</h2><p>Four <a href="https://www.dndbeyond.com/monsters/16907-goblin">goblins</a> attempt to ambush the party. Their stealth modifier is +6 vs the party's passive perception. Will they surprise everyone in the party?</p><div class="hll"><pre><span></span><span class="c1"># annotate(), d20, and normal_roll are defined above</span>
+
+
+<span class="k">def</span> <span class="nf">get_success_chance</span><span class="p">(</span><span class="n">dc</span><span class="p">,</span> <span class="n">modifier</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Determine probibility of success for a given DC with a modifier d20 roll.</span>
+<span class="sd">    """</span>
+    <span class="c1"># Create probability array for rolling DC or higher on a d20</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="n">d20</span> <span class="o">+</span> <span class="n">modifier</span>
+    <span class="k">if</span> <span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">dc</span><span class="p">:</span>
+        <span class="n">chance</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="k">elif</span> <span class="n">keys</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">dc</span><span class="p">:</span>
+        <span class="n">chance</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">dc</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">normal_roll</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+
+<span class="n">goblin_stealth_modifier</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">player_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"Dwarven Cleric</span><span class="se">\n</span><span class="s2">13 passive perception"</span><span class="p">,</span>
+    <span class="s2">"Elf Wizard</span><span class="se">\n</span><span class="s2">13 passive perception"</span><span class="p">,</span>
+    <span class="s2">"Halfling Rogue</span><span class="se">\n</span><span class="s2">10 passive perception"</span><span class="p">,</span>
+    <span class="s2">"Human Fighter 1</span><span class="se">\n</span><span class="s2">13 passive perception"</span><span class="p">,</span>
+    <span class="s2">"Human Fighter 2</span><span class="se">\n</span><span class="s2">13 passive perception"</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">players_passive_perception</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="n">players_observation_chance</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">passive_perception</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">players_passive_perception</span><span class="p">):</span>
+    <span class="n">observation_chance</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">get_success_chance</span><span class="p">(</span>
+        <span class="n">passive_perception</span><span class="p">,</span> <span class="n">goblin_stealth_modifier</span>
+    <span class="p">)</span>
+    <span class="n">players_observation_chance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">observation_chance</span><span class="p">)</span>
+<span class="n">party_observation_chance</span> <span class="o">=</span> <span class="n">fmean</span><span class="p">(</span><span class="n">players_observation_chance</span><span class="p">)</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">width_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">axs</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot and annotation for observation probability of each player</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">observation_chance</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">players_observation_chance</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"C</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="s2">"C5"</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">observation_chance</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">observation_chance</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot and annotation for observation probability of entire party</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">party_observation_chance</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"C4"</span><span class="p">)</span>
+<span class="n">annotate</span><span class="p">(</span><span class="n">ax2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">party_observation_chance</span><span class="p">,</span> <span class="s2">"black"</span><span class="p">)</span>
+
+<span class="c1"># Configure Title</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Probability of observing the sneaking goblins"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">player_names</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedFormatter</span><span class="p">(</span><span class="n">player_names</span><span class="p">))</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_tick_params</span><span class="p">(</span><span class="n">labelrotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="s2">"small"</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">([</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedFormatter</span><span class="p">([</span><span class="s2">"Entire Party"</span><span class="p">]))</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_tick_params</span><span class="p">(</span><span class="n">labelrotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="s2">"medium"</span><span class="p">)</span>
+<span class="c1"># Configure Y Axis</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">())</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">())</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ax1</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">())</span>  <span class="c1"># use same scale for both axes</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_13_1.png"/></p><h2 id="initiative-rolls">Initiative Rolls</h2><p>Initiative, for everyone involved in this encounter, uses a single die with a flat probability plot (boring). However, I think the comparison between characters is interesting:</p><div class="hll"><pre><span></span><span class="c1"># d20 is defined above</span>
+
+<span class="n">initiative</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Character, Initiative</span>
+    <span class="p">(</span><span class="s2">"Dwarven Cleric</span><span class="se">\n</span><span class="s2">-1 initiative"</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Elf Wizard</span><span class="se">\n</span><span class="s2">+2 initiative"</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Halfling Rogue</span><span class="se">\n</span><span class="s2">+3 initiative"</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Human Fighter1</span><span class="se">\n</span><span class="s2">-1 initiative"</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Human Fighter2</span><span class="se">\n</span><span class="s2">+3 initiative"</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Goblins</span><span class="se">\n</span><span class="s2">+2 initiative"</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">initiative_arrays</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">modifier</span> <span class="ow">in</span> <span class="n">initiative</span><span class="p">:</span>
+    <span class="n">initiative_arrays</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d20</span> <span class="o">+</span> <span class="n">modifier</span><span class="p">)</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">array</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">initiative_arrays</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">average</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="c1"># Create horizontal bar plot for initative roll range for each creature</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="n">left</span><span class="p">)</span>
+    <span class="c1"># Create average initative roll annotation for each creature</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">0.35</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.35</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sa">f</span><span class="s2">"C</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">average</span><span class="si">}</span><span class="s2"> average"</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">average</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span>
+        <span class="n">backgroundcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="sa">f</span><span class="s2">"C</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+        <span class="n">fontsize</span><span class="o">=</span><span class="s2">"x-small"</span><span class="p">,</span>
+        <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">,</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
+        <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="c1"># Configure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Initiative roll ranges"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Roll Result</span><span class="se">\n</span><span class="s2">(d20 + modifier)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">AutoMinorLocator</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">26</span><span class="p">)</span>
+<span class="c1"># Configure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span>
+    <span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">initiative_arrays</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span>
+    <span class="n">ticker</span><span class="o">.</span><span class="n">FixedFormatter</span><span class="p">([</span><span class="s2">""</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">initiative</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_15_0.png"/></p><h2 id="damage-rolls">Damage Rolls</h2><p>With initiative order established, let us investigate the more interesting damage probabilities. We'll only explore the specific damage rolls with interesting (not flat) plots. Last we'll compare damage ranges and averages.</p><h3 id="hafling-rogue">Hafling Rogue</h3><p>The Halfling Rogue can do <a href="https://www.dndbeyond.com/classes/rogue#SneakAttack-343">sneak attack</a> damage when a fellow party member is adjacentto their target:</p><div class="hll"><pre><span></span><span class="c1"># annotate() and d6 are defined above</span>
+
+<span class="c1"># Create datasets</span>
+<span class="n">proficiency_modifier</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">dexterity_modifier</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">modifier</span> <span class="o">=</span> <span class="n">proficiency_modifier</span> <span class="o">+</span> <span class="n">dexterity_modifier</span>
+<span class="n">d6_plus_mod</span> <span class="o">=</span> <span class="n">d6</span> <span class="o">+</span> <span class="n">modifier</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">combination</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="n">d6_plus_mod</span><span class="p">,</span> <span class="n">d6</span><span class="p">):</span>
+    <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">combination</span><span class="p">))</span>
+<span class="n">counts</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">average_damage</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">counts</span><span class="p">))))</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot for each damage roll result probability</span>
+<span class="n">probability_total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="n">damage_probability</span> <span class="o">=</span> <span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">d6_plus_mod</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">probability_total</span> <span class="o">+=</span> <span class="n">damage_probability</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">damage_probability</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"maroon"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">damage_probability</span><span class="p">)</span>
+<span class="c1"># Create average damage annotation</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">average_damage</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> average damage"</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">average_damage</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">backgroundcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"maroon"</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="s2">"small"</span><span class="p">,</span>
+    <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">,</span>
+    <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">,</span>
+    <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Configure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Halfling Rogue damage probability</span><span class="se">\n</span><span class="s2">Shortbow + Sneak Attack"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Damage</span><span class="se">\n</span><span class="s2">(1d6 + 3) + 1d6"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
+<span class="c1"># Confgure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">(</span><span class="n">decimals</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="c1"># check probability for errors</span>
+<span class="k">if</span> <span class="n">probability_total</span> <span class="o">&gt;</span> <span class="mf">100.001</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ERROR: total damage probability:"</span><span class="p">,</span> <span class="n">probability_total</span><span class="p">)</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_17_0.png"/></p><h3 id="elf-wizard">Elf Wizard</h3><p>The Elf Wizard has more interesting attacks in terms of probability. First, we'll investigate the damage probability of the <a href="https://www.dndbeyond.com/spells/magic-missile">Magic Missile</a> spell at 1st level:</p><div class="hll"><pre><span></span><span class="c1"># annotate() and d4 are defined above</span>
+
+<span class="c1"># Create datasets</span>
+<span class="n">d4_plus_mod</span> <span class="o">=</span> <span class="n">d4</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">combination</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="n">d4_plus_mod</span><span class="p">,</span> <span class="n">d4_plus_mod</span><span class="p">,</span> <span class="n">d4_plus_mod</span><span class="p">):</span>
+    <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">combination</span><span class="p">))</span>
+<span class="n">counts</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">average_damage</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">counts</span><span class="p">))))</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot for each damage roll result probability</span>
+<span class="n">probability_total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="n">damage_probability</span> <span class="o">=</span> <span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">d4_plus_mod</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">probability_total</span> <span class="o">+=</span> <span class="n">damage_probability</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">damage_probability</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"maroon"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">damage_probability</span><span class="p">)</span>
+<span class="c1"># Create average damage annotation</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">average_damage</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> average damage"</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">average_damage</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">backgroundcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"maroon"</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="s2">"small"</span><span class="p">,</span>
+    <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">,</span>
+    <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">,</span>
+    <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Configure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span>
+    <span class="s2">"Elf Wizard damage probability</span><span class="se">\n</span><span class="s2">Magic Missile at 1st level against a"</span>
+    <span class="s2">" single target"</span>
+<span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Damage</span><span class="se">\n</span><span class="s2">(1d4 + 1) + (1d4 + 1) + (1d4 + 1)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
+<span class="c1"># Confgure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">(</span><span class="n">decimals</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="c1"># check probability for errors</span>
+<span class="k">if</span> <span class="n">probability_total</span> <span class="o">&gt;</span> <span class="mf">100.001</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ERROR: total damage probability:"</span><span class="p">,</span> <span class="n">probability_total</span><span class="p">)</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_19_0.png"/></p><p>Next, we'll investigate the damage probability if the Elf Wizard casts the <a href="https://www.dndbeyond.com/spells/burning-hands">Burning Hands</a> spell at 1st level:</p><div class="hll"><pre><span></span><span class="c1"># annotate() and d6 are defined above</span>
+
+<span class="c1"># Create datasets</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">combination</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="n">d6</span><span class="p">,</span> <span class="n">d6</span><span class="p">,</span> <span class="n">d6</span><span class="p">):</span>
+    <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">combination</span><span class="p">))</span>
+<span class="n">counts</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">average_damage</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">counts</span><span class="p">))))</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot for each damage roll result probability</span>
+<span class="n">probability_total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="n">damage_probability</span> <span class="o">=</span> <span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">d6</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">probability_total</span> <span class="o">+=</span> <span class="n">damage_probability</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+        <span class="n">result</span><span class="p">,</span> <span class="n">damage_probability</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"maroon"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.9</span>
+    <span class="p">)</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">damage_probability</span><span class="p">)</span>
+<span class="c1"># Create average damage annotation</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">average_damage</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> average damage"</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">average_damage</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">backgroundcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"maroon"</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="s2">"small"</span><span class="p">,</span>
+    <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">,</span>
+    <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">,</span>
+    <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Confgure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Elf Wizard damage probability</span><span class="se">\n</span><span class="s2">Burning Hands at 1st level"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Damage</span><span class="se">\n</span><span class="s2">3d6"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
+<span class="c1"># Confgure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">(</span><span class="n">decimals</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="c1"># check probability for errors</span>
+<span class="k">if</span> <span class="n">probability_total</span> <span class="o">&gt;</span> <span class="mf">100.001</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ERROR: total damage probability:"</span><span class="p">,</span> <span class="n">probability_total</span><span class="p">)</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_21_0.png"/></p><h3 id="goblins">Goblins</h3><p>The total damage of the four <a href="https://www.dndbeyond.com/monsters/16907-goblin">goblins</a>:</p><div class="hll"><pre><span></span><span class="c1"># annotate() and d6 are defined above</span>
+
+<span class="c1"># Create datasets</span>
+<span class="n">dexterity_modifier</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">d6_plus_mod</span> <span class="o">=</span> <span class="n">d6</span> <span class="o">+</span> <span class="n">dexterity_modifier</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">combination</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="n">d6_plus_mod</span><span class="p">,</span> <span class="n">d6_plus_mod</span><span class="p">,</span> <span class="n">d6_plus_mod</span><span class="p">,</span> <span class="n">d6_plus_mod</span><span class="p">):</span>
+    <span class="n">counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">combination</span><span class="p">))</span>
+<span class="n">counts</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">average_damage</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">counts</span><span class="p">))))</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Create bar plot for each damage roll result probability</span>
+<span class="n">probability_total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="n">damage_probability</span> <span class="o">=</span> <span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">d6_plus_mod</span><span class="p">)</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">probability_total</span> <span class="o">+=</span> <span class="n">damage_probability</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+        <span class="n">result</span><span class="p">,</span> <span class="n">damage_probability</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"maroon"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.9</span>
+    <span class="p">)</span>
+    <span class="n">annotate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">damage_probability</span><span class="p">)</span>
+<span class="c1"># Create average damage annotation</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">average_damage</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> average damage"</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">average_damage</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">backgroundcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">"maroon"</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="s2">"small"</span><span class="p">,</span>
+    <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">,</span>
+    <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span>
+    <span class="n">rotation</span><span class="o">=</span><span class="s2">"vertical"</span><span class="p">,</span>
+    <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Confgure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Four Goblins</span><span class="se">\n</span><span class="s2">Scimitars or Shortbows"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Damage</span><span class="se">\n</span><span class="s2">(1d6 + 2) + (1d6 + 2) + (1d6 + 2) + (1d6 + 2)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
+<span class="c1"># Confgure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">PercentFormatter</span><span class="p">(</span><span class="n">decimals</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+<span class="c1"># check probability for errors</span>
+<span class="k">if</span> <span class="n">probability_total</span> <span class="o">&gt;</span> <span class="mf">100.001</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"ERROR: total damage probability:"</span><span class="p">,</span> <span class="n">probability_total</span><span class="p">)</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_23_0.png"/></p><h3 id="damage-range-comparisons">Damage Range Comparisons</h3><p>Last, let's look at optimal damage comparisons (ignoring criticals, but otherwise assuming the best circumstance for each character or monster group):</p><div class="hll"><pre><span></span><span class="c1"># dice() is defined above</span>
+
+<span class="c1"># Create dataset: character, damage array</span>
+<span class="n">damage</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">"Dwarven Cleric</span><span class="se">\n</span><span class="s2">Warhammer</span><span class="se">\n</span><span class="s2">1d8 + 2"</span><span class="p">,</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"1d8 + 2"</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">"Elf Wizard</span><span class="se">\n</span><span class="s2">Burning Hands</span><span class="se">\n</span><span class="s2">3d6"</span><span class="p">,</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"3d6"</span><span class="p">)),</span>
+    <span class="p">(</span>
+        <span class="s2">"Halfling Rogue</span><span class="se">\n</span><span class="s2">Shortbow &amp; Sneak Attack</span><span class="se">\n</span><span class="s2">(1d6 + 3) + 1d6"</span><span class="p">,</span>
+        <span class="n">dice</span><span class="p">(</span><span class="s2">"2d6 + 3"</span><span class="p">),</span>
+    <span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Human Fighter 1</span><span class="se">\n</span><span class="s2">Greataxe</span><span class="se">\n</span><span class="s2">1d12 + 3"</span><span class="p">,</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"1d12 + 3"</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">"Human Fighter 2</span><span class="se">\n</span><span class="s2">Longbow</span><span class="se">\n</span><span class="s2">1d8 + 3"</span><span class="p">,</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"1d8 + 3"</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">"Goblins</span><span class="se">\n</span><span class="s2">Scimatar / Shortbow</span><span class="se">\n</span><span class="s2">1d6 + 2"</span><span class="p">,</span> <span class="n">dice</span><span class="p">(</span><span class="s2">"1d6 + 2"</span><span class="p">)),</span>
+<span class="p">]</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">array</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">damage</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">average</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="n">left</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"x"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">0.35</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.35</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sa">f</span><span class="s2">"C</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">average</span><span class="si">}</span><span class="s2"> average"</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">average</span> <span class="o">+</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span>
+        <span class="n">backgroundcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="sa">f</span><span class="s2">"C</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+        <span class="n">fontsize</span><span class="o">=</span><span class="s2">"x-small"</span><span class="p">,</span>
+        <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">,</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
+        <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="c1"># Confgure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Individual damage ranges"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Damage"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="c1"># Confgure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span>
+    <span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">initiative_arrays</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span>
+    <span class="n">ticker</span><span class="o">.</span><span class="n">FixedFormatter</span><span class="p">([</span><span class="s2">""</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">damage</span><span class="p">])</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="s2">"small"</span><span class="p">)</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_25_0.png"/></p><p>The players have the benefit of outnumbering the goblins:</p><div class="hll"><pre><span></span><span class="c1"># Create dataset: group, damage array</span>
+<span class="n">damage</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">"Players"</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">74</span><span class="p">)),</span>
+    <span class="p">(</span><span class="s2">"Goblins"</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">33</span><span class="p">)),</span>
+<span class="p">]</span>
+
+<span class="c1"># Initialize plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">array</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">damage</span><span class="p">):</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">average</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">0.35</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.35</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sa">f</span><span class="s2">"C</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">average</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">average</span><span class="si">}</span><span class="s2"> average"</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">average</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span>
+        <span class="n">backgroundcolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="sa">f</span><span class="s2">"C</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+        <span class="n">fontsize</span><span class="o">=</span><span class="s2">"x-small"</span><span class="p">,</span>
+        <span class="n">fontweight</span><span class="o">=</span><span class="s2">"bold"</span><span class="p">,</span>
+        <span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
+        <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"bottom"</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="c1"># Confgure Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Combined damage ranges"</span><span class="p">)</span>
+<span class="c1"># Confgure X Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Damage"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">nbins</span><span class="o">=</span><span class="mi">17</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">ticker</span><span class="o">.</span><span class="n">AutoMinorLocator</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">76</span><span class="p">)</span>
+<span class="c1"># Confgure Y Axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span>
+    <span class="n">ticker</span><span class="o">.</span><span class="n">FixedLocator</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">initiative_arrays</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span>
+    <span class="n">ticker</span><span class="o">.</span><span class="n">FixedFormatter</span><span class="p">([</span><span class="s2">""</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">damage</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div><p><img alt="png" src="/2023/01/phandelver-probabilities/output_27_0.png"/></p><h2 id="notes-and-references">Notes and References</h2><ul><li>D&amp;D Content<ul><li><a href="https://www.dndbeyond.com/sources/lmop">Lost Mine of Phandelver</a> D&amp;D adventure (free, but requires D&amp;D Beyond signup)<ul><li><a href="https://www.dndbeyond.com/sources/lmop/introduction#PregeneratedCharacters">Pregenerated Characters</a>:<ol><li><a href="https://www.dndbeyond.com/file-attachments/0/776/dwarf-cleric.pdf">Dwarven ClericDwarven Cleric (231 KB PDF)</a></li><li><a href="https://www.dndbeyond.com/file-attachments/0/777/elf-wizard.pdf">Elven Wizard (219 KB PDF)</a></li><li><a href="https://www.dndbeyond.com/file-attachments/0/778/halfling-rogue.pdf">Halfling Rogue (202 KB PDF)</a></li><li><a href="https://www.dndbeyond.com/file-attachments/0/779/human-fighter.pdf">Human Fighter 1 (189 KB PDF)</a></li><li><a href="https://www.dndbeyond.com/file-attachments/0/780/human-fighter2.pdf">Human Fighter 2 (188 KB PDF)</a></li></ol></li></ul></li></ul></li><li>D&amp;D Rules<ul><li>[Round Down - Basic Rules for Dungeons and Dragons (D&amp;D) Fifth Edition (5e)<ul><li>D&amp;D Beyond](<a href="https://www.dndbeyond.com/sources/basic-rules/introduction#RoundDown">https://www.dndbeyond.com/sources/basic-rules/introduction#RoundDown</a>)</li></ul></li><li><a href="https://www.dndbeyond.com/sources/basic-rules/using-ability-scores#AdvantageandDisadvantage">Advantage and Disadvantage - Basic Rules for Dungeons and Dragons (D&amp;D) Fifth Edition (5e) - D&amp;D Beyond</a></li></ul></li><li>D&amp;D and Probability<ul><li><a href="https://www.reddit.com/r/DnD/comments/802zzo/comment/dusrx2d/">[5e] The math and probability behind rolling with advantage! : DnD</a></li><li><a href="https://www.cl.cam.ac.uk/~rmk35/dropbears.html">D&amp;D Probability distributionsD&amp;D Probability distributions</a> (tabular data is inaccurate--off by 1)</li><li><a href="https://www.reddit.com/r/DungeonsAndDragons/comments/uupw5t/i_made_a_probability_calculator_for_dnd_dice_rolls/">I made a probability calculator for DnD dice rolls! : DungeonsAndDragons</a></li><li><a href="https://www.reddit.com/r/DnD/comments/i36b8b/comment/g0a72bv/">Comment - DnD has led me to discover a rule of probability and I feel like Blaise Pascal : DnD</a> (more complex problems may require simulation instead of maths)</li></ul></li><li>JupyterLab<ul><li><a href="https://docs.jupyter.org/en/latest/">Jupyter Project Documentation</a></li><li><a href="https://github.com/ryantam626/jupyterlab_code_formatter">ryantam626/jupyterlab_code_formatter</a> (note that the extension is configured in Jupyter Lab, not config files)</li></ul></li><li>Matplotlib<ul><li><a href="https://matplotlib.org/stable/index.html">Matplotlib documentation</a></li></ul></li><li>NumPy<ul><li><a href="https://numpy.org/doc/stable/user/index.html#user">NumPy user guide — NumPy Manual</a></li></ul></li><li>Python Documentation<ul><li><a href="https://docs.python.org/3.10/library/itertools.html">itertools — Functions creating iterators for efficient looping — Python 3.10.9 documentation</a></li></ul></li></ul><h2 id="trademark-notice">Trademark Notice</h2><p>Dungeons &amp; Dragons, D&amp;D, their respective logos, and all Wizards titles and characters are property of Wizards of the Coast LLC in the U.S.A. and other countries. All other trademarks referenced are the property of their respective owners.</p><h2 id="source">Source</h2><ul><li><a href="https://github.com/TimidRobot/dnd_probabilities">TimidRobot/dnd_probabilities</a></li></ul><div><h2>Tags</h2><ul><li><a href="/tags/2023//"><i class="fas fa-tag"></i> 2023</a></li><li><a href="/tags/floss//"><i class="fas fa-tag"></i> Free/Libre and Open Source Software</a></li><li><a href="/tags/python//"><i class="fas fa-tag"></i> Python</a></li><li><a href="/tags/trpg//"><i class="fas fa-tag"></i> Tabletop Roleplaying Game</a></li></ul></div></div><hr class="copyright"/><p class="copyright"><a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" title="CC0 1.0 (license button)"><img alt="CC0 1.0 license button" src="https://licensebuttons.net/l/zero/1.0/88x31.png#floatleft"/></a> Dedicated, with all copyright and related and neighboring rights, to the public domain worldwide. It is distributed without any warranty (<strong><a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" title="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></strong>).</p></div></main><nav class="container footer"><div class="post-next"><a href="/2022/07/emotional-labor-revisited/" title="Next post: Emotional Labor Revisited">Emotional Labor Revisited <i class="fas fa-angle-right"></i></a></div></nav><div class="container bottombot"><i class="fas fa-robot"></i></div></body></html>
