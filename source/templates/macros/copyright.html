@@ -25,7 +25,7 @@
   <a rel="license" title="CC BY-SA 4.0 (license button)"
      href="https://creativecommons.org/licenses/by-sa/4.0/">
     <img alt="CC BY-SA 4.0 license button"
-         src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"></a>
+         src="https://licensebuttons.net/l/by-sa/4.0/80x15.png#floatleft"></a>
   Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}.
   This work is licensed under a <strong>
   <a rel="license"
@@ -38,13 +38,26 @@
   <a rel="license" title="CC BY 4.0 (license button)"
      href="https://creativecommons.org/licenses/by/4.0/">
     <img alt="CC BY 4.0 license button"
-         src="https://licensebuttons.net/l/by/4.0/80x15.png"></a>
+         src="https://licensebuttons.net/l/by/4.0/80x15.png#floatleft"></a>
   Copyright &copy; {{ pub_date.strftime("%Y") }} {{ copyright_author }}.
   This work is licensed under a <strong>
   <a rel="license"
      title="Creative Commons Attribution 4.0 International License"
      href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
      Attribution 4.0 International License</a>.</strong>
+</p>
+  {%- elif copyright.lower() == "cc-zero" %}
+<p class="copyright">
+  <a rel="license" title="CC0 1.0 (license button)"
+     href="https://creativecommons.org/publicdomain/zero/1.0/">
+    <img alt="CC0 1.0 license button"
+         src="https://licensebuttons.net/l/zero/1.0/88x31.png#floatleft"></a>
+  Dedicated, with all copyright and related and neighboring rights,
+to the public domain worldwide. It is distributed without any warranty (<strong>
+  <a rel="license"
+     title="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+     href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0
+     Universal (CC0 1.0) Public Domain Dedication</a></strong>).
 </p>
   {%- else %}
 <p class="copyright">{{ copyright }}</p>
