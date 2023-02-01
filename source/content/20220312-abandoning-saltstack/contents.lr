@@ -32,14 +32,15 @@ laptop. SaltStack claims macOS is supported. [Salt Project][saltproject]
 
 I originally installed SaltStack via homebrew, but had to switch to a Python
 3.7 virtual environment due to:
-- `2020-06-21`: [[BUG] AttributeError: 'Process' object has no attribute
-  '_args_for_getstate' · Issue #57742 · saltstack/salt][i57742]
+- ~~`2020 Jun 21`: [[BUG] AttributeError: 'Process' object has no attribute
+  '_args_for_getstate' · Issue #57742 · saltstack/salt][i57742]~~
 <!-- x_ fix vim markdown highlight issue -->
-- `2022-01-09`: [[BUG] salt-ssh fails due to attempting to pickle _thread._local
-  object · Issue #61435 · saltstack/salt][i61435]
+- ~~`2022 Jan 09`: [[BUG] salt-ssh fails due to attempting to pickle
+  _thread._local object · Issue #61435 · saltstack/salt][i61435]~~
 <!-- x_ fix vim markdown highlight issue -->
 
-These issues have exists since the release of Python 3.8 on `2019-10-14`.
+**Update:** These problems existed between the release of Python 3.8 on
+`2019 Oct 14` and the release of Salt version `3005` on `2022-08-25`.
 
 [saltproject]: https://docs.saltproject.io/en/3004/topics/about_salt_project.html
 [i57742]: https://github.com/saltstack/salt/issues/57742
@@ -50,10 +51,13 @@ These issues have exists since the release of Python 3.8 on `2019-10-14`.
 
 With SaltStack appearing to work, I wanted to use SaltStack Formulas.
 Unfortunately, that option has been unsupported since 2005:
-- `2015-5-12`: [Cannot use gitfs with salt-ssh · Issue #23576 ·
-  saltstack/salt][i23576]
+- ~~`2015 May 12`: [Cannot use gitfs with salt-ssh · Issue #23576 ·
+  saltstack/salt][i23576]~~
 
-I tried to symlink git submodules in, but I encountered the same error.
+I also tried to symlink git submodules in, but I encountered the same error.
+
+**Update:** Maybe I misidentified the problem. The issue above was closed on
+`2022 Mar 14` with a comment indicating there are other issues.
 
 [i23576]: https://github.com/saltstack/salt/issues/23576
 
@@ -61,10 +65,9 @@ I tried to symlink git submodules in, but I encountered the same error.
 ### Docker images unmaintained
 
 I thought I might have fewer issues if I might moved my use case closer to the
-SaltStack mainstream by using a SaltStack docker image. SaltStack `3004` was
-release 145 days ago on `2021-10-18`. Unfortunately, as of today
-(`2022-03-12`--still true as of `2022-05-03`), there is not yet a `3004` docker
-image. [saltstack/salt - Docker Image | Docker Hub][dockersalt]:
+SaltStack mainstream by using a SaltStack docker image. ~~Unfortunately, no
+`3004` docker image was available~~ (note update, below). [saltstack/salt -
+Docker Image | Docker Hub][dockersalt]:
 > **Supported tags and respective `Dockerfile` links**
 >
 > - `3004rc1`, `rc`
@@ -74,6 +77,10 @@ image. [saltstack/salt - Docker Image | Docker Hub][dockersalt]:
 
 I realize I could create my own docker image, but I encountered this when my
 capacity for workarounds was already at its limit.
+
+**Update:** At some point after `2022 May 03`, the docker image creation
+pipeline was fixed. The `3004` image was last pushed on `2022 Oct 04` (just over
+2 years after the release of SaltStack `3004` on `2021 Oct 18`).
 
 
 ## Issues at Work
@@ -95,8 +102,10 @@ I spent years working with Puppet, which had a much stronger community.
 ### Incomplete Migration from Python 2.7 to Python 3
 
 I use `boto_rds` for provisioning:
-- `2022-01-31`: [[BUG] boto_rds.subnet_group_present broken · Issue #61555 ·
+- `2022 Jan 31`: [[BUG] boto_rds.subnet_group_present broken · Issue #61555 ·
   saltstack/salt][i61555]
+
+**Update:** This issue remains open as of `2023 Feb 01`.
 
 [i61555]: https://github.com/saltstack/salt/issues/61555
 
@@ -104,8 +113,10 @@ I use `boto_rds` for provisioning:
 ### More `salt-ssh` Trouble
 
 I use `salt-ssh` for the initial setup of newly provisioned EC2 instances:
-- `2022-01-27`: [[BUG] salt-ssh requires the distro python package · Issue
+- `2022 Jan 27`: [[BUG] salt-ssh requires the distro python package · Issue
   #61535 · saltstack/salt][i61535]
+
+**Update:** This issue remains open as of `2023 Feb 01`.
 
 [i61535]: https://github.com/saltstack/salt/issues/61535
 
@@ -136,16 +147,16 @@ I expect that next I'll try Ansible at home:
 
 ## Response
 
-2022-03-16: Gareth J. Greenaway provided [a good response][twitterresponse] to
-this post on Twitter.
+`2022 Mar 16`: Gareth J. Greenaway provided [a good response][twitterresponse]
+to this post on Twitter.
 
 [twitterresponse]: https://twitter.com/garethgreenaway/status/1504121699372974082?s=20&t=2sVPB8iytlNVglrK3Lnl5Q
 
 
 ## Ansible Success
 
-2022-05-03: Not long after writing this post, my firewall's RAM was damaged by
-a blackout and I had to rebuild it. I was able to do fairly quickly, even
+`2022 May 03`: Not long after writing this post, my firewall's RAM was damaged
+by a blackout and I had to rebuild it. I was able to do fairly quickly, even
 though I was learning Ansible at the same time. So far, I've really enjoyed
 Ansible. My only complaint is that it is slow (though fast enough for my
 needs).
@@ -153,6 +164,9 @@ needs).
 
 ## Updates
 
+- `2023 Feb 01`:
+  - Added update notes throughout
+  - Made date formats consistent
 - `2022 May 03`:
   - Added recheck date to Docker images unmaintained section
   - Added Response section
