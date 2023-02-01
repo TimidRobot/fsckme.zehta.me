@@ -818,24 +818,26 @@ laptop. SaltStack claims macOS is supported. &lt;a href="https://docs.saltprojec
 &lt;p&gt;I originally installed SaltStack via homebrew, but had to switch to a Python
 3.7 virtual environment due to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;2020-06-21&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/57742"&gt;[BUG] AttributeError: 'Process' object has no attribute
-'_args_for_getstate' · Issue #57742 · saltstack/salt&lt;/a&gt;&lt;!-- x_ fix vim markdown highlight issue --&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;2022-01-09&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/61435"&gt;[BUG] salt-ssh fails due to attempting to pickle _thread._local
-object · Issue #61435 · saltstack/salt&lt;/a&gt;&lt;!-- x_ fix vim markdown highlight issue --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;&lt;code&gt;2020 Jun 21&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/57742"&gt;[BUG] AttributeError: 'Process' object has no attribute
+'_args_for_getstate' · Issue #57742 · saltstack/salt&lt;/a&gt;&lt;/del&gt;&lt;!-- x_ fix vim markdown highlight issue --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;&lt;code&gt;2022 Jan 09&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/61435"&gt;[BUG] salt-ssh fails due to attempting to pickle
+_thread._local object · Issue #61435 · saltstack/salt&lt;/a&gt;&lt;/del&gt;&lt;!-- x_ fix vim markdown highlight issue --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;These issues have exists since the release of Python 3.8 on &lt;code&gt;2019-10-14&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; These problems existed between the release of Python 3.8 on
+&lt;code&gt;2019 Oct 14&lt;/code&gt; and the release of Salt version &lt;code&gt;3005&lt;/code&gt; on &lt;code&gt;2022-08-25&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="cannot-use-gitfs-with-salt-ssh"&gt;Cannot use gitfs with salt-ssh&lt;/h3&gt;&lt;p&gt;With SaltStack appearing to work, I wanted to use SaltStack Formulas.
 Unfortunately, that option has been unsupported since 2005:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;2015-5-12&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/23576"&gt;Cannot use gitfs with salt-ssh · Issue #23576 ·
-saltstack/salt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;&lt;code&gt;2015 May 12&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/23576"&gt;Cannot use gitfs with salt-ssh · Issue #23576 ·
+saltstack/salt&lt;/a&gt;&lt;/del&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I tried to symlink git submodules in, but I encountered the same error.&lt;/p&gt;
+&lt;p&gt;I also tried to symlink git submodules in, but I encountered the same error.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Maybe I misidentified the problem. The issue above was closed on
+&lt;code&gt;2022 Mar 14&lt;/code&gt; with a comment indicating there are other issues.&lt;/p&gt;
 &lt;h3 id="docker-images-unmaintained"&gt;Docker images unmaintained&lt;/h3&gt;&lt;p&gt;I thought I might have fewer issues if I might moved my use case closer to the
-SaltStack mainstream by using a SaltStack docker image. SaltStack &lt;code&gt;3004&lt;/code&gt; was
-release 145 days ago on &lt;code&gt;2021-10-18&lt;/code&gt;. Unfortunately, as of today
-(&lt;code&gt;2022-03-12&lt;/code&gt;--still true as of &lt;code&gt;2022-05-03&lt;/code&gt;), there is not yet a &lt;code&gt;3004&lt;/code&gt; docker
-image. &lt;a href="https://hub.docker.com/r/saltstack/salt"&gt;saltstack/salt - Docker Image | Docker Hub&lt;/a&gt;:&lt;/p&gt;
+SaltStack mainstream by using a SaltStack docker image. &lt;del&gt;Unfortunately, no
+&lt;code&gt;3004&lt;/code&gt; docker image was available&lt;/del&gt; (note update, below). &lt;a href="https://hub.docker.com/r/saltstack/salt"&gt;saltstack/salt -
+Docker Image | Docker Hub&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Supported tags and respective &lt;code&gt;Dockerfile&lt;/code&gt; links&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;3004rc1&lt;/code&gt;, &lt;code&gt;rc&lt;/code&gt;&lt;/li&gt;
@@ -844,6 +846,9 @@ image. &lt;a href="https://hub.docker.com/r/saltstack/salt"&gt;saltstack/salt - 
 &lt;/blockquote&gt;
 &lt;p&gt;I realize I could create my own docker image, but I encountered this when my
 capacity for workarounds was already at its limit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; At some point after &lt;code&gt;2022 May 03&lt;/code&gt;, the docker image creation
+pipeline was fixed. The &lt;code&gt;3004&lt;/code&gt; image was last pushed on &lt;code&gt;2022 Oct 04&lt;/code&gt; (just over
+2 years after the release of SaltStack &lt;code&gt;3004&lt;/code&gt; on &lt;code&gt;2021 Oct 18&lt;/code&gt;).&lt;/p&gt;
 &lt;h2 id="issues-at-work"&gt;Issues at Work&lt;/h2&gt;&lt;h3 id="lack-of-open-community"&gt;Lack of Open Community&lt;/h3&gt;&lt;p&gt;In learning and using SaltStack, I've frequently come up against a terrible
 lack of examples and documentation of SaltStack in use. It seems to be getting
 worse as the few examples I did find are becoming outdated.&lt;/p&gt;
@@ -853,14 +858,16 @@ Robot&lt;/a&gt;). So far, engagement has been nonexistent.&lt;/p&gt;
 &lt;p&gt;I spent years working with Puppet, which had a much stronger community.&lt;/p&gt;
 &lt;h3 id="incomplete-migration-from-python-2-7-to-python-3"&gt;Incomplete Migration from Python 2.7 to Python 3&lt;/h3&gt;&lt;p&gt;I use &lt;code&gt;boto_rds&lt;/code&gt; for provisioning:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;2022-01-31&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/61555"&gt;[BUG] boto_rds.subnet_group_present broken · Issue #61555 ·
+&lt;li&gt;&lt;code&gt;2022 Jan 31&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/61555"&gt;[BUG] boto_rds.subnet_group_present broken · Issue #61555 ·
 saltstack/salt&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This issue remains open as of &lt;code&gt;2023 Feb 01&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="more-salt-ssh-trouble"&gt;More &lt;code&gt;salt-ssh&lt;/code&gt; Trouble&lt;/h3&gt;&lt;p&gt;I use &lt;code&gt;salt-ssh&lt;/code&gt; for the initial setup of newly provisioned EC2 instances:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;2022-01-27&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/61535"&gt;[BUG] salt-ssh requires the distro python package · Issue
+&lt;li&gt;&lt;code&gt;2022 Jan 27&lt;/code&gt;: &lt;a href="https://github.com/saltstack/salt/issues/61535"&gt;[BUG] salt-ssh requires the distro python package · Issue
 #61535 · saltstack/salt&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; This issue remains open as of &lt;code&gt;2023 Feb 01&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="overwhelming-backlog"&gt;Overwhelming Backlog&lt;/h3&gt;&lt;p&gt;The backlog contains many ancient and higher severity issues that deal with the
 functionality I am interested in (ex. &lt;code&gt;salt-ssh&lt;/code&gt;):&lt;/p&gt;
 &lt;ul&gt;
@@ -876,14 +883,19 @@ like SaltStack will work well for me.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://docs.ansible.com/ansible_community.html"&gt;Ansible Community Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="response"&gt;Response&lt;/h2&gt;&lt;p&gt;2022-03-16: Gareth J. Greenaway provided &lt;a href="https://twitter.com/garethgreenaway/status/1504121699372974082?s=20&amp;amp;t=2sVPB8iytlNVglrK3Lnl5Q"&gt;a good response&lt;/a&gt; to
-this post on Twitter.&lt;/p&gt;
-&lt;h2 id="ansible-success"&gt;Ansible Success&lt;/h2&gt;&lt;p&gt;2022-05-03: Not long after writing this post, my firewall's RAM was damaged by
-a blackout and I had to rebuild it. I was able to do fairly quickly, even
+&lt;h2 id="response"&gt;Response&lt;/h2&gt;&lt;p&gt;&lt;code&gt;2022 Mar 16&lt;/code&gt;: Gareth J. Greenaway provided &lt;a href="https://twitter.com/garethgreenaway/status/1504121699372974082?s=20&amp;amp;t=2sVPB8iytlNVglrK3Lnl5Q"&gt;a good response&lt;/a&gt;
+to this post on Twitter.&lt;/p&gt;
+&lt;h2 id="ansible-success"&gt;Ansible Success&lt;/h2&gt;&lt;p&gt;&lt;code&gt;2022 May 03&lt;/code&gt;: Not long after writing this post, my firewall's RAM was damaged
+by a blackout and I had to rebuild it. I was able to do fairly quickly, even
 though I was learning Ansible at the same time. So far, I've really enjoyed
 Ansible. My only complaint is that it is slow (though fast enough for my
 needs).&lt;/p&gt;
 &lt;h2 id="updates"&gt;Updates&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2023 Feb 01&lt;/code&gt;:&lt;ul&gt;
+&lt;li&gt;Added update notes throughout&lt;/li&gt;
+&lt;li&gt;Made date formats consistent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;2022 May 03&lt;/code&gt;:&lt;ul&gt;
 &lt;li&gt;Added recheck date to Docker images unmaintained section&lt;/li&gt;
 &lt;li&gt;Added Response section&lt;/li&gt;
