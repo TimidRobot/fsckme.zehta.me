@@ -40,7 +40,7 @@ I originally installed SaltStack via homebrew, but had to switch to a Python
 <!-- x_ fix vim markdown highlight issue -->
 
 **Update:** These problems existed between the release of Python 3.8 on
-`2019 Oct 14` and the release of Salt version `3005` on `2022-08-25`.
+`2019 Oct 14` and the release of Salt version `3005` on `2022 Aug 25`.
 
 [saltproject]: https://docs.saltproject.io/en/3004/topics/about_salt_project.html
 [i57742]: https://github.com/saltstack/salt/issues/57742
