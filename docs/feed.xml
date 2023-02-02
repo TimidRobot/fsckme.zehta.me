@@ -824,7 +824,7 @@ laptop. SaltStack claims macOS is supported. &lt;a href="https://docs.saltprojec
 _thread._local object · Issue #61435 · saltstack/salt&lt;/a&gt;&lt;/del&gt;&lt;!-- x_ fix vim markdown highlight issue --&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; These problems existed between the release of Python 3.8 on
-&lt;code&gt;2019 Oct 14&lt;/code&gt; and the release of Salt version &lt;code&gt;3005&lt;/code&gt; on &lt;code&gt;2022-08-25&lt;/code&gt;.&lt;/p&gt;
+&lt;code&gt;2019 Oct 14&lt;/code&gt; and the release of Salt version &lt;code&gt;3005&lt;/code&gt; on &lt;code&gt;2022 Aug 25&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="cannot-use-gitfs-with-salt-ssh"&gt;Cannot use gitfs with salt-ssh&lt;/h3&gt;&lt;p&gt;With SaltStack appearing to work, I wanted to use SaltStack Formulas.
 Unfortunately, that option has been unsupported since 2005:&lt;/p&gt;
 &lt;ul&gt;
