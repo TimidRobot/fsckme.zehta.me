@@ -35,7 +35,8 @@ sudo auditctl -a exit,always -S open -F uid=33 -F a1'!=0'`
 
 This resulted in the following rules:
 ```shell
-sudo auditctl -l LIST_RULES: exit,always uid=33 (0x21) syscall=write LIST_RULES: exit,always uid=33 (0x21) a1!=0 syscall=open
+sudo auditctl -l LIST_RULES: exit,always uid=33 (0x21) syscall=write \
+    LIST_RULES: exit,always uid=33 (0x21) a1!=0 syscall=open
 ```
 
 This allowed us to isolate a PHP module that was completely broken (using
