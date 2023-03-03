@@ -2,6 +2,7 @@
 # Source                                                # Target
 ######################################################  #######################
 /tags/zzz/                                              /tags/all/
+/creative/reminder-sculpture                            /2002/04/reminder/
 /2016/12/feelings-thermometer.html                      /2016/12/feelings-thermometer/
 /2015/10/emotional-labor.html                           /2015/10/emotional-labor/
 /2015/02/apple-and-ubuntu-openssh-versions.html         /2015/02/apple-ubuntu-ssh/
