@@ -52,6 +52,10 @@ a[href*="github.com"]:before {
   font-family: "Font Awesome 6 Brands"; font-weight: 400;
   content: "\f09b\00a0";
 }
+a[href*="hachyderm.io"]:before {
+  font-family: "Font Awesome 6 Brands"; font-weight: 400;
+  content: "\f4f6\00a0";
+}
 a[href*="hackerrank.com"]:before {
   font-family: "Font Awesome 6 Brands"; font-weight: 400;
   content: "\f5f7\00a0";
@@ -178,6 +182,9 @@ ul {
 }
 @media (min-width: 1024px) {
   .container {  /*LgDev*/ max-width: 960px; width: 80%; }
+}
+.none {
+  display: none;
 }
 /*** Navigation **************************************************************/
 nav div.columns {
