@@ -17,8 +17,8 @@ The built content is located in [`docs/`](docs/).
 
 ### Docker NGINX and Lektor build
 
-This option serves content more reliably (more like GitHub Pages), but rebuilds
-all content instead of only content that has changed.
+This option serves content more reliably, but rebuilds all content instead of
+only content that has changed.
 
 1. Install [Pipenv][pipenv]
     ```shell
