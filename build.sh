@@ -69,6 +69,7 @@ fi
 
 ./combine_css.sh
 
+
 if [[ -n "${PRETIFY:-}" ]]
 then
     printf "\e[1m\e[7m %-80s\e[0m\n" 'Lektor: building site with pretify'
@@ -82,3 +83,16 @@ cp -v source/assets/_redirects docs/
 echo
 
 ./sri_hashes.sh
+echo
+echo
+
+
+printf "\e[1m\e[7m %-80s\e[0m\n" 'Updating custom CSS SRI in layout template'
+sha512=$(cat docs/static/custom.css | openssl dgst -sha512 -binary \
+    | openssl base64 -A)
+grep --fixed-strings --recursive --files-with-matches static/custom.css docs \
+    | xargs \
+        gsed -r \
+            -e"s|(/custom[.]css.+integrity=\")([^\"]+)|\\1sha512-${sha512}|" \
+            -i source/templates/layout.html
+echo done.
