@@ -2,7 +2,7 @@
 ###########################################  #######################
 # Source                                     # Target
 ###########################################  #######################
-/tags/zzz/                                   /tags/all/
+/tags/zzz/*                                  /tags/all/
 /name-change*                                /2012/09/name-change/
 /creative/reminder-sculpture*                /2002/04/reminder/
 /2016/12/feelings-thermometer*               /2016/12/feelings-thermometer/
