@@ -2,10 +2,5 @@ title: 404 Not Found
 ---
 body:
 
-
-<!-- Plausible web stats -->
-<!-- - https://plausible.io/docs/error-pages-tracking-404 -->
-<script async defer src="/static/event404.js"
-  integrity="sha512-RjhvLIPXgb/0HuVjYbhveY9fG9Ie6DMC1Y2adyA5R19ZtMs2zrQ8b+czwwuM+QuEn9xt65a1HOtmdAbqJOKlfw=="></script>
 <i class="fas fa-exclamation-circle"></i> No page exists for the URL that you
 specified. Please double-check the URL or use the navigation, above.
