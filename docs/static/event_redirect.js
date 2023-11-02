@@ -1,1 +1,0 @@
-plausible("Redirect",{props:{path:document.location.pathname}});
