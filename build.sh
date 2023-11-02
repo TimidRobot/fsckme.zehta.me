@@ -78,6 +78,7 @@ else
     pipenv run lektor build --extra-flag minify --output-path ../docs
 fi
 echo
+cp -v source/assets/_redirects docs/
 echo
 
 ./sri_hashes.sh
