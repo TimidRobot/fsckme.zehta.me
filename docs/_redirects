@@ -1,7 +1,7 @@
 # https://docs.netlify.com/routing/redirects/redirect-options/
-###########################################  #######################
+###########################################  ###############################
 # Source                                     # Target
-###########################################  #######################
+###########################################  ###############################
 /tags/zzz/*                                  /tags/all/
 /name-change*                                /2012/09/name-change/
 /creative/reminder-sculpture*                /2002/04/reminder/
@@ -21,12 +21,16 @@
 /2012/10/linux-tcpip-tuning*                 /2012/10/linux-tcp-ip/
 /2012/10/isolating-ssd-firmware-issue*       /2012/10/isolating-ssd/
 /2012/09/to-err-iz-human*                    /2012/09/to-err-iz/
-#############  #########  #############
-# Source       # Target   # Status code
-#############  #########  #############
-/xmlrpc*       /403.html  403
-/wp-login*     /403.html  403
-/wp-includes*  /403.html  403
-/wp-content*   /403.html  403
-/wp-admin*     /403.html  403
-/wordpress*    /403.html  403
+##################  #########  ######
+# Source            # Target   # Code
+##################  #########  ######
+/xmlrpc*            /403.html  403
+/wp/wp-*            /403.html  403
+/wp-login*          /403.html  403
+/wp-includes*       /403.html  403
+/wp-content*        /403.html  403
+/wp-admin*          /403.html  403
+/wordpress*         /403.html  403
+/test/wp-includes*  /403.html  403
+/shop/wp-includes*  /403.html  403
+/blog/wp-includes*  /403.html  403
