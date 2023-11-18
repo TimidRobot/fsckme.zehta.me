@@ -2,4 +2,4 @@ title: 403 Forbidden
 ---
 body:
 
-<i class="fas fa-exclamation-circle"></i> 403 Forbidden
+<i class="fas fa-ban"></i> 403 Forbidden
