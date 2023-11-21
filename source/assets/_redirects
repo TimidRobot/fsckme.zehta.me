@@ -29,6 +29,7 @@
 /wp-login*          /403.html  403
 /wp-includes*       /403.html  403
 /wp-content*        /403.html  403
+/wp-config*         /403.html  403
 /wp-admin*          /403.html  403
 /wordpress*         /403.html  403
 /:dir/wp-includes*  /403.html  403
