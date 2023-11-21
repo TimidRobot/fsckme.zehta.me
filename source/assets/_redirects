@@ -31,6 +31,5 @@
 /wp-content*        /403.html  403
 /wp-admin*          /403.html  403
 /wordpress*         /403.html  403
-/test/wp-includes*  /403.html  403
-/shop/wp-includes*  /403.html  403
-/blog/wp-includes*  /403.html  403
+/:dir/wp-includes*  /403.html  403
+/.env*              /403.html  403
