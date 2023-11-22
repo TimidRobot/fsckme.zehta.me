@@ -48,20 +48,20 @@ This is a personal blog. All opinions are my own.
 [instagram]: https://www.instagram.com/timidrobot/ "Timid Robot Zehta (@timidrobot) • Instagram photos and videos"
 
 
-## Encrypted Communication
-
-- You can find me on [Signal](https://signal.org/) via my mobile number
-- [GnuPG public key](Timid_Robot_Zehta__E03BF929__Public.asc)
-
-
-## Unencrypted Communication
+## Contact Me
 
 - [Contact form][contact]
 
 [contact]: contact/
 
 
-##  Atom Syndication Format
+### Encrypted Communication
+
+- You can find me on [Signal](https://signal.org/) via my mobile number
+- [GnuPG public key](Timid_Robot_Zehta__E03BF929__Public.asc)
+
+
+##  Atom Syndication Format (RSS)
 
 [Atom Feed - Blog - Timid Robot](../feed.xml)
 
