@@ -4,6 +4,7 @@ body:
 
 <form
     name="contact-form"
+    action="/about/thanks/"
     method="POST"
     data-netlify="true"
     netlify-honeypot="crypto">
