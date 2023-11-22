@@ -186,6 +186,26 @@ ul {
 .none {
   display: none;
 }
+/*** Forms *******************************************************************/
+form > p > button {
+  background-color: var(--HeavyGray);
+  border: 1px solid var(--MetaBlack);
+  color: var(--BluePlum);
+  text-decoration: none;
+}
+form > p > button:hover {
+  background-color: var(--AnswerGray);
+  border-color: var(--BluePlum);
+  color: var(--BluePlum);
+  text-decoration: underline;
+}
+input {
+  width: 100%;
+}
+textarea {
+  height: 10em;
+  width: 100%;
+}
 /*** Navigation **************************************************************/
 nav div.columns {
   margin-bottom: 0;

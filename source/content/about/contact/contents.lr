@@ -1,0 +1,21 @@
+title: Contact
+---
+body:
+
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" maxlength=254 />
+  </p>
+  <p>
+    <label for="email">Your Email:</label>
+    <input type="email" name="email" maxlength=254 minlength=6 required />
+  </p>
+  <p>
+    <label for="message">Message:</label>
+    <textarea name="message" minlength=3 ></textarea>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
