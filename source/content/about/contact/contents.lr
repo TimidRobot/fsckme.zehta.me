@@ -1,8 +1,16 @@
-title: Contact
+title: Contact form
 ---
 body:
 
-<form name="contact" method="POST" data-netlify="true">
+<form
+    name="contact-form"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="crypto">
+  <p class="none">
+    <label for="crypto">Artificial Intelligence (AI):</label>
+    <input type="text" name="crypto" />
+  </p>
   <p>
     <label for="name">Your Name:</label>
     <input type="text" name="name" maxlength=254 />
@@ -12,7 +20,7 @@ body:
     <input type="email" name="email" maxlength=254 minlength=6 required />
   </p>
   <p>
-    <label for="message">Message:</label>
+    <label for="message">Message to Timid Robot:</label>
     <textarea name="message" minlength=3 ></textarea>
   </p>
   <p>
