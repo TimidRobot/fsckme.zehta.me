@@ -32,5 +32,6 @@
 /wp-config*         /403.html  403
 /wp-admin*          /403.html  403
 /wordpress*         /403.html  403
+/admin*             /403.html  403
 /:dir/wp-includes*  /403.html  403
 /.env*              /403.html  403
