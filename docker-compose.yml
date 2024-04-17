@@ -1,6 +1,6 @@
-# https://docs.docker.com/compose/compose-file/compose-file-v3/
-
-version: "3.6"
+# Use docker compose v2 for non swarm deployments
+# https://docs.docker.com/compose/compose-file/compose-file-v2/
+version: '2.4'
 
 services:
 
@@ -10,10 +10,10 @@ services:
       && nginx -g 'daemon off;'
       "
     # https://hub.docker.com/_/nginx
-    image: nginx:alpine
+    image: 'nginx:alpine'
     ports:
-      - "8080:80"
-    restart: always
+      - '8080:80'
+    restart: on-failure
     volumes:
-      - ./docs/:/usr/share/nginx/html:ro
-      - ./nginx-conf.d/:/etc/nginx/conf.d:ro
+      - './docs/:/usr/share/nginx/html:ro'
+      - './nginx-conf.d/:/etc/nginx/conf.d:ro'
